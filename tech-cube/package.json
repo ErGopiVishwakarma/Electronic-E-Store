@@ -30,7 +30,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+<<<<<<< HEAD
     "server": "json-server --watch ./src/db.json --port 8080"
+=======
+    "server": "json-server --watch ./src/db.json --port 8080"
+>>>>>>> ef01d71d1db4d35acdb826cfc38a60c932683571
   },
   "eslintConfig": {
     "extends": "react-app"
