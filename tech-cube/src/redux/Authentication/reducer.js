@@ -3,7 +3,8 @@ import { LOGIN_USER, LOGIN_USER_FAILURE, LOGIN_USER_SUCCESSFUL, REGISTER_USER, R
 const initialState = {
     isLoading : false,
     isAuth : false,
-    data : [],
+    isRegistered : false,
+    users : [],
     isError : false,
 }
 
@@ -20,8 +21,8 @@ export const reducer = (state = initialState, {type, payload}) => {
             return {
                 ...state,
                 isLoading : false,
-                data : [...state.data, payload],
-
+                isRegistered : true,
+                data : [...state.users, payload]
             }
         }
 
@@ -36,7 +37,8 @@ export const reducer = (state = initialState, {type, payload}) => {
         case LOGIN_USER : {
             return {
                 ...state,
-                isLoading : true
+                isLoading : true,
+                isAuth : false
             }
         }
 
@@ -44,7 +46,6 @@ export const reducer = (state = initialState, {type, payload}) => {
             return {
                 ...state,
                 isLoading : false,
-                data : payload,
                 isAuth : true
             }
         }
