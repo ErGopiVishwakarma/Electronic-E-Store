@@ -12,12 +12,14 @@ import {
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import MainRoutes from './route/MainRoutes';
+import ProductPage from './Pages/ProductPage';
 
 function App() {
   return (
     <Box>
       <ColorModeSwitcher />
-      <MainRoutes />
+      {/* <MainRoutes /> */}
+      <ProductPage />
     </Box>
   );
 }
