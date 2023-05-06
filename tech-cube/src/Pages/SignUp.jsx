@@ -22,6 +22,7 @@ import { signup } from '../redux/Authentication/action';
 import axios from 'axios';
 import { useToast } from '@chakra-ui/react';
 import signupImg from '../Assets/signupImg.jpg';
+import Loader from '../component/Loader&Error/Loader';
 
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
@@ -37,8 +38,7 @@ export default function SignUp() {
   const loader = useSelector(store => store.authReducer.isLoading);
   const error = useSelector(store => store.authReducer.isError);
 
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!firstName || !lastName || !email || !password || !mobile) {
@@ -50,7 +50,7 @@ export default function SignUp() {
         position: 'top',
         isClosable: true,
       })
-      return
+      return;
     }
 
     if (mobile.toString().length !== 10) {
@@ -65,12 +65,19 @@ export default function SignUp() {
       return;
     }
 
-    if(loader){
-      return <h1 textAlign='center'>Loading...</h1>
-    }
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
 
-    if(error){
-      return <h1 textAlign='center'>Something went wrong. Please refresh the page.</h1>
+    }
+    else {
+      toast({
+        title: 'Correct details Required!',
+        description: "Please fill valid email!",
+        status: 'warning',
+        duration: 4000,
+        position: 'top',
+        isClosable: true,
+      })
+      return;
     }
 
     let userData = {
@@ -79,53 +86,59 @@ export default function SignUp() {
       email,
       password,
       mobile
-
     }
 
-    getRequest(userData);
+    let check = false;
+    const data = await axios.get('http://localhost:8080/users').then(res => res.data)
+    if (data.length > 0) {
+      data.forEach(el => {
+        if (el.email === userData.email) {
+          check = true;
+        }
+      })
+    } else {
+      dispatch(signup(userData));
+      toast({
+        title: 'User Registered Successfully.',
+        description: "Please log in to continue.",
+        status: 'success',
+        duration: 4000,
+        position: 'top',
+        isClosable: true,
+      })
+      return
+    }
+
+    if (!check) {
+      dispatch(signup(userData))
+      toast({
+        title: 'User Registered Successfully.',
+        description: "Please log in to continue.",
+        status: 'success',
+        duration: 4000,
+        position: 'top',
+        isClosable: true,
+      })
+      return
+    }
+
+    (check && toast({
+      title: 'User already registered.',
+      description: "Please log in to continue.",
+      status: 'error',
+      duration: 4000,
+      position: 'top',
+      isClosable: true,
+    }))
+    return;
   }
 
-  const getRequest = (userData) => {
-    axios.get('http://localhost:3000/users')
-      .then(res => {
-        res.data?.map(el => {
-          if (el.email === userData.email || el.mobile === userData.mobile) {
-            toast({
-              title: 'User already Registered.',
-              description: "Please log in to continue.",
-              status: 'error',
-              position: 'top',
-              duration: 9000,
-              isClosable: true,
-            })
-            return;
-          }
-          else {
-            dispatch(signup(userData));
-            if (isRegister === true) {
-              toast({
-                title: 'User Registered Successfully.',
-                description: "Please log in to continue.",
-                status: 'success',
-                position: 'top',
-                duration: 9000,
-                isClosable: true,
-              })
-              return;
-            }
-            return;
-          }
-        })
-      })
-      .catch(err => {
-        console.log(err);
-      })
-  }
 
   return (
     <Flex
       minH={'100vh'}
       align={'center'}
+      pt={'50px'}
       justify={'center'}
       direction={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }}
       bg={useColorModeValue('gray.50', 'gray.800')}>
@@ -208,4 +221,5 @@ export default function SignUp() {
       </Box>
     </Flex>
   );
+
 }
