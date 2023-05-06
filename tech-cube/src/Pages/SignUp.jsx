@@ -1,3 +1,4 @@
+
 import {
   Flex,
   Box,
@@ -224,3 +225,4 @@ export default function SignUp() {
   );
 
 }
+
