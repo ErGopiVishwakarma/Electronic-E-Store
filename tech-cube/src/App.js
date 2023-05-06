@@ -16,11 +16,11 @@ function App() {
       {/* <MainRoutes /> */}
 
       {/* <Navbar /> */}
-      <MainRoutes />
+      {/* <MainRoutes /> */}
       {/* <Footer /> */}
 
-      {/* <FilterSort /> */}
-      {/* <ProductPage /> */}
+      <FilterSort />
+      <ProductPage />
     </Box>
   );
 }
