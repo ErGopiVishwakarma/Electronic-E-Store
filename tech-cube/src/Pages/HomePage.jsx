@@ -9,21 +9,11 @@ import BestDeal from '../component/HomeComponent/BestDeal'
 const HomePage = () => {
   return (
     <Box pt="70px">
-      <Box  position={'relative'} w="100%" h='100vh' bgImg={home} bgRepeat={'no-repeat'} bgSize={'cover'} bgPosition={'center'}>
-        <Image src={home} w="100%" />
-      </Box>
-      <Flex p="3%" direction={'column'} gap="50px">
-        <Heading>Shop Our Top Category</Heading>
-        <Grid templateColumns={{base:'repeat(2,1fr)',md:'repeat(3,1fr)',lg:'repeat(6,1fr)'}} gap="20px">
-          {
-            shopCategory.map((el, ind) => (
-              <Box bgImage={el.image} className={el.class} >
-                {/* <Heading color='white'>{el.name}</Heading> */}
-              </Box>
-            ))
-          }
-        </Grid>
-      </Flex>
+      <Box w="100%">
+        <Box position={'relative'} w="100%" h='100vh' bgImg={home} bgRepeat={'no-repeat'} bgSize={'cover'} bgPosition={'center'} display={{base:'none',md:'none',lg:'block'}}>
+        </Box>
+        <Image src="https://demo4techies.com/mage/magetheme108/pub/media/wysiwyg/slider/next-home-banner-1.png" w="100%" display={{base:'block',md:'block',lg:'none'}} />
+</Box>
       <BestDeal />
       <HomeService />
     </Box>

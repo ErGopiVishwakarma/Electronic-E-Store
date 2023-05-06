@@ -36,7 +36,7 @@ export default function SignUp() {
   const navigate = useNavigate();
   // const isRegister = useSelector(store => store.authReducer.isRegistered);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
 
@@ -60,29 +60,43 @@ export default function SignUp() {
       mobile
 
     }
+// from here to till 
 
-    axios.get('http://localhost:3000/users')
-      .then(res => {
-        res.data?.map(el => {
-          if (el.email !== userData.email) {
-            dispatch(signup(userData))
-              .then(res => {
-                toast({
-                  title: 'User Registered Successfully.',
-                  description: "Please log in to continue.",
-                  status: 'success',
-                  duration: 4000,
-                  position: 'top',
-                  isClosable: true,
-                })
-              })
-            return;
-          }
-          flag = true;
-        })
-      })
+let check = false
+const data = await axios.get('http://localhost:8080/user').then(res=>res.data)
+ if(data.length > 0){
+  data.forEach(el=>{
+    if (el.email === userData.email) {
+         check = true
+      }
+ })
+}else{
+  dispatch(signup(userData))
+    toast({
+      title: 'User Registered Successfully.',
+      description: "Please log in to continue.",
+      status: 'success',
+      duration: 4000,
+      position: 'top',
+      isClosable: true,
+    })
+  return 
+}
 
-      (flag && toast({
+if(!check){
+  dispatch(signup(userData))
+    toast({
+      title: 'User Registered Successfully.',
+      description: "Please log in to continue.",
+      status: 'success',
+      duration: 4000,
+      position: 'top',
+      isClosable: true,
+    })
+  return 
+}
+
+      (check && toast({
         title: 'User already registered.',
         description: "Please log in to continue.",
         status: 'error',
@@ -91,6 +105,8 @@ export default function SignUp() {
         isClosable: true,
       }))
     return;
+
+    // till here  gopi vishwakarma 
 
   }
 

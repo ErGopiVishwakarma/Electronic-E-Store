@@ -1,5 +1,8 @@
-.showOff,.earbuds,.mobile,.watch {
-  height: 250px;
+.showOff,
+.earbuds,
+.mobile,
+.watch {
+  height: 300px;
   position: relative;
   text-align: center;
   cursor: pointer;
@@ -12,22 +15,22 @@
 }
 
 .showOff:hover {
-  background-size: 220%;
+  background-size: 245%;
   transition: all 0.3s ease-in-out;
 }
 
 .earbuds:hover {
-  background-size: 250%;
+  background-size: 290%;
   transition: all 0.3s ease-in-out;
 }
 
 .mobile:hover {
-  background-size: 250%;
+  background-size: 290%;
   transition: all 0.3s ease-in-out;
 }
 
 .watch:hover {
-  background-size: 150%;
+  background-size: 170%;
   transition: all 0.3s ease-in-out;
 }
 
@@ -46,5 +49,10 @@
 
 .homecard:hover {
   background-size: 120%;
+  transition: all 0.3s ease-in-out;
+}
+
+.bestdeal:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   transition: all 0.3s ease-in-out;
 }
