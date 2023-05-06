@@ -1,36 +1,46 @@
-import { Box, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Center, } from '@chakra-ui/react';
 
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCartData, } from '../redux/CartReducer/action';
-import CartItem from '../component/CartComponet/CartItem';      
+import CartItem from '../component/CartComponet/CartItem';
+  
 
 
-export let updateTriggers; // is for making changes on localStorage
+
 
 //----------------------------------------------------------------------------------------------------------------------------
 const CartPage = () => {
   const dispatch = useDispatch();
   const { cart } = useSelector(store => store.cartReducer);
 
+    let totalPrice = 0;
+    cart.forEach((cartItem) => {
+      totalPrice += cartItem.price * cartItem.quantity;
+    })
+
   useEffect(() => {
     dispatch(getCartData());
   },[]);
   return (
-    <Box
+    <Box marginTop={"30px"}
       display={'flex'}
-      flexDir={{ base: 'column', sm: 'row' }}
+      flexDir={{ base: 'column', sm: 'column' ,md: 'row'}}
       justifyContent={'space-between'}
     >
-      {cart.length > 0 ? (
+      {cart.length > 0 ? (<>
         <CartList />
+
+
+        <div className="payment-summery">
+     
+        </div>
+        </>
       ) : (
         <div className="empty-cart">No data found plese buy some product</div>
       )}
 
-      <div className="payment-summery">
-        <OrderSummery />
-      </div>
+     
     </Box>
   );
 };
@@ -44,39 +54,36 @@ export const CartList = () => {
   const { cart } = useSelector(store => store.cartReducer);
 
   
+
+
+  
   return (
-    <div className="cart-list-container">
-      {cart.map(cartItem => {
-        return <CartItem key={cartItem.id} {...cartItem} />;
-      })}
-    </div>
+    <Box className="cart-list-container"  width={"80%"} margin={"auto"}>
+    {cart.length > 0 && cart.map((el)=>{
+            return <CartItem  key={el.id} {...el}  />
+          })}
+     
+    </Box>
   );
 };
 
 
 //order summery
 
-export const OrderSummery = () => {
-  const { cart } = useSelector(store => store.cartReducer);
-    let totalPrice = 0;
-    cart.forEach((cartItem) => {
-      totalPrice += cartItem.price * cartItem.quantity;
-    });
-    return (
-      <Box border={"1px solid red"} minW={{base:"full",md:"md",lg:"lg"}}>
-       <h4>Products</h4>
-       <Box display={'flex'} flexWrap={'wrap'}> {cart.map((el) =>{
-        return <Image maxW={'50px'} key={el.id} src={el.image[0]} alt={el.title}/>
-       })}</Box>
-
-       <h4>Price  : {totalPrice}</h4>
-       <Text>Gst: 18%</Text>
-       <h3>Grant Total : {totalPrice+totalPrice*0.18}</h3>
-      
-      </Box>
-    );
+// export const OrderSummery = () => {
+//   const { cart } = useSelector(store => store.cartReducer);
+//     let totalPrice = 0;
+//     cart.forEach((cartItem) => {
+//       totalPrice += cartItem.price * cartItem.quantity;
+//     });
+//     return (
+//       <Center>
+     
+//       </Center>
+  
+//     );
   
 
-};
+// };
 
 

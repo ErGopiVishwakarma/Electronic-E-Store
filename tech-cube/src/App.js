@@ -17,8 +17,9 @@ import CartPage from './Pages/CartPage';
 function App() {
   return (
     <Box>
+    
       <CartPage />
-      <ColorModeSwitcher />
+      {/* <ColorModeSwitcher /> */}
       <MainRoutes />
     </Box>
   );
