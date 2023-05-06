@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <>
     <Box w={'100%'} borderTop="1px solid lightgray">
-       <Center>
+       {/* <Center>
         <Stack direction={'row'} spacing={{base:'20px',md:"80px"}} py={50} >
             <Stack direction={{base:'column',md:"row"}} alignItems={'center'} spacing={{base:5,md:10}}>
               <Image src="https://images.dailyobjects.com/marche/icons/social/quick-delivery.svg?tr=cm-pad_resize,v-2,w-40,h-40,dpr-1"></Image>
@@ -20,7 +20,7 @@ export default function Footer() {
               <Text fontSize={14}>Quality Assured</Text>
             </Stack>
         </Stack>
-       </Center>
+       </Center> */}
     </Box>
     <Box
       bg={useColorModeValue('gray.50', 'gray.900')}
@@ -96,16 +96,6 @@ export default function Footer() {
         </Stack>
        </Center>
     </Box>
-    {/* <Box w={'100%'} border="0.2px solid lightgray">
-       <Center>
-        <Stack direction={'column'} fontWeight="bold">
-         <Center><Text fontSize={20}>HONEST REVIEWS. NOTHING ELSE.</Text></Center>
-            <Stack direction={'row'}>
-              <Image src="https://images.dailyobjects.com/marche/assets/images/other/reviews-desktop-updated-23.png?tr=cm-pad_resize,v-2,w-1349,h-200,dpr-1" />     
-            </Stack>
-        </Stack>
-       </Center>
-    </Box> */}
     </>
   );
 }

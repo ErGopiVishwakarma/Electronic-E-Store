@@ -62,50 +62,6 @@ export default function SignUp() {
     }
 // from here to till 
 
-let check = false
-const data = await axios.get('http://localhost:8080/user').then(res=>res.data)
- if(data.length > 0){
-  data.forEach(el=>{
-    if (el.email === userData.email) {
-         check = true
-      }
- })
-}else{
-  dispatch(signup(userData))
-    toast({
-      title: 'User Registered Successfully.',
-      description: "Please log in to continue.",
-      status: 'success',
-      duration: 4000,
-      position: 'top',
-      isClosable: true,
-    })
-  return 
-}
-
-if(!check){
-  dispatch(signup(userData))
-    toast({
-      title: 'User Registered Successfully.',
-      description: "Please log in to continue.",
-      status: 'success',
-      duration: 4000,
-      position: 'top',
-      isClosable: true,
-    })
-  return 
-}
-
-      (check && toast({
-        title: 'User already registered.',
-        description: "Please log in to continue.",
-        status: 'error',
-        duration: 4000,
-        position: 'top',
-        isClosable: true,
-      }))
-    return;
-
     // till here  gopi vishwakarma 
 
   }

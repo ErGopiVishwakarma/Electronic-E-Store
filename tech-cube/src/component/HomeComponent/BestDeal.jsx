@@ -1,5 +1,5 @@
 
-import { Box, Button, Flex, Grid, Heading, Image, Stack, Text } from '@chakra-ui/react'
+import { Box, Button, Center, Flex, Grid, Heading, Image, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 import { FaGrinHearts, FaHeart, FaHeartBroken, FaHeartbeat, FaKissWinkHeart } from "react-icons/fa";
 const imageArr = [
@@ -13,9 +13,11 @@ const BestDeal = () => {
   return (
     <Box>
       <Flex direction={'column'} p="3%" gap="50px">
-        <Heading>
+      <Center>
+      <Heading>
           Today's Best Deal For You
         </Heading>
+      </Center>
         <Grid templateColumns={{ base: 'repeat(2,1fr)', md: 'repeat(3,1fr)', lg: 'repeat(4,1fr)' }} gap="20px" >
 
           {
