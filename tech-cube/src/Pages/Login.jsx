@@ -106,6 +106,7 @@ const Login = () => {
     <Flex
       minH={'100vh'}
       align={'center'}
+      pt={'60px'}
       justify={'center'}
       direction={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }}
       bg={useColorModeValue('gray.50', 'gray.800')}>
