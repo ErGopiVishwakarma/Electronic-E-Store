@@ -38,7 +38,7 @@ export default function SignUp() {
   const error = useSelector(store => store.authReducer.isError);
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
     if (!firstName || !lastName || !email || !password || !mobile) {
@@ -82,44 +82,6 @@ export default function SignUp() {
 
     }
 
-    getRequest(userData);
-  }
-
-  const getRequest = (userData) => {
-    axios.get('http://localhost:3000/users')
-      .then(res => {
-        res.data?.map(el => {
-          if (el.email === userData.email || el.mobile === userData.mobile) {
-            toast({
-              title: 'User already Registered.',
-              description: "Please log in to continue.",
-              status: 'error',
-              position: 'top',
-              duration: 9000,
-              isClosable: true,
-            })
-            return;
-          }
-          else {
-            dispatch(signup(userData));
-            if (isRegister === true) {
-              toast({
-                title: 'User Registered Successfully.',
-                description: "Please log in to continue.",
-                status: 'success',
-                position: 'top',
-                duration: 9000,
-                isClosable: true,
-              })
-              return;
-            }
-            return;
-          }
-        })
-      })
-      .catch(err => {
-        console.log(err);
-      })
   }
 
   return (
