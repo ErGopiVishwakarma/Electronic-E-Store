@@ -1,8 +1,10 @@
-import { Box, Button } from '@chakra-ui/react';
+import { Box, Image, Text } from '@chakra-ui/react';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCartData, updateCartFn } from '../redux/CartReducer/action';
+import { getCartData, } from '../redux/CartReducer/action';
+import CartItem from '../component/CartComponet/CartItem';      
+
 
 export let updateTriggers; // is for making changes on localStorage
 
@@ -13,11 +15,11 @@ const CartPage = () => {
 
   useEffect(() => {
     dispatch(getCartData());
-  }, []);
+  },[]);
   return (
     <Box
       display={'flex'}
-      flexDir={{ base: 'column', md: 'row' }}
+      flexDir={{ base: 'column', sm: 'row' }}
       justifyContent={'space-between'}
     >
       {cart.length > 0 ? (
@@ -38,7 +40,7 @@ export default CartPage;// nothing here yet
 
 // cart list data shoing here
 export const CartList = () => {
-  const dispatch = useDispatch();
+
   const { cart } = useSelector(store => store.cartReducer);
 
   
@@ -51,98 +53,30 @@ export const CartList = () => {
   );
 };
 
-// -----------------------------------------------------------------------------------------------------------------------
-//Cart Item Component
-
-export const CartItem = ({
-  id,
-  title,
-  brand,
-  image,
-  price,
-  color,
-  quantity,
-}) => {
-  const [qty, setQty] = useState(quantity);
-  const dispatch = useDispatch();
-  const { cart } = useSelector(store => store.cartReducer);
-  const HandleAddQty = () => {
-  const upDatedData=cart.map((el)=>{
-    return el.id===id?{...el,quantity:el.quantity+1}:el;
-  })
-
-  dispatch(updateCartFn(upDatedData));
-    setQty(prev => prev + 1);
-  };
-
-  const handleSubQty = () => {
-    const upDatedData=cart.map((el)=>{
-      return el.id===id?{...el,quantity:el.quantity-1}:el;
-    })
-  
-    dispatch(updateCartFn(upDatedData));
-    setQty(prev => prev - 1);
-  };
-
-  const handleDeleteQty = () => {
-    const upDatedData=cart.filter((el)=>{
-      return el.id!==id
-    })
-  
-    dispatch(updateCartFn(upDatedData));
-  };
-
-  return (
-    <div style={{ display: 'flex', border: '1px solid blue' }}>
-      <img
-        src={image}
-        alt={title}
-        style={{ width: '50px', height: '50px', display: 'inline' }}
-      />
-      <div>
-        <div>
-          <h4>
-            {title}-{brand} - Color:{color}
-          </h4>
-          <p>Price:{price} </p>
-          <h3>Total Price: {price * quantity}</h3>
-        </div>
-        <div>
-          <Button
-            className="Add-Qty"
-            isDisabled={qty >= 5}
-            onClick={HandleAddQty}
-          >
-            add
-          </Button>
-          Quantity:{qty}
-          <Button
-            className="Sub Qty"
-            display={qty <= 1 && 'none'}
-            isDisabled={qty === 1}
-            onClick={handleSubQty}
-          >
-            remove
-          </Button>
-          <Button
-            className="delete-Qty"
-            colorScheme="red"
-            display={qty >= 2 && 'none'}
-            isDisabled={qty > 1}
-            onClick={handleDeleteQty}
-          >
-            delete
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-//--------------------------------------------------------------------------------------------------------------------------
 
 //order summery
 
 export const OrderSummery = () => {
-  return <div>{/*update grantTotal*/}</div>;
+  const { cart } = useSelector(store => store.cartReducer);
+    let totalPrice = 0;
+    cart.forEach((cartItem) => {
+      totalPrice += cartItem.price * cartItem.quantity;
+    });
+    return (
+      <Box border={"1px solid red"} minW={{base:"full",md:"md",lg:"lg"}}>
+       <h4>Products</h4>
+       <Box display={'flex'} flexWrap={'wrap'}> {cart.map((el) =>{
+        return <Image maxW={'50px'} key={el.id} src={el.image[0]} alt={el.title}/>
+       })}</Box>
+
+       <h4>Price  : {totalPrice}</h4>
+       <Text>Gst: 18%</Text>
+       <h3>Grant Total : {totalPrice+totalPrice*0.18}</h3>
+      
+      </Box>
+    );
+  
+
 };
+
+
