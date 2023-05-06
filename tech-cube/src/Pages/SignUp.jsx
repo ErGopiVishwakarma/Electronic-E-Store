@@ -38,7 +38,7 @@ export default function SignUp() {
   const loader = useSelector(store => store.authReducer.isLoading);
   const error = useSelector(store => store.authReducer.isError);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
     if (!firstName || !lastName || !email || !password || !mobile) {
@@ -131,6 +131,7 @@ export default function SignUp() {
       isClosable: true,
     }))
     return;
+
   }
 
 

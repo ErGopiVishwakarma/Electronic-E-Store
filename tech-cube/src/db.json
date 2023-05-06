@@ -1,20 +1,2 @@
-{
-  "users": [
-    {
-      "firstName": "Ritesh",
-      "lastName": "Goswami",
-      "email": "riteshgoswami22201@gmail.com",
-      "password": "1234",
-      "mobile": 8210483459,
-      "id": 1
-    },
-    {
-      "firstName": "Ritesh",
-      "lastName": "Goswami",
-      "email": "sonukumar80924033@gmail.com",
-      "password": "1234",
-      "mobile": 8210483459,
-      "id": 2
-    }
-  ]
-}
+
+
