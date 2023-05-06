@@ -11,17 +11,17 @@ import {
   Button,
   Heading,
   Text,
+  Image,
   useColorModeValue,
   Link,
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
-import { useDispatch, useSelector } from 'react-redux';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { signup } from '../redux/Authentication/action';
-import { RESET } from '../redux/Authentication/actionType';
 import axios from 'axios';
 import { useToast } from '@chakra-ui/react';
-import { useNavigate } from 'react-router-dom';
+import signupImg from '../Assets/signupImg.jpg';
 
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
@@ -30,19 +30,20 @@ export default function SignUp() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [mobile, setMobile] = useState(0);
-  const [flag, setFlag] = useState(false);
   const dispatch = useDispatch();
   const toast = useToast();
-  const navigate = useNavigate();
-  // const isRegister = useSelector(store => store.authReducer.isRegistered);
+
+  const isRegister = useSelector(store => store.authReducer.isRegistered);
+  const loader = useSelector(store => store.authReducer.isLoading);
+  const error = useSelector(store => store.authReducer.isError);
+
 
   const handleSubmit = async(e) => {
     e.preventDefault();
 
-
     if (!firstName || !lastName || !email || !password || !mobile) {
       toast({
-        title: 'Failed.',
+        title: 'Registration Failed.',
         description: "All fields are required.",
         status: 'warning',
         duration: 4000,
@@ -50,6 +51,26 @@ export default function SignUp() {
         isClosable: true,
       })
       return
+    }
+
+    if (mobile.toString().length !== 10) {
+      toast({
+        title: 'Correct details Required!',
+        description: "Please fill valid mobile number!",
+        status: 'warning',
+        duration: 4000,
+        position: 'top',
+        isClosable: true,
+      })
+      return;
+    }
+
+    if(loader){
+      return <h1 textAlign='center'>Loading...</h1>
+    }
+
+    if(error){
+      return <h1 textAlign='center'>Something went wrong. Please refresh the page.</h1>
     }
 
     let userData = {
@@ -60,9 +81,6 @@ export default function SignUp() {
       mobile
 
     }
-// from here to till 
-
-    // till here  gopi vishwakarma 
 
   }
 
@@ -71,8 +89,9 @@ export default function SignUp() {
       minH={'100vh'}
       align={'center'}
       justify={'center'}
+      direction={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }}
       bg={useColorModeValue('gray.50', 'gray.800')}>
-      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+      <Stack w={'50%'} spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
           <Heading fontSize={'4xl'} textAlign={'center'}>
             Create your Account
@@ -88,20 +107,19 @@ export default function SignUp() {
           p={8}>
           <Stack spacing={4}>
             <form onSubmit={handleSubmit}>
-              <HStack>
-                <Box>
-                  <FormControl id="firstName">
-                    <FormLabel>First Name</FormLabel>
-                    <Input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-                  </FormControl>
-                </Box>
-                <Box>
-                  <FormControl id="lastName">
-                    <FormLabel>Last Name</FormLabel>
-                    <Input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
-                  </FormControl>
-                </Box>
-              </HStack>
+              <Box>
+                <FormControl id="firstName">
+                  <FormLabel>First Name</FormLabel>
+                  <Input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                </FormControl>
+              </Box>
+              <Box>
+                <FormControl id="lastName">
+                  <FormLabel>Last Name</FormLabel>
+                  <Input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                </FormControl>
+              </Box>
+
               <FormControl id="mobile">
                 <FormLabel>Mobile Number</FormLabel>
                 <Input type="number" value={mobile} onChange={(e) => setMobile(+e.target.value)} />
@@ -147,6 +165,9 @@ export default function SignUp() {
           </Stack>
         </Box>
       </Stack>
+      <Box w={'50%'} p={'20px'}>
+        <Image w={'100%'} mr={'20px'} borderRadius={'10px'} src={signupImg} alt='signupImg' />
+      </Box>
     </Flex>
   );
 }
