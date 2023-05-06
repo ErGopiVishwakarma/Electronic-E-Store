@@ -3,6 +3,7 @@ import { Box } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import MainRoutes from './route/MainRoutes';
+import CartPage from './Pages/CartPage';
 
 import Navbar from './component/HomeComponent/Navbar';
 import Footer from './component/HomeComponent/Footer';
@@ -12,10 +13,16 @@ import { FilterSort } from './component/ProductComponent/FilterSort';
 function App() {
   return (
     <Box>
-      <ColorModeSwitcher />
-      {/* <MainRoutes /> */}
 
-      {/* <Navbar /> */}
+
+
+     
+     
+
+     
+      <Navbar />
+
+
       <MainRoutes />
       {/* <Footer /> */}
 
