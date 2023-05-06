@@ -48,6 +48,7 @@ import UserProfile from '../component/Admin/UserModal';
 export default function AdminPage() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
+
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')} pos="relative" zIndex={999}>
       <SidebarContent
         onClose={() => onClose}
@@ -75,6 +76,7 @@ export default function AdminPage() {
       </Box>
     </Box>
   );
+
 }
 
 
