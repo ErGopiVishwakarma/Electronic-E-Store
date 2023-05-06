@@ -24,7 +24,7 @@ function App() {
 
 
       <MainRoutes />
-      {/* <Footer /> */}
+      <Footer />
 
       {/* <FilterSort /> */}
       {/* <ProductPage /> */}
