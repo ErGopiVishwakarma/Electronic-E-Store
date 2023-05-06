@@ -1,26 +1,30 @@
 import React from 'react';
 import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
+  Box
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import MainRoutes from './route/MainRoutes';
 import CartPage from './Pages/CartPage';
 
+import Navbar from './component/HomeComponent/Navbar';
+import Footer from './component/HomeComponent/Footer';
+
+
 function App() {
   return (
     <Box>
-    
-      <CartPage />
-      {/* <ColorModeSwitcher /> */}
+
+
+     
+     
+
+     
+      <Navbar />
+
       <MainRoutes />
+      <Footer />
+
     </Box>
   );
 }
