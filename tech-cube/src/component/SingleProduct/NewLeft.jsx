@@ -14,6 +14,10 @@ const NewLeft = props => {
   const Brand = 'boat';
   const tag_badge = '42 Hours Playback';
 
+  // console.log("today is day-4 ")
+
+
+  
   return (
     <Box
       display={'flex'}
@@ -55,7 +59,7 @@ const NewLeft = props => {
         borderBottom={'2px'}
       >
 
-      
+
         <Box>
           <img src={image[index]} alt="" width="100%" />
         </Box>
