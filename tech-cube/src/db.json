@@ -15,6 +15,14 @@
       "password": "1234",
       "mobile": 8210483459,
       "id": 2
+    },
+    {
+      "firstName": "Ritesh",
+      "lastName": "Goswami",
+      "email": "sonukumar3362@rediffmail.com",
+      "password": "1234",
+      "mobile": 8210483459,
+      "id": 3
     }
   ]
 }
