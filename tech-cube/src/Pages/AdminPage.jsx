@@ -1,9 +1,159 @@
-import React from 'react'
 
-const AdminPage = () => {
+import React, { ReactNode, useState } from 'react';
+import {
+  IconButton,
+  Avatar,
+  Box,
+  CloseButton,
+  Flex,
+  HStack,
+  VStack,
+  Icon,
+  useColorModeValue,
+  Link,
+  Drawer,
+  DrawerContent,
+  Text,
+  useDisclosure,
+  Menu,
+  MenuButton,
+  MenuDivider,
+  MenuItem,
+  MenuList,
+  Input,
+} from '@chakra-ui/react';
+import {
+  FiHome,
+  FiTrendingUp,
+  FiCompass,
+  FiStar,
+  FiSettings,
+  FiMenu,
+  FiBell,
+  FiChevronDown,
+} from 'react-icons/fi';
+
+import SidebarContent from '../component/Admin/SidebarContent';
+import AdminBody from '../component/Admin/AdminBody';
+import UserProfile from '../component/Admin/UserModal';
+
+
+ const LinkItems= [
+  { name: 'Dashboard', icon: FiHome },
+  { name: 'Admin Profile', icon: FiTrendingUp },
+  { name: 'User Profile', icon: FiCompass },
+  { name: 'All Product', icon: FiStar },
+  { name: 'Home', icon: FiSettings },
+];
+export default function AdminPage() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <div>AdminPage</div>
-  )
+
+    <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')} pos="relative" zIndex={999}>
+      <SidebarContent
+        onClose={() => onClose}
+        display={{ base: 'none', md: 'none', lg:'block' }}
+      />
+      <Drawer
+        autoFocus={false}
+        isOpen={isOpen}
+        placement="left"
+        onClose={onClose}
+        returnFocusOnClose={false}
+        onOverlayClick={onClose}
+       >
+        <DrawerContent>
+          <SidebarContent onClose={onClose} />
+        </DrawerContent>
+      </Drawer>
+      
+      {/* mobilenav */}
+      <MobileNav onOpen={onOpen} />
+
+      {/* here is all pages of body  */}
+      <Box ml={{ base: 0, md: 0 ,lg:60}} p={{base:'2',md:'3',lg:'4'}}>
+         <AdminBody />
+      </Box>
+    </Box>
+  );
+
 }
 
-export default AdminPage
+
+const MobileNav = ({ onOpen, ...rest }) => {
+  return (
+    <Flex 
+    ml={{ base: 0, md: 0,lg:60 }}
+      px={{ base: 4, md: 4 }}
+      height="20"
+      alignItems="center"
+      bg={'blackAlpha.900'}
+      borderBottomWidth="1px"
+      borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
+      justifyContent={{ base: 'space-between', md: 'space-between' }}
+      {...rest}>
+      <IconButton
+        display={{ base: 'flex', md: 'block',lg:'none' }}
+        onClick={onOpen}
+        variant="unstyled"
+        color={'white'}
+        aria-label="open menu"
+        icon={<FiMenu />}
+      />
+       <Flex display={{base:'none',md:'none',lg:'block'}}>
+       <Input w="300px" placeholder='search' color="white" variant={'outline'}/>
+       </Flex> 
+      <Text
+        display={{ base: 'flex', md: 'block' ,lg:'none'}}
+        fontSize="2xl"
+        fontFamily="monospace"
+        color="white"
+        fontWeight="bold">
+        Logo
+      </Text>
+
+      <HStack spacing={{ base: '0', md: '6' }}>
+        <Flex alignItems={'center'}>
+          <Menu>
+            <MenuButton
+              py={2}
+              transition="all 0.3s"
+              _focus={{ boxShadow: 'none' }}>
+              <HStack>
+                <Avatar
+                  size={'sm'}
+                  src={
+                    'https://lenstax.com/auth/app-assets/images/profile/user-uploads/user-04.jpg'
+                  }
+                />
+                <VStack
+                  display={{ base: 'none', md: 'flex' }}
+                  alignItems="flex-start"
+                  color='white'
+                  spacing="1px"
+                  ml="2">
+                  <Text fontSize="sm">gopi vishwakarma</Text>
+                  <Text fontSize="xs" color='white'>
+                    Admin
+                  </Text>
+                </VStack>
+                <Box display={{ base: 'none', md: 'flex' }}>
+                  <FiChevronDown />
+                </Box>
+              </HStack>
+            </MenuButton>
+            <MenuList>
+              <MenuItem>
+                <UserProfile>
+                  Profile
+                </UserProfile>
+              </MenuItem>
+              <MenuItem>Sign out</MenuItem>
+            </MenuList>
+          </Menu>
+        </Flex>
+      </HStack>
+    </Flex>
+  );
+};
+
