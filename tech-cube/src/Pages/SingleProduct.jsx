@@ -1,9 +1,73 @@
-import React from 'react'
+import {
+  Badge,
+  Box,
+  Button,
+  Center,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  Stack,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react';
+import { singleProductfunc } from '../redux/Product/action';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
+// import { singleProductfunc } from '../redux/Product/action';
+import NewLeft from '../component/SingleProduct/NewLeft'
+import NewRight from '../component/SingleProduct/NewRight';
+import { extendTheme } from '@chakra-ui/react';
+
+// 2. Update the breakpoints as key-value pairs
+const breakpoints = {
+  sm: '320px',
+  md: '768px',
+  lg: '960px',
+  xl: '1200px',
+  '2xl': '1536px',
+};
+
+// 3. Extend the theme
+const theme = extendTheme({ breakpoints });
 
 const SingleProduct = () => {
-  return (
-    <div>SingleProduct</div>
-  )
-}
+  const dispatch = useDispatch();
+  const { id } = useParams();
 
-export default SingleProduct
+  // const data=useSelector((store)=> store.productReducer.data)
+  // const singleData=data.find((singleData)=>singleData.id === parseInt(id));
+
+  const spData = useSelector(store => store.productReducer.spData);
+
+  useEffect(() => {
+    dispatch(singleProductfunc(id));
+  }, []);
+
+  return (
+    <Box display={['block', 'block', 'block', 'flex']} width={'100%'} paddingTop={'50px'}>
+      <Box width={['100%']}>
+        <NewLeft spData={spData} />
+      </Box>
+
+      <div
+        style={{
+          width: '5px',
+          height: 'full',
+          backgroundColor: 'black',
+          margin: '5% 0 5% 0',
+          opacity: '40%',
+        }}
+      />
+
+      <Box width={['100%']}>
+        {' '}
+        <NewRight />
+      </Box>
+    </Box>
+  );
+};
+
+export default SingleProduct;
