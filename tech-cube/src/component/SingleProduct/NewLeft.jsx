@@ -45,6 +45,8 @@ const NewLeft = props => {
         })}
       </Box>
 
+
+
       <Box
         borderRightRadius={'md'}
         overflow={'hidden'}
@@ -52,6 +54,8 @@ const NewLeft = props => {
         bg={'gray.300'}
         borderBottom={'2px'}
       >
+
+      
         <Box>
           <img src={image[index]} alt="" width="100%" />
         </Box>

@@ -30,6 +30,10 @@ const data = {
 const NewRight = () => {
   const roundedRating = Math.round(data.rating);
 
+
+
+  // console.log("Today is day-3")
+
   return (
     <Box  textAlign={"left"} margin={['5%','5%','10%','10%']}>
       <Box >
