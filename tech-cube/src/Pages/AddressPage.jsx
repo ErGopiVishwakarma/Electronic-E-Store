@@ -131,7 +131,7 @@ const AddressForm = () => {
   );
 };
 
-const PaymentForm = () => {
+export const PaymentForm = () => {
   const [paymentDetails, setPaymentDetails] = useState({});
   const dispatch = useDispatch();
 
@@ -147,7 +147,7 @@ const PaymentForm = () => {
 
   return (
     <>
-      <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
+      {/* <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
         Payment method
       </Heading>
       <Grid templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }} gap={3}>
@@ -181,7 +181,10 @@ const PaymentForm = () => {
             Remember credit card details for next time
           </Checkbox>
         </GridItem>
-      </Grid>
+      </Grid> */}
+
+
+      
 
     </>
   );

@@ -5,11 +5,13 @@ import {
     Stack,
     Text,
     Box,
-    Image, Table, TableCaption, TableContainer, Tbody, Td, Th, Thead, Tr, useMediaQuery, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter
+    Image, useMediaQuery, useDisclosure, Divider, Select
   } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateCartFn } from '../../redux/CartReducer/action';
+import { ChevronDownIcon, DeleteIcon } from '@chakra-ui/icons';
+
   
   export default function CartItem({
       id,
@@ -38,24 +40,17 @@ cart.forEach((cartItem) => {
 }); // this for shoing total price
 
 
-const handleAddQty = () => {
+const handleQuantity = (e) => {
+  
     const upDatedData=cart.map((el)=>{
-      return el.id===id?{...el,quantity:el.quantity+1}:el;
+      return el.id===id?{...el,quantity:+e.target.value}:el;
     })
   
     dispatch(updateCartFn(upDatedData));
-      setQty(prev => prev + 1);
+      setQty(+e.target.value);
     };
   
-    const handleSubQty = () => {
-      const upDatedData=cart.map((el)=>{
-        return el.id===id?{...el,quantity:el.quantity-1}:el;
-      })
     
-      dispatch(updateCartFn(upDatedData));
-      setQty(prev => prev - 1);
-    };
-  
     const handleDeleteQty = () => {
       const upDatedData=cart.filter((el)=>{
         return el.id!==id
@@ -68,129 +63,49 @@ const handleAddQty = () => {
 
 
 
-    return isLargerThan800?(
-      
-<TableContainer>
-            <Table variant="simple">
-              <TableCaption>Grand Total Price : {totalPrice}</TableCaption>
-              <Thead>
-                <Tr>
-                
-                  <Th>Image</Th>
-                  <Th>Title</Th>
-                  <Th>Price</Th>
-                  <Th>Quan.</Th>
-                  <Th>Total</Th>
-                  <Th>Edit</Th>
-                </Tr>
-              </Thead>
-              {cart.length > 0 &&
-                cart.map((item) => {
-                  return (
-                    <Tbody>
-                      <Tr>
-                  
-                        <Td>
-                          <img src={item.image} 
-                            width={"100px"}
-                            alt={item.title}
-                          />
-                        </Td>
-                        <Td>{item.title}</Td>
-                        <Td>{item.price}</Td>
-                        <Td>{item.quantity}</Td>
-                        <Td>{Number(item.quantity) * Number(item.price)}</Td>
-                        <Td>
-                        <Button onClick={onOpen}>Edit</Button>
-
-<Modal isOpen={isOpen} onClose={onClose}>
-  <ModalOverlay/>
-  <ModalContent>
-    <ModalHeader>{item.title}</ModalHeader>
-    <ModalCloseButton />
-    <ModalBody>
-
-     <Text>Total Price :{item.price*qty}</Text>
-     <Text>Quantity :{qty}</Text>
-     <Button display={quantity >= 5 && 'none'} onClick={handleAddQty}> +   </Button>
-     <Button display={quantity === 1 && 'none'} onClick={handleSubQty}>   - </Button>
+    return (
     
-    </ModalBody>
 
-    <ModalFooter>
-      <Button colorScheme='blue' mr={3} onClick={onClose}>
-        Save
-      </Button>
-      <Button variant={'outline'} color={'red.300'} onClick={handleDeleteQty}>Delete</Button>
-    </ModalFooter>
-  </ModalContent>
-</Modal>
-                        </Td>
-                      </Tr>
-                    </Tbody>
-                  );
-                })}
-            </Table>
-          </TableContainer>
-    ):(
-<Stack
-        direction={{ base: 'column', md: 'row' }}
-        borderBottom={'2px solid gray'}
-        borderRadius={"10px"}
-      >
-        <Flex flex={1}>
-          <Image maxH={"250px"} alt={'Login Image'} objectFit={'cover'} src={image} />
-        </Flex>
-        <Flex p={8} flex={1} align={'center'} justify={'center'}>
-          <Stack spacing={4} maxW={{ md:'sm'}}>
-            <Heading fontSize={'2xl'}>{title}</Heading>
-            <Heading color={'orange.400'} fontSize={'xl'}>
-              {brand}
-            </Heading>
-            <Box
-              display={!edit ? 'flex' : 'none'}
-              alignItems={'center'}
-              flexWrap={'wrap'}
-              gap={'40px'}
-            >
-              <Text>Color: {color[0]}</Text>
-              <Text>Qty: {qty}</Text>
-              <Text>Price:${price}</Text>
-              <Text>Total:$ {price * quantity}</Text>
-              <Button onClick={handleEdit}>Edit</Button>
-            </Box>
+<Box  width={{base:"full",sm:'full',md:'sm' ,lg:'lg',xl:'2xl'}} marginTop={'20px'}  marginBottom={'20px'}>
 
-            <Box
-              display={edit ? 'flex' : 'none'}
-              alignItems={'center'}
-              flexWrap={'wrap'}
-              gap={'40px'}
-            >
-              <Text>Quantity: {quantity}</Text>
-              <Button isDisabled={quantity >= 5} onClick={handleAddQty}>
-                +
-              </Button>
-              <Button display={quantity === 1 && 'none'} onClick={handleSubQty}>
-                -
-              </Button>
-              <Button
-                bgColor={'red.200'}
-                display={quantity > 1 && 'none'}
-                onClick={handleDeleteQty}
-              >
-                Delete
-              </Button>
-              <Button
-                display={quantity === 1 && 'none'}
-                bgColor={'green.200'}
-                onClick={handleEdit}
-              >
-                Save
-              </Button>
-            </Box>
-          </Stack>
-        </Flex>
-      </Stack>
+<Box  display={'flex'} flexDirection={{base:"column",md:"row"}} justifyContent={"space-between"}  gap={'20px'}>
+
+  <Image width={{base:"100vw",sm:'100vw',md:'120px' ,lg:'150px',xl:'200px'}} src={image} alt={title} />
+  <Box className='TitleColorBrand'>
+    <Text fontWeight={'bold'} fontSize={'20px'}>{title}</Text>
+    <Text>Color:{color}</Text>
+    <Text fontWeight={'bold'} color={'orange.400'}>Brand: {brand}</Text>
+    </Box>
+  <Box className='EatchPrice'><Text fontWeight={'bold'} fontSize={'16px'}>Each</Text>
+  <Text fontWeight={'bold'} fontSize={'15px'}>$ {price}</Text>
+  </Box>
+  <Box className='Quentity'><Text fontWeight={'bold'} fontSize={'16px'}>Quantity</Text>
+  <Select placeholder={quantity}  onChange={handleQuantity}>
+  <option value='1'> 1</option>
+  <option value='2'> 2</option>
+  <option value='3'> 3</option>
+  <option value='4'> 4</option>
+  <option value='5'> 5</option>
+</Select>
+ 
+  </Box>
+  <Box className='Total'><Text fontWeight={'bold'}>Delete</Text>
+  <DeleteIcon fontSize={"20px"} color={'red.500'} onClick={handleDeleteQty}/>
+  </Box>
+</Box>
+
+<Box className='actions' display={'flex'} flexDirection={{base:"column",md:"row"}} justifyContent={"space-between"} alignItems={"center"}>
+
+
+  <Button  variant="outline"  border={'none'}>Move to Wishlist</Button>
+  <Button  variant="outline" border={'none'}>Save For Letter</Button>
+</Box>
+<Divider />
+<Divider/>
+</Box>
+
+
+ 
 
 
     )
