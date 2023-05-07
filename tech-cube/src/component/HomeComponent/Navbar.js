@@ -55,6 +55,7 @@ export default function Navbar() {
     <Box
       bg="white"
       pos={'fixed'}
+      top={'0px'}
       w="100%"
       zIndex={999}
       borderBottom={'1px solid white'}

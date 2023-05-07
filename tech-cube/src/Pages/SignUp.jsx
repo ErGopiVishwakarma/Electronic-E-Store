@@ -66,21 +66,6 @@ export default function SignUp() {
       return;
     }
 
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-
-    }
-    else {
-      toast({
-        title: 'Correct details Required!',
-        description: "Please fill valid email!",
-        status: 'warning',
-        duration: 4000,
-        position: 'top',
-        isClosable: true,
-      })
-      return;
-    }
-
     let userData = {
       firstName,
       lastName,
@@ -90,7 +75,7 @@ export default function SignUp() {
     }
 
     let check = false;
-    const data = await axios.get('http://localhost:8080/users').then(res => res.data)
+    const data = await axios.get('https://gopi.onrender.com/user').then(res => res.data)
     if (data.length > 0) {
       data.forEach(el => {
         if (el.email === userData.email) {
@@ -135,13 +120,6 @@ export default function SignUp() {
 
   }
   
-  // const manageLoader = () => {
-  //    return loader ? <Loader/> : ''
-  // }
-
-  // useEffect(() => {
-  //   manageLoader();
-  // }, [])
 
   return (
     loader ? <Loader/> :
