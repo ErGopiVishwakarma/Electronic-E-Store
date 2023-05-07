@@ -1,4 +1,4 @@
-import { ADD_TO_CART, PLACE_ORDER_FAILURE, PLACE_ORDER_REQUEST, PLACE_ORDER_SUCCESS, UPDATE_CART } from './actionType';
+import {ADD_PAYMENT_DETAILS, ADD_TO_CART, PLACE_ORDER_FAILURE, PLACE_ORDER_REQUEST, PLACE_ORDER_SUCCESS, UPDATE_CART } from './actionType';
 
 
 
@@ -15,3 +15,6 @@ export const updateCartFn=(data)=>(dispatch)=>{
     dispatch({type:UPDATE_CART,payload:data});
 }
 
+export const updatePaymentMethod=(paymentDetails)=>(dispatch)=>{
+    dispatch({type:ADD_PAYMENT_DETAILS,payload:paymentDetails})
+}

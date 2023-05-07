@@ -24,9 +24,10 @@ const CartPage = () => {
   },[]);
   return (
     <Box marginTop={"30px"}
+    px={'3%'}
       display={'flex'}
       flexDir={{ base: 'column', sm: 'column' ,md: 'row'}}
-      justifyContent={'space-between'}
+      justifyContent={'space-between'}  
     >
       {cart.length > 0 ? (<>
         <CartList />
