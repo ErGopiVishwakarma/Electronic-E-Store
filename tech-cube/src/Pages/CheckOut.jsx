@@ -1,34 +1,69 @@
-import { Box, Flex, Heading, Image, Text, Button, Divider, Alert, AlertIcon } from '@chakra-ui/react'
-import React, { useEffect } from 'react';
+import { Box, Flex, Heading, Image, Text, Button, Divider, Alert, AlertIcon, Input, InputGroup } from '@chakra-ui/react'
+import React, { useEffect, useRef, useState } from 'react';
 import { css } from '@emotion/react';
 import orderSummaryImg from '../Assets/orderSummaryImg.avif';
 import { useColorModeValue } from '@chakra-ui/react';
 import axios from 'axios';
-import { showData } from '../redux/CheckoutReducer/action';
+import { getAddress, postAddress, showData } from '../redux/CheckoutReducer/action';
 import { useDispatch, useSelector } from 'react-redux';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const CheckOut = () => {
   const text = useColorModeValue('dark', 'light');
   const dispatch = useDispatch();
   const data = useSelector(store => store.checkoutReducer.data);
-  const auth = useSelector(store => store.authReducer.isAuth);
+  const user = useSelector(store => store.checkoutReducer.userData);
+  let { cart } = useSelector(store => store.cartReducer);
+
+  const [toggle, setToggle] = useState(false);
+  let id = JSON.parse(localStorage.getItem('userId')) || '';
+  const navigate = useNavigate();
+  const ref = useRef(0);
+
+  const [formData, setFormData] = useState({
+    firstName: '', lastName: '', address: '', city: '', pincode: '', state: '', mobile: ''
+  })
 
   useEffect(() => {
     dispatch(showData);
+    if (id !== '') {
+      dispatch(getAddress(id));
+    }
+    totalPrice()
   }, [])
+
+  const handleEdit = () => {
+    setToggle(!toggle);
+  }
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  }
+
+  const handleSubmit = () => {
+    dispatch(postAddress(id, formData));
+    setToggle(!toggle);
+  }
+
+  const totalPrice = () => {
+    cart.forEach(el => {
+      ref.current = el.quantity * el.price + ref.current;
+    })
+  }
+  
 
   return (
     <Flex id='app' justifyContent={'center'} direction={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }} w={'90%'} m={'20px auto'} gap={'20px'}>
       <Box w={{ base: '100%', sm: '100%', md: '100%', lg: '65%', xl: '65%', '2xl': '65%' }} m={'100px 0 0px 0'}>
-        <Box boxShadow='rgba(0, 0, 0, 0.24) 0px 3px 8px' p={'20px'} borderRadius={'10px'}>
+        <Box overflowY={'scroll'} maxHeight={'400px'} boxShadow='rgba(0, 0, 0, 0.24) 0px 3px 8px' p={'20px'} borderRadius={'10px'}>
           <Heading as={'h2'} fontSize={'23px'}>Review form And Shipping</Heading>
           {data.length === 0 ? <Alert m={'20px 0'} p={'30px'} status='warning'>
-            <AlertIcon ml={'240px'}/>
+            <AlertIcon ml={'240px'} />
             No items here.
           </Alert> :
             data.map(el => {
-              return <Flex mt={'30px'} justifyContent={'space-between'}>
-                <Image w={'200px'} src={el.image[0]} alt='product' />
+              return <Flex alignItems={'center'} mt={'30px'} justifyContent={'space-between'}>
+                <Image w={'150px'} src={el.image[0]} alt='product' />
                 <Box>
                   <Heading as='h3' size={'md'}>{el.title}</Heading>
                   <Text>{el.category}</Text>
@@ -46,6 +81,8 @@ const CheckOut = () => {
             <Button
               borderRadius={'20px'}
               variant={'outline'}
+              onClick={handleEdit}
+              display={toggle && 'none'}
               css={css`
                 &:hover {
                 color: white;
@@ -53,42 +90,84 @@ const CheckOut = () => {
               }
              `}
             >
-              Edit Details
+              {!toggle ? 'Edit Address' : 'Add Address'}
             </Button>
           </Flex>
-          <Box>
-            <Flex mb={'15px'}>
-              <Heading as={'h3'} fontSize={'17px'}>Name</Heading>
-              <Text color={'gray'}></Text>
-            </Flex>
-            <Flex mb={'15px'}>
-              <Heading as={'h3'} fontSize={'17px'}>Address</Heading>
-              <Text color={'gray'}></Text>
-            </Flex>
-            <Flex mb={'15px'}>
-              <Heading as={'h3'} fontSize={'17px'}>City</Heading>
-              <Text color={'gray'}></Text>
-            </Flex>
-            <Flex mb={'15px'}>
-              <Heading as={'h3'} fontSize={'17px'}>Pincode</Heading>
-              <Text color={'gray'}></Text>
-            </Flex>
-            <Flex mb={'15px'}>
-              <Heading as={'h3'} fontSize={'17px'}>State</Heading>
-              <Text color={'gray'}></Text>
-            </Flex>
-            <Flex mb={'15px'}>
-              <Heading as={'h3'} fontSize={'17px'}>Mobile</Heading>
-              <Text color={'gray'}></Text>
-            </Flex>
-            <Flex mb={'15px'}>
-              <Heading as={'h3'} fontSize={'17px'}>Email</Heading>
-              <Text color={'gray'}></Text>
-            </Flex>
-          </Box>
+          {!toggle &&
+            <Box>
+              <Flex mb={'15px'}>
+                <Heading as={'h3'} fontSize={'17px'}>First Name</Heading>
+                <Text ml={'50px'} color={'gray'}>{user.firstName}</Text>
+              </Flex>
+              <Flex mb={'15px'}>
+                <Heading as={'h3'} fontSize={'17px'}>Last Name</Heading>
+                <Text ml={'50px'} color={'gray'}>{user.lastName}</Text>
+              </Flex>
+              <Flex mb={'15px'}>
+                <Heading as={'h3'} fontSize={'17px'}>Address</Heading>
+                <Text ml={'50px'} color={'gray'}>{user.address}</Text>
+              </Flex>
+              <Flex mb={'15px'}>
+                <Heading as={'h3'} fontSize={'17px'}>City</Heading>
+                <Text ml={'50px'} color={'gray'}>{user.city}</Text>
+              </Flex>
+              <Flex mb={'15px'}>
+                <Heading as={'h3'} fontSize={'17px'}>Pincode</Heading>
+                <Text ml={'50px'} color={'gray'}>{user.pincode}</Text>
+              </Flex>
+              <Flex mb={'15px'}>
+                <Heading as={'h3'} fontSize={'17px'}>State</Heading>
+                <Text ml={'50px'} color={'gray'}>{user.state}</Text>
+              </Flex>
+              <Flex mb={'15px'}>
+                <Heading as={'h3'} fontSize={'17px'}>Mobile</Heading>
+                <Text ml={'50px'} color={'gray'}>{user.mobile}</Text>
+              </Flex>
+              <Flex mb={'15px'}>
+                <Heading as={'h3'} fontSize={'17px'}>Email</Heading>
+                <Text ml={'50px'} color={'gray'}>{user.email}</Text>
+              </Flex>
+            </Box>
+          }
+
+          {toggle &&
+            <Box>
+              <Flex alignItems={'center'} justifyContent={'space-between'} mb={'15px'}>
+                <Heading as={'h3'} fontSize={'17px'}>First Name</Heading>
+                <Input w={'70%'} name='firstName' value={formData.firstName} onChange={handleChange} color={'gray'} type='text' />
+              </Flex>
+              <Flex alignItems={'center'} justifyContent={'space-between'} mb={'15px'}>
+                <Heading as={'h3'} fontSize={'17px'}>Last Name</Heading>
+                <Input w={'70%'} name='lastName' value={formData.lastName} onChange={handleChange} color={'gray'} type='text' />
+              </Flex>
+              <Flex alignItems={'center'} justifyContent={'space-between'} mb={'15px'}>
+                <Heading as={'h3'} fontSize={'17px'}>Address</Heading>
+                <Input w={'70%'} name='address' value={formData.address} onChange={handleChange} color={'gray'} type='text' />
+              </Flex>
+              <Flex alignItems={'center'} justifyContent={'space-between'} mb={'15px'}>
+                <Heading as={'h3'} fontSize={'17px'}>City</Heading>
+                <Input w={'70%'} name='city' value={formData.city} onChange={handleChange} color={'gray'} type='text' />
+              </Flex>
+              <Flex alignItems={'center'} justifyContent={'space-between'} mb={'15px'}>
+                <Heading as={'h3'} fontSize={'17px'}>Pincode</Heading>
+                <Input w={'70%'} name='pincode' value={formData.pincode} onChange={handleChange} color={'gray'} type='text' />
+              </Flex>
+              <Flex alignItems={'center'} justifyContent={'space-between'} mb={'15px'}>
+                <Heading as={'h3'} fontSize={'17px'}>State</Heading>
+                <Input w={'70%'} name='state' value={formData.state} onChange={handleChange} color={'gray'} type='text' />
+              </Flex>
+              <Flex alignItems={'center'} justifyContent={'space-between'} mb={'15px'}>
+                <Heading as={'h3'} fontSize={'17px'}>Mobile</Heading>
+                <Input w={'70%'} name='mobile' value={formData.mobile} onChange={handleChange} color={'gray'} type='number' />
+              </Flex>
+              <Flex justifyContent={'flex-end'}>
+                <Button onClick={handleSubmit} _hover={'none'} bg={'black'} color={'white'}>Save Address</Button>
+              </Flex>
+            </Box>
+          }
         </Box>
       </Box>
-      <Box mt={{ base: '10px', sm: '10px', md: '10px', lg: '100px', xl: '100px', '2xl': '100px' }} w={{ base: '100%', sm: '100%', md: '100%', lg: '35%', xl: '35%', '2xl': '35%' }} boxShadow='rgba(0, 0, 0, 0.24) 0px 3px 8px' p={'20px'} borderRadius={'10px'}>
+      <Box mt={{ base: '10px', sm: '10px', md: '10px', lg: '100px', xl: '100px', '2xl': '100px' }} w={{ base: '100%', sm: '100%', md: '100%', lg: '35%', xl: '35%', '2xl': '35%' }} boxShadow='rgba(0, 0, 0, 0.24) 0px 3px 8px' p={'20px'} h={'550px'} borderRadius={'10px'}>
         <Flex justifyContent={'center'}>
           <Image w={'250px'} src={orderSummaryImg} alt='orderSummaryImg' />
         </Flex>
@@ -109,15 +188,15 @@ const CheckOut = () => {
         <Box lineHeight={'35px'}>
           <Flex justifyContent={'space-between'}>
             <Text>Subtotal</Text>
-            <Text>₹ {data.length === 0 ? 0 : 100}</Text>
+            <Text>₹ {ref.current}</Text>
           </Flex>
           <Flex justifyContent={'space-between'}>
             <Text>Shipping</Text>
-            <Text>FREE</Text>
+            <Text>{ref.current > 500 ? 'FREE' : '₹ 40'}</Text>
           </Flex>
           <Flex justifyContent={'space-between'}>
             <Text>Estimated Tax</Text>
-            <Text>₹ {data.length === 0 ? 0 : 20}</Text>
+            <Text>₹ {ref.current > 1000 ? 'FREE' : 30}</Text>
           </Flex>
         </Box>
         <Box m={'10px 0'} h={'3px'} color={'gray.600'}>
@@ -126,13 +205,13 @@ const CheckOut = () => {
         <Box>
           <Flex justifyContent={'space-between'}>
             <Heading size={'md'}>Total</Heading>
-              <Heading size={'md'}>₹ {data.length === 0 ? 0 : 100}</Heading>
+            <Heading size={'md'}>₹ {ref.current > 500 && ref.current < 1000 ? ref.current + 30 : ref.current > 1000 ? ref.current : ref.current + 30 + 40}</Heading>
           </Flex>
         </Box>
         <Box m={'10px 0'} h={'3px'} color={'gray.600'}>
           <Divider orientation='horizontal'></Divider>
         </Box>
-        <Button _hover={'none'} w={'100%'} bg={text === 'dark' ? 'black' : 'white'} color={text === 'dark' ? 'white' : 'black'}>Proceed to Payment</Button>
+        <Button onClick={() => navigate('/payment')} _hover={{ bg: 'gray.700' }} w={'100%'} bg={text === 'dark' ? 'black' : 'white'} color={text === 'dark' ? 'white' : 'black'}>Proceed to Payment</Button>
       </Box>
     </Flex>
   )

@@ -43,18 +43,27 @@ import logo from '../../Assets/techcube.png';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 import { useState } from 'react';
 import UserProfile from './UserProfile';
+import { useDispatch } from 'react-redux';
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
   const text = useColorModeValue('dark', 'light')
   const textColor = text === 'dark' ? 'gray.100' : 'blackAlpha.900'
-  const [open, setOpen] = useState(false)
+
+  const [open, setOpen] = useState(false);
+  const auth = JSON.parse(localStorage.getItem('auth')) || '';
+  const navigate = useNavigate();
 
   const openFun = () => {
     setOpen(true)
   }
   const closeFun = () => {
     setOpen(false)
+  }
+
+  const handleLogout = () => {
+    localStorage.setItem('auth', JSON.stringify(false));
+    navigate('/login');
   }
 
   return (
@@ -151,8 +160,13 @@ export default function Navbar() {
               <MenuItem>
                 <UserProfile>User Profile</UserProfile>
               </MenuItem>
+
+              <MenuItem onClick={handleLogout}>LogOut</MenuItem>
+              <NavLink to='/admin'> <MenuItem>Admin</MenuItem></NavLink>
+
               <MenuItem>LogOut</MenuItem>
               <NavLink to='/adminlogin'> <MenuItem>Admin</MenuItem></NavLink>
+
             </MenuList>
           </Menu>
           <NavLink to="/cart">
