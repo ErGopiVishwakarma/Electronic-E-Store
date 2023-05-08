@@ -28,6 +28,7 @@ export const ProductCard = ({
         <Box
           className="bestdeal"
           justifyContent={'center'}
+          
           alignItems={'center'}
           display={'flex'}
         >
@@ -36,7 +37,7 @@ export const ProductCard = ({
             alt="image"
             height={'220px'}
             width={'260px'}
-            onClick={() => navigate('/products/id')}
+            onClick={() => navigate(`/products/${id}`)}
           />
         </Box>
       </Box>
