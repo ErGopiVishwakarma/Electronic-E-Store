@@ -22,7 +22,7 @@ export const reducer = (state = initialState, {type, payload}) => {
                 ...state,
                 isLoading : false,
                 isRegistered : true,
-                data : [...state.users, payload]
+                users : [...state.users, payload]
             }
         }
 
@@ -46,7 +46,8 @@ export const reducer = (state = initialState, {type, payload}) => {
             return {
                 ...state,
                 isLoading : false,
-                isAuth : true
+                isAuth : true,
+                users : payload
             }
         }
 

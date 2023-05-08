@@ -9,6 +9,7 @@ import {
   Box,
 } from '@chakra-ui/react';
 import { VscHeart } from 'react-icons/vsc';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export const ProductCard = ({
   id,
@@ -18,7 +19,9 @@ export const ProductCard = ({
   description,
   rating,
   review,
+  discount,
 }) => {
+  const navigate = useNavigate();
   return (
     <Flex direction={'column'} pos={'relative'} borderRadius={'12px'}>
       <Box p="20px" bg="#F5F5F5" boxSizing="borderBox" borderRadius={'9PX'}>
@@ -28,28 +31,43 @@ export const ProductCard = ({
           alignItems={'center'}
           display={'flex'}
         >
-          <Image src={image[0]} alt="image" height={'220px'} width={'260px'} />
+          <Image
+            src={image[0]}
+            alt="image"
+            height={'220px'}
+            width={'260px'}
+            onClick={() => navigate('/products/id')}
+          />
         </Box>
       </Box>
 
       <Stack px="5px">
+        <Text
+          fontWeight={'bold'}
+          fontSize={'18px'}
+          fontFamily={'sans-serif'}
+          pt={'10px'}
+        >
+          {title.length < 30 ? title : title.substring(0, 32)}
+        </Text>
         <Flex justifyContent={'space-between'}>
-          <Text
-            fontWeight={'bold'}
-            fontSize={'18px'}
-            fontFamily={'sans-serif'}
-            mt={'5px'}
-          >
-            {title.substring(0, 20)}...
-          </Text>
           <Flex>
-            <Text fontWeight={'bold'} fontSize={'18px'} mt={'5px'}>
+            <Text fontWeight={'bold'} fontSize={'18px'} mt={'2px'} pt={'0px'}>
               {'₹' + price}
             </Text>
-            <Text fontSize={'15px'} fontWeight={600} mt={'5px'}>
+            <Text fontSize={'15px'} fontWeight={600} mt={'0px'} mb={'20px'}>
               .00
             </Text>
           </Flex>
+
+          <Text
+            fontWeight={'bold'}
+            fontSize={'22px'}
+            mt={'1px'}
+            color={'green.600'}
+          >
+            {discount > 0 ? discount + '%' : ''}
+          </Text>
         </Flex>
         <Text fontSize={'14px'} opacity="80%">
           {description.substring(0, 30)}...

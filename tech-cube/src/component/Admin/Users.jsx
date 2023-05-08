@@ -1,49 +1,36 @@
-import { Flex, Center, Box, Heading, Image, Text, Button } from '@chakra-ui/react'
+import { Flex, Center, Box, Heading, Image, Text, Button, Avatar } from '@chakra-ui/react'
 import axios from 'axios'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import { getUser } from '../../redux/Admin/action'
 
-export const adminPageData = [
-    { image: 'https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg' },
-    { image: 'https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg' },
-    { image: 'https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg' },
-    { image: 'https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg' },
-    { image: 'https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg' },
-    { image: 'https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg' }
-]
-
 const Users = () => {
-const dispatch = useDispatch()
-const userData= useSelector(store=>store.adminReducer.userProfile)
+const [user,setUser] = useState([])
 
 useEffect(()=>{
-    dispatch(getUser())
+    axios('http://localhost:8080/user').then(res => setUser(res.data))
 },[])
 
-console.log(userData)
 
     return (
         <Flex direction={'column'} bg='white' borderRadius={'10px'}>
-            <Flex justify={'space-between'} px={{ base: '7px', md: '20px', lg: '50px' }} alignItems={'center'} py="8px">
-                <Text fontSize={'20px'} fontWeight={'bolder'}>Total users - 5</Text>
-                <Button>Add Users</Button>
+            <Flex justify={'flex-end'} px={{ base: '7px', md: '20px', lg: '50px' }} alignItems={'center'} py="15px">
+                <Text fontSize={'20px'} fontWeight={'bolder'}>Total users - {user.length}</Text>
             </Flex>
             <Box w="98%" h={{ base: "100vh", md: '100vh', lg: '450px' }} direction={'column'} overflow={'scroll'} >
 
                 {
-                    userData?.map((el,ind) => (
+                    user?.map((el,ind) => (
                         <Flex key={ind} direction={{ base: 'column', md: 'row' }} justify="space-between" alignItems={'center'} px={{ base: '7px', md: '20px', lg: '50px' }} py="10px" boxShadow="rgba(0, 0, 0, 0.16) 0px 1px 4px">
                             <Flex w="100%" justifyContent={'space-between'} pr={{ base: '0px', md: '30px', lg: '100px' }} alignItems={'center'}>
-                                <Image src={el.image} w='70px' h='70px' borderRadius={'50%'} />
+                                <Avatar src={el.image} w='70px' h='70px' borderRadius={'50%'} name={el.name} />
                                 <Text>{el.name}</Text>
                                 <Button display={{ base: 'block', md: 'none' }}>show detail</Button>
-                                <Text display={{ base: 'none', md: 'block' }}>{el.email}</Text>
+                                <Text display={{ base: 'none', md: 'block' }}>{el.email.substring(0,20)}</Text>
                                 <Text display={{ base: 'none', md: 'block' }}>{el.password}</Text>
                             </Flex>
-                            <Flex gap={{ base: '30px', md: '30px', lg: '50px' }} display={{ base: 'none', md: 'flex' }} >
-                                <Button>Edit</Button>
-                                <Button>Delete</Button>
+                            <Flex gap={{ base: '30px', md: '30px', lg: '50px' }} display={{ base: 'none', md: 'flex' }} >                                
+                                <Button bg="red.400" colorScheme='black'>Block User</Button>
                             </Flex>
                         </Flex>
                     ))

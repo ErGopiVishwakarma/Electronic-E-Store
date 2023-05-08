@@ -35,7 +35,7 @@ import {
 import { IconContext } from 'react-icons';
 import { FaHome, FaSearch, FaShoppingBag, FaUser } from 'react-icons/fa';
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import logo1 from '../../Assets/techCubeLogo.png';
 
 import { NAV_ITEMS } from './navComponent/NavItem';
@@ -49,21 +49,13 @@ export default function Navbar() {
   const text = useColorModeValue('dark', 'light')
   const textColor = text === 'dark' ? 'gray.100' : 'blackAlpha.900'
   const [open, setOpen] = useState(false)
+
   const openFun = () => {
     setOpen(true)
   }
   const closeFun = () => {
     setOpen(false)
   }
-  // const [isTrue,setIsTrue] = useState(false)
-  // window.addEventListener('wheel',(e)=>{
-  //     if(e.deltaY<0){
-  //       setIsTrue(false)
-  //     } else {
-  //       setIsTrue(true)
-  //     }
-
-  //   })
 
   return (
     <Box
@@ -160,7 +152,7 @@ export default function Navbar() {
                 <UserProfile>User Profile</UserProfile>
               </MenuItem>
               <MenuItem>LogOut</MenuItem>
-              <NavLink to='/admin'> <MenuItem>Admin</MenuItem></NavLink>
+              <NavLink to='/adminlogin'> <MenuItem>Admin</MenuItem></NavLink>
             </MenuList>
           </Menu>
           <NavLink to="/cart">
