@@ -5,12 +5,16 @@ import {
   Stack,
   Text,
   Box,
+
   Image, useMediaQuery, useDisclosure, Divider, Select
+
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateCartFn } from '../../redux/CartReducer/action';
+
 import { ChevronDownIcon, DeleteIcon } from '@chakra-ui/icons';
+
 
 
 export default function CartItem({
@@ -38,6 +42,7 @@ export default function CartItem({
   cart.forEach((cartItem) => {
     totalPrice += cartItem.price * cartItem.quantity;
   }); // this for shoing total price
+
 
 
   const handleQuantity = (e) => {
@@ -81,8 +86,7 @@ export default function CartItem({
         {/* <Box className='EatchPrice' display={'flex'} flexDirection={'column'} justifyContent={'center'}> */}
       
       <Text fontWeight={'bold'} fontSize={'15px'}>$ {price}</Text>
-    {/* </Box> */}
-    {/* <Box className='Quentity' display={'flex'} flexDirection={'column'} justifyContent={'center'}> */}
+
 
       <Select placeholder={quantity} onChange={handleQuantity} w={{ base: '100px', }}>
         <option value='1'> 1</option>
@@ -92,11 +96,10 @@ export default function CartItem({
         <option value='5'> 5</option>
       </Select>
 
-    {/* </Box> */}
-    {/* <Box className='Total' display={'flex'} flexDirection={'column'} justifyContent={'center'}> */}
-      {/* <Text fontWeight={'bold'}>Delete</Text> */}
+
+   
       <Button onClick={handleDeleteQty}><DeleteIcon fontSize={"20px"} color={'red.500'} /></Button>
-    {/* </Box> */}
+  
         </Box>
         
       </Box>
@@ -110,7 +113,6 @@ export default function CartItem({
       <Divider />
       <Divider />
     </Box>
-
 
 
 
