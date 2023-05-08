@@ -8,6 +8,7 @@ import {
 } from 'react-icons/fi';
 import { useDispatch } from 'react-redux';
 import { Admin, Dash, Product, User } from '../../redux/Admin/actionType';
+import { NavLink } from 'react-router-dom';
 
 
 const SidebarContent = ({ onClose, ...rest }) => {
@@ -52,7 +53,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
                     {link.name}
                 </NavItem>
             ))}
-            <Link href="#" style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }} >
+            <NavLink to="/" style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }} >
                 <Flex align="center" color={'white'} p="4" borderRadius="lg" role="group" cursor="pointer" _hover={{
                     bg: 'blackAlpha.900',
                     color: 'white',}}>                   
@@ -61,9 +62,9 @@ const SidebarContent = ({ onClose, ...rest }) => {
                         }}
                             as={FiHome}
                         />                  
-                    Home
+                     Home
                 </Flex>
-            </Link>
+            </NavLink>
         </Box>
     );
 }

@@ -13,13 +13,9 @@ import './App.css';
 function App() {
   return (
     <Box className='App'>
-
       <Navbar />
       <MainRoutes />
       <Footer />
-
-      {/* <FilterSort /> */}
-      {/* <ProductPage /> */}
     </Box>
   );
 }

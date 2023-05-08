@@ -1,8 +1,8 @@
 import React from 'react'
 
 const AddressPage = () => {
-  return (
-    <div>AddressPage</div>
+  return (     
+    <div>AddressPages</div>
   )
 }
 

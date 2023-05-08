@@ -1,7 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import HomePage from '../Pages/HomePage'
-import ProductPage from '../Pages/ProductPage'
 import SingleProduct from '../Pages/SingleProduct'
 import Login from '../Pages/Login'
 import SignUp from '../Pages/SignUp'
@@ -11,6 +10,7 @@ import PaymentPage from '../Pages/PaymentPage'
 import ErrorPage from '../Pages/ErrorPage'
 import AdminPage from '../Pages/AdminPage'
 import Private from './Private'
+import ProductPage from '../Pages/ProductPage'
 
 const MainRoutes = () => {
   return (

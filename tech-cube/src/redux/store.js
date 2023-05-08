@@ -9,10 +9,11 @@ import {reducer as checkoutReducer} from './CheckoutReducer/reducer';
 
 
 const rootReducer=combineReducers({
+  checkoutReducer,
   productReducer,
   authReducer,
   cartReducer,
-  checkoutReducer
+  adminReducer
 })
 
 
