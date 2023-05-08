@@ -22,8 +22,9 @@ export const getProducts = (dispatch) => {
 
 export const singleProductfunc=(id)=>(dispatch)=>{
   dispatch({type:PRODUCT_REQUEST})
-  axios.get(`https://gopi.onrender.com/products/${id}`)
+ return axios.get(`https://gopi.onrender.com/products/${id}`)
           .then((res)=>{
+            console.log("Deepak from Product Action")
             console.log("**From Product Action.jsx",res.data);
               dispatch({type:SINGLE_PRODUCT_SUCCESS,payload:res.data})
           })

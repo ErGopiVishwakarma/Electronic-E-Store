@@ -3,43 +3,63 @@ import React from "react";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import delivery from '../../Assets/delivery.svg';
+import { useDispatch } from "react-redux";
+import { postSingleProductItem } from "../../redux/CartReducer/action";
+import { useNavigate } from "react-router-dom";
+// const data = {
+//   color: ["black", "white", "green", "yellow"],
+//   image: [
+//     "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/back_600x.png?v=1668599490",
+//     "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI_1f060ff5-cbbf-43f3-b673-41e4aacc7d79_700x.jpg?v=1657869596",
+//     "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI-1_2_d9489be8-8f88-4832-991d-28b012711719_700x.jpg?v=1655369215",
+//     "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI-2_5f7d05ca-6358-4ff8-899f-c6720e201a72_700x.jpg?v=1655369215",
+//     "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI-3_25e4be39-aa68-4c07-94de-75afabaeef11_700x.jpg?v=1655369215",
+//   ],
+//   tag_badge: "42 Hours Playback",
+//   title: "Boat Airdopes 141",
+//   price: 999,
+//   discount: 71,
+//   mrp: 4490,
+//   rating: 2.5,
 
-const data = {
-  color: ["black", "white", "green", "yellow"],
-  image: [
-    "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/back_600x.png?v=1668599490",
-    "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI_1f060ff5-cbbf-43f3-b673-41e4aacc7d79_700x.jpg?v=1657869596",
-    "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI-1_2_d9489be8-8f88-4832-991d-28b012711719_700x.jpg?v=1655369215",
-    "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI-2_5f7d05ca-6358-4ff8-899f-c6720e201a72_700x.jpg?v=1655369215",
-    "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI-3_25e4be39-aa68-4c07-94de-75afabaeef11_700x.jpg?v=1655369215",
-  ],
-  tag_badge: "42 Hours Playback",
-  title: "Boat Airdopes 141",
-  price: 999,
-  discount: 71,
-  mrp: 4490,
-  rating: 2.5,
+//   category: "wireless_earbuds",
+//   id: 1,
+//   description: "Up to 42HRS Playback Clear Calling ASAP™ Charge   ",
+//   brand: "BOAT",
+//   review: 2159,
+// };
 
-  category: "wireless_earbuds",
-  id: 1,
-  description: "Up to 42HRS Playback Clear Calling ASAP™ Charge   ",
-  brand: "BOAT",
-  review: 2159,
-};
+const NewRight = ({spData}) => {
+const dispatch=useDispatch()
+const navigate=useNavigate()
 
-const NewRight = () => {
-  const roundedRating = Math.round(data.rating);
+// console.log("😍😂spData at NewRight.jsx ",spData)
+
+  const roundedRating = Math.round(spData.rating);
+
+     const handleAddToCart=()=>{
+      // console.log(" ❤️❤️❤️❤️❤️❤️add handle to cart item from NewRight")
+       dispatch(postSingleProductItem(spData)).then((res)=>navigate("/cart"))
+     }
+
+      const handleBuySingleProduct=()=>{
+        // console.log(" 💕💕💕💕💕💕add handle to cart item from NewRight")
+        dispatch(postSingleProductItem(spData)).then((res)=>navigate("/payment"))
+      }
+
+
+
 
   return (
     <Box  textAlign={"left"} margin={['5%','5%','10%','10%']}>
       <Box >
         <Heading
-          size="md"
-          fontSize="22px"
-          fontWeight={550}
+          size="1000px"
+          fontSize="xl"
+          fontWeight={"extrabold"}
           fontFamily={"sans-serif"}
         >
-          {data.title}
+          {spData.title}
         </Heading>
 
         <Text
@@ -49,7 +69,7 @@ const NewRight = () => {
 
           paddingY={'1.5%'}
         >
-          {data.description}
+          {spData.description}
         </Text>
         <Box display={"flex"} fontSize={"10px"}>
           {Array.from({ length: 5 }).map((_, index) => {
@@ -69,7 +89,7 @@ const NewRight = () => {
 
       <Box display="flex" alignItems="center" >
         <Box paddingRight={'3%'}>
-          <Text fontSize={'xl'} display={'flex'} >Price: <Text fontWeight={ 'semibold'} textDecoration={'line-through'}>1710</Text> </Text>
+          <Text fontSize={'xl'} display={'flex'} >Price: <Text fontWeight={ 'semibold'} textDecoration={'line-through'}>{spData.mrp}</Text> </Text>
         </Box>
         <Box
           // boxShadow="0px 4px 4px rgba(0, 1, 0, 3), 0px 4px 16px rgba(0, 0, 0, 0.12), 0px 0px 4px rgba(0, 0, 0, 0.1), 0px 0px 8px skyblue"
@@ -84,16 +104,16 @@ const NewRight = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Heading size="lg" fontWeight="extrabold">
-            {data.discount}%
+          <Heading size="lg" fontWeight="bold">
+            {spData.discount}%
           </Heading>
           <Text  color={'black'} fontWeight={'bold'} paddingLeft={"4px"}>off</Text>
         </Box>
       </Box>
-        <Box >
+        <Box fontWeight={"5px"}>
           <Heading display={"flex"}>
             <Heading paddingRight={"2px"}>₹</Heading>
-            {data.price}
+            {spData.price} 
           </Heading>
         </Box>
 </Box>
@@ -102,17 +122,17 @@ const NewRight = () => {
         <Heading size={"md"}>Specification</Heading>
         <Box spac paddingLeft={'2%'} marginY={'3%'} borderLeft={'3px solid #03fcd3'} fontSize={'md'} opacity={"70%"}>
 
-        <Text>Brand:{data.brand}</Text>
-        <Text>Category:{data.category}</Text>
-        <Text>Battery Life:{data.tag_badge}</Text>
+        <Text>Brand:{spData.brand}</Text>
+        <Text>Category:{spData.category}</Text>
+        <Text>Battery Life:{spData.tag_badge}</Text>
         </Box>
       </Box>
 
       <Box  display={'flex'} flexDirection={'column'} gap={'5px'}>
-        <Button   backgroundColor={'black'} textColor={'white'} fontSize={'17px'} width={'250px'}    border={'2px solid black'}  >
+        <Button onClick={handleAddToCart}  backgroundColor={'black'} textColor={'white'} fontSize={'17px'} width={'250px'}    border={'2px solid black'}  >
           Add to Cart
         </Button>
-        <Button  backgroundColor={'black'} textColor={'white'} fontSize={'17px'} width={'250px'}    border={'2px solid black'} >
+        <Button  onClick={handleBuySingleProduct} backgroundColor={'black'} textColor={'white'} fontSize={'17px'} width={'250px'}    border={'2px solid black'} >
           Buy Now
         </Button>
       </Box>
