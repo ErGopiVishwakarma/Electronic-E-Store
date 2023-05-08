@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../redux/Product/action';
 import { ProductCard } from '../component/ProductComponent/ProductCard';
 import { FilterSort } from '../component/ProductComponent/FilterSort';
+
 const ProductPage = () => {
   const dispatch = useDispatch();
   const products = useSelector(store => store.productReducer.products);
@@ -19,7 +20,9 @@ const ProductPage = () => {
   useEffect(() => {
     dispatch(getProducts);
   }, []);
+ 
   return (
+
     <Box pos={'relative'} minH={'1000px'}>
       <Flex direction={'column'} p="3%" gap="50px">
         <Center>
@@ -48,6 +51,7 @@ const ProductPage = () => {
         </Grid>
       </Flex>
     </Box>
+
   );
 };
 

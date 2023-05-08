@@ -20,6 +20,7 @@ import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { LOGIN_USER, LOGIN_USER_FAILURE, LOGIN_USER_SUCCESSFUL } from '../redux/Authentication/actionType';
 import { useNavigate } from 'react-router-dom';
+import { loginData } from '../redux/Authentication/action';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -46,60 +47,36 @@ const Login = () => {
       return;
     }
 
-    if (loader) {
-      return <h1 textAlign='center'>Loading...</h1>
-    }
-
-    if (error) {
-      return <h1 textAlign='center'>Something went wrong. Please refresh the page.</h1>
-    }
-
     const userObj = {
       email,
       password
     }
 
-    loginData(userObj);
+  dispatch(loginData); 
 
-    if (auth === true) {
-      navigate('/');
-      toast({
-        title: 'Login Successful.',
-        description: "Welcome Back.",
-        status: 'success',
-        duration: 4000,
-        position: 'top',
-        isClosable: true,
-      })
-    }
-    else {
-      return toast({
-        title: 'Login Failed.',
-        description: "Wrong Credentials.",
-        status: 'error',
-        duration: 4000,
-        position: 'top',
-        isClosable: true,
-      })
-    }
+  if (auth === true) {
+    navigate('/');
+    toast({
+      title: 'Login Successful.',
+      description: "Welcome Back.",
+      status: 'success',
+      duration: 4000,
+      position: 'top',
+      isClosable: true,
+    })
+  }
+  else {
+    toast({
+      title: 'Login Failed.',
+      description: "Wrong Credentials.",
+      status: 'error',
+      duration: 4000,
+      position: 'top',
+      isClosable: true,
+    })
   }
 
-  const loginData = (userObj) => {
-    dispatch({ type: LOGIN_USER })
-    axios.get('http://localhost:3000/users')
-      .then(res => {
-        res.data?.map(el => {
-          if (el.email === userObj.email && el.password === userObj.password) {
-            dispatch({ type: LOGIN_USER_SUCCESSFUL });
-            return;
-          }
-          return;
-        })
-      })
-      .catch(err => {
-        dispatch({ type: LOGIN_USER_FAILURE });
-      })
-  }
+}
 
 
   return (
@@ -155,8 +132,8 @@ const Login = () => {
           </Flex>
         </Box>
       </Stack>
-      <Box w={'50%'}>
-        <Image w={{ base: '95%', sm: '95%', md: '95%', lg: '95%', xl: '95%', '2xl': '95%' }} borderRadius={'10px'} h={'500px'} mr={'20px'} src={loginImg} alt='loginImg' />
+      <Box m={'20px auto'} w={{ base: '90%', sm: '75%', md: '75%', lg: '50%', xl: '50%', '2xl': '50%' }}>
+        <Image w={'95%'} borderRadius={'10px'} h={'500px'} src={loginImg} alt='loginImg' />
       </Box>
     </Flex>
   )

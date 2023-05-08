@@ -16,7 +16,7 @@ import {
   useColorModeValue,
   Link,
 } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { signup } from '../redux/Authentication/action';
@@ -66,21 +66,6 @@ export default function SignUp() {
       return;
     }
 
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-
-    }
-    else {
-      toast({
-        title: 'Correct details Required!',
-        description: "Please fill valid email!",
-        status: 'warning',
-        duration: 4000,
-        position: 'top',
-        isClosable: true,
-      })
-      return;
-    }
-
     let userData = {
       firstName,
       lastName,
@@ -90,7 +75,7 @@ export default function SignUp() {
     }
 
     let check = false;
-    const data = await axios.get('http://localhost:8080/users').then(res => res.data)
+    const data = await axios.get('https://gopi.onrender.com/user').then(res => res.data)
     if (data.length > 0) {
       data.forEach(el => {
         if (el.email === userData.email) {
@@ -134,16 +119,17 @@ export default function SignUp() {
     return;
 
   }
-
+  
 
   return (
+    loader ? <Loader/> :
     <Flex
       minH={'100vh'}
       align={'center'}
       pt={'50px'}
       justify={'center'}
       direction={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }}
-      bg={useColorModeValue('gray.50', 'gray.800')}>
+      >
       <Stack w={'50%'} spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
           <Heading fontSize={'4xl'} textAlign={'center'}>
@@ -155,7 +141,6 @@ export default function SignUp() {
         </Stack>
         <Box
           rounded={'lg'}
-          bg={useColorModeValue('white', 'gray.700')}
           boxShadow={'lg'}
           p={8}>
           <Stack spacing={4}>

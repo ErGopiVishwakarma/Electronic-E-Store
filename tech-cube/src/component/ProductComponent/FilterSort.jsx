@@ -19,7 +19,7 @@ import {
 import { HiChevronDown } from 'react-icons/hi';
 import React from 'react';
 
-export const FilterSort = () => {
+ export const FilterSort = () => {
   return (
     <Box
       w={'100%'}
@@ -163,3 +163,4 @@ export const FilterSort = () => {
     </Box>
   );
 };
+
