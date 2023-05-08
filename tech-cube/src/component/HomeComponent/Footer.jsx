@@ -2,25 +2,11 @@ import { Box, Container, Link, SimpleGrid, Stack, Text, IconButton, useColorMode
 } from '@chakra-ui/react';
 import { FaInstagram, FaTwitter, FaYoutube,FaUser, FaFacebook, FaPinterest } from 'react-icons/fa';
 export default function Footer() {
+  const text = useColorModeValue('light','dark')
+  const textColor = text==='dark'?'gray.100':'blackAlpha.900'
   return (
     <>
     <Box w={'100%'} borderTop="1px solid lightgray">
-       {/* <Center>
-        <Stack direction={'row'} spacing={{base:'20px',md:"80px"}} py={50} >
-            <Stack direction={{base:'column',md:"row"}} alignItems={'center'} spacing={{base:5,md:10}}>
-              <Image src="https://images.dailyobjects.com/marche/icons/social/quick-delivery.svg?tr=cm-pad_resize,v-2,w-40,h-40,dpr-1"></Image>
-              <Text fontSize={14}>Quick Delivery</Text>
-            </Stack>
-            <Stack direction={{base:'column',md:"row"}} alignItems={'center'} spacing={{base:5,md:10}}>
-              <Image src="https://images.dailyobjects.com/marche/icons/social/easy-returns.svg?tr=cm-pad_resize,v-2,w-40,h-40,dpr-1"></Image>
-              <Text fontSize={14}>Easy Returns</Text>
-            </Stack>
-            <Stack direction={{base:'column',md:"row"}} alignItems={'center'} spacing={{base:5,md:10}}>
-              <Image src=" https://images.dailyobjects.com/marche/icons/social/quality-assured.svg?tr=cm-pad_resize,v-2,w-40,h-40,dpr-1"></Image>
-              <Text fontSize={14}>Quality Assured</Text>
-            </Stack>
-        </Stack>
-       </Center> */}
     </Box>
     <Box
       bg={useColorModeValue('gray.50', 'gray.900')}
@@ -37,17 +23,17 @@ export default function Footer() {
           </Stack>
           <Stack align={'flex-start'}>
             <Text fontSize={16} fontWeight="bolder">HELPDESK</Text>
-            <Link href={'#'} fontSize={14}>Terms Of Use</Link>
-            <Link href={'#'} fontSize={14}>Warranty Policy</Link>
-            <Link href={'#'} fontSize={14}>Shipping Policy</Link>
-            <Link href={'#'} fontSize={14}>Cancellation Policy</Link>
-            <Link href={'#'} fontSize={14}>Return and Exchange Policy</Link>
-            <Link href={'#'} fontSize={14}>Privacy & Security Policy</Link>
+            <Text fontSize={14}>Terms Of Use</Text>
+            <Text fontSize={14}>Warranty Policy</Text>
+            <Text fontSize={14}>Shipping Policy</Text>
+            <Text fontSize={14}>Cancellation Policy</Text>
+            <Text fontSize={14}>Return and Exchange Policy</Text>
+            <Text fontSize={14}>Privacy & Security Policy</Text>
           </Stack>
           <Stack align={'flex-start'}>
             <Text fontSize={16} fontWeight="bolder">NETWORK</Text>
-            <Link href={'#'} fontSize={14}>Contact Us</Link>
-            <Link href={'#'} fontSize={14}>Corporate Gifting</Link>
+            <Text fontSize={14}>Contact Us</Text>
+            <Text fontSize={14}>Corporate Gifting</Text>
 
           </Stack>
           <Stack align={'flex-start'} borderLeft="1px solid lightgray" spacing={10}>
@@ -57,11 +43,11 @@ export default function Footer() {
             <Text fontSize={25} fontWeight={'bolder'}>FOLLOW US ON</Text>
             <Divider ></Divider>
             <HStack>
-              <Link><IconButton borderRadius={'50%'} border={'2px solid black'} variant={'outline'} color="black"  icon={<FaInstagram />} /></Link>
-              <Link><IconButton borderRadius={'50%'} border={'2px solid black'} variant={'outline'} color="black" icon={<FaFacebook />} /></Link>
-              <Link><IconButton borderRadius={'50%'} border={'2px solid black'} variant={'outline'} color="red"  icon={<FaYoutube />} /></Link>
-              <Link><IconButton borderRadius={'50%'} border={'2px solid black'} variant={'outline'} color="blue.500"  icon={<FaTwitter />} /></Link>
-              <Link><IconButton borderRadius={'50%'} border={'2px solid black'} variant={'outline'} color="brown.500"  icon={<FaPinterest />} /></Link>
+              <Link><IconButton borderRadius={'50%'} border={text === 'dark' ? "2px solid white" : "2px solid black"} variant={'outline'} color={textColor}  icon={<FaInstagram />} /></Link>
+              <Link><IconButton borderRadius={'50%'} border={text === 'dark' ? "2px solid white" : "2px solid black"} variant={'outline'} color={textColor} icon={<FaFacebook />} /></Link>
+              <Link><IconButton borderRadius={'50%'} border={text === 'dark' ? "2px solid white" : "2px solid black"} variant={'outline'} color="red"  icon={<FaYoutube />} /></Link>
+              <Link><IconButton borderRadius={'50%'} border={text === 'dark' ? "2px solid white" : "2px solid black"} variant={'outline'} color="blue.500"  icon={<FaTwitter />} /></Link>
+              <Link><IconButton borderRadius={'50%'} border={text === 'dark' ? "2px solid white" : "2px solid black"} variant={'outline'} color="brown.500"  icon={<FaPinterest />} /></Link>
 
             </HStack>
             </Stack>

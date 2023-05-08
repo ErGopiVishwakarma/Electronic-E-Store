@@ -20,6 +20,10 @@ import {
   Input,
   InputRightElement,
   VStack,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -38,9 +42,19 @@ import { NAV_ITEMS } from './navComponent/NavItem';
 import logo from '../../Assets/techcube.png';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 import { useState } from 'react';
+import UserProfile from './UserProfile';
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
+  const text = useColorModeValue('dark', 'light')
+  const textColor = text === 'dark' ? 'gray.100' : 'blackAlpha.900'
+  const [open, setOpen] = useState(false)
+  const openFun = () => {
+    setOpen(true)
+  }
+  const closeFun = () => {
+    setOpen(false)
+  }
   // const [isTrue,setIsTrue] = useState(false)
   // window.addEventListener('wheel',(e)=>{
   //     if(e.deltaY<0){
@@ -56,7 +70,7 @@ export default function Navbar() {
       bg="white"
       pos={'fixed'}
       w="100%"
-      zIndex={999}
+      zIndex={99}
       borderBottom={'1px solid white'}
       boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'}
     >
@@ -89,10 +103,9 @@ export default function Navbar() {
             aria-label={'Toggle Navigation'}
           />
           <Box display={{ base: 'none', md: 'block' }}>
-            <NavLink to="/search">
-              {' '}
+            <Box onClick={openFun}>
               <SearchIcon fontSize={'25px'} />
-            </NavLink>
+            </Box>
           </Box>
         </Flex>
 
@@ -135,9 +148,20 @@ export default function Navbar() {
           display={{ base: 'none', md: 'flex' }}
           justifyContent={'space-evenly'}
         >
-          <NavLink to="/account">
+  
+          <Menu>
+            <MenuButton>
             <FaUser size={'20px'} />
-          </NavLink>
+            </MenuButton>
+            <MenuList>
+              <NavLink to='/signup'><MenuItem>login / signup</MenuItem></NavLink>
+              <MenuItem>
+                <UserProfile>User Profile</UserProfile>
+              </MenuItem>
+              <MenuItem>LogOut</MenuItem>
+              <NavLink to='/admin'> <MenuItem>Admin</MenuItem></NavLink>
+            </MenuList>
+          </Menu>
           <NavLink to="/cart">
             <FaShoppingBag size={'20px'} />
           </NavLink>
@@ -154,7 +178,7 @@ export default function Navbar() {
         w="100%"
         bottom={0}
         display={{ base: 'block', md: 'none', lg: 'none' }}
-        bg="white"
+        bg={textColor}
         py="6px"
         borderRadius={'10px'}
         boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'}
@@ -162,20 +186,34 @@ export default function Navbar() {
         <IconContext.Provider value={{ size: '25px' }}>
           <Flex justifyContent={'space-around'}>
             <NavLink to="/">
-              <FaHome color="black" />
+              <FaHome />
             </NavLink>
-            <NavLink to="/search">
-              <FaSearch color="black" />
-            </NavLink>
+            <Box onClick={openFun}>
+              <FaSearch />
+            </Box>
             <NavLink to="/account">
-              <FaUser color="black" />
+              <FaUser />
             </NavLink>
             <NavLink to="/cart">
-              <FaShoppingBag color="black" />
+              <FaShoppingBag />
             </NavLink>
           </Flex>
         </IconContext.Provider>
       </Flex>
+      <Box pos={'absolute'} w="100%" zIndex={999} top={0} display={{ base: open ? 'block' : 'none', md: open ? 'block' : 'none', lg: 'none' }} >
+        <InputGroup size='md' >
+          <Input
+            fontSize={'18px'}
+            h="60px"
+            bg="white"
+            color="black"
+            placeholder='search....'
+          />
+          <InputRightElement width='4.5rem' >
+            <CloseIcon color="black" mt='20px' cursor={'pointer'} onClick={() => closeFun()} />
+          </InputRightElement>
+        </InputGroup>
+      </Box>
     </Box>
   );
 }
@@ -190,11 +228,11 @@ const DesktopNav = () => {
       {NAV_ITEMS.map(navItem => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
-            <PopoverTrigger>
+            <PopoverTrigger display='flex' align='center'>
               <Link
                 p={2}
                 href={navItem.href ?? '#'}
-                fontSize={'sm'}
+                fontSize={'15px'}
                 fontWeight={500}
                 color={linkColor}
                 _hover={{
@@ -202,7 +240,7 @@ const DesktopNav = () => {
                   color: linkHoverColor,
                 }}
               >
-                {navItem.label}
+                {navItem.label}{navItem.children ? <ChevronDownIcon w={5} h={5} /> : ''}
               </Link>
             </PopoverTrigger>
 
@@ -230,6 +268,8 @@ const DesktopNav = () => {
 };
 
 const DesktopSubNav = ({ image, href, subLabel }) => {
+  const text = useColorModeValue('light', 'dark')
+  const textColor = text === 'dark' ? 'gray.100' : 'blackAlpha.900'
   return (
     <NavLink
       to="/product"
@@ -238,9 +278,9 @@ const DesktopSubNav = ({ image, href, subLabel }) => {
       rounded={'md'}
       _hover={{ bg: 'pink.50' }}
     >
-      <Stack direction={'row'} align={'center'} bg="pink.50">
-        <Flex gap="10px" pr="100px" alignItems={'center'}>
-          <Image src={image} w="70px" />
+      <Stack direction={'row'} align={'center'}>
+        <Flex gap="20px" pr="100px" alignItems={'center'}>
+          <Image src={image} w="70px" h="70px" />
           <Text fontSize={'sm'}>{subLabel}</Text>
         </Flex>
         <Flex
@@ -252,7 +292,7 @@ const DesktopSubNav = ({ image, href, subLabel }) => {
           align={'center'}
           flex={1}
         >
-          <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={textColor} w={6} h={6} as={ChevronRightIcon} />
         </Flex>
       </Stack>
     </NavLink>
