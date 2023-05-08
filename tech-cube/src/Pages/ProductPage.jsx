@@ -12,21 +12,29 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../redux/Product/action';
 import { ProductCard } from '../component/ProductComponent/ProductCard';
 import { FilterSort } from '../component/ProductComponent/FilterSort';
+import { useSearchParams } from 'react-router-dom';
 
 const ProductPage = () => {
+  const [searchParams] = useSearchParams();
   const dispatch = useDispatch();
   const products = useSelector(store => store.productReducer.products);
 
-  useEffect(() => {
-    dispatch(getProducts);
-  }, []);
- 
-  return (
+  let obj = {
+    params: {
+      brand: searchParams.getAll('brand'),
+      category: searchParams.getAll('category'),
+    },
+  };
 
+  useEffect(() => {
+    dispatch(getProducts(obj));
+  }, [searchParams]);
+
+  return (
     <Box pos={'relative'} minH={'1000px'}>
       <Flex direction={'column'} p="3%" gap="50px">
         <Center>
-          <FilterSort />
+          <FilterSort products={products} />
         </Center>
         <Grid
           templateColumns={{
@@ -51,7 +59,6 @@ const ProductPage = () => {
         </Grid>
       </Flex>
     </Box>
-
   );
 };
 
