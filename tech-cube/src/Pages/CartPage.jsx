@@ -1,10 +1,15 @@
-import { Box, Button, Center, } from '@chakra-ui/react';
+import { Box, Button, Center, Divider, Heading, Image, Input, InputGroup, Text, } from '@chakra-ui/react';
 
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCartData, } from '../redux/CartReducer/action';
 import CartItem from '../component/CartComponet/CartItem';
-  let data=[{"color":["black","silver","green","pink"],"image":["https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.png?v=1668756103","https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_600x.png?v=1668756103","https://cdn.shopify.com/s/files/1/0057/8938/4802/products/616b4ead-bbd9-4a16-aeab-8d331a16f697_600x.png?v=1642405569","https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ivory-white_600x.png?v=1639466536","https://cdn.shopify.com/s/files/1/0057/8938/4802/products/viper-green_600x.png?v=1642405569"],"tag_badge":"60 Hours Playback","title":"Airdopes 131","price":999,"discount":67,"mrp":2990,"rating":4.8,"category":"wireless_earbuds","id":2,"description":"Up to 60HRS Playback 13mm drivers IWP Technology","brand":"BOAT","quantity":5,"review":1363},{"color":["black","white","blue"],"image":["https://cdn.shopify.com/s/files/1/0057/8938/4802/products/3_743027d7-94ca-43e1-9c04-72ad6483c226_700x.png?v=1669055392","https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2_614c0321-f235-4765-b157-a8727f7e4aae_700x.png?v=1669055570","https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1_0b38e5a7-0427-413d-b804-342451f18cca_700x.png?v=1669055570"],"tag_badge":"50 Hours Playback","title":"Airdopes Atom 81","price":999,"discount":71,"mrp":3490,"rating":5,"category":"wireless_earbuds","id":3,"description":"Up to 50HRS Playback ENx™ Technology ASAP Fast Charge ","brand":"BOAT","quantity":4,"review":48903}]
+
+import { Link } from 'react-router-dom';
+import emptyCartGif from '../Assets/empty-cart.gif'
+
+
+
 
 
 
@@ -24,25 +29,58 @@ const CartPage = () => {
     dispatch(getCartData());
   },[]);
   return (
-    <Box pt="70%"
-      display={'flex'}
-      flexDir={{ base: 'column', sm: 'column' ,md: 'row'}}
-      justifyContent={'space-between'}
-    >
-      {cart?.length > 0 ? (<>
-        <CartList />
-        <div className="payment-summery">     
-        </div>
-        </>
-      ) : (
-        <div className="empty-cart">No data found plese buy some product</div>
-      )}
 
+    <Box display={"flex"} flexDirection={{base:'column',sm:"row",md:"column",lg:'row'}}  paddingTop={"90px"} px={'3%'}>
+
+<Box width={{base:"full",sm:'sm',md:'2xl' ,lg:'4xl'}} >
+<Center  fontWeight={'bold'} fontSize={'24px'}>My Cart</Center>
+<Divider/>
+      {cart.length > 0 ? (
+       
+        <CartList />
+
+      ) : (
+        <div className="empty-cart"><Image minW={'full'} src= {emptyCartGif} alt ='empty cart' /></div>
+      )}
+</Box>
+<Box width={{base:"full",sm:'sm',md:'sm' ,lg:'sm',xl:'lg'}} margin={"4px"} padding={"20px"}>
+<Box className='order_summ' >
+  <Text fontWeight={"bold"} color={"gray.500"}>Enter Promo Code</Text>
+<InputGroup>
+<Input borderRadius={"none"} width={"60%"} type='text'  placeholder='Promo Code'/>
+<Button bgColor={"blackAlpha.900"}  color={"white"} borderRadius={"none"} width={"40%"} >Submit</Button>
+</InputGroup>
+
+</Box>
+<Box display={"flex"} justifyContent={"space-between"} margin={"20px"}>
+  <Text color={"gray.600"}>Shoping Cost</Text>
+  <Text color={"gray.600"}>$ {totalPrice}</Text>
+</Box>
+
+<Box display={"flex"} justifyContent={"space-between"} margin={"20px"}>
+  <Text color={"gray.600"}>Discount</Text>
+  <Text color={"gray.600"}>-${totalPrice>0 ?'150':0}</Text>
+</Box>
+
+<Box display={"flex"} justifyContent={"space-between"} margin={"20px"}>
+  <Text color={"gray.600"}>Tax</Text>
+  <Text color={"gray.600"}>18%GSt</Text>
+</Box>
+
+<Box display={"flex"} justifyContent={"space-between"} margin={"20px"}>
+  <Text color={"gray.600"}>Estimate Total</Text>
+  <Text color={"gray.600"}>{totalPrice>0 ? totalPrice+totalPrice*0.18-150:0}</Text>
+</Box>
+
+<Link to="/checkout"><Button display={'block'} margin={"auto"} borderRadius={"none"} width={"100%"} bgColor={"blackAlpha.900"} color={"white"}>Chekout</Button>
+</Link>
+</Box>
      
     </Box>
   );
 };
 export default CartPage;// nothing here yet
+
 
 //--------------------------------------------------------------------------------------------------------------------
 
@@ -56,7 +94,9 @@ export const CartList = () => {
 
   
   return (
-    <Box className="cart-list-container"  width={"80%"}>
+
+    <Box className="cart-list-container"  >
+
     {cart.length > 0 && cart.map((el)=>{
             return <CartItem  key={el.id} {...el}  />
           })}
@@ -66,22 +106,6 @@ export const CartList = () => {
 };
 
 
-//order summery
 
-// export const OrderSummery = () => {
-//   const { cart } = useSelector(store => store.cartReducer);
-//     let totalPrice = 0;
-//     cart.forEach((cartItem) => {
-//       totalPrice += cartItem.price * cartItem.quantity;
-//     });
-//     return (
-//       <Center>
-     
-//       </Center>
-  
-//     );
-  
-
-// };
 
 

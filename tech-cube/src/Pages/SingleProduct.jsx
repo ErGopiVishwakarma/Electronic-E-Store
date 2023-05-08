@@ -36,11 +36,15 @@ const theme = extendTheme({ breakpoints });
 const SingleProduct = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-
+    
+  console.log("id at single page",id)
   // const data=useSelector((store)=> store.productReducer.data)
   // const singleData=data.find((singleData)=>singleData.id === parseInt(id));
 
-  const spData = useSelector(store => store.productReducer.spData);
+  const data = useSelector(store => store.productReducer.data);
+     
+  console.log("data at single Page ",data)
+
 
   useEffect(() => {
     dispatch(singleProductfunc(id));
@@ -49,7 +53,7 @@ const SingleProduct = () => {
   return (
     <Box display={['block', 'block', 'block', 'flex']} width={'100%'} paddingTop={'50px'}>
       <Box width={['100%']}>
-        <NewLeft spData={spData} />
+        <NewLeft/>
       </Box>
 
       <div
@@ -64,7 +68,7 @@ const SingleProduct = () => {
 
       <Box width={['100%']}>
         {' '}
-        <NewRight />
+        <NewRight/>
       </Box>
     </Box>
   );
