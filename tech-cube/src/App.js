@@ -13,26 +13,11 @@ import { FilterSort } from './component/ProductComponent/FilterSort';
 function App() {
   return (
     <Box>
-
-<<<<<<< HEAD
-      {/* <Navbar /> */}
-      {/* <MainRoutes /> */}
-=======
-
-
-     
-     
-
-     
       <Navbar />
 
-
       <MainRoutes />
->>>>>>> bd205519c1d170ed95119129df19a1a55b7da39e
-      {/* <Footer /> */}
 
-      <FilterSort />
-      <ProductPage />
+      <Footer />
     </Box>
   );
 }
