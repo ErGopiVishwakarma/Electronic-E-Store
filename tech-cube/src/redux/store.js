@@ -9,7 +9,7 @@ import { reducer as productReducer } from './Product/reducer';
 
 
 const rootReducer=combineReducers({
-  productReducer,authReducer,cartReducer
+  productReducer,authReducer,cartReducer,adminReducer
 
 })
 

@@ -13,21 +13,9 @@ import { FilterSort } from './component/ProductComponent/FilterSort';
 function App() {
   return (
     <Box>
-
-
-
-     
-     
-
-     
       <Navbar />
-
-
       <MainRoutes />
-      <Footer />
-
-      {/* <FilterSort /> */}
-      {/* <ProductPage /> */}
+      <Footer /> 
     </Box>
   );
 }

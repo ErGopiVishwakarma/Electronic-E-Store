@@ -9,7 +9,7 @@ import {
 export const getProducts = dispatch => {
   dispatch({ type: PRODUCT_REQUEST });
   axios
-    .get('http://localhost:8080/products')
+    .get('https://gopi.onrender.com/products')
     .then(res => {
       dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data });
     })
