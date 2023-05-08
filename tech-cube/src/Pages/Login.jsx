@@ -19,7 +19,9 @@ import loginImg from '../Assets/loginImg.avif';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { LOGIN_USER, LOGIN_USER_FAILURE, LOGIN_USER_SUCCESSFUL } from '../redux/Authentication/actionType';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { loginData } from '../redux/Authentication/action';
+import Loader from '../component/Loader&Error/Loader';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -28,7 +30,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const auth = useSelector(store => store.authReducer.isAuth);
   const loader = useSelector(store => store.authReducer.isLoading);
-  const error = useSelector(store => store.authReducer.isError);
+  const data = useSelector(store => store.authReducer.users);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -46,23 +48,22 @@ const Login = () => {
       return;
     }
 
-    if (loader) {
-      return <h1 textAlign='center'>Loading...</h1>
+  dispatch(loginData); 
+
+  const userData = data.find(el => el.email === email);
+  if(userData){
+    if(userData.password !== password){
+      toast({
+        title: 'Login Failed.',
+        description: "Please enter correct password.",
+        status: 'error',
+        duration: 4000,
+        position: 'top',
+        isClosable: true,
+      })
+      return;
     }
-
-    if (error) {
-      return <h1 textAlign='center'>Something went wrong. Please refresh the page.</h1>
-    }
-
-    const userObj = {
-      email,
-      password
-    }
-
-    loginData(userObj);
-
-    if (auth === true) {
-      navigate('/');
+    else{
       toast({
         title: 'Login Successful.',
         description: "Welcome Back.",
@@ -71,52 +72,41 @@ const Login = () => {
         position: 'top',
         isClosable: true,
       })
-    }
-    else {
-      return toast({
-        title: 'Login Failed.',
-        description: "Wrong Credentials.",
-        status: 'error',
-        duration: 4000,
-        position: 'top',
-        isClosable: true,
-      })
-    }
-  }
 
-  const loginData = (userObj) => {
-    dispatch({ type: LOGIN_USER })
-    axios.get('http://localhost:3000/users')
-      .then(res => {
-        res.data?.map(el => {
-          if (el.email === userObj.email && el.password === userObj.password) {
-            dispatch({ type: LOGIN_USER_SUCCESSFUL });
-            return;
-          }
-          return;
-        })
-      })
-      .catch(err => {
-        dispatch({ type: LOGIN_USER_FAILURE });
-      })
+      setTimeout(() => {
+        navigate('/');
+      }, 4000)
+      return;
+    }
   }
+  else{
+    toast({
+      title: 'Wrong Credentials.',
+      description: "Please make sure you are registered.",
+      status: 'error',
+      duration: 4000,
+      position: 'top',
+      isClosable: true,
+    })
+    return;
+  }
+}
 
 
   return (
+    loader ? <Loader/> : 
     <Flex
       minH={'100vh'}
       align={'center'}
       pt={'60px'}
       justify={'center'}
-      direction={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }}
-      bg={useColorModeValue('gray.50', 'gray.800')}>
+      direction={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }}>
       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
           <Heading fontSize={'4xl'}>Sign in to your Account</Heading>
         </Stack>
         <Box
           rounded={'lg'}
-          bg={useColorModeValue('white', 'gray.700')}
           boxShadow={'lg'}
           p={8}>
           <form onSubmit={handleSubmit}>
@@ -151,12 +141,12 @@ const Login = () => {
           </form>
           <Flex w='90%' mt='20px' justifyContent='center'>
             <Text>New here?</Text>
-            <Link ml='10px' color='blue.400' href='./signup'>Sign Up</Link>
+            <NavLink style={{marginLeft : '10px', color : '#4299e1', textDecoration : 'underline'}} to='/signup'>Sign Up</NavLink>
           </Flex>
         </Box>
       </Stack>
-      <Box w={'50%'}>
-        <Image w={{ base: '95%', sm: '95%', md: '95%', lg: '95%', xl: '95%', '2xl': '95%' }} borderRadius={'10px'} h={'500px'} mr={'20px'} src={loginImg} alt='loginImg' />
+      <Box m={'20px auto'} w={{ base: '90%', sm: '75%', md: '75%', lg: '50%', xl: '50%', '2xl': '50%' }}>
+        <Image w={'95%'} borderRadius={'10px'} h={'500px'} src={loginImg} alt='loginImg' />
       </Box>
     </Flex>
   )

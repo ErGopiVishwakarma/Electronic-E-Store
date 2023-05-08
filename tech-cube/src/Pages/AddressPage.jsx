@@ -367,6 +367,7 @@ export const Multistep = () => {
                     handlePaymentDetails();
                   }
 
+
                   setStep(step + 1);
                   if (step === 3) {
                     setProgress(100);

@@ -3,11 +3,13 @@ import {
   Stack,
   Text,
   Image,
-  VStack,
-  HStack,
   Flex,
   Button,
+  useColorModeValue,
+  Box,
 } from '@chakra-ui/react';
+import { VscHeart } from 'react-icons/vsc';
+
 export const ProductCard = ({
   id,
   title,
@@ -18,57 +20,81 @@ export const ProductCard = ({
   review,
 }) => {
   return (
-    <VStack>
-      <Stack
-        align="flex-start"
-        bg="#FAFAFA"
-        p="12px"
-        key={id}
-        borderRadius={'10PX'}
-      >
-        <Image
-          box-shadow="rgba(0, 0, 0, 0.16) 0px 1px 4px"
-          _hover={{
-            cursor: 'pointer',
-          }}
-          src={image[0]}
-          alt="image"
-          height={'270px'}
-          width={'300px'}
-        />
-      </Stack>
-      <Stack>
+    <Flex direction={'column'} pos={'relative'} borderRadius={'12px'}>
+      <Box p="20px" bg="#F5F5F5" boxSizing="borderBox" borderRadius={'9PX'}>
+        <Box
+          className="bestdeal"
+          justifyContent={'center'}
+          alignItems={'center'}
+          display={'flex'}
+        >
+          <Image src={image[0]} alt="image" height={'220px'} width={'260px'} />
+        </Box>
+      </Box>
+
+      <Stack px="5px">
         <Flex justifyContent={'space-between'}>
-          <Text fontSize="19px" fontWeight={600} fontFamily={'sans-serif'}>
-            {title.substring(0, 70)}
+          <Text
+            fontWeight={'bold'}
+            fontSize={'18px'}
+            fontFamily={'sans-serif'}
+            mt={'5px'}
+          >
+            {title.substring(0, 20)}...
           </Text>
           <Flex>
-            <Text pl="7px" fontSize="19px" fontWeight={600}>
+            <Text fontWeight={'bold'} fontSize={'18px'} mt={'5px'}>
               {'₹' + price}
             </Text>
-            <Text fontSize={'15px'} fontWeight={600}>
+            <Text fontSize={'15px'} fontWeight={600} mt={'5px'}>
               .00
             </Text>
           </Flex>
         </Flex>
-
-        <Text fontSize="13px" textAlign={'left'} opacity="80%">
-          {description.substring(0, 100)}
+        <Text fontSize={'14px'} opacity="80%">
+          {description.substring(0, 30)}...
         </Text>
         <Flex>
-          <Text>{rating}</Text>
-
-          <Text opacity={'80%'}>({review})</Text>
+          <Text color={'green'} fontSize={'19px'}>
+            {rating >= 0 && rating <= 1.5
+              ? '★☆☆☆☆'
+              : rating >= 1.6 && rating <= 2.5
+              ? '★★☆☆☆'
+              : rating >= 2.6 && rating <= 3.5
+              ? '★★★☆☆'
+              : rating >= 3.6 && rating <= 4.5
+              ? '★★★★☆'
+              : '★★★★★'}
+          </Text>
+          <Text opacity={'90%'}>({review})</Text>
         </Flex>
+        <Button
+          variant={'unstyled'}
+          border={'1px solid black'}
+          w="120px"
+          borderRadius={'40px'}
+          bg={useColorModeValue('light', 'gray.700')}
+          _hover={{
+            backgroundColor: 'gray.700',
+            color: 'white',
+            background: useColorModeValue('light', 'gray'),
+          }}
+        >
+          Add To Cart
+        </Button>
       </Stack>
       <Button
-        background={'white'}
-        border={'1px solid black'}
-        borderRadius={'20PX'}
-        marginRight={'100px'}
+        p="10px"
+        bg="white"
+        borderRadius={'50%'}
+        pos={'absolute'}
+        right={'11px'}
+        top="15px"
+        _hover={{ bg: 'pink.100' }}
+        color={useColorModeValue('light', 'gray.700')}
       >
-        Add to Cart
+        <VscHeart style={{ width: '20px', height: '20px' }} />
       </Button>
-    </VStack>
+    </Flex>
   );
 };

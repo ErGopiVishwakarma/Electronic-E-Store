@@ -1,60 +1,50 @@
+import { ChevronDownIcon } from "@chakra-ui/icons";
+
 export const NAV_ITEMS = [
     {
-        label: 'Category',
+        label: 'All category',
         children: [
             {
-                image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e4aed3c6720e446aa1_airpod%20max-min.png',
-                subLabel: 'Headphones',
+                image: 'https://cdn.shopify.com/s/files/1/0057/8938/4802/products/boat-bassheads-102-red_600x.png?v=1633152280',
+                subLabel: 'Earphone',
                 href: '#',
             },
             {
-                image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e4aed3c6720e446aa1_airpod%20max-min.png',
+                image: 'https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/e/r/a/-original-imagna3qqyay2gaf.jpeg?q=70',
                 subLabel: 'Mobile',
                 href: '#',
             },
             {
-                image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e4aed3c6720e446aa1_airpod%20max-min.png',
-                subLabel: 'Headphones',
+                image: 'https://cdn.shopify.com/s/files/1/0057/8938/4802/products/back_600x.png?v=1668599490',
+                subLabel: 'Earbuds',
                 href: '#',
             },
             {
-                image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e4aed3c6720e446aa1_airpod%20max-min.png',
-                subLabel: 'Mobile',
+                image: 'https://cdn.shopify.com/s/files/1/0564/3006/7870/products/ACERAN515-45-R2GL_320x.jpg?v=1660545864',
+                subLabel: 'Laptop',
                 href: '#',
             },
             {
-                image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e4aed3c6720e446aa1_airpod%20max-min.png',
-                subLabel: 'Headphones',
+                image: 'https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveFit_FI-01-PhotoRoom.png-PhotoRoom_300x.png?v=1679351026',
+                subLabel: 'Watch',
                 href: '#',
             },
             {
-                image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e4aed3c6720e446aa1_airpod%20max-min.png',
-                subLabel: 'Mobile',
+                image: 'https://cdn.shopify.com/s/files/1/0057/8938/4802/products/stone-1010-black_600x.png?v=1673002262',
+                subLabel: 'Speaker',
                 href: '#',
             },
         ],
     },
     {
-        label: 'Find Work',
-        // children: [
-        //     {
-        //         image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e4aed3c6720e446aa1_airpod%20max-min.png',
-        //         subLabel: 'headdkfd',
-        //         href: '#',
-        //     },
-        //     {
-        //         image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e4aed3c6720e446aa1_airpod%20max-min.png',
-        //         subLabel: 'headphones',
-        //         href: '#',
-        //     },
-        // ],
+        label: 'Accessories',
     },
     {
-        label: 'Learn Design',
+        label: 'Tv & Watches',
         href: '#',
     },
     {
-        label: 'Hire Designers',
+        label: 'electonics',
         href: '#',
     },
 ];

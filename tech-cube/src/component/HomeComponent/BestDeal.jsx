@@ -1,5 +1,5 @@
 
-import { Box, Button, Center, Flex, Grid, Heading, Image, Stack, Text } from '@chakra-ui/react'
+import { Box, Button, Center, Flex, Grid, Heading, Image, Stack, Text, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 import { FaGrinHearts, FaHeart, FaHeartBroken, FaHeartbeat, FaKissWinkHeart } from "react-icons/fa";
 const imageArr = [
@@ -10,9 +10,13 @@ const imageArr = [
 ]
 
 const BestDeal = () => {
+
+  const text = useColorModeValue('light','dark')
+  const textColor = text==='dark'?'gray.100':'blackAlpha.900'
+
   return (
-    <Box>
-      <Flex direction={'column'} p="3%" gap="50px">
+    <Box mt="20px">
+      <Flex direction={'column'} px="3%" gap="50px">
       <Center>
       <Heading>
           Today's Best Deal For You
@@ -21,19 +25,19 @@ const BestDeal = () => {
         <Grid templateColumns={{ base: 'repeat(2,1fr)', md: 'repeat(3,1fr)', lg: 'repeat(4,1fr)' }} gap="20px" >
 
           {
-            imageArr.map(el => (
-              <Flex direction={'column'} pos={'relative'} borderRadius={'12px'} >
+            imageArr.map((el,ind) => (
+              <Flex key={ind} direction={'column'} pos={'relative'} borderRadius={'12px'} >
                 <Box p="20px" bg="red.50" boxSizing='borderBox'>
                   <Box className='bestdeal'>
                     <Image src={el.image} />
                   </Box>
                 </Box>
                 <Stack px="5px">
-                  <Flex justifyContent={'space-between'}>
-                    <Text fontWeight={'bold'} color={'gray.700'} fontSize={'18px'}>gopi singh vishwakarma..</Text>
-                    <Text fontWeight={'bold'} color={'gray.800'} fontSize={'18px'}>$500</Text>
+                  <Flex justifyContent={'space-between'} color={text==='dark'?'white':'blackAlpha.900'}>
+                    <Text fontWeight={'bold'} fontSize={'18px'} color={textColor}>gopi singh vishwakarma..</Text>
+                    <Text fontWeight={'bold'} color={textColor} fontSize={'18px'}>$500</Text>
                   </Flex>
-                  <Text fontSize={'14px'} color={'gray.600'}>Organic Cotton, fairtrade certified</Text>
+                  <Text fontSize={'14px'} color={textColor}>Organic Cotton, fairtrade certified</Text>
                   <Flex>
                     <Text color={'green'} fontSize={'19px'}>&#9733;</Text>
                     <Text color={'green'} fontSize={'19px'}>&#9733;</Text>

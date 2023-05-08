@@ -1,13 +1,16 @@
 import {
   GET_PRODUCT_SUCCESS,
+  POST_PRODUCT_SUCCESS,
   PRODUCT_FAILURE,
   PRODUCT_REQUEST,
+  SINGLE_PRODUCT_SUCCESS
 } from './actionType';
 
 const initialState = {
   products: [],
   isLoading: false,
   isError: false,
+  data:{},
 };
 
 export const reducer = (state = initialState, { type, payload }) => {
@@ -30,6 +33,17 @@ export const reducer = (state = initialState, { type, payload }) => {
         isLoading: false,
         products: payload,
       };
+
+    case POST_PRODUCT_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+      };
+
+
+      case SINGLE_PRODUCT_SUCCESS:{
+        return {...state,isLoading:false,data:payload}
+    };
 
     default:
       return state;

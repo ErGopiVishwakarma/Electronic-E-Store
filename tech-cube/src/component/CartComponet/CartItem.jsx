@@ -5,12 +5,16 @@ import {
   Stack,
   Text,
   Box,
+
   Image, useMediaQuery, useDisclosure, Divider, Select
+
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateCartFn } from '../../redux/CartReducer/action';
+
 import { ChevronDownIcon, DeleteIcon } from '@chakra-ui/icons';
+
 
 
 export default function CartItem({
@@ -38,6 +42,7 @@ export default function CartItem({
   cart.forEach((cartItem) => {
     totalPrice += cartItem.price * cartItem.quantity;
   }); // this for shoing total price
+
 
 
   const handleQuantity = (e) => {
@@ -92,8 +97,9 @@ export default function CartItem({
       </Select>
 
 
+
       <Button onClick={handleDeleteQty}><DeleteIcon fontSize={"20px"} color={'red.500'} /></Button>
-    {/* </Box> */}
+  
         </Box>
         
       </Box>
@@ -107,7 +113,6 @@ export default function CartItem({
       <Divider />
       <Divider />
     </Box>
-
 
 
 

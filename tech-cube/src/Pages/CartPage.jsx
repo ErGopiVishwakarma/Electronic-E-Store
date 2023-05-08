@@ -4,8 +4,10 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCartData, } from '../redux/CartReducer/action';
 import CartItem from '../component/CartComponet/CartItem';
+
 import { Link } from 'react-router-dom';
 import emptyCartGif from '../Assets/empty-cart.gif'
+
 
 
 
@@ -15,8 +17,9 @@ import emptyCartGif from '../Assets/empty-cart.gif'
 //----------------------------------------------------------------------------------------------------------------------------
 const CartPage = () => {
   const dispatch = useDispatch();
-  const { cart } = useSelector(store => store.cartReducer);
-
+  // const { cart } = useSelector(store => store.cartReducer);
+  localStorage.setItem('cart',JSON.stringify(data))
+  let cart =JSON.parse(localStorage.getItem('cart')) || []
     let totalPrice = 0;
     cart.forEach((cartItem) => {
       totalPrice += cartItem.price * cartItem.quantity;
@@ -26,6 +29,7 @@ const CartPage = () => {
     dispatch(getCartData());
   },[]);
   return (
+
     <Box display={"flex"} flexDirection={{base:'column',sm:"row",md:"column",lg:'row'}}  paddingTop={"90px"} px={'3%'}>
 
 <Box width={{base:"full",sm:'sm',md:'2xl' ,lg:'4xl'}} >
@@ -34,6 +38,7 @@ const CartPage = () => {
       {cart.length > 0 ? (
        
         <CartList />
+
       ) : (
         <div className="empty-cart"><Image minW={'full'} src= {emptyCartGif} alt ='empty cart' /></div>
       )}
@@ -89,7 +94,9 @@ export const CartList = () => {
 
   
   return (
+
     <Box className="cart-list-container"  >
+
     {cart.length > 0 && cart.map((el)=>{
             return <CartItem  key={el.id} {...el}  />
           })}
