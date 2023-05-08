@@ -7,7 +7,6 @@ export default function DeleteData({id,children}) {
     const dispatch = useDispatch()
 
     const deleteRequest =(id) =>{
-        alert('ok')
         dispatch(deleteProduct(id)).then(res=>{
             dispatch(getAllData());
             alert('product successfully deleted')
@@ -17,7 +16,7 @@ export default function DeleteData({id,children}) {
     return (
 
       <>
-        <Button onClick={onOpen} bg='red.500' color='white'>{children}</Button>
+        <Button onClick={onOpen} bg='red.500' colorScheme='white'>{children}</Button>
   
         <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
@@ -31,7 +30,7 @@ export default function DeleteData({id,children}) {
                 cancel
               </Button>
               <Button variant='ghost' onClick={()=>{
-               deleteRequest();
+               deleteRequest(id);
                onClose();
               }}>Ok</Button>
             </ModalFooter>

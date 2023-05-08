@@ -9,7 +9,7 @@ import {
 export const getProducts = (dispatch) => {
   dispatch({ type: PRODUCT_REQUEST });
   axios
-    .get('https://gopi.onrender.com/products')
+    .get('http://localhost:8080/products')
     .then(res => {
       dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data }); 
     })
@@ -22,7 +22,7 @@ export const getProducts = (dispatch) => {
 
 export const singleProductfunc=(id)=>(dispatch)=>{
   dispatch({type:PRODUCT_REQUEST})
-  axios.get(`https://gopi.onrender.com/products/${id}`)
+  axios.get(`http://localhost:8080/products/${id}`)
           .then((res)=>{
             console.log("**From Product Action.jsx",res.data);
               dispatch({type:SINGLE_PRODUCT_SUCCESS,payload:res.data})

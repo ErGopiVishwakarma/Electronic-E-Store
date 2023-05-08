@@ -4,12 +4,14 @@ import { useEffect } from 'react'
 import { deleteProduct, getAllData } from '../../redux/Admin/action'
 import EditProduct from './EditProduct'
 import DeleteData from './DeleteProduct'
+import AddProduct from './AddProduct'
 
 
 const Products = () => {
 
 const dispatch = useDispatch()
 const productsData = useSelector(store=>store.adminReducer.allProductData)
+let count = productsData.length;
 
 useEffect(()=>{
     dispatch(getAllData())
@@ -19,8 +21,8 @@ useEffect(()=>{
     return (
         <Flex direction={'column'} bg='white' borderRadius={'10px'}>
             <Flex justify={'space-between'} px={{ base: '7px', md: '20px', lg: '50px' }} alignItems={'center'} py="8px">
-                <Text fontSize={'20px'} fontWeight={'bolder'}>Total Products - 5</Text>
-                <Button>Add Product</Button>
+                <Text fontSize={'20px'} fontWeight={'bolder'}>Total Products - {count}</Text>
+                <AddProduct>Add New Product</AddProduct>
             </Flex>
             <Box w="98%" h={{ base: "100vh", md: '100vh', lg: '450px' }} direction={'column'} overflowY={'scroll'} >
 

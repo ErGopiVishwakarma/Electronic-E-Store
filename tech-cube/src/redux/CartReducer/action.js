@@ -22,7 +22,7 @@ export const updatePaymentMethod=(paymentDetails)=>(dispatch)=>{
 
 export const getCartServerdata=()=>(dispatch)=>{
     dispatch({type:GET_CART_SERVER_REQUEST})
-const data=axios.get('https://real-lime-bandicoot-robe.cyclic.app/addcard').then((res)=>{dispatch({type:GET_CART_SERVER_SUCCESS,payload:res.data})})
+const data=axios.get('http://localhost:8080/addcard').then((res)=>{dispatch({type:GET_CART_SERVER_SUCCESS,payload:res.data})})
 .catch((err)=>dispatch({type:GET_CART_SERVER_FAILD}))
 
 localStorage.setItem('cart', JSON.stringify(data));

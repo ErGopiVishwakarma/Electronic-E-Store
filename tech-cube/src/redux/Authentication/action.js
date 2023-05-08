@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const signup = (userData) => (dispatch) => {
     dispatch({ type: REGISTER_USER });
-    axios.post('https://gopi.onrender.com/user', userData)
+    axios.post('http://localhost:8080/user', userData)
         .then(res => {
             dispatch({ type: REGISTER_USER_SUCCESSFUL, payload: res.data });
         })
@@ -14,7 +14,7 @@ export const signup = (userData) => (dispatch) => {
 
 export const loginData = (dispatch) => {
     dispatch({ type: LOGIN_USER })
-    axios.get('https://gopi.onrender.com/user')
+    axios.get('http://localhost:8080/user')
         .then(res => {
             dispatch({ type: LOGIN_USER_SUCCESSFUL, payload: res.data });
             console.log(res);

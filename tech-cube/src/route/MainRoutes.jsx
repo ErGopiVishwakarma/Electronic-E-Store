@@ -12,6 +12,7 @@ import ErrorPage from '../Pages/ErrorPage'
 import AdminPage from '../Pages/AdminPage'
 import Private from './Private'
 import ProductPage from '../Pages/ProductPage'
+import AdminLogin from '../Pages/AdminLogin'
 
 
 const MainRoutes = () => {
@@ -39,6 +40,7 @@ const MainRoutes = () => {
         </Private>
       } />
       <Route path='/admin' element={<AdminPage />} />
+      <Route path='/adminlogin' element={<AdminLogin />} />
       <Route path='*' element={<ErrorPage />} />
 
     </Routes>

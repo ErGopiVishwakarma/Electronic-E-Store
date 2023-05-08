@@ -18,7 +18,7 @@ import emptyCartGif from '../Assets/empty-cart.gif'
 const CartPage = () => {
   const dispatch = useDispatch();
   // const { cart } = useSelector(store => store.cartReducer);
-  localStorage.setItem('cart',JSON.stringify(data))
+  // localStorage.setItem('cart',JSON.stringify(data))
   let cart =JSON.parse(localStorage.getItem('cart')) || []
     let totalPrice = 0;
     cart.forEach((cartItem) => {
