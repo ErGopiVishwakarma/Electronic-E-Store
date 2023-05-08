@@ -18,10 +18,9 @@ import AdminLogin from '../Pages/AdminLogin'
 const MainRoutes = () => {
   return (
     <Routes>
-
       <Route path='/' element={<HomePage />} />
       <Route path='/product' element={<ProductPage />} />
-      <Route path='/product/id' element={<SingleProduct />} />
+      <Route path='/product/:id' element={<SingleProduct />} />
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<SignUp />} />
       <Route path='/cart' element={
@@ -44,7 +43,8 @@ const MainRoutes = () => {
       <Route path='*' element={<ErrorPage />} />
 
     </Routes>
-  );
+  )
+
 };
 
 
