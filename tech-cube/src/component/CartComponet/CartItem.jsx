@@ -1,197 +1,121 @@
 import {
-    Button,
-    Flex,
-    Heading,
-    Stack,
-    Text,
-    Box,
-    Image, Table, TableCaption, TableContainer, Tbody, Td, Th, Thead, Tr, useMediaQuery, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter
-  } from '@chakra-ui/react';
+  Button,
+  Flex,
+  Heading,
+  Stack,
+  Text,
+  Box,
+
+  Image, useMediaQuery, useDisclosure, Divider, Select
+
+} from '@chakra-ui/react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateCartFn } from '../../redux/CartReducer/action';
-  
-  export default function CartItem({
-      id,
-      title,
-      brand,
-      image,
-      price,
-      color,
-      quantity,
-    }) {
-      const { isOpen, onOpen, onClose } = useDisclosure();
-      const [isLargerThan800] = useMediaQuery('(min-width: 874px)')
-   const [qty, setQty] = useState(quantity);
-   const dispatch = useDispatch();
-     const { cart } = useSelector(store => store.cartReducer);
 
-const [edit,togEdit]=useState(false)
-const handleEdit=()=>{
-togEdit(!edit);
-}
-
-
-let totalPrice = 0;
-cart.forEach((cartItem) => {
-  totalPrice += cartItem.price * cartItem.quantity;
-}); // this for shoing total price
-
-
-const handleAddQty = () => {
-    const upDatedData=cart.map((el)=>{
-      return el.id===id?{...el,quantity:el.quantity+1}:el;
-    })
-  
-    dispatch(updateCartFn(upDatedData));
-      setQty(prev => prev + 1);
-    };
-  
-    const handleSubQty = () => {
-      const upDatedData=cart.map((el)=>{
-        return el.id===id?{...el,quantity:el.quantity-1}:el;
-      })
-    
-      dispatch(updateCartFn(upDatedData));
-      setQty(prev => prev - 1);
-    };
-  
-    const handleDeleteQty = () => {
-      const upDatedData=cart.filter((el)=>{
-        return el.id!==id
-      })
-    
-      dispatch(updateCartFn(upDatedData));
-    };
-  
+import { ChevronDownIcon, DeleteIcon } from '@chakra-ui/icons';
 
 
 
+export default function CartItem({
+  id,
+  title,
+  brand,
+  image,
+  price,
+  color,
+  quantity,
+}) {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [isLargerThan800] = useMediaQuery('(min-width: 874px)')
+  const [qty, setQty] = useState(quantity);
+  const dispatch = useDispatch();
+  const { cart } = useSelector(store => store.cartReducer);
 
-    return isLargerThan800?(
-      
-<TableContainer>
-            <Table variant="simple">
-              <TableCaption>Grand Total Price : {totalPrice}</TableCaption>
-              <Thead>
-                <Tr>
-                
-                  <Th>Image</Th>
-                  <Th>Title</Th>
-                  <Th>Price</Th>
-                  <Th>Quan.</Th>
-                  <Th>Total</Th>
-                  <Th>Edit</Th>
-                </Tr>
-              </Thead>
-              {cart.length > 0 &&
-                cart.map((item) => {
-                  return (
-                    <Tbody>
-                      <Tr>
-                  
-                        <Td>
-                          <img src={item.image} 
-                            width={"100px"}
-                            alt={item.title}
-                          />
-                        </Td>
-                        <Td>{item.title}</Td>
-                        <Td>{item.price}</Td>
-                        <Td>{item.quantity}</Td>
-                        <Td>{Number(item.quantity) * Number(item.price)}</Td>
-                        <Td>
-                        <Button onClick={onOpen}>Edit</Button>
-
-<Modal isOpen={isOpen} onClose={onClose}>
-  <ModalOverlay/>
-  <ModalContent>
-    <ModalHeader>{item.title}</ModalHeader>
-    <ModalCloseButton />
-    <ModalBody>
-
-     <Text>Total Price :{item.price*qty}</Text>
-     <Text>Quantity :{qty}</Text>
-     <Button display={quantity >= 5 && 'none'} onClick={handleAddQty}> +   </Button>
-     <Button display={quantity === 1 && 'none'} onClick={handleSubQty}>   - </Button>
-    
-    </ModalBody>
-
-    <ModalFooter>
-      <Button colorScheme='blue' mr={3} onClick={onClose}>
-        Save
-      </Button>
-      <Button variant={'outline'} color={'red.300'} onClick={handleDeleteQty}>Delete</Button>
-    </ModalFooter>
-  </ModalContent>
-</Modal>
-                        </Td>
-                      </Tr>
-                    </Tbody>
-                  );
-                })}
-            </Table>
-          </TableContainer>
-    ):(
-<Stack
-        direction={{ base: 'column', md: 'row' }}
-        borderBottom={'2px solid gray'}
-        borderRadius={"10px"}
-      >
-        <Flex flex={1}>
-          <Image maxH={"250px"} alt={'Login Image'} objectFit={'cover'} src={image} />
-        </Flex>
-        <Flex p={8} flex={1} align={'center'} justify={'center'}>
-          <Stack spacing={4} maxW={{ md:'sm'}}>
-            <Heading fontSize={'2xl'}>{title}</Heading>
-            <Heading color={'orange.400'} fontSize={'xl'}>
-              {brand}
-            </Heading>
-            <Box
-              display={!edit ? 'flex' : 'none'}
-              alignItems={'center'}
-              flexWrap={'wrap'}
-              gap={'40px'}
-            >
-              <Text>Color: {color[0]}</Text>
-              <Text>Qty: {qty}</Text>
-              <Text>Price:${price}</Text>
-              <Text>Total:$ {price * quantity}</Text>
-              <Button onClick={handleEdit}>Edit</Button>
-            </Box>
-
-            <Box
-              display={edit ? 'flex' : 'none'}
-              alignItems={'center'}
-              flexWrap={'wrap'}
-              gap={'40px'}
-            >
-              <Text>Quantity: {quantity}</Text>
-              <Button isDisabled={quantity >= 5} onClick={handleAddQty}>
-                +
-              </Button>
-              <Button display={quantity === 1 && 'none'} onClick={handleSubQty}>
-                -
-              </Button>
-              <Button
-                bgColor={'red.200'}
-                display={quantity > 1 && 'none'}
-                onClick={handleDeleteQty}
-              >
-                Delete
-              </Button>
-              <Button
-                display={quantity === 1 && 'none'}
-                bgColor={'green.200'}
-                onClick={handleEdit}
-              >
-                Save
-              </Button>
-            </Box>
-          </Stack>
-        </Flex>
-      </Stack>
-
-
-    )
+  const [edit, togEdit] = useState(false)
+  const handleEdit = () => {
+    togEdit(!edit);
   }
+
+
+  let totalPrice = 0;
+  cart.forEach((cartItem) => {
+    totalPrice += cartItem.price * cartItem.quantity;
+  }); // this for shoing total price
+
+
+
+  const handleQuantity = (e) => {
+
+    const upDatedData = cart.map((el) => {
+      return el.id === id ? { ...el, quantity: +e.target.value } : el;
+    })
+
+    dispatch(updateCartFn(upDatedData));
+    setQty(+e.target.value);
+  };
+
+
+  const handleDeleteQty = () => {
+    const upDatedData = cart.filter((el) => {
+      return el.id !== id
+    })
+
+    dispatch(updateCartFn(upDatedData));
+  };
+
+
+
+
+
+  return (
+
+
+    <Box width={{ base: "full", sm: 'full', md: '2xl', lg: '2xl', xl: '2xl', '2xl': '4xl' }} >
+
+      <Box display={'flex'} flexDirection={{ base: "column", md: "row" }} justifyContent={"space-between"} gap={'20px'}>
+
+        <Image width={{ base: "full", sm: 'full', md: '100px', lg: '150px', xl: '200px' }} src={image} alt={title} />
+        <Box className='TitleColorBrand' display={'flex'} flexDirection={'column'} justifyContent={'center'}>
+          <Text fontWeight={'bold'} fontSize={'20px'}>{title}</Text>
+          <Flex gap={'10px'}><Text>Color : </Text><Box height={'20px'} w={'20px'} borderRadius={'50%'} bgColor={color[0]}></Box></Flex>
+          <Text fontWeight={'bold'} color={'orange.400'}>Brand: {brand}</Text>
+        </Box>
+
+        <Box display={'flex'} flexDirection={'row'} justifyContent={'center'} gap={'20px'} alignItems={'center'}>
+        {/* <Box className='EatchPrice' display={'flex'} flexDirection={'column'} justifyContent={'center'}> */}
+      
+      <Text fontWeight={'bold'} fontSize={'15px'}>$ {price}</Text>
+
+
+      <Select placeholder={quantity} onChange={handleQuantity} w={{ base: '100px', }}>
+        <option value='1'> 1</option>
+        <option value='2'> 2</option>
+        <option value='3'> 3</option>
+        <option value='4'> 4</option>
+        <option value='5'> 5</option>
+      </Select>
+
+
+   
+      <Button onClick={handleDeleteQty}><DeleteIcon fontSize={"20px"} color={'red.500'} /></Button>
+  
+        </Box>
+        
+      </Box>
+
+      <Box className='actions' display={'flex'} flexDirection={{ base: "column", md: "row" }} justifyContent={"flex-end"} alignItems={"center"}>
+
+
+        <Button variant="outline" color={'teal'} border={'none'}>move to wishlist</Button>
+        <Button variant="outline" border={'none'}>save for letter</Button>
+      </Box>
+      <Divider />
+      <Divider />
+    </Box>
+
+
+
+
+  )
+}

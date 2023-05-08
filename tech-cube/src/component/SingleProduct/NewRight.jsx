@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Flex, Img, Input, border } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex, Img, Input, border, InputGroup, InputRightElement } from "@chakra-ui/react";
 import React from "react";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { FaStar, FaRegStar } from "react-icons/fa";
@@ -29,10 +29,6 @@ const data = {
 
 const NewRight = () => {
   const roundedRating = Math.round(data.rating);
-
-
-
-  // console.log("Today is day-3")
 
   return (
     <Box  textAlign={"left"} margin={['5%','5%','10%','10%']}>
@@ -76,9 +72,9 @@ const NewRight = () => {
           <Text fontSize={'xl'} display={'flex'} >Price: <Text fontWeight={ 'semibold'} textDecoration={'line-through'}>1710</Text> </Text>
         </Box>
         <Box
-          boxShadow="0px 4px 4px rgba(0, 1, 0, 3), 0px 4px 16px rgba(0, 0, 0, 0.12), 0px 0px 4px rgba(0, 0, 0, 0.1), 0px 0px 8px skyblue"
-          borderRadius={"3xl"}
-          backgroundImage={`linear-gradient(to right, #03fcd3, #14deda)`} // added a gradient that fades from left to right
+          // boxShadow="0px 4px 4px rgba(0, 1, 0, 3), 0px 4px 16px rgba(0, 0, 0, 0.12), 0px 0px 4px rgba(0, 0, 0, 0.1), 0px 0px 8px skyblue"
+          
+          // backgroundImage={`linear-gradient(to right, #03fcd3, #14deda)`} // added a gradient that fades from left to right
           backgroundPosition="center"
           backgroundSize="cover"
           backgroundRepeat="no-repeat"
@@ -104,7 +100,7 @@ const NewRight = () => {
 
       <Box >
         <Heading size={"md"}>Specification</Heading>
-        <Box spac paddingLeft={'2%'} marginY={'3%'} borderLeft={'3px solid #03fcd3'} fontSize={'xs'}>
+        <Box spac paddingLeft={'2%'} marginY={'3%'} borderLeft={'3px solid #03fcd3'} fontSize={'md'} opacity={"70%"}>
 
         <Text>Brand:{data.brand}</Text>
         <Text>Category:{data.category}</Text>
@@ -112,30 +108,40 @@ const NewRight = () => {
         </Box>
       </Box>
 
-      <Flex  paddingY={'2%'}>
-        <Button  size="sm" backgroundColor={'white'} _hover={{ bg: "#03fcd3", color: "black" }} border={'2px solid black'} marginRight={'7%'} borderRadius={"3xl"}>
+      <Box  display={'flex'} flexDirection={'column'} gap={'5px'}>
+        <Button   backgroundColor={'black'} textColor={'white'} fontSize={'17px'} width={'250px'}    border={'2px solid black'}  >
           Add to Cart
         </Button>
-        <Button  size="sm" bg={"white"}  _hover={{ bg: "#03fcd3", color: " #black" }} border={'2px solid black'} borderRadius={"3xl"}>
+        <Button  backgroundColor={'black'} textColor={'white'} fontSize={'17px'} width={'250px'}    border={'2px solid black'} >
           Buy Now
         </Button>
-      </Flex>
+      </Box>
 
       <Box >
       <Box display={'flex'} marginY={'1.5'} justifyItems={'center'}>
           <Img maxWidth={'30px'} src={delivery}/>
         <Text fontWeight={'semibold'}>Free Delivery</Text>
       </Box>
-        <Text fontSize={'sm'} fontWeight={'semibold'}  opacity={'80%'} paddingBottom={'3%'}>Enter your Postal code for Delivery Availibility</Text>
-        <Box  display={'flex '} justifyItems={'center'}>
-        <Input maxHeight={'33px'} marginRight={'2%'} borderRadius={"3xl"} placeholder="Enter your postal code here" fontSize={'sm'} width={'40%'} border={'2px solid black '} _focus={''}/>
-          <Button size="sm"  _hover={{ bg: "#03fcd3", color: " #black" }} border={'2px solid black'} borderRadius={"3xl"} bg={'white'}>Check Now</Button>
-        </Box>
+        <Text fontSize={'sm'} fontWeight={'semibold'}  opacity={'80%'} paddingBottom={'3%'}>Enter your Postal code to Check Delivery Availibility</Text>
+        
+        <InputGroup size='md'>
+      <Input
+        pr='4.5rem'
+        placeholder='Enter password'
+      />
+      <InputRightElement width='4.5rem'>
+        <Button h='1.75rem' size='sm'>
+       Check now 
+        </Button>
+      </InputRightElement>
+    </InputGroup>
+
+
       </Box>
 
       <Box marginY={'3'}>
         <Text  fontWeight={'medium'}>Return Policy</Text>
-        <Text fontSize={'md'} >7 Days Reaplacement</Text>
+        <Text fontSize={'md'}  opacity={"70%"}>7 Days Reaplacement</Text>
       </Box>
       <Box >
         <Text cursor={'pointer'} _hover={{opacity:"70%"}} textDecoration={'underline'} fontWeight={'medium'}>Terms & Condition</Text>
