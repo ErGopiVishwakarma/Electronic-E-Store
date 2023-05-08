@@ -27,14 +27,12 @@ export const updatePaymentMethod = paymentDetails => dispatch => {
 
 export const getCartServerdata = () => dispatch => {
   dispatch({ type: GET_CART_SERVER_REQUEST });
-  const data = axios
+  axios
     .get('http://localhost:8080/cart')
     .then(res => {
       dispatch({ type: GET_CART_SERVER_SUCCESS, payload: res.data });
     })
     .catch(err => dispatch({ type: GET_CART_SERVER_FAILD }));
-
-  localStorage.setItem('cart', JSON.stringify(data));
 };
 
 export const postSingleProductItem = obj => dispatch => {
