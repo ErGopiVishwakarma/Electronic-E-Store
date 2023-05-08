@@ -47,6 +47,8 @@ import UserProfile from '../component/Admin/UserModal';
 ];
 export default function AdminPage() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+ 
+
   return (
 
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')} pos="relative" zIndex={999}>
@@ -81,6 +83,7 @@ export default function AdminPage() {
 
 
 const MobileNav = ({ onOpen, ...rest }) => {
+  let adminProfile = JSON.parse(localStorage.getItem('adminProfile')) || {}
   return (
     <Flex 
     ml={{ base: 0, md: 0,lg:60 }}
@@ -123,8 +126,9 @@ const MobileNav = ({ onOpen, ...rest }) => {
                 <Avatar
                   size={'sm'}
                   src={
-                    'https://lenstax.com/auth/app-assets/images/profile/user-uploads/user-04.jpg'
+                    adminProfile.pic
                   }
+                  name={adminProfile.name}
                 />
                 <VStack
                   display={{ base: 'none', md: 'flex' }}
@@ -132,7 +136,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
                   color='white'
                   spacing="1px"
                   ml="2">
-                  <Text fontSize="sm">gopi vishwakarma</Text>
+                  <Text fontSize="sm">{adminProfile.name}</Text>
                   <Text fontSize="xs" color='white'>
                     Admin
                   </Text>

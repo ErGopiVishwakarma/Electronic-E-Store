@@ -4,6 +4,7 @@ import axios from 'axios';
 export const signup = (userData) => (dispatch) => {
     dispatch({ type: REGISTER_USER });
     axios.post('http://localhost:8080/user', userData)
+
         .then(res => {
             dispatch({ type: REGISTER_USER_SUCCESSFUL, payload: res.data });
         })

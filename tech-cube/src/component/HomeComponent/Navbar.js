@@ -49,6 +49,7 @@ export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
   const text = useColorModeValue('dark', 'light')
   const textColor = text === 'dark' ? 'gray.100' : 'blackAlpha.900'
+
   const [open, setOpen] = useState(false);
   const auth = JSON.parse(localStorage.getItem('auth')) || '';
   const navigate = useNavigate();
@@ -59,15 +60,6 @@ export default function Navbar() {
   const closeFun = () => {
     setOpen(false)
   }
-  // const [isTrue,setIsTrue] = useState(false)
-  // window.addEventListener('wheel',(e)=>{
-  //     if(e.deltaY<0){
-  //       setIsTrue(false)
-  //     } else {
-  //       setIsTrue(true)
-  //     }
-
-  //   })
 
   const handleLogout = () => {
     localStorage.setItem('auth', JSON.stringify(false));
@@ -168,8 +160,13 @@ export default function Navbar() {
               <MenuItem>
                 <UserProfile>User Profile</UserProfile>
               </MenuItem>
+
               <MenuItem onClick={handleLogout}>LogOut</MenuItem>
               <NavLink to='/admin'> <MenuItem>Admin</MenuItem></NavLink>
+
+              <MenuItem>LogOut</MenuItem>
+              <NavLink to='/adminlogin'> <MenuItem>Admin</MenuItem></NavLink>
+
             </MenuList>
           </Menu>
           <NavLink to="/cart">

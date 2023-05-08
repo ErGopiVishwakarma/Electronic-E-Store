@@ -1,3 +1,4 @@
+
 import { Box, Button, Center, Divider, Heading, Image, Input, InputGroup, Text, } from '@chakra-ui/react';
 
 import React, { useEffect } from 'react';
@@ -17,6 +18,7 @@ import emptyCartGif from '../Assets/empty-cart.gif'
 //----------------------------------------------------------------------------------------------------------------------------
 const CartPage = () => {
   const dispatch = useDispatch();
+
   let { cart } = useSelector(store => store.cartReducer);
 
   let totalPrice = 0;
@@ -29,6 +31,7 @@ const CartPage = () => {
     dispatch(getCartData());
   }, []);
   return (
+
 
     <Box display={"flex"} flexDirection={{ base: 'column', sm: "row", md: "column", lg: 'row' }} paddingTop={"90px"} px={'3%'}>
 
@@ -75,14 +78,14 @@ const CartPage = () => {
         <Link to="/checkout"><Button display={'block'} margin={"auto"} borderRadius={"none"} width={"100%"} bgColor={"blackAlpha.900"} color={"white"}>Chekout</Button>
         </Link>
       </Box>
-
+    
     </Box>
   );
 };
 export default CartPage;// nothing here yet
 
 
-//--------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
 
 // cart list data shoing here
 export const CartList = () => {
@@ -104,6 +107,7 @@ export const CartList = () => {
     </Box>
   );
 };
+
 
 
 
