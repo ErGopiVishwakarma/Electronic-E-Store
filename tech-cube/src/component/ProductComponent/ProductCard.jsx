@@ -28,7 +28,6 @@ export const ProductCard = ({
         <Box
           className="bestdeal"
           justifyContent={'center'}
-          
           alignItems={'center'}
           display={'flex'}
         >
