@@ -27,3 +27,12 @@ const data=axios.get('https://real-lime-bandicoot-robe.cyclic.app/addcard').then
 localStorage.setItem('cart', JSON.stringify(data));
 
 }
+
+
+export const postSingleProductItem=(obj)=>(dispatch)=>{
+    dispatch({type:GET_CART_SERVER_REQUEST})
+return axios.post(`https://gopi.onrender.com/addcard`,obj)
+.then((res)=>{console.log("res after post 👌👌")})
+.catch((err)=>dispatch({type:GET_CART_SERVER_FAILD}))
+
+}
