@@ -78,11 +78,10 @@ export default function CartItem({
         </Box>
 
         <Box display={'flex'} flexDirection={'row'} justifyContent={'center'} gap={'20px'} alignItems={'center'}>
-        {/* <Box className='EatchPrice' display={'flex'} flexDirection={'column'} justifyContent={'center'}> */}
+    
       
       <Text fontWeight={'bold'} fontSize={'15px'}>$ {price}</Text>
-    {/* </Box> */}
-    {/* <Box className='Quentity' display={'flex'} flexDirection={'column'} justifyContent={'center'}> */}
+
 
       <Select placeholder={quantity} onChange={handleQuantity} w={{ base: '100px', }}>
         <option value='1'> 1</option>
@@ -92,9 +91,7 @@ export default function CartItem({
         <option value='5'> 5</option>
       </Select>
 
-    {/* </Box> */}
-    {/* <Box className='Total' display={'flex'} flexDirection={'column'} justifyContent={'center'}> */}
-      {/* <Text fontWeight={'bold'}>Delete</Text> */}
+
       <Button onClick={handleDeleteQty}><DeleteIcon fontSize={"20px"} color={'red.500'} /></Button>
     {/* </Box> */}
         </Box>

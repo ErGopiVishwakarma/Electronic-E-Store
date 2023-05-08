@@ -4,7 +4,6 @@ import {ADD_PAYMENT_DETAILS, ADD_TO_CART, PLACE_ORDER_FAILURE, PLACE_ORDER_REQUE
 
 
 
-
 export const getCartData=()=>(dispatch)=>{
 const data=JSON.parse(localStorage.getItem('cart') || '[]');
 dispatch({type:ADD_TO_CART,payload:data});
