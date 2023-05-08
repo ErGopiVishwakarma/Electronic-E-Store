@@ -13,6 +13,7 @@ import {
   MenuList,
   MenuOptionGroup,
   Stack,
+  useColorModeValue,
 } from '@chakra-ui/react';
 
 import { HiChevronDown } from 'react-icons/hi';
@@ -20,22 +21,39 @@ import React from 'react';
 
  export const FilterSort = () => {
   return (
-    <Box>
-      <Flex justifyContent={'space-around'}>
-        <HStack width={'60%'} gap={'40px'}>
+    <Box
+      w={'100%'}
+      mt={'80px'}
+      bg={'white'}
+      // w={'70%'}
+    >
+      <Flex
+        w={'100%'}
+        pos={'relative'}
+        bg={useColorModeValue('white', 'gray.800')}
+        color={useColorModeValue('gray.600', 'white')}
+        // minH={'70px'}
+
+        direction={{ base: 'row', md: 'row' }}
+        justifyContent={{ base: 'space-between' }}
+        // display={{ base: 'none', md: 'none', lg: 'block' }}
+        align={'center'}
+      >
+        <Flex gap={'40px'} justifyContent={'space-evenly'}>
           <Menu closeOnSelect={false}>
             <MenuButton
               as={Button}
               colorScheme="gray"
               rightIcon={<HiChevronDown />}
             >
-              color
+              Mobile Phones
             </MenuButton>
             <MenuList minWidth="240px">
-              <MenuOptionGroup title="Choose color" type="checkbox">
-                <MenuItemOption value="red">Red</MenuItemOption>
-                <MenuItemOption value="black">Black</MenuItemOption>
-                <MenuItemOption value="grey">Grey</MenuItemOption>
+              <MenuOptionGroup title="Choose Brand" type="checkbox">
+                <MenuItemOption value="APPLE">IPhone</MenuItemOption>
+                <MenuItemOption value="SAMSUNG">Samsung</MenuItemOption>
+                <MenuItemOption value="POCO">Poco</MenuItemOption>
+                <MenuItemOption value="Infinix">Infinix</MenuItemOption>
               </MenuOptionGroup>
             </MenuList>
           </Menu>
@@ -45,13 +63,15 @@ import React from 'react';
               colorScheme="gray"
               rightIcon={<HiChevronDown />}
             >
-              category
+              Laptop
             </MenuButton>
             <MenuList minWidth="240px">
-              <MenuOptionGroup title="Choose category" type="checkbox">
-                <MenuItemOption value="phone">Phone</MenuItemOption>
-                <MenuItemOption value="earphone">Earphone</MenuItemOption>
-                <MenuItemOption value="laptop">laptop</MenuItemOption>
+              <MenuOptionGroup title="Choose Brand" type="checkbox">
+                <MenuItemOption value="DELL">Dell</MenuItemOption>
+                <MenuItemOption value="LENOVO">Lenovo</MenuItemOption>
+                <MenuItemOption value="Acer">Acer</MenuItemOption>
+                <MenuItemOption value="HP">HP</MenuItemOption>
+                <MenuItemOption value="REDMI">Redmi</MenuItemOption>
               </MenuOptionGroup>
             </MenuList>
           </Menu>
@@ -61,13 +81,13 @@ import React from 'react';
               colorScheme="gray"
               rightIcon={<HiChevronDown />}
             >
-              Brand
+              Televisions
             </MenuButton>
             <MenuList minWidth="240px">
-              <MenuOptionGroup title="Choose brand" type="checkbox">
-                <MenuItemOption value="phone">Phone</MenuItemOption>
-                <MenuItemOption value="earphone">Earphone</MenuItemOption>
-                <MenuItemOption value="laptop">laptop</MenuItemOption>
+              <MenuOptionGroup title="Choose Brand" type="checkbox">
+                <MenuItemOption value="ONEPLUS">One plus</MenuItemOption>
+                <MenuItemOption value="Realme Tvs">Realme Tvs</MenuItemOption>
+                <MenuItemOption value="MI REDMI">MI Redmi</MenuItemOption>
               </MenuOptionGroup>
             </MenuList>
           </Menu>
@@ -77,13 +97,20 @@ import React from 'react';
               colorScheme="gray"
               rightIcon={<HiChevronDown />}
             >
-              4
+              Earphones & Speakers
             </MenuButton>
             <MenuList minWidth="240px">
-              <MenuOptionGroup title="Choose category" type="checkbox">
-                <MenuItemOption value="phone">Phone</MenuItemOption>
-                <MenuItemOption value="earphone">Earphone</MenuItemOption>
-                <MenuItemOption value="laptop">laptop</MenuItemOption>
+              <MenuOptionGroup title="Choose Type" type="checkbox">
+                <MenuItemOption value="wireless_earbuds">
+                  Wireless Earbuds
+                </MenuItemOption>
+                <MenuItemOption value="wireless_earphones">
+                  Wireless Earphones
+                </MenuItemOption>
+                <MenuItemOption value="earphones">Earphones</MenuItemOption>
+                <MenuItemOption value="wireless_speakers">
+                  Wireless Speakers
+                </MenuItemOption>
               </MenuOptionGroup>
             </MenuList>
           </Menu>
@@ -93,17 +120,18 @@ import React from 'react';
               colorScheme="gray"
               rightIcon={<HiChevronDown />}
             >
-              5
+              Other Accessories
             </MenuButton>
             <MenuList minWidth="240px">
-              <MenuOptionGroup title="Choose category" type="checkbox">
-                <MenuItemOption value="phone">Phone</MenuItemOption>
-                <MenuItemOption value="earphone">Earphone</MenuItemOption>
-                <MenuItemOption value="laptop">laptop</MenuItemOption>
+              <MenuOptionGroup title="Choose Type" type="checkbox">
+                <MenuItemOption value="smart_watches">
+                  Smart Watch
+                </MenuItemOption>
+                <MenuItemOption value="power_bank">Power Bank</MenuItemOption>
               </MenuOptionGroup>
             </MenuList>
           </Menu>
-        </HStack>
+        </Flex>
         <Stack>
           <Menu closeOnSelect={false}>
             <MenuButton
