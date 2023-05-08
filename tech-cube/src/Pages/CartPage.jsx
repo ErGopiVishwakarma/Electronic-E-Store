@@ -72,7 +72,7 @@ const CartPage = () => {
   <Text color={"gray.600"}>{totalPrice>0 ? totalPrice+totalPrice*0.18-150:0}</Text>
 </Box>
 
-<Link to="/checkout"><Button display={'block'} margin={"auto"} borderRadius={"none"} width={"100%"} bgColor={"blackAlpha.900"} color={"white"}>Chekout</Button>
+<Link to="/checkout"><Button display={'block'} margin={"auto"} borderRadius={"none"} width={"100%"} bgColor={"blackAlpha.900"} color={"white"} _hover={'none'}>Chekout</Button>
 </Link>
 </Box>
      
@@ -82,7 +82,7 @@ const CartPage = () => {
 export default CartPage;// nothing here yet
 
 
-//--------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
 
 // cart list data shoing here
 export const CartList = () => {
