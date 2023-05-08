@@ -17,7 +17,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 // import { singleProductfunc } from '../redux/Product/action';
-import NewLeft from '../component/SingleProduct/NewLeft'
+import NewLeft from '../component/SingleProduct/NewLeft';
 import NewRight from '../component/SingleProduct/NewRight';
 import { extendTheme } from '@chakra-ui/react';
 
@@ -36,24 +36,27 @@ const theme = extendTheme({ breakpoints });
 const SingleProduct = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-    
-  console.log("id at single page",id)
+
+  console.log('id at single page', id);
   // const data=useSelector((store)=> store.productReducer.data)
   // const singleData=data.find((singleData)=>singleData.id === parseInt(id));
 
   const data = useSelector(store => store.productReducer.data);
-     
-  console.log("data at single Page ",data)
 
+  console.log('data at single Page ', data);
 
   useEffect(() => {
     dispatch(singleProductfunc(id));
   }, []);
 
   return (
-    <Box display={['block', 'block', 'block', 'flex']} width={'100%'} paddingTop={'50px'}>
+    <Box
+      display={['block', 'block', 'block', 'flex']}
+      width={'100%'}
+      paddingTop={'50px'}
+    >
       <Box width={['100%']}>
-        <NewLeft/>
+        <NewLeft />
       </Box>
 
       <div
@@ -68,7 +71,7 @@ const SingleProduct = () => {
 
       <Box width={['100%']}>
         {' '}
-        <NewRight/>
+        <NewRight />
       </Box>
     </Box>
   );

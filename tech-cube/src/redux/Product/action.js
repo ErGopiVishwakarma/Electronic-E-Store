@@ -20,6 +20,7 @@ export const getProducts = paramObj => dispatch => {
 
 export const singleProductfunc = id => dispatch => {
   dispatch({ type: PRODUCT_REQUEST });
+
   axios
     .get(`http://localhost:8080/products/${id}`)
     .then(res => {
