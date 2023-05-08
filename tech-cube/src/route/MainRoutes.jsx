@@ -17,10 +17,6 @@ import ProductPage from '../Pages/ProductPage'
 const MainRoutes = () => {
   return (
     <Routes>
-<<<<<<< HEAD
-=======
-
->>>>>>> 80ec62d13afe6fcc4fa029d15fa35d43e01db095
       <Route path='/' element={<HomePage />} />
       <Route path='/product' element={<ProductPage />} />
       <Route path='/product/id' element={<SingleProduct />} />
@@ -43,15 +39,10 @@ const MainRoutes = () => {
       } />
       <Route path='/admin' element={<AdminPage />} />
       <Route path='*' element={<ErrorPage />} />
-<<<<<<< HEAD
-    </Routes>
-  )
-}
-=======
->>>>>>> 80ec62d13afe6fcc4fa029d15fa35d43e01db095
 
     </Routes>
-  );
+  )
+
 };
 
 
