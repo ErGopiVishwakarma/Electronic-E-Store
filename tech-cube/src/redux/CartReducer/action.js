@@ -1,4 +1,5 @@
-import {ADD_PAYMENT_DETAILS, ADD_TO_CART, PLACE_ORDER_FAILURE, PLACE_ORDER_REQUEST, PLACE_ORDER_SUCCESS, UPDATE_CART } from './actionType';
+import axios from 'axios';
+import {ADD_PAYMENT_DETAILS, ADD_TO_CART, GET_CART_SERVER_REQUEST,GET_CART_SERVER_SUCCESS,GET_CART_SERVER_FAILD,PLACE_ORDER_FAILURE, PLACE_ORDER_REQUEST, PLACE_ORDER_SUCCESS, UPDATE_CART } from './actionType';
 
 
 
@@ -17,4 +18,13 @@ export const updateCartFn=(data)=>(dispatch)=>{
 
 export const updatePaymentMethod=(paymentDetails)=>(dispatch)=>{
     dispatch({type:ADD_PAYMENT_DETAILS,payload:paymentDetails})
+}
+
+export const getCartServerdata=()=>(dispatch)=>{
+    dispatch({type:GET_CART_SERVER_REQUEST})
+const data=axios.get('https://real-lime-bandicoot-robe.cyclic.app/addcard').then((res)=>{dispatch({type:GET_CART_SERVER_SUCCESS,payload:res.data})})
+.catch((err)=>dispatch({type:GET_CART_SERVER_FAILD}))
+
+localStorage.setItem('cart', JSON.stringify(data));
+
 }
