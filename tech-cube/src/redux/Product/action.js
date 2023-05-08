@@ -20,14 +20,15 @@ export const getProducts = paramObj => dispatch => {
     });
 };
 
-
+//https://gopi.onrender.com/products      
 
 
 export const singleProductfunc=(id)=>(dispatch)=>{
+console.log("id receiving at product action.js 👍👍👍👍",id)
+
   dispatch({type:PRODUCT_REQUEST})
-
-  axios.get(`http://localhost:8080/products/${id}`)
-
+  
+ return axios.get(`http://localhost:8080/products/${id}`)
           .then((res)=>{
             console.log("Deepak from Product Action")
             console.log("**From Product Action.jsx",res.data);
