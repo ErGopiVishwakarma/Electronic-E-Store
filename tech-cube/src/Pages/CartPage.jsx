@@ -1,3 +1,4 @@
+
 import { Box, Button, Center, Divider, Heading, Image, Input, InputGroup, Text, } from '@chakra-ui/react';
 
 import React, { useEffect } from 'react';
@@ -104,6 +105,7 @@ export const CartList = () => {
     </Box>
   );
 };
+
 
 
 

@@ -6,17 +6,20 @@ import {
   PRODUCT_REQUEST,
 } from './actionType';
 
-export const getProducts = (dispatch) => {
+export const getProducts = paramObj => dispatch => {
   dispatch({ type: PRODUCT_REQUEST });
   axios
-    .get('http://localhost:8080/products')
+
+    .get(' http://localhost:8080/products', paramObj)
+
     .then(res => {
-      dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data }); 
+      dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data });
     })
     .catch(err => {
       dispatch({ type: PRODUCT_FAILURE });
     });
 };
+
 
 
 
@@ -34,3 +37,4 @@ export const singleProductfunc=(id)=>(dispatch)=>{
               dispatch({type:PRODUCT_FAILURE})
           })
   }
+

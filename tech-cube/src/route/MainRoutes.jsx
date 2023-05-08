@@ -1,4 +1,5 @@
 
+
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import HomePage from '../Pages/HomePage'
@@ -15,9 +16,11 @@ import ProductPage from '../Pages/ProductPage'
 import AdminLogin from '../Pages/AdminLogin'
 
 
+
 const MainRoutes = () => {
   return (
     <Routes>
+
       <Route path='/' element={<HomePage />} />
       <Route path='/product' element={<ProductPage />} />
       <Route path='/product/:id' element={<SingleProduct />} />
@@ -42,11 +45,10 @@ const MainRoutes = () => {
       <Route path='/adminlogin' element={<AdminLogin />} />
       <Route path='*' element={<ErrorPage />} />
 
+
     </Routes>
   )
 
 };
 
-
 export default MainRoutes;
-
