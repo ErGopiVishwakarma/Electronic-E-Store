@@ -13,6 +13,7 @@ const ProductPage = () => {
   }, []);
  
   return (
+
     <Center p="3%" pt="70px">
     {/* <FilterSort /> */}
       <SimpleGrid
