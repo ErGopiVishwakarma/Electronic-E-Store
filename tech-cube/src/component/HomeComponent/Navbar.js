@@ -35,7 +35,7 @@ import {
 import { IconContext } from 'react-icons';
 import { FaHome, FaSearch, FaShoppingBag, FaUser } from 'react-icons/fa';
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import logo1 from '../../Assets/techCubeLogo.png';
 
 import { NAV_ITEMS } from './navComponent/NavItem';
@@ -43,12 +43,16 @@ import logo from '../../Assets/techcube.png';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 import { useState } from 'react';
 import UserProfile from './UserProfile';
+import { useDispatch } from 'react-redux';
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
   const text = useColorModeValue('dark', 'light')
   const textColor = text === 'dark' ? 'gray.100' : 'blackAlpha.900'
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+  const auth = JSON.parse(localStorage.getItem('auth')) || '';
+  const navigate = useNavigate();
+
   const openFun = () => {
     setOpen(true)
   }
@@ -64,6 +68,11 @@ export default function Navbar() {
   //     }
 
   //   })
+
+  const handleLogout = () => {
+    localStorage.setItem('auth', JSON.stringify(false));
+    navigate('/login');
+  }
 
   return (
     <Box
@@ -159,7 +168,7 @@ export default function Navbar() {
               <MenuItem>
                 <UserProfile>User Profile</UserProfile>
               </MenuItem>
-              <MenuItem>LogOut</MenuItem>
+              <MenuItem onClick={handleLogout}>LogOut</MenuItem>
               <NavLink to='/admin'> <MenuItem>Admin</MenuItem></NavLink>
             </MenuList>
           </Menu>

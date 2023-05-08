@@ -1,9 +1,10 @@
-import { GET_DATA, GET_DATA_FAILURE, GET_DATA_SUCCESSFUL } from "./actionType";
+import { GET_ADDRESS, GET_ADDRESS_FAILURE, GET_ADDRESS_SUCCESSFUL, GET_DATA, GET_DATA_FAILURE, GET_DATA_SUCCESSFUL, POST_ADDRESS_SUCCESS } from "./actionType";
 
 const initialState = {
     isLoading : false,
     data : [],
-    isError : false
+    isError : false,
+    userData : {}
 }
 
 export const reducer = (state = initialState, {type, payload}) => {
@@ -28,6 +29,37 @@ export const reducer = (state = initialState, {type, payload}) => {
                 ...state, 
                 isLoading : false,
                 isError : true
+            }
+        }
+
+        case GET_ADDRESS : {
+            return {
+                ...state, 
+                isLoading :true
+            }
+        }
+
+        case GET_ADDRESS_SUCCESSFUL : {
+            return {
+                ...state, 
+                isLoading : false,
+                userData : payload
+            }
+        }
+
+        case GET_ADDRESS_FAILURE : {
+            return {
+                ...state, 
+                isLoading : false,
+                isError : true
+            }
+        }
+
+        case POST_ADDRESS_SUCCESS : {
+            return {
+                ...state,
+                isLoading : false,
+                userData : payload
             }
         }
 

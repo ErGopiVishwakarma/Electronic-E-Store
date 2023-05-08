@@ -78,7 +78,7 @@ export default function SignUp() {
     }
 
     let check = false;
-    const data = await axios.get('https://real-lime-bandicoot-robe.cyclic.app/user').then(res => res.data)
+    const data = await axios.get('http://localhost:8080/user').then(res => res.data)
     if (data.length > 0) {
       data.forEach(el => {
         if (el.email === userData.email) {
@@ -203,11 +203,11 @@ export default function SignUp() {
                 <Button
                   loadingText="Submitting"
                   size="lg"
-                  bg={'blue.500'}
+                  bg={'black'}
                   type='submit'
                   color={'white'}
                   _hover={{
-                    bg: 'blue.400',
+                    bg: 'gray.700',
                   }}>
                   Sign up
                 </Button>

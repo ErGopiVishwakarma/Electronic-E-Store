@@ -48,14 +48,44 @@ const Login = () => {
       return;
     }
 
-  dispatch(loginData); 
+    dispatch(loginData);
 
-  const userData = data.find(el => el.email === email);
-  if(userData){
-    if(userData.password !== password){
+    const userData = data.find(el => el.email === email);
+    if (userData) {
+      if (userData.password !== password) {
+        toast({
+          title: 'Login Failed.',
+          description: "Please enter correct password.",
+          status: 'error',
+          duration: 4000,
+          position: 'top',
+          isClosable: true,
+        })
+        return;
+      }
+      else {
+        localStorage.setItem('userId', JSON.stringify(userData.id));
+        localStorage.setItem('auth', JSON.stringify(auth));
+        toast({
+          title: 'Login Successful.',
+          description: "Welcome Back.",
+          status: 'success',
+          duration: 4000,
+          position: 'top',
+          isClosable: true,
+        })
+
+        setTimeout(() => {
+          navigate('/');
+        }, 4000)
+        return;
+      }
+
+    }
+    else {
       toast({
-        title: 'Login Failed.',
-        description: "Please enter correct password.",
+        title: 'Wrong Credentials.',
+        description: "Please make sure you are registered.",
         status: 'error',
         duration: 4000,
         position: 'top',
@@ -63,92 +93,66 @@ const Login = () => {
       })
       return;
     }
-    else{
-      toast({
-        title: 'Login Successful.',
-        description: "Welcome Back.",
-        status: 'success',
-        duration: 4000,
-        position: 'top',
-        isClosable: true,
-      })
 
-      setTimeout(() => {
-        navigate('/');
-      }, 4000)
-      return;
-    }
   }
-  else{
-    toast({
-      title: 'Wrong Credentials.',
-      description: "Please make sure you are registered.",
-      status: 'error',
-      duration: 4000,
-      position: 'top',
-      isClosable: true,
-    })
-    return;
-  }
-}
 
 
   return (
-    loader ? <Loader/> : 
-    <Flex
-      minH={'100vh'}
-      align={'center'}
-      pt={'60px'}
-      justify={'center'}
-      direction={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }}>
-      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
-        <Stack align={'center'}>
-          <Heading fontSize={'4xl'}>Sign in to your Account</Heading>
-        </Stack>
-        <Box
-          rounded={'lg'}
-          boxShadow={'lg'}
-          p={8}>
-          <form onSubmit={handleSubmit}>
-            <Stack spacing={4}>
-              <FormControl id="email">
-                <FormLabel>Email address</FormLabel>
-                <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-              </FormControl>
-              <FormControl id="password">
-                <FormLabel>Password</FormLabel>
-                <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-              </FormControl>
-              <Stack spacing={10}>
-                <Stack
-                  direction={{ base: 'column', sm: 'row' }}
-                  align={'start'}
-                  justify={'space-between'}>
-                  <Checkbox>Remember me</Checkbox>
-                  <Link color={'blue.400'}>Forgot password?</Link>
+    loader ? <Loader /> :
+      <Flex
+        minH={'100vh'}
+        align={'center'}
+        pt={'60px'}
+        justify={'center'}
+        direction={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }}>
+        <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+          <Stack align={'center'}>
+            <Heading fontSize={'4xl'}>Sign in to your Account</Heading>
+          </Stack>
+          <Box
+            rounded={'lg'}
+            boxShadow={'lg'}
+            p={8}>
+            <form onSubmit={handleSubmit}>
+              <Stack spacing={4}>
+                <FormControl id="email">
+                  <FormLabel>Email address</FormLabel>
+                  <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                </FormControl>
+                <FormControl id="password">
+                  <FormLabel>Password</FormLabel>
+                  <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                </FormControl>
+                <Stack spacing={10}>
+                  <Stack
+                    direction={{ base: 'column', sm: 'row' }}
+                    align={'start'}
+                    justify={'space-between'}>
+                    <Checkbox>Remember me</Checkbox>
+                    <Link color={'blue.400'}>Forgot password?</Link>
+                  </Stack>
+                  <Button
+                    bg={'black'}
+                    color={'white'}
+                    type='submit'
+                    _hover={{
+                      bg: 'gray.700',
+                    }}>
+                    Sign in
+                  </Button>
                 </Stack>
-                <Button
-                  bg={'blue.400'}
-                  color={'white'}
-                  type='submit'
-                  _hover={{
-                    bg: 'blue.500',
-                  }}>
-                  Sign in
-                </Button>
               </Stack>
-            </Stack>
-          </form>
-          <Flex w='90%' mt='20px' justifyContent='center'>
-            <Text>New here?</Text>
-            <NavLink style={{marginLeft : '10px', color : '#4299e1', textDecoration : 'underline'}} to='/signup'>Sign Up</NavLink>
-          </Flex>
+            </form>
+            <Flex w='90%' mt='20px' justifyContent='center'>
+              <Text>New here?</Text>
+              <NavLink style={{ marginLeft: '10px', color: '#4299e1', textDecoration: 'underline' }} to='/signup'>Sign Up</NavLink>
+            </Flex>
+          </Box>
+        </Stack>
+        <Box m={'20px auto'} w={{ base: '90%', sm: '75%', md: '75%', lg: '50%', xl: '50%', '2xl': '50%' }}>
+          <Image w={'95%'} borderRadius={'10px'} h={'500px'} src={loginImg} alt='loginImg' />
         </Box>
-      </Stack>
-      <Box m={'20px auto'} w={{ base: '90%', sm: '75%', md: '75%', lg: '50%', xl: '50%', '2xl': '50%' }}>
-        <Image w={'95%'} borderRadius={'10px'} h={'500px'} src={loginImg} alt='loginImg' />
-      </Box>
-    </Flex>
+      </Flex>
   )
 }
 

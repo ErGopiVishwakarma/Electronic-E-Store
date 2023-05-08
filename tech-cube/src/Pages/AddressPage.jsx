@@ -37,7 +37,7 @@ let handlePaymentDetails; // for adding details on redux on Payment page
 
 
 
-const AddressForm = () => {
+export const AddressForm = () => {
 
 
   const [user, setUser] = useState({});
