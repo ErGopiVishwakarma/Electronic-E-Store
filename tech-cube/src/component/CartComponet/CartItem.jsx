@@ -83,7 +83,7 @@ export default function CartItem({
         </Box>
 
         <Box display={'flex'} flexDirection={'row'} justifyContent={'center'} gap={'20px'} alignItems={'center'}>
-        {/* <Box className='EatchPrice' display={'flex'} flexDirection={'column'} justifyContent={'center'}> */}
+    
       
       <Text fontWeight={'bold'} fontSize={'15px'}>$ {price}</Text>
 
@@ -97,7 +97,7 @@ export default function CartItem({
       </Select>
 
 
-   
+
       <Button onClick={handleDeleteQty}><DeleteIcon fontSize={"20px"} color={'red.500'} /></Button>
   
         </Box>

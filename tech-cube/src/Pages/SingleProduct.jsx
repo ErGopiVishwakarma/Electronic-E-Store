@@ -41,9 +41,9 @@ const SingleProduct = () => {
   // const data=useSelector((store)=> store.productReducer.data)
   // const singleData=data.find((singleData)=>singleData.id === parseInt(id));
 
-  const data = useSelector(store => store.productReducer.data);
+  const spData = useSelector(store => store.productReducer.data);
 
-  console.log('data at single Page ', data);
+  console.log('data at single Page ', spData);
 
   useEffect(() => {
     dispatch(singleProductfunc(id));
@@ -56,7 +56,7 @@ const SingleProduct = () => {
       paddingTop={'50px'}
     >
       <Box width={['100%']}>
-        <NewLeft />
+        <NewLeft spData={spData} />
       </Box>
 
       <div
@@ -71,7 +71,7 @@ const SingleProduct = () => {
 
       <Box width={['100%']}>
         {' '}
-        <NewRight />
+        <NewRight spData={spData} />
       </Box>
     </Box>
   );

@@ -1,7 +1,17 @@
+
+
+
+
+
 {
-  "products": [
+    "products":[
     {
-      "color": ["black", "white", "green", "yellow"],
+      "color": [
+        "black",
+        "white",
+        "green",
+        "yellow"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/back_600x.png?v=1668599490",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI_1f060ff5-cbbf-43f3-b673-41e4aacc7d79_700x.jpg?v=1657869596",
@@ -23,7 +33,12 @@
       "review": 2159
     },
     {
-      "color": ["black", "silver", "green", "pink"],
+      "color": [
+        "black",
+        "silver",
+        "green",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.png?v=1668756103",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_600x.png?v=1668756103",
@@ -45,7 +60,11 @@
       "review": 1363
     },
     {
-      "color": ["black", "white", "blue"],
+      "color": [
+        "black",
+        "white",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/3_743027d7-94ca-43e1-9c04-72ad6483c226_700x.png?v=1669055392",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2_614c0321-f235-4765-b157-a8727f7e4aae_700x.png?v=1669055570",
@@ -65,7 +84,11 @@
       "review": 48903
     },
     {
-      "color": ["black", "white", "blue"],
+      "color": [
+        "black",
+        "white",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_white_600x.png?v=1641206209",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD161-FI_Black02_bc21c8ef-bd1e-4850-b20f-1d3a89dba389_700x.jpg?v=1674117809",
@@ -87,7 +110,11 @@
       "review": 12403
     },
     {
-      "color": ["black", "white", "blue"],
+      "color": [
+        "black",
+        "white",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_white_9263689b-ad66-47cd-8183-f59685e1dff6_600x.png?v=1671193643",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD161-FI_Black05_3200c952-62a7-4b5a-969b-c5e6f29ba71c_700x.jpg?v=1674118097",
@@ -107,7 +134,11 @@
       "review": 4378
     },
     {
-      "color": ["black", "blue", "pink"],
+      "color": [
+        "black",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/airdopes-121-v2-pink_600x.png?v=1678773275",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/airdopes-121-v2-blue_600x.png?v=1678773275",
@@ -127,7 +158,10 @@
       "review": 0
     },
     {
-      "color": ["black", "gray"],
+      "color": [
+        "black",
+        "gray"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_black_71281c3f-ea28-4316-8a1f-544820908c6c_600x.png?v=1664103051",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD181-FI_Black01_e7aa0e47-1514-45d7-87e1-d39f9a869d89_700x.png?v=1664103052",
@@ -149,7 +183,12 @@
       "review": 53671
     },
     {
-      "color": ["black", "pink", "green", "blue"],
+      "color": [
+        "black",
+        "pink",
+        "green",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/grey_916612cd-a8da-408e-8ec6-b177df5fa727_1_700x.png?v=1658150489",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/121-pro-BG_600x.gif?v=1665492449",
@@ -171,7 +210,11 @@
       "review": 2160
     },
     {
-      "color": ["gray", "red", "blue"],
+      "color": [
+        "gray",
+        "red",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/MI-2_600x.png?v=1658736611",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD191G-FI_White05_700x.png?v=1658738968",
@@ -193,7 +236,11 @@
       "review": 1364
     },
     {
-      "color": ["black", "blue", "red"],
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image-3_e05a4bee-499f-42da-8db5-e3921a185f5c_600x.png?v=1655526604",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/04_700x.jpg?v=1656100430",
@@ -215,7 +262,11 @@
       "review": 48904
     },
     {
-      "color": ["black", "blue", "gray"],
+      "color": [
+        "black",
+        "blue",
+        "gray"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_9230f72d-9f86-4aec-9ae2-a7d87d332877_600x.png?v=1647426798",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_41abf7ad-3d7f-4189-a93a-08fefd02ba45_600x.png?v=1647426798",
@@ -237,7 +288,12 @@
       "review": 12404
     },
     {
-      "color": ["green", "black", "blue", "pink"],
+      "color": [
+        "green",
+        "black",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveCall.1_1_60x.png?v=1680772802",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/wave-call-3_600x.png?v=1680772802",
@@ -259,7 +315,12 @@
       "review": 4379
     },
     {
-      "color": ["black", "red", "blue", "pink"],
+      "color": [
+        "black",
+        "red",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/black_bdca4987-8550-461d-bb37-b1bae02009b4_600x.png?v=1678969539",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveLite_GIFCarousal_001_800x.jpg?v=1678969539",
@@ -281,7 +342,12 @@
       "review": 2383
     },
     {
-      "color": ["black", "green", "blue", "pink"],
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-4_d6819031-819f-461b-a0e1-32c829d0c13c.png?v=1661268545",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268572",
@@ -303,7 +369,11 @@
       "review": 53672
     },
     {
-      "color": ["black", "green", "pink"],
+      "color": [
+        "black",
+        "green",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveFlexConnectPackaging1.2_300x.png?v=1677645513",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268573",
@@ -325,7 +395,11 @@
       "review": 2161
     },
     {
-      "color": ["green", "blue", "pink"],
+      "color": [
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/removal.ai__tmp-63679b9ab29ed_300x.png?v=1667734467",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268574",
@@ -347,7 +421,11 @@
       "review": 1365
     },
     {
-      "color": ["black", "green", "pink"],
+      "color": [
+        "black",
+        "green",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/MAINPRIMIA_300x.png?v=1673000401",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268575",
@@ -369,7 +447,10 @@
       "review": 48905
     },
     {
-      "color": ["green", "blue"],
+      "color": [
+        "green",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Leapcall.5284_3aca31a0-1964-4e03-bbef-b4391393af2d_300x.png?v=1679352767",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268576",
@@ -391,7 +472,11 @@
       "review": 12405
     },
     {
-      "color": ["black", "blue", "pink"],
+      "color": [
+        "black",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Lyncvoice2_300x.png?v=1674034373",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268577",
@@ -413,7 +498,11 @@
       "review": 4380
     },
     {
-      "color": ["black", "green", "blue"],
+      "color": [
+        "black",
+        "green",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Leapcall.5284_300x.png?v=1678948531",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268578",
@@ -435,7 +524,9 @@
       "review": 0
     },
     {
-      "color": ["green"],
+      "color": [
+        "green"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/blsck_300x.png?v=1671601227",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268579",
@@ -457,7 +548,10 @@
       "review": 53673
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/bla_300x.png?v=1679660395",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268580",
@@ -479,7 +573,12 @@
       "review": 0
     },
     {
-      "color": ["black", "green", "blue", "pink"],
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/black_21bd8228-f672-4ccd-84a2-aff8ec1c293d_300x.png?v=1670787230",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268581",
@@ -501,7 +600,10 @@
       "review": 1366
     },
     {
-      "color": ["green", "pink"],
+      "color": [
+        "green",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/B1_1_-PhotoRoom_300x.png?v=1668117625",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268582",
@@ -523,7 +625,12 @@
       "review": 48906
     },
     {
-      "color": ["black", "green", "blue", "pink"],
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveArmourPackaging.98_300x.png?v=1679727242",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268583",
@@ -545,7 +652,10 @@
       "review": 0
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveSmartCall-FI_Black01_300x.png?v=1680071619",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268584",
@@ -567,7 +677,11 @@
       "review": 4381
     },
     {
-      "color": ["black", "green", "pink"],
+      "color": [
+        "black",
+        "green",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/xtend-pro-3_300x.png?v=1658298359",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268585",
@@ -589,7 +703,10 @@
       "review": 2385
     },
     {
-      "color": ["blue", "pink"],
+      "color": [
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Wavebeatcall1.2_300x.png?v=1674561165",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268586",
@@ -611,7 +728,11 @@
       "review": 53674
     },
     {
-      "color": ["black", "green", "blue"],
+      "color": [
+        "black",
+        "green",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1.1129_300x.png?v=1678102525",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268587",
@@ -633,7 +754,11 @@
       "review": 2163
     },
     {
-      "color": ["black", "green", "pink"],
+      "color": [
+        "black",
+        "green",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveEdge.24_300x.png?v=1672899936",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268588",
@@ -655,7 +780,11 @@
       "review": 1367
     },
     {
-      "color": ["green", "blue", "pink"],
+      "color": [
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveFit_FI-01-PhotoRoom.png-PhotoRoom_300x.png?v=1679351026",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268589",
@@ -677,7 +806,10 @@
       "review": 48907
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/wave-call-Copy_dcaa5c5f-2574-4a71-ba0e-a77e7a82abfa_300x.png?v=1678190676",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268590",
@@ -699,7 +831,10 @@
       "review": 12407
     },
     {
-      "color": ["green", "blue"],
+      "color": [
+        "green",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/3_886cfe4b-3473-4348-8242-001f3a156a61_300x.png?v=1672986395",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268591",
@@ -721,7 +856,9 @@
       "review": 4382
     },
     {
-      "color": ["black"],
+      "color": [
+        "black"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untitled-5_300x.png?v=1658294451",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268592",
@@ -743,7 +880,12 @@
       "review": 2386
     },
     {
-      "color": ["black", "green", "blue", "pink"],
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untitled-2_78dd12b0-7258-46b8-97cf-01671a965d4a_300x.png?v=1669707141",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268593",
@@ -765,7 +907,12 @@
       "review": 53675
     },
     {
-      "color": ["black", "green", "blue", "pink"],
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1_f28099c2-bf34-48f9-88dd-dee880b36ec9_300x.png?v=1663246010",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268594",
@@ -787,7 +934,10 @@
       "review": 2164
     },
     {
-      "color": ["black", "red"],
+      "color": [
+        "black",
+        "red"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_f30681d9-fddb-4997-bfcb-503fcc258a5c_300x.png?v=1646392933",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268595",
@@ -809,7 +959,10 @@
       "review": 13
     },
     {
-      "color": ["blue", "pink"],
+      "color": [
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/a09a67f0-75bd-42b8-8f0d-58ffad51e03b_300x.png?v=1625045372",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268596",
@@ -831,7 +984,11 @@
       "review": 48908
     },
     {
-      "color": ["black", "blue", "pink"],
+      "color": [
+        "black",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/103_600x.png?v=1574927262",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/103blk_600x.png?v=1574927262",
@@ -853,7 +1010,10 @@
       "review": 12408
     },
     {
-      "color": ["black", "gray"],
+      "color": [
+        "black",
+        "gray"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8fd33d93-0ea1-46a3-89d6-6cad41e95741_600x.png?v=1625046503",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/5ea15cf3-7454-4851-9342-cd77f8af418f_600x.png?v=1625046503",
@@ -874,7 +1034,11 @@
       "review": 4383
     },
     {
-      "color": ["black", "white", "black"],
+      "color": [
+        "black",
+        "white",
+        "black"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8ec58553-3255-48ec-929e-4838215b640c_1400x.png?v=1625046271",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8ec58553-3255-48ec-929e-4838215b640c_1400x.png?v=1625046271",
@@ -894,7 +1058,12 @@
       "review": 2387
     },
     {
-      "color": ["gray", "red", "blue", "pink"],
+      "color": [
+        "gray",
+        "red",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/bassheads-110-black_600x.png?v=1613742985",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/bassheads-110-white_600x.png?v=1613457275",
@@ -915,7 +1084,11 @@
       "review": 53676
     },
     {
-      "color": ["black", "blue", "red"],
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/boat-bassheads-102-red_600x.png?v=1633152280",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2_4996964f-aee4-451a-9e4d-33ee171b439d_676x.png?v=1659689852",
@@ -937,7 +1110,12 @@
       "review": 2165
     },
     {
-      "color": ["black", "red", "white", "pink"],
+      "color": [
+        "black",
+        "red",
+        "white",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c3d0fbbd-9479-4351-bf04-91136da2ae91_600x.png?v=1656750183",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/04981d98-f010-4553-9ba2-97c9a36fef4e_600x.png?v=1656750183",
@@ -958,7 +1136,12 @@
       "review": 1369
     },
     {
-      "color": ["green", "black", "white", "blue"],
+      "color": [
+        "green",
+        "black",
+        "white",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main15_600x.png?v=1623832759",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_743eb2f9-663e-4359-ae9d-192e5f0ed056_600x.png?v=1623832759",
@@ -979,7 +1162,12 @@
       "review": 48909
     },
     {
-      "color": ["green", "blue", "yellow", "red"],
+      "color": [
+        "green",
+        "blue",
+        "yellow",
+        "red"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Red_d8ee4785-21ae-4fee-943e-d5c571131ae8_700x.png?v=1660654082",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Orange_05fdf488-bd1f-437e-8d13-dc428e957628_700x.png?v=1660654083",
@@ -1001,7 +1189,11 @@
       "review": 12409
     },
     {
-      "color": ["green", "blue", "orange"],
+      "color": [
+        "green",
+        "blue",
+        "orange"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/mint--orange_600x.png?v=1673001242",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/mint-purple_600x.png?v=1673001241",
@@ -1021,7 +1213,10 @@
       "review": 4384
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untblueitled-1_600x.png?v=1661509030",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/06-2_700x.png?v=1675769103",
@@ -1043,7 +1238,11 @@
       "review": 2388
     },
     {
-      "color": ["green", "blue", "pink"],
+      "color": [
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/35ca6350-d6f3-4bc2-a742-01b2c88d80c4_700x.png?v=1673005509",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/93b827fc-0108-4e8b-9ea9-e66fb1e7a362_600x.png?v=1625157890",
@@ -1065,7 +1264,10 @@
       "review": 53677
     },
     {
-      "color": ["black", "red"],
+      "color": [
+        "black",
+        "red"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/rockerz-255r-red_600x.png?v=1613731612",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R255-FI_Red02_600x.png?v=1667509412",
@@ -1087,7 +1289,12 @@
       "review": 2166
     },
     {
-      "color": ["green", "blue", "gray", "black"],
+      "color": [
+        "green",
+        "blue",
+        "gray",
+        "black"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ed46e58c-9643-43e0-b350-9539d293aa51_600x.png?v=1625045114",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/235v2-striking-orange_600x.png?v=1679327481",
@@ -1108,7 +1315,11 @@
       "review": 1370
     },
     {
-      "color": ["black", "blue", "pink"],
+      "color": [
+        "black",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1_1_c28e268f-71e2-44e0-9b7a-f52aebadc3e2_600x.png?v=1677232434",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Rockerz255MAXFI08_2_600x.png?v=1677232434",
@@ -1130,7 +1341,11 @@
       "review": 48910
     },
     {
-      "color": ["black", "green", "blue"],
+      "color": [
+        "black",
+        "green",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Nirvana551ANCPackaging1.3_600x.png?v=1681413243",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Rockers551ANCFI04_600x.png?v=1682310099",
@@ -1152,7 +1367,9 @@
       "review": 12410
     },
     {
-      "color": ["green"],
+      "color": [
+        "green"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/m1_dac5a6b1-7937-4cdf-be70-76bb5a1fcf49_600x.png?v=1639153081",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/m3_08324ce2-cdd9-44d6-8f5b-849fda265ba8_600x.png?v=1639153082",
@@ -1173,7 +1390,10 @@
       "review": 4385
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/yellow-PhotoRoom.png-PhotoRoom_600x.png?v=1679314398",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/boldblue_600x.png?v=1679314398",
@@ -1194,7 +1414,12 @@
       "review": 2389
     },
     {
-      "color": ["black", "green", "blue", "pink"],
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/245pr01_600x.png?v=1663584345",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R245Pro-FI_Teal03_600x.png?v=1667508010",
@@ -1215,7 +1440,10 @@
       "review": 53678
     },
     {
-      "color": ["green", "pink"],
+      "color": [
+        "green",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_8549ad38-acec-45d6-bba4-8b202a9bfdc1_600x.png?v=1673001484",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S500-FI_Black01_600x.png?v=1659431798",
@@ -1237,7 +1465,12 @@
       "review": 2167
     },
     {
-      "color": ["black", "green", "blue", "pink"],
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img_Blue_cd42b3e2-9e7f-4f5d-9026-51770ac39389_600x.png?v=1678882698",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img_R_60710fef-bdab-4177-be07-6273b7536d26_600x.png?v=1678882698",
@@ -1257,7 +1490,10 @@
       "review": 1371
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8f17d4a5-844a-472d-9c60-d9741fd0290e_600x.png?v=1625045367",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2b57048f-0a88-4234-a72c-e57c6ed99cb6_600x.png?v=1625045116",
@@ -1277,7 +1513,11 @@
       "review": 48911
     },
     {
-      "color": ["black", "green", "pink"],
+      "color": [
+        "black",
+        "green",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/3_1b999434-bebd-4991-97e0-8ab8974b99c2_600x.png?v=1655187482",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/resize_600x.png?v=1655187482",
@@ -1298,7 +1538,11 @@
       "review": 12411
     },
     {
-      "color": ["red", "blue", "pink"],
+      "color": [
+        "red",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-2_0a0b0dd1-2a5d-4887-afad-7593ecf06ca1_600x.png?v=1640073281",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S620-FI_Blue04_cfba1596-5bf7-477d-8775-780b84a000c3_600x.png?v=1659433719",
@@ -1320,7 +1564,11 @@
       "review": 4386
     },
     {
-      "color": ["black", "yellow", "blue"],
+      "color": [
+        "black",
+        "yellow",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1200f_main2_600x.png?v=1673002142",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1200f_main3_600x.png?v=1673002201",
@@ -1340,7 +1588,9 @@
       "review": 2390
     },
     {
-      "color": ["black"],
+      "color": [
+        "black"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main---1_14fdb862-156c-4161-a402-b4e56a464ec1_600x.png?v=1678952224",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/PP50-FI02_c9c4db94-902a-457d-b6a6-7e747da9b91b_600x.png?v=1678952224",
@@ -1361,7 +1611,12 @@
       "review": 53679
     },
     {
-      "color": ["red", "green", "blue", "pink"],
+      "color": [
+        "red",
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/3e35681e-bcb1-449c-a58a-2d43e8b00bf4_cca7c375-b937-4349-a70b-2a5ae95f3e6f_600x.png?v=1679336862",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/last-blue_9fc4005e-f8fe-4227-8de9-6bb06e88c3ac_600x.jpg?v=1679336863",
@@ -1382,7 +1637,10 @@
       "review": 2168
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_5f41606a-604c-4433-b1a0-404b31892ab8_600x.png?v=1662546797",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_c609fdda-89f7-44e4-ba04-ca485538711f_600x.png?v=1662546797",
@@ -1402,7 +1660,11 @@
       "review": 1372
     },
     {
-      "color": ["red", "green", "blue"],
+      "color": [
+        "red",
+        "green",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/stone-1010-black_600x.png?v=1673002262",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/blue_3c76e716-948f-44ff-a53d-1406e787259e_600x.png?v=1673002262",
@@ -1422,7 +1684,9 @@
       "review": 33
     },
     {
-      "color": ["black"],
+      "color": [
+        "black"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/992fa71b-0203-43f3-a1ca-43c9f535e87a_600x.png?v=1631788202",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/64a076e9-ef0c-443d-b86e-16715212dd92_600x.png?v=1631788202",
@@ -1443,7 +1707,12 @@
       "review": 12412
     },
     {
-      "color": ["black", "green", "blue", "pink"],
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ab154db8-8ffc-4464-a37a-31f309893bfe_600x.png?v=1625046393",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/d3e46a5d-cda9-49f8-a24f-b975fdd50689_600x.png?v=1625046393",
@@ -1464,7 +1733,12 @@
       "review": 4387
     },
     {
-      "color": ["black", "green", "blue", "pink"],
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image_600x.png?v=1655534170",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_Batman02_600x.png?v=1656101102",
@@ -1486,7 +1760,10 @@
       "review": 2391
     },
     {
-      "color": ["red", "green"],
+      "color": [
+        "red",
+        "green"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img_7fdc52dd-e28d-45a9-b965-09366b5ebb0d_600x.png?v=1616582227",
         "https://rukminim1.flixcart.com/image/416/416/kkec4280/speaker/mobile-tablet-speaker/a/z/9/blitz-1500-boat-original-imafzr3zhtrxyqfx.jpeg?q=70"
@@ -1505,7 +1782,11 @@
       "review": 53680
     },
     {
-      "color": ["red", "blue", "pink"],
+      "color": [
+        "red",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_250_red_600x.png?v=1673001723",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S250-FI_Red01_600x.png?v=1659432693",
@@ -1527,7 +1808,10 @@
       "review": 2169
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untitled-1_e66c4515-7594-4726-89d6-e2b311a39c94_600x.png?v=1658436784",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/3_6f20b409-43b2-43d5-96ac-e9f8a26d79a8_600x.png?v=1658436783",
@@ -1547,7 +1831,12 @@
       "review": 1373
     },
     {
-      "color": ["black", "green", "blue", "pink"],
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_WW02_a7ba0e48-779c-4625-acb9-2f79310b4c8b_600x.png?v=1656101346",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_WW03_faea534e-ac48-45ee-a949-3747bfcf3138_600x.png?v=1656101347",
@@ -1567,7 +1856,11 @@
       "review": 48913
     },
     {
-      "color": ["red", "green", "pink"],
+      "color": [
+        "red",
+        "green",
+        "pink"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/190ca_600x.png?v=1639989015",
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/desk3.jpg?v=1639984472",
@@ -1587,7 +1880,12 @@
       "review": 12413
     },
     {
-      "color": ["black", "green", "blue", "pink"],
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/xif0q/power-bank/j/t/b/power-bank-dx10s-10000-mah-dx-10s-10000-callmate-original-imagzg2rmrrwtgzq.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/xif0q/power-bank/n/y/y/power-bank-dx10s-10000-mah-dx-10s-10000-callmate-original-imagzg2rfzwz7h8p.jpeg?q=70",
@@ -1607,7 +1905,10 @@
       "review": 4388
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/xif0q/power-bank/v/r/6/p1070d-elegant-black-10000-p1070d-elegant-black-syska-original-imaggd4twbytk967.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/xif0q/power-bank/p/q/q/p1070d-elegant-black-10000-p1070d-elegant-black-syska-original-imaggmg6pryy7shs.jpeg?q=70",
@@ -1628,7 +1929,11 @@
       "review": 2392
     },
     {
-      "color": ["black", "green", "pink"],
+      "color": [
+        "black",
+        "green",
+        "pink"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/km9ht3k0/power-bank/r/o/w/pocket-pro-pb1022zm-mi-original-imagf78kujzgcwht.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/km9ht3k0/power-bank/1/c/n/pocket-pro-pb1022zm-mi-original-imagf78kh955adyd.jpeg?q=70",
@@ -1648,7 +1953,11 @@
       "review": 53681
     },
     {
-      "color": ["red", "blue", "pink"],
+      "color": [
+        "red",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/o/l/w/pp-111-10000-ambrane-original-imagg7nprsfvwttp.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/l5jxt3k0/power-bank/3/i/v/-original-imagg7np5ap4eyfr.jpeg?q=70",
@@ -1669,7 +1978,11 @@
       "review": 2170
     },
     {
-      "color": ["black", "green", "blue"],
+      "color": [
+        "black",
+        "green",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/l5fnhjk0/power-bank/m/f/z/-original-imagg3utnefgyxkh.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/l5fnhjk0/power-bank/6/z/h/-original-imagg3utytg5qwd4.jpeg?q=70",
@@ -1689,7 +2002,11 @@
       "review": 1374
     },
     {
-      "color": ["black", "green", "pink"],
+      "color": [
+        "black",
+        "green",
+        "pink"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/kd7pevk0/power-bank/s/n/g/power-bank-10000-pb100lzm-redmi-original-imafu5entn9mvccq.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/kdeum4w0/power-bank/h/h/e/power-bank-20000-pb200lzm-redmi-original-imafubxpckzrz5uj.jpeg?q=70",
@@ -1709,7 +2026,12 @@
       "review": 48914
     },
     {
-      "color": ["red", "green", "blue", "pink"],
+      "color": [
+        "red",
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/u/1/k/stylo-10k-10000-ambrane-original-imaggvt4dpp43pfk.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/b/z/e/stylo-10k-10000-ambrane-original-imag6gca25nnywfv.jpeg?q=70"
@@ -1728,7 +2050,10 @@
       "review": 12414
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/y/c/h/stylo-pro-27000-ambrane-original-imag58udy8vk2jhc.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/kn97te80/power-bank/r/a/l/quick-charging-18w-10000-p1029j-ebl-syska-original-imagfz7zpeab5wmg.jpeg?q=70",
@@ -1749,7 +2074,11 @@
       "review": 4389
     },
     {
-      "color": ["red", "green", "blue"],
+      "color": [
+        "red",
+        "green",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/z/s/1/stylo-pro-27000-ambrane-original-imag58udpcyzjyhf.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/n/d/u/stylo-pro-27000-ambrane-original-imag58udt6guvzyz.jpeg?q=70"
@@ -1768,7 +2097,9 @@
       "review": 0
     },
     {
-      "color": ["black"],
+      "color": [
+        "black"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/612/612/xif0q/power-bank/o/8/w/-original-imaggbhjcsvzhurt.jpeg?q=70",
         "https://image01.realme.net/general/20220613/1655093360510.png.webp"
@@ -1787,7 +2118,12 @@
       "review": 0
     },
     {
-      "color": ["black", "green", "blue", "pink"],
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/612/612/xif0q/shopsy-power-bank/7/l/m/stylo-max-50000-ambrane-original-imagfgr5swwr6qkw.jpeg?q=70",
         "https://cdn.shopify.com/s/files/1/0003/7565/2399/products/stylomaxblacklisting-02_720x.png?v=1669883612"
@@ -1806,7 +2142,12 @@
       "review": 2171
     },
     {
-      "color": ["black", "green", "blue", "pink"],
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/612/612/koenl3k0/power-bank/k/u/y/k2-3-in-1-black-40000-k2-bla-mi-mobinori-original-imag2vefp52zwnnz.jpeg?q=70",
         "https://cdn.shopify.com/s/files/1/0003/7565/2399/products/powerlitultralisting-03_720x.jpg?v=1682055388"
@@ -1825,7 +2166,10 @@
       "review": 1375
     },
     {
-      "color": ["red", "green"],
+      "color": [
+        "red",
+        "green"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0003/7565/2399/products/powerlitultralisting-03_720x.jpg?v=1682055388",
         "https://rukminim1.flixcart.com/image/612/612/kw2fki80/power-bank/i/k/2/smart-power-pack-l3-iqoniqe-original-imag8tv4n4arwphp.jpeg?q=70"
@@ -1844,7 +2188,11 @@
       "review": 48915
     },
     {
-      "color": ["red", "blue", "pink"],
+      "color": [
+        "red",
+        "blue",
+        "pink"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/612/612/xif0q/power-bank/j/b/l/dx138-c-thru-20000mah-20000-c-thru-20000mah-transparent-power-original-imagh64dyaz2x8c2.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/612/612/xif0q/power-bank/j/b/l/dx138-c-thru-20000mah-20000-c-thru-20000mah-transparent-power-original-imagh64dyaz2x8c2.jpeg?q=70"
@@ -1863,7 +2211,12 @@
       "review": 12415
     },
     {
-      "color": ["silver", "blue", "gray", "green"],
+      "color": [
+        "silver",
+        "blue",
+        "gray",
+        "green"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/REALMEBOOKSLIMi54_540x.jpg?v=1660559968",
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/REALMEBOOKSLIMi53_320x.jpg?v=1660559970",
@@ -1885,7 +2238,10 @@
       "review": 4390
     },
     {
-      "color": ["silver", "blue"],
+      "color": [
+        "silver",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU4_9f7f65cc-fd3e-44f8-b4a6-d798e943725b_540x.jpg?v=1663670501",
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU3_50e61315-9197-4768-b332-17c69235fa24_320x.jpg?v=1663670501",
@@ -1907,7 +2263,11 @@
       "review": 2394
     },
     {
-      "color": ["silver", "blue", "red"],
+      "color": [
+        "silver",
+        "blue",
+        "red"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/DELLINSPi55410_4_320x.jpg?v=1669094519",
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/DELLINSPi55410_3_320x.jpg?v=1669094520",
@@ -1929,7 +2289,11 @@
       "review": 53683
     },
     {
-      "color": ["silver", "blue", "red"],
+      "color": [
+        "silver",
+        "blue",
+        "red"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/02_cb3c93e3-02ea-478d-9c90-f750895d0ffd_320x.jpg?v=1667290210",
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/03_41792eda-5506-4626-8ecd-c512f2aef324_320x.jpg?v=1667290209",
@@ -1951,7 +2315,10 @@
       "review": 2172
     },
     {
-      "color": ["silver", "blue"],
+      "color": [
+        "silver",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585126_8344367e-4b86-4f69-8a3a-ed7c4a8d7d0c_320x.jpg?v=1663670400",
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585122_276dca95-a6b4-4ad2-a60b-3fb4ff81900f_320x.jpg?v=1663670400",
@@ -1973,7 +2340,9 @@
       "review": 1376
     },
     {
-      "color": ["green"],
+      "color": [
+        "green"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585126_8344367e-4b86-4f69-8a3a-ed7c4a8d7d0c_320x.jpg?v=1663670400",
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585122_276dca95-a6b4-4ad2-a60b-3fb4ff81900f_320x.jpg?v=1663670400",
@@ -1995,7 +2364,10 @@
       "review": 48916
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/ACERAV15-51-54S15_320x.jpg?v=1663673361",
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585121_e6d16c2b-b850-4e6e-a481-8f1c1cb85674_320x.jpg?v=1663670400"
@@ -2014,7 +2386,10 @@
       "review": 12416
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/AMDRyzen5-3500U4_320x.jpg?v=1663669249",
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/62eb2580-32ba-46f7-8fe0-2da474ee1e6021131258_320x.jpg?v=1649237746"
@@ -2033,7 +2408,10 @@
       "review": 4391
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/62eb2580-32ba-46f7-8fe0-2da474ee1e6021131258_320x.jpg?v=1649237746",
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585121_e6d16c2b-b850-4e6e-a481-8f1c1cb85674_320x.jpg?v=1663670400"
@@ -2052,7 +2430,10 @@
       "review": 2395
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/ACERAN515-45-R2GL_320x.jpg?v=1660545864",
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/RedmiBook15Corei311thGeneration_8GBRAM_256GBSSD_Windo_1_320x.png?v=1643610479"
@@ -2071,7 +2452,10 @@
       "review": 53684
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585121_e6d16c2b-b850-4e6e-a481-8f1c1cb85674_320x.jpg?v=1663670400",
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585121_e6d16c2b-b850-4e6e-a481-8f1c1cb85674_320x.jpg?v=1663670400",
@@ -2091,7 +2475,10 @@
       "review": 2173
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/ONEPLUSTVUSER-503_a7ad4009-759e-4f5a-9c4a-2abc9a246e9f_320x.jpg?v=1664779483",
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HP15s-du3564TUCorei311thGeneration-_8GBRAM_512GBSSD_Windows11Home_MSOffice_1_320x.png?v=1640850183"
@@ -2110,7 +2497,10 @@
       "review": 1377
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/REALMETV43UHD_4_320x.jpg?v=1663672477",
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/RedmiBook15Corei311thGeneration_8GBRAM_256GBSSD_Windo_1_320x.png?v=1643610479"
@@ -2129,7 +2519,10 @@
       "review": 48917
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/REALMETV435_320x.jpg?v=1663672556",
         "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
@@ -2148,7 +2541,10 @@
       "review": 12417
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/REALMETV325_320x.jpg?v=1660717635",
         "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
@@ -2167,7 +2563,10 @@
       "review": 4392
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/REDMISMARTTVX434_320x.jpg?v=1660645431",
         "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
@@ -2186,7 +2585,10 @@
       "review": 2396
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/1_3d22c310-0cda-49ae-ab63-a17a7c4134a7_320x.png?v=1631779205",
         "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
@@ -2205,7 +2607,10 @@
       "review": 53685
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/ONEPLUSLEDTV43Y1_320x.jpg?v=1664779231",
         "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
@@ -2224,7 +2629,10 @@
       "review": 2174
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/ONEPLUSLEDTV32Y16_320x.jpg?v=1666760464",
         "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
@@ -2243,7 +2651,10 @@
       "review": 1378
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MITV4A40_100CM_2_320x.jpg?v=1660643335",
         "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
@@ -2262,7 +2673,10 @@
       "review": 48918
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MISMARTTV5A404_320x.jpg?v=1660637830",
         "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
@@ -2281,7 +2695,10 @@
       "review": 12418
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MISMARTTV5A323_320x.jpg?v=1660636374",
         "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
@@ -2300,7 +2717,10 @@
       "review": 4393
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/ONEPLUSLEDTV43Y1S4_320x.jpg?v=1667452057",
         "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
@@ -2319,7 +2739,10 @@
       "review": 2397
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/Redmi108centimeters_43inches_FullHDSmartLEDTV_1_320x.png?v=1637994409",
         "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
@@ -2338,7 +2761,10 @@
       "review": 53686
     },
     {
-      "color": ["black", "red"],
+      "color": [
+        "black",
+        "red"
+      ],
       "image": [
         "https://www.reliancedigital.in/medias/OnePlus-65U1S-Television-492338515-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wzMzgxMDZ8aW1hZ2UvanBlZ3xpbWFnZXMvaGEzL2g3MC85NTY4NDA3NzE1ODcwLmpwZ3xkOGE1ZGIzMmM1OTNkOTgyZGU3YjU3N2Q5ODU1ODI2ZDhmZTI1YzAxYzg2ZTlmNzhlYWZiZDNmOTJjNmE0NWE2",
         "https://www.reliancedigital.in/medias/OnePlus-65U1S-Television-492338515-i-2-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w0MjA4Njl8aW1hZ2UvanBlZ3xpbWFnZXMvaDQ2L2hkNC85NTY4NDA4MDQzNTUwLmpwZ3w0OGIyOTRlMzcwY2JhYjlmZTIxZThiYmFiZGQ0OTgwZmI1YTY4NDRhNWJjNGZiYmZkMDc2ZTg5NWYzZjMyYWMw",
@@ -2359,7 +2785,10 @@
       "review": 2175
     },
     {
-      "color": ["blue", "red"],
+      "color": [
+        "blue",
+        "red"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/g/4/k/43fd2a00-43-y1s-oneplus-original-imagbgc44gerfphz.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70",
@@ -2379,7 +2808,10 @@
       "review": 1379
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/4/n/0/43fd2a00-43-y1s-oneplus-original-imagbgc4rcfpenmd.jpeg?q=70"
@@ -2398,7 +2830,9 @@
       "review": 48919
     },
     {
-      "color": ["black"],
+      "color": [
+        "black"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/o/l/w/pp-111-10000-ambrane-original-imagg7nprsfvwttp.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/o/l/w/pp-111-10000-ambrane-original-imagg7nprsfvwttp.jpeg?q=70"
@@ -2417,7 +2851,9 @@
       "review": 12419
     },
     {
-      "color": ["black"],
+      "color": [
+        "black"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/l5fnhjk0/power-bank/m/f/z/-original-imagg3utnefgyxkh.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/l5fnhjk0/power-bank/m/f/z/-original-imagg3utnefgyxkh.jpeg?q=70"
@@ -2436,7 +2872,9 @@
       "review": 4394
     },
     {
-      "color": ["black"],
+      "color": [
+        "black"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/kd7pevk0/power-bank/s/n/g/power-bank-10000-pb100lzm-redmi-original-imafu5entn9mvccq.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/kd7pevk0/power-bank/s/n/g/power-bank-10000-pb100lzm-redmi-original-imafu5entn9mvccq.jpeg?q=70"
@@ -2455,7 +2893,10 @@
       "review": 2398
     },
     {
-      "color": ["black", "red"],
+      "color": [
+        "black",
+        "red"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/u/1/k/stylo-10k-10000-ambrane-original-imaggvt4dpp43pfk.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/u/1/k/stylo-10k-10000-ambrane-original-imaggvt4dpp43pfk.jpeg?q=70"
@@ -2474,7 +2915,9 @@
       "review": 53687
     },
     {
-      "color": ["black"],
+      "color": [
+        "black"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/y/c/h/stylo-pro-27000-ambrane-original-imag58udy8vk2jhc.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/y/c/h/stylo-pro-27000-ambrane-original-imag58udy8vk2jhc.jpeg?q=70"
@@ -2493,7 +2936,10 @@
       "review": 2176
     },
     {
-      "color": ["black", "yellow"],
+      "color": [
+        "black",
+        "yellow"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/z/s/1/stylo-pro-27000-ambrane-original-imag58udpcyzjyhf.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/z/s/1/stylo-pro-27000-ambrane-original-imag58udpcyzjyhf.jpeg?q=70"
@@ -2512,7 +2958,9 @@
       "review": 0
     },
     {
-      "color": ["black"],
+      "color": [
+        "black"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/612/612/xif0q/power-bank/o/8/w/-original-imaggbhjcsvzhurt.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/612/612/xif0q/power-bank/o/8/w/-original-imaggbhjcsvzhurt.jpeg?q=70"
@@ -2531,7 +2979,9 @@
       "review": 48920
     },
     {
-      "color": ["black"],
+      "color": [
+        "black"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/612/612/xif0q/shopsy-power-bank/7/l/m/stylo-max-50000-ambrane-original-imagfgr5swwr6qkw.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/612/612/xif0q/shopsy-power-bank/7/l/m/stylo-max-50000-ambrane-original-imagfgr5swwr6qkw.jpeg?q=70"
@@ -2550,7 +3000,10 @@
       "review": 12420
     },
     {
-      "color": ["black", "white"],
+      "color": [
+        "black",
+        "white"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/612/612/koenl3k0/power-bank/k/u/y/k2-3-in-1-black-40000-k2-bla-mi-mobinori-original-imag2vefp52zwnnz.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/612/612/koenl3k0/power-bank/k/u/y/k2-3-in-1-black-40000-k2-bla-mi-mobinori-original-imag2vefp52zwnnz.jpeg?q=70"
@@ -2569,7 +3022,9 @@
       "review": 439965
     },
     {
-      "color": ["black"],
+      "color": [
+        "black"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/612/612/kw2fki80/power-bank/i/k/2/smart-power-pack-l3-iqoniqe-original-imag8tv4n4arwphp.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/612/612/kw2fki80/power-bank/i/k/2/smart-power-pack-l3-iqoniqe-original-imag8tv4n4arwphp.jpeg?q=70"
@@ -2588,7 +3043,9 @@
       "review": 2399
     },
     {
-      "color": ["black"],
+      "color": [
+        "black"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/612/612/xif0q/power-bank/j/b/l/dx138-c-thru-20000mah-20000-c-thru-20000mah-transparent-power-original-imagh64dyaz2x8c2.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/612/612/xif0q/power-bank/j/b/l/dx138-c-thru-20000mah-20000-c-thru-20000mah-transparent-power-original-imagh64dyaz2x8c2.jpeg?q=70"
@@ -2607,7 +3064,9 @@
       "review": 53688
     },
     {
-      "color": ["black"],
+      "color": [
+        "black"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/t/a/x/-original-imaghmtch6qfmfxg.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/xif0q/mobile/k/z/n/-original-imaghggz7emhbdfx.jpeg?q=70",
@@ -2628,7 +3087,10 @@
       "review": 20562
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/w/d/o/-original-imaghgbyhy6banxv.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/xif0q/mobile/n/6/t/-original-imaghggzzmwgb6f7.jpeg?q=70",
@@ -2648,7 +3110,11 @@
       "review": 11337
     },
     {
-      "color": ["black", "blue", "red"],
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/6/v/0/c51-mzb0dxkin-poco-original-imagzdpycgrcdc8z.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/xif0q/mobile/n/6/t/-original-imaghggzzmwgb6f7.jpeg?q=70"
@@ -2667,7 +3133,10 @@
       "review": 1156
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/l4rd0280/mobile/q/x/g/e10-e10-cellecor-original-imagfh9ccyjh2sgv.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/l4rd0280/mobile/q/x/g/e10-e10-cellecor-original-imagfh9ccyjh2sgv.jpeg?q=70"
@@ -2686,7 +3155,10 @@
       "review": 57
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/7/p/9/-original-imaghgbyypzkzvud.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/i/v/-original-imagfhu6bdzhnmkz.jpeg?q=70"
@@ -2705,7 +3177,10 @@
       "review": 11337
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/2/n/m/-original-imagna3rjqn8vqxb.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/u/c/u/-original-imagnanh2yvpc4zx.jpeg?q=70",
@@ -2725,7 +3200,11 @@
       "review": 14388
     },
     {
-      "color": ["black", "blue", "red"],
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/u/c/u/-original-imagnanh2yvpc4zx.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/e/r/a/-original-imagna3qqyay2gaf.jpeg?q=70"
@@ -2744,7 +3223,10 @@
       "review": 14388
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/o/t/a/c51-mzb0e6din-poco-original-imagzdzzraqzsrzc.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/b/y/g/-original-imagnfzybft7wzmp.jpeg?q=70",
@@ -2764,7 +3246,10 @@
       "review": 1156
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/w/o/s/-original-imaghuf9mryjhf3m.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/9/z/o/-original-imaghuf9guqmb65z.jpeg?q=70"
@@ -2783,7 +3268,10 @@
       "review": 3453
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/e/n/j/-original-imaghuf9vphhbnkc.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/w/o/s/-original-imaghuf9mryjhf3m.jpeg?q=70",
@@ -2803,7 +3291,11 @@
       "review": 3453
     },
     {
-      "color": ["black", "blue", "red"],
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/3/l/x/-original-imaghmtcmxwgypsk.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/b/y/g/-original-imagnfzybft7wzmp.jpeg?q=70",
@@ -2823,7 +3315,10 @@
       "review": 20562
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/e/r/a/-original-imagna3qqyay2gaf.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/u/c/u/-original-imagnanh2yvpc4zx.jpeg?q=70",
@@ -2843,7 +3338,10 @@
       "review": 14388
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/9/z/o/-original-imaghuf9guqmb65z.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/w/o/s/-original-imaghuf9mryjhf3m.jpeg?q=70",
@@ -2863,7 +3361,11 @@
       "review": 3453
     },
     {
-      "color": ["black", "blue", "red"],
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/9/j/r/-original-imagjyhyaf7tdxnc.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/416/416/xif0q/mobile/n/6/t/-original-imaghggzzmwgb6f7.jpeg?q=70"
@@ -2882,7 +3384,10 @@
       "review": 1725
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/y/9/g/-original-imagnfzyhh8gz8sd.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/b/y/g/-original-imagnfzybft7wzmp.jpeg?q=70",
@@ -2902,7 +3407,11 @@
       "review": 10287
     },
     {
-      "color": ["black", "blue", "red"],
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/b/y/g/-original-imagnfzybft7wzmp.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/6/f/-original-imagnb6nvnqz7hqq.jpeg?q=70"
@@ -2921,7 +3430,10 @@
       "review": 6499
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/6/f/-original-imagnb6nvnqz7hqq.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/b/y/g/-original-imagnfzybft7wzmp.jpeg?q=70",
@@ -2941,7 +3453,10 @@
       "review": 10287
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/9/b/-original-imagjyhyrgdtnjjy.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/p/a/4/-original-imagjyhymqnhz7fm.jpeg?q=70"
@@ -2960,7 +3475,11 @@
       "review": 1725
     },
     {
-      "color": ["black", "blue", "red"],
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/i/v/-original-imagfhu6bdzhnmkz.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/w/d/o/-original-imaghgbyhy6banxv.jpeg?q=70",
@@ -2981,7 +3500,10 @@
       "review": 140457
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/2/y/o/iphone-13-mlpk3hn-a-apple-original-imag6vpyur6hjngg.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/s/l/c/iphone-13-mlpf3hn-a-apple-original-imag6vzz5qvejz8z.jpeg?q=70",
@@ -3001,7 +3523,10 @@
       "review": 206545
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/p/a/4/-original-imagjyhymqnhz7fm.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/9/b/-original-imagjyhyrgdtnjjy.jpeg?q=70"
@@ -3020,7 +3545,10 @@
       "review": 1725
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/8/z/w/iphone-13-mlph3hn-a-apple-original-imag6vzzhrxgazsg.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/s/l/c/iphone-13-mlpf3hn-a-apple-original-imag6vzz5qvejz8z.jpeg?q=70"
@@ -3039,7 +3567,10 @@
       "review": 206545
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/l0igvww0/mobile/r/q/m/-original-imagca5ajerqpfjy.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/8/z/w/iphone-13-mlph3hn-a-apple-original-imag6vzzhrxgazsg.jpeg?q=70",
@@ -3059,7 +3590,10 @@
       "review": 206545
     },
     {
-      "color": ["black", "blue"],
+      "color": [
+        "black",
+        "blue"
+      ],
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/s/l/c/iphone-13-mlpf3hn-a-apple-original-imag6vzz5qvejz8z.jpeg?q=70",
         "https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/8/z/w/iphone-13-mlph3hn-a-apple-original-imag6vzzhrxgazsg.jpeg?q=70"
@@ -3077,5 +3611,4 @@
       "quantity": 1,
       "review": 206545
     }
-  ]
-}
+  ]}

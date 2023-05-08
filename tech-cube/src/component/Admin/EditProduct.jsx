@@ -16,8 +16,8 @@ import {
     FormLabel,
 
 } from '@chakra-ui/react'
-import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
+import React, { memo, useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
 import { editProducts, getAllData } from '../../redux/Admin/action'
 
@@ -25,6 +25,8 @@ function EditProduct({ id , children }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const finalRef = React.useRef(null)
     const dispatch = useDispatch()
+    const storeData = useSelector(store=>store.adminReducer.allProductData)
+  
     const [data, setData] = useState('')
 
 
@@ -40,20 +42,16 @@ function EditProduct({ id , children }) {
     const handleEdit = (e) => {
         e.preventDefault()
         dispatch(editProducts(id, data))
-            .then(() => {
+            .then((res) => {
                 dispatch(getAllData())
             })
     }
 
-    const singledata = (id) => {
-        axios.get(`https://real-lime-bandicoot-robe.cyclic.app/products/${id}`)
-            .then((res) => setData(res.data))
-    }
-
     useEffect(() => {
-        singledata(id)
+        let findData = storeData.find(el=>el.id === id)
+        setData(findData)
 
-    }, [])
+    },[])
 
 
 
@@ -67,7 +65,7 @@ function EditProduct({ id , children }) {
             <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent>
-                    <Center><ModalHeader w='100%'>Product</ModalHeader></Center>
+                    <ModalHeader fontWeight={'bolder'} w='full'>Edit Product</ModalHeader>
                     <ModalBody>
                         <Flex direction={'column'} gap='8px'>
                             <Flex direction={'column'}>
@@ -75,28 +73,35 @@ function EditProduct({ id , children }) {
                                 <Input onChange={handleChange} name="title" value={data.title} />
                             </Flex>
                             <Flex direction={'column'}>
-                                <label>Image</label>
+                                <FormLabel fontWeight="bold">Image</FormLabel>
                                 <Input onChange={handleChange} name="image" value={data.image} />
                             </Flex>
                             <Flex gap='15px'>
                                 <Flex direction={'column'}>
-                                    <label>category</label>
+                                    <FormLabel fontWeight="bold">category</FormLabel>
                                     <Input onChange={handleChange} name="category" value={data.category} />
                                 </Flex>
                                 <Flex direction={'column'}>
-                                    <label>color</label>
+                                    <FormLabel fontWeight="bold">color</FormLabel>
                                     <Input onChange={handleChange} name="color" value={data.color} />
                                 </Flex>
                             </Flex>
                             <Flex direction={'column'}>
-                                <label>description</label>
+                                <FormLabel fontWeight="bold">description</FormLabel>
                                 <Input onChange={handleChange} name="description" value={data.description} />
                             </Flex>
                             <Flex gap='15px'>
                                 <Flex direction={'column'}>
-                                    <label>price</label>
+                                    <FormLabel fontWeight="bold">price</FormLabel>
                                     <Input onChange={handleChange} name="price" value={data.price} />
                                 </Flex>
+                                <Flex direction={'column'}>
+                                    <FormLabel fontWeight="bold">brand</FormLabel>
+                                    <Input onChange={handleChange} name="brand" value={data.brand} />
+                                </Flex>
+                            </Flex>
+                            <Flex gap='15px'>
+                               
                             </Flex>
                         </Flex>
                     </ModalBody>
@@ -106,7 +111,7 @@ function EditProduct({ id , children }) {
                             <Button varient='unstyled' mr={3} onClick={onClose}>
                                 cancel
                             </Button>
-                            <Button onClick={handleEdit}  varient='outline'>update</Button>
+                            <Button  onClick={handleEdit}  varient='outline'>update</Button>
                         </Flex>
                     </ModalFooter>
                 </ModalContent>
@@ -115,4 +120,6 @@ function EditProduct({ id , children }) {
     )
 }
 
-export default EditProduct
+export default memo(EditProduct)
+
+
