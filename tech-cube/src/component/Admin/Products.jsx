@@ -1,13 +1,17 @@
 import { Flex, Center, Box, Heading, Image, Text, Button } from '@chakra-ui/react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import { getAllData } from '../../redux/Admin/action'
+import { deleteProduct, getAllData } from '../../redux/Admin/action'
 import EditProduct from './EditProduct'
+import DeleteData from './DeleteProduct'
+import AddProduct from './AddProduct'
+
 
 const Products = () => {
 
 const dispatch = useDispatch()
 const productsData = useSelector(store=>store.adminReducer.allProductData)
+let count = productsData.length;
 
 useEffect(()=>{
     dispatch(getAllData())
@@ -17,8 +21,8 @@ useEffect(()=>{
     return (
         <Flex direction={'column'} bg='white' borderRadius={'10px'}>
             <Flex justify={'space-between'} px={{ base: '7px', md: '20px', lg: '50px' }} alignItems={'center'} py="8px">
-                <Text fontSize={'20px'} fontWeight={'bolder'}>Total Products - 5</Text>
-                <Button>Add Product</Button>
+                <Text fontSize={'20px'} fontWeight={'bolder'}>Total Products - {count}</Text>
+                <AddProduct>Add New Product</AddProduct>
             </Flex>
             <Box w="98%" h={{ base: "100vh", md: '100vh', lg: '450px' }} direction={'column'} overflowY={'scroll'} >
 
@@ -34,7 +38,8 @@ useEffect(()=>{
                             </Flex>
                             <Flex gap={{ base: '30px', md: '30px', lg: '50px' }} display={{ base: 'none', md: 'flex' }} >
                                 <EditProduct id={el.id}>Edit</EditProduct>
-                                <Button bg="red.600" colorScheme="white">Delete</Button>
+                                <DeleteData id={el.id}>Delete</DeleteData>
+                                {/* <Button bg="red.600" colorScheme="white">Delete</Button> */}
                             </Flex>
                         </Flex>
                     ))
