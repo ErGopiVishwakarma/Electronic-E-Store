@@ -1,8 +1,10 @@
 import { Flex, Center, Box, Heading, Image, Text, Button } from '@chakra-ui/react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import { getAllData } from '../../redux/Admin/action'
+import { deleteProduct, getAllData } from '../../redux/Admin/action'
 import EditProduct from './EditProduct'
+import DeleteData from './DeleteProduct'
+
 
 const Products = () => {
 
@@ -34,7 +36,8 @@ useEffect(()=>{
                             </Flex>
                             <Flex gap={{ base: '30px', md: '30px', lg: '50px' }} display={{ base: 'none', md: 'flex' }} >
                                 <EditProduct id={el.id}>Edit</EditProduct>
-                                <Button bg="red.600" colorScheme="white">Delete</Button>
+                                <DeleteData id={el.id}>Delete</DeleteData>
+                                {/* <Button bg="red.600" colorScheme="white">Delete</Button> */}
                             </Flex>
                         </Flex>
                     ))
