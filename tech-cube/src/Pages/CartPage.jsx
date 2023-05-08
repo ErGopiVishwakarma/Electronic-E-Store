@@ -26,7 +26,7 @@ const CartPage = () => {
     dispatch(getCartData());
   },[]);
   return (
-    <Box display={"flex"} flexDirection={{base:'column',sm:"row",md:"row"}}  paddingTop={"90px"} >
+    <Box display={"flex"} flexDirection={{base:'column',sm:"row",md:"column",lg:'row'}}  paddingTop={"90px"} px={'3%'}>
 
 <Box width={{base:"full",sm:'sm',md:'2xl' ,lg:'4xl'}} >
 <Center  fontWeight={'bold'} fontSize={'24px'}>My Cart</Center>
@@ -67,7 +67,7 @@ const CartPage = () => {
   <Text color={"gray.600"}>{totalPrice>0 ? totalPrice+totalPrice*0.18-150:0}</Text>
 </Box>
 
-<Link to="/payment"><Button display={'block'} margin={"auto"} borderRadius={"none"} width={"100%"} bgColor={"blackAlpha.900"} color={"white"}>Chekout</Button>
+<Link to="/checkout"><Button display={'block'} margin={"auto"} borderRadius={"none"} width={"100%"} bgColor={"blackAlpha.900"} color={"white"}>Chekout</Button>
 </Link>
 </Box>
      
@@ -89,7 +89,7 @@ export const CartList = () => {
 
   
   return (
-    <Box className="cart-list-container"  width={"80%"} margin={"auto"}>
+    <Box className="cart-list-container"  >
     {cart.length > 0 && cart.map((el)=>{
             return <CartItem  key={el.id} {...el}  />
           })}

@@ -56,78 +56,86 @@ const AddressForm = () => {
 
 
   return (
-    <>
-      <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
-        Update Billing Address
-      </Heading>
-      <Flex>
-        <FormControl mr="5%" isRequired>
-          <FormLabel htmlFor="first-name" fontWeight={'normal'}>
-            First name
+    <Box>
+      < Box width={{ base: "full", sm: 'full', md: 'sm', lg: 'lg', xl: '2xl' }} >
+
+        <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
+          Update Billing Address
+        </Heading>
+        <Flex>
+          <FormControl mr="5%" isRequired>
+            <FormLabel htmlFor="first-name" fontWeight={'normal'}>
+              First name
+            </FormLabel>
+            <Input id="first-name" placeholder="First name" value={user.name} name='name' onChange={handleChenge} />
+          </FormControl>
+
+          <FormControl>
+            <FormLabel htmlFor="last-name" fontWeight={'normal'}>
+              Last name
+            </FormLabel>
+            <Input id="last-name" placeholder="First name" />
+          </FormControl>
+        </Flex>
+        <FormControl mt="2%">
+          <FormLabel htmlFor="email" fontWeight={'normal'} >
+            Email address
           </FormLabel>
-          <Input id="first-name" placeholder="First name" value={user.name} name='name' onChange={handleChenge} />
+          <Input type="email" name='email' value={user.email} placeholder='example@abc.com' onChange={handleChenge} />
+          <FormHelperText>We'll never share your email.</FormHelperText>
+          <FormLabel mt="2%" fontWeight={'normal'}>
+            Phone No
+          </FormLabel>
+
+          <Input type="tel" name='phone' value={user.phone} placeholder='999999999' maxLength={'10'} onChange={handleChenge} />
         </FormControl>
 
         <FormControl>
-          <FormLabel htmlFor="last-name" fontWeight={'normal'}>
-            Last name
+          <FormLabel fontWeight={'normal'} mt="2%">
+            Address
           </FormLabel>
-          <Input id="last-name" placeholder="First name" />
+          <Textarea type="text" name='address' onChange={handleChenge} />
         </FormControl>
-      </Flex>
-      <FormControl mt="2%">
-        <FormLabel htmlFor="email" fontWeight={'normal'} >
-          Email address
-        </FormLabel>
-        <Input type="email" name='email' value={user.email} placeholder='example@abc.com' onChange={handleChenge} />
-        <FormHelperText>We'll never share your email.</FormHelperText>
-        <FormLabel mt="2%" fontWeight={'normal'}>
-          Phone No
-        </FormLabel>
+        <FormControl>
+          <FormLabel fontWeight={'normal'} mt="2%">
+            City
+          </FormLabel>
+          <Input type="text" name='city' />
+        </FormControl>
 
-        <Input type="tel" name='phone' value={user.phone} placeholder='999999999' maxLength={'10'} onChange={handleChenge} />
-      </FormControl>
-
-      <FormControl>
-        <FormLabel fontWeight={'normal'} mt="2%">
-          Address
-        </FormLabel>
-        <Textarea type="text" name='address' onChange={handleChenge} />
-      </FormControl>
-      <FormControl>
-        <FormLabel fontWeight={'normal'} mt="2%">
-          City
-        </FormLabel>
-        <Input type="text" name='city' />
-      </FormControl>
-
-      <FormControl as={GridItem} colSpan={[6, 3, null, 2]}>
-        <FormLabel
-          htmlFor="postal_code"
-          fontSize="sm"
-          fontWeight="md"
-          color="gray.700"
-          _dark={{
-            color: 'gray.50',
-          }}
-          mt="2%">
-          ZIP / Postal
-        </FormLabel>
-        <Input
-          type="tel"
-          maxLength={"6"}
-          name="pincode"
+        <FormControl as={GridItem} colSpan={[6, 3, null, 2]}>
+          <FormLabel
+            htmlFor="postal_code"
+            fontSize="sm"
+            fontWeight="md"
+            color="gray.700"
+            _dark={{
+              color: 'gray.50',
+            }}
+            mt="2%">
+            ZIP / Postal
+          </FormLabel>
+          <Input
+            type="tel"
+            maxLength={"6"}
+            name="pincode"
 
 
-          focusBorderColor="gray.400"
-          shadow="sm"
-          size="sm"
-          w="full"
-          rounded="md"
-          onChange={handleChenge}
-        />
-      </FormControl>
-    </>
+            focusBorderColor="gray.400"
+            shadow="sm"
+            size="sm"
+            w="full"
+            rounded="md"
+            onChange={handleChenge}
+          />
+        </FormControl>
+      </Box>
+
+      <Box>
+        
+      </Box>
+
+    </Box>
   );
 };
 
@@ -147,7 +155,7 @@ export const PaymentForm = () => {
 
   return (
     <>
-      {/* <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
+      <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
         Payment method
       </Heading>
       <Grid templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }} gap={3}>
@@ -166,7 +174,7 @@ export const PaymentForm = () => {
         <GridItem colSpan={{ sm: 1, md: 1 / 2 }}>
           <FormControl isRequired>
             <FormLabel htmlFor="expDate">Expiry date</FormLabel>
-            <Input type="text" name="expDate" autoComplete="cc-exp" placeholder='04/2024'  maxLength={'7'} onChange={handlechenge} />
+            <Input type="text" name="expDate" autoComplete="cc-exp" placeholder='04/2024' maxLength={'7'} onChange={handlechenge} />
           </FormControl>
         </GridItem>
         <GridItem colSpan={{ sm: 1, md: 1 / 2 }}>
@@ -181,10 +189,10 @@ export const PaymentForm = () => {
             Remember credit card details for next time
           </Checkbox>
         </GridItem>
-      </Grid> */}
+      </Grid>
 
 
-      
+
 
     </>
   );
@@ -197,12 +205,12 @@ export const PaymentForm = () => {
 const Form3 = () => {
 
 
-  const { cart,paymentDetails } = useSelector((store) => store.cartReducer)
+  const { cart, paymentDetails } = useSelector((store) => store.cartReducer)
   const dispatch = useDispatch();
   const totalPrice = useRef(0)
   useEffect(() => {
     dispatch(getCartData())
- console.log(paymentDetails);
+    console.log(paymentDetails);
   }, [])
   return (
     <>
@@ -259,44 +267,44 @@ const Form3 = () => {
             </Heading>
             <Grid templateColumns="repeat(2, 1fr)" gap={2}>
 
-             
-                <React.Fragment >
-                  <GridItem>
-                    <Text fontWeight="semibold">Card type</Text>
-                  </GridItem>
-                  <GridItem>
-                    <Text>Visa</Text>
-                  </GridItem>
-                </React.Fragment>
-        
-             
-                <React.Fragment >
-                  <GridItem>
-                    <Text fontWeight="semibold">Card holder</Text>
-                  </GridItem>
-                  <GridItem>
-                    <Text>{paymentDetails.cardHolderName}</Text>
-                  </GridItem>
-                </React.Fragment>
 
-                <React.Fragment >
-                  <GridItem>
-                    <Text fontWeight="semibold">Card number</Text>
-                  </GridItem>
-                  <GridItem>
-                    <Text>'xxxx-xxxx-xxxx-{paymentDetails.cardNumber.substr(paymentDetails.cardNumber.length - 4)}</Text>
-                  </GridItem>
-                </React.Fragment>
+              <React.Fragment >
+                <GridItem>
+                  <Text fontWeight="semibold">Card type</Text>
+                </GridItem>
+                <GridItem>
+                  <Text>Visa</Text>
+                </GridItem>
+              </React.Fragment>
 
 
-                <React.Fragment >
-                  <GridItem>
-                    <Text fontWeight="semibold">Expiry date</Text>
-                  </GridItem>
-                  <GridItem>
-                    <Text>{paymentDetails.expDate}</Text>
-                  </GridItem>
-                </React.Fragment>
+              <React.Fragment >
+                <GridItem>
+                  <Text fontWeight="semibold">Card holder</Text>
+                </GridItem>
+                <GridItem>
+                  <Text>{paymentDetails.cardHolderName}</Text>
+                </GridItem>
+              </React.Fragment>
+
+              <React.Fragment >
+                <GridItem>
+                  <Text fontWeight="semibold">Card number</Text>
+                </GridItem>
+                <GridItem>
+                  <Text>'xxxx-xxxx-xxxx-{paymentDetails.cardNumber.substr(paymentDetails.cardNumber.length - 4)}</Text>
+                </GridItem>
+              </React.Fragment>
+
+
+              <React.Fragment >
+                <GridItem>
+                  <Text fontWeight="semibold">Expiry date</Text>
+                </GridItem>
+                <GridItem>
+                  <Text>{paymentDetails.expDate}</Text>
+                </GridItem>
+              </React.Fragment>
 
 
             </Grid>
@@ -351,12 +359,14 @@ export const Multistep = () => {
                 w="7rem"
                 isDisabled={step === 3}
                 onClick={() => {
-                  if (step === 1){
-                     handleSubmitTriggure();}
+                  if (step === 1) {
+                    handleSubmitTriggure();
+                  }
                   if (step === 2) {
-                
-                    handlePaymentDetails();}
-              
+
+                    handlePaymentDetails();
+                  }
+
                   setStep(step + 1);
                   if (step === 3) {
                     setProgress(100);
@@ -370,23 +380,23 @@ export const Multistep = () => {
               </Button>
             </Flex>
             {step === 3 ? (
-              <Link to ={"/payment"}>
-              <Button
-                w="7rem"
-                colorScheme="green"
-                variant="solid"
-                onClick={() => {
-                  toast({
-                    title: 'Order Placed.',
-                    description: "Your order placed successfully  ",
-                    status: 'success',
-                    duration: 3000,
-                    isClosable: true,
-                  });
-                }}
+              <Link to={"/payment"}>
+                <Button
+                  w="7rem"
+                  colorScheme="green"
+                  variant="solid"
+                  onClick={() => {
+                    toast({
+                      title: 'Order Placed.',
+                      description: "Your order placed successfully  ",
+                      status: 'success',
+                      duration: 3000,
+                      isClosable: true,
+                    });
+                  }}
                 >
-              Pay
-              </Button>
+                  Pay
+                </Button>
               </Link>
             ) : null}
           </Flex>
