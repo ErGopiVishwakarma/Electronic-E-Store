@@ -4,6 +4,7 @@ import {
   PLACE_ORDER_REQUEST,
   PLACE_ORDER_SUCCESS,
   UPDATE_CART,
+  ADD_PAYMENT_DETAILS
 } from './actionType';
 
 const initialState = {
@@ -12,7 +13,8 @@ const initialState = {
 
   cart: [],
   order: [],
-  user_details: {},
+  paymentDetails : {},
+  
 };
 
 export const reducer = (state = initialState, { type, payload }) => {
@@ -21,6 +23,9 @@ export const reducer = (state = initialState, { type, payload }) => {
       return { ...state, cart: payload };
     case UPDATE_CART:
       return { ...state, cart: payload };
+
+      case ADD_PAYMENT_DETAILS:
+        return{...state,paymentDetails:payload}
 
     case PLACE_ORDER_REQUEST:
       return { ...state, isLoading: true };
