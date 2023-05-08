@@ -26,7 +26,7 @@ export const singleProductfunc = id => dispatch => {
   console.log('id receiving at product action.js 👍👍👍👍', id);
 
   dispatch({ type: PRODUCT_REQUEST });
-
+  console.log('sghdgassdj');
   return axios
     .get(`http://localhost:8080/products/${id}`)
     .then(res => {
