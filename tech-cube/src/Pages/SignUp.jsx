@@ -24,6 +24,7 @@ import axios from 'axios';
 import { useToast } from '@chakra-ui/react';
 import signupImg from '../Assets/signupImg.jpg';
 import Loader from '../component/Loader&Error/Loader';
+import { NavLink } from 'react-router-dom';
 
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
@@ -31,7 +32,9 @@ export default function SignUp() {
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [mobile, setMobile] = useState(0);
+  const [mobile, setMobile] = useState('');
+  const [confirmpassword, setConfirmPassword] = useState('');
+
   const dispatch = useDispatch();
   const toast = useToast();
 
@@ -75,7 +78,7 @@ export default function SignUp() {
     }
 
     let check = false;
-    const data = await axios.get('https://gopi.onrender.com/user').then(res => res.data)
+    const data = await axios.get('https://real-lime-bandicoot-robe.cyclic.app/user').then(res => res.data)
     if (data.length > 0) {
       data.forEach(el => {
         if (el.email === userData.email) {
@@ -130,7 +133,7 @@ export default function SignUp() {
       justify={'center'}
       direction={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }}
       >
-      <Stack w={'50%'} spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+      <Stack w={{base : '95%', sm : '95%', md : '95%', lg : '50%', xl : '50%', '2xl' : '50%'}} spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
           <Heading fontSize={'4xl'} textAlign={'center'}>
             Create your Account
@@ -181,6 +184,21 @@ export default function SignUp() {
                   </InputRightElement>
                 </InputGroup>
               </FormControl>
+              <FormControl id="password">
+                <FormLabel>Confirm Password</FormLabel>
+                <InputGroup>
+                  <Input type={showPassword ? 'text' : 'password'} value={confirmpassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+                  <InputRightElement h={'full'}>
+                    <Button
+                      variant={'ghost'}
+                      onClick={() =>
+                        setShowPassword((showPassword) => !showPassword)
+                      }>
+                      {showPassword ? <ViewIcon /> : <ViewOffIcon />}
+                    </Button>
+                  </InputRightElement>
+                </InputGroup>
+              </FormControl>
               <Stack spacing={10} pt={2}>
                 <Button
                   loadingText="Submitting"
@@ -196,14 +214,14 @@ export default function SignUp() {
               </Stack>
               <Stack pt={6}>
                 <Text align={'center'}>
-                  Already a user? <Link color={'blue.400'} href='./login'>Login</Link>
+                  Already a user? <NavLink style={{marginLeft : '5px', color : '#4299e1', textDecoration : 'underline'}} to='/login'>Login</NavLink>
                 </Text>
               </Stack>
             </form>
           </Stack>
         </Box>
       </Stack>
-      <Box w={'50%'} p={'20px'}>
+      <Box  w={{base : '95%', sm : '95%', md : '95%', lg : '50%', xl : '50%', '2xl' : '50%'}} p={'20px'}>
         <Image w={'100%'} mr={'20px'} borderRadius={'10px'} src={signupImg} alt='signupImg' />
       </Box>
     </Flex>

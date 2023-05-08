@@ -11,6 +11,7 @@ const CheckOut = () => {
   const text = useColorModeValue('dark', 'light');
   const dispatch = useDispatch();
   const data = useSelector(store => store.checkoutReducer.data);
+  const auth = useSelector(store => store.authReducer.isAuth);
 
   useEffect(() => {
     dispatch(showData);

@@ -5,7 +5,6 @@ import {ADD_PAYMENT_DETAILS, ADD_TO_CART, GET_CART_SERVER_REQUEST,GET_CART_SERVE
 
 
 
-
 export const getCartData=()=>(dispatch)=>{
 const data=JSON.parse(localStorage.getItem('cart') || '[]');
 dispatch({type:ADD_TO_CART,payload:data});
@@ -22,9 +21,18 @@ export const updatePaymentMethod=(paymentDetails)=>(dispatch)=>{
 
 export const getCartServerdata=()=>(dispatch)=>{
     dispatch({type:GET_CART_SERVER_REQUEST})
-const data=axios.get('https://real-lime-bandicoot-robe.cyclic.app/addcard').then((res)=>{dispatch({type:GET_CART_SERVER_SUCCESS,payload:res.data})})
+const data=axios.get('http://localhost:8080/addcard').then((res)=>{dispatch({type:GET_CART_SERVER_SUCCESS,payload:res.data})})
 .catch((err)=>dispatch({type:GET_CART_SERVER_FAILD}))
 
 localStorage.setItem('cart', JSON.stringify(data));
+
+}
+
+
+export const postSingleProductItem=(obj)=>(dispatch)=>{
+    dispatch({type:GET_CART_SERVER_REQUEST})
+return axios.post(`https://gopi.onrender.com/addcard`,obj)
+.then((res)=>{console.log("res after post 👌👌")})
+.catch((err)=>dispatch({type:GET_CART_SERVER_FAILD}))
 
 }
