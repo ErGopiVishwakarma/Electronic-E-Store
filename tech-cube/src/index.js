@@ -7,6 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux'
 import { store } from './redux/store';
+import SearchContextProvider from './context/SearchContextProvider';
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
@@ -17,7 +18,9 @@ root.render(
     <BrowserRouter>
       <ChakraProvider theme={theme}>
         <Provider store={store}>
-          <App />
+          <SearchContextProvider>
+            <App />
+          </SearchContextProvider>
         </Provider>
       </ChakraProvider>
     </BrowserRouter>

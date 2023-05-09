@@ -28,71 +28,125 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const toast = useToast();
   const dispatch = useDispatch();
-  const auth = useSelector(store => store.authReducer.isAuth);
+  // const auth = useSelector(store => store.authReducer.isAuth);
   const loader = useSelector(store => store.authReducer.isLoading);
-  const data = useSelector(store => store.authReducer.users);
+  // const data = useSelector(store => store.authReducer.users);
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
-    if (!email || !password) {
-      toast({
-        title: 'Login Failed.',
-        description: "All fields are required.",
-        status: 'warning',
-        duration: 4000,
-        position: 'top',
-        isClosable: true,
-      })
-      return;
-    }
-
-    dispatch(loginData);
-
-    const userData = data.find(el => el.email === email);
-    if (userData) {
-      if (userData.password !== password) {
+        let data = await axios('http://localhost:8080/user').then(res=>res.data);
+        
+        if(!email || !password){
+            toast({
+                title: 'failed',
+                description: "all filled are required",
+                status: 'error',
+                duration: 3000,
+                isClosable: true,
+                position:'top'
+              })
+              return;
+        }
+       const newData = data.find(el=>el.email === email)
+       console.log(newData, data)
+       if(newData){
+        if(newData.password === password){
+            toast({
+            title: 'successfully login',
+            description: "Redirecting to admin page",
+            status: 'success',
+            duration: 3000,
+            isClosable: true,
+            position:'top'
+          })
+          localStorage.setItem('userId',JSON.stringify(newData.id))
+          localStorage.setItem('auth',JSON.stringify(true));
+          setTimeout(()=>{
+            navigate('/');
+          },3000)
+          return;
+        }else{
+            toast({
+                title: 'failed',
+                description: "password didn't match",
+                status: 'warning',
+                duration: 3000,
+                isClosable: true,
+                position:'top'
+              })
+              return;
+        }
+       }else{
         toast({
-          title: 'Login Failed.',
-          description: "Please enter correct password.",
-          status: 'error',
-          duration: 4000,
-          position: 'top',
-          isClosable: true,
-        })
-        return;
-      }
-      else {
-        localStorage.setItem('userId', JSON.stringify(userData.id));
-        localStorage.setItem('auth', JSON.stringify(auth));
-        toast({
-          title: 'Login Successful.',
-          description: "Welcome Back.",
-          status: 'success',
-          duration: 4000,
-          position: 'top',
-          isClosable: true,
-        })
+            title: 'wrong credential',
+            description: "please check your email or password",
+            status: 'error',
+            duration: 3000,
+            isClosable: true,
+            position:'top'
+          })
+          return;
+       }
 
-        setTimeout(() => {
-          navigate('/');
-        }, 4000)
-        return;
-      }
+    // if (!email || !password) {
+    //   toast({
+    //     title: 'Login Failed.',
+    //     description: "All fields are required.",
+    //     status: 'warning',
+    //     duration: 4000,
+    //     position: 'top',
+    //     isClosable: true,
+    //   })
+    //   return;
+    // }
 
-    }
-    else {
-      toast({
-        title: 'Wrong Credentials.',
-        description: "Please make sure you are registered.",
-        status: 'error',
-        duration: 4000,
-        position: 'top',
-        isClosable: true,
-      })
-      return;
-    }
+    // dispatch(loginData);
+
+    // const userData = data.find(el => el.email === email);
+    // if (userData) {
+    //   if (userData.password !== password) {
+    //     toast({
+    //       title: 'Login Failed.',
+    //       description: "Please enter correct password.",
+    //       status: 'error',
+    //       duration: 4000,
+    //       position: 'top',
+    //       isClosable: true,
+    //     })
+    //     return;
+    //   }
+    //   else {
+    //     localStorage.setItem('userId', JSON.stringify(userData.id));
+    //     localStorage.setItem('auth', JSON.stringify(auth));
+    //     toast({
+    //       title: 'Login Successful.',
+    //       description: "Welcome Back.",
+    //       status: 'success',
+    //       duration: 4000,
+    //       position: 'top',
+    //       isClosable: true,
+    //     })
+
+    //     setTimeout(() => {
+    //       navigate('/');
+    //     }, 4000)
+    //     return;
+    //   }
+
+    // }
+    // else {
+    //   toast({
+    //     title: 'Wrong Credentials.',
+    //     description: "Please make sure you are registered.",
+    //     status: 'error',
+    //     duration: 4000,
+    //     position: 'top',
+    //     isClosable: true,
+    //   })
+    //   return;
+    // }
 
   }
 
