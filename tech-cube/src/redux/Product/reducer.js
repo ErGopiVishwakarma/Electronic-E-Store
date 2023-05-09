@@ -11,9 +11,13 @@ const initialState = {
   isLoading: false,
   isError: false,
   data: {},
+  totalProducts: 0,
 };
 
-export const reducer = (state = initialState, { type, payload }) => {
+export const reducer = (
+  state = initialState,
+  { type, payload, totalProducts }
+) => {
   switch (type) {
     case PRODUCT_REQUEST:
       return {
@@ -32,6 +36,7 @@ export const reducer = (state = initialState, { type, payload }) => {
         ...state,
         isLoading: false,
         products: payload,
+        totalProducts: totalProducts,
       };
 
     case POST_PRODUCT_SUCCESS:
