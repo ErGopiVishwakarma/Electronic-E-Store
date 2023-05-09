@@ -23,4 +23,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/src/db.json
+db.json
+
+test.rest
+

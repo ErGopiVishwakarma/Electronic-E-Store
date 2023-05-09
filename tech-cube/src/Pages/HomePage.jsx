@@ -33,7 +33,6 @@ const HomePage = () => {
        <Box w="100%" display={{ base: 'block', md: 'block', lg: 'none' }}  >
        <DemoCarousel />
        </Box>
-        {/* <Image src="https://demo4techies.com/mage/magetheme108/pub/media/wysiwyg/slider/next-home-banner-1.png" /> */}
       </Box>
 
       {/* New Arrival Product section  */}

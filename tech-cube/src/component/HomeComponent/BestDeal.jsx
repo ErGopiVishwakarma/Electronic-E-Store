@@ -3,10 +3,10 @@ import { Box, Button, Center, Flex, Grid, Heading, Image, Stack, Text, useColorM
 import React from 'react'
 import { FaGrinHearts, FaHeart, FaHeartBroken, FaHeartbeat, FaKissWinkHeart } from "react-icons/fa";
 const imageArr = [
-  { image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e61eb4ad4af6e75689_macbook%2013-min.png' },
-  { image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e4aed3c6720e446aa1_airpod%20max-min.png' },
-  { image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e64bd907adafd35b46_ipad%20mini-min.png' },
-  { image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e74b76916e072f2466_watch-min.png' }
+  { image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e61eb4ad4af6e75689_macbook%2013-min.png',text:'APPLE A715-42G-R2NE l', price:500, description:'Key Features 39.6cm (15.6\")' },
+  { image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e4aed3c6720e446aa1_airpod%20max-min.png',text:'wireless_headphone' , price:300, description:'Organic Cotton, fairtrade certified'},
+  { image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e64bd907adafd35b46_ipad%20mini-min.png',text:'Infinix SMART 7', price:5900 , description:'4 GB RAM | 64 GB ROM'},
+  { image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e74b76916e072f2466_watch-min.png',text:'Wave Select Smartwatch' , price:800, description:'1.78\" AMOLED Display'}
 ]
 
 const BestDeal = () => {
@@ -34,10 +34,10 @@ const BestDeal = () => {
                 </Box>
                 <Stack px="5px">
                   <Flex justifyContent={'space-between'} color={text==='dark'?'white':'blackAlpha.900'}>
-                    <Text fontWeight={'bold'} fontSize={'18px'} color={textColor}>gopi singh vishwakarma..</Text>
-                    <Text fontWeight={'bold'} color={textColor} fontSize={'18px'}>$500</Text>
+                    <Text fontWeight={'bold'} fontSize={'18px'} color={textColor}>{el.text}</Text>
+                    <Text fontWeight={'bold'} color={textColor} fontSize={'18px'}>₹{el.price}</Text>
                   </Flex>
-                  <Text fontSize={'14px'} color={textColor}>Organic Cotton, fairtrade certified</Text>
+                  <Text fontSize={'14px'} color={textColor}>{el.description}</Text>
                   <Flex>
                     <Text color={'green'} fontSize={'19px'}>&#9733;</Text>
                     <Text color={'green'} fontSize={'19px'}>&#9733;</Text>
