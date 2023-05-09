@@ -32,8 +32,10 @@ export const getCartServerdata = () => dispatch => {
     .then(res => {
       dispatch({ type: GET_CART_SERVER_SUCCESS, payload: res.data });
     })
-    .catch(err => dispatch({ type: GET_CART_SERVER_FAILD }));
-};
+        .catch((err) => dispatch({ type: GET_CART_SERVER_FAILD }))
+}
+
+
 
 export const postSingleProductItem = obj => dispatch => {
   dispatch({ type: GET_CART_SERVER_REQUEST });
@@ -44,3 +46,4 @@ export const postSingleProductItem = obj => dispatch => {
     })
     .catch(err => dispatch({ type: GET_CART_SERVER_FAILD }));
 };
+

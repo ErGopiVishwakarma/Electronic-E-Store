@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react'
 
 
-function UserProfile({ name, children }) {
+function UserProfile({ name, children, data }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const user ={
         image:'',
@@ -28,12 +28,12 @@ function UserProfile({ name, children }) {
             <Modal isOpen={isOpen} onClose={onClose}>
                 {/* <ModalOverlay /> */}
                 <ModalContent>
-                    <ModalHeader textAlign={'center'}>Gopi Vishwakarma</ModalHeader>
+                    <ModalHeader textAlign={'center'}>{data.firstName} {data.lastName}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody display={'flex'} justifyContent={'center'}>
                             <Flex direction={'column'} justifyContent={'center'}>
-                            <Avatar src={user.image} h="150px" w="150px" name={user.name} size={'lg'} />
-                            <Text fontSize="20px">gopi@gmail.com</Text>
+                            <Avatar m={'auto'} src={data.image} h="150px" w="150px" name={`${data.firstName} ${data.lastName}`} size={'lg'} />
+                            <Text fontSize="20px">{data.email}</Text>
                             </Flex>
                     </ModalBody>
 

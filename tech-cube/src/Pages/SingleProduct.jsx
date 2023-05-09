@@ -73,6 +73,7 @@ const SingleProduct = () => {
         {' '}
         <NewRight spData={spData} />
       </Box>
+  
     </Box>
   );
 };

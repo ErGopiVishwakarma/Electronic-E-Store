@@ -1,5 +1,5 @@
 import { Box, Button, Center, Flex, Grid, Heading, Image, Text, useColorModeValue } from '@chakra-ui/react'
-import React from 'react'
+import React, { useContext } from 'react'
 import home from '../Assets/home.png'
 import '../Css/Home.css'
 import { shopCategory } from '../component/HomeComponent/navComponent/NavItem'
@@ -7,12 +7,17 @@ import HomeService from '../component/HomeComponent/HomeService'
 import BestDeal from '../component/HomeComponent/BestDeal'
 import NewArrival from '../component/HomeComponent/NewArrival'
 import DemoCarousel from '../component/HomeComponent/DemoCarousel'
+import { SearchContext } from '../context/SearchContextProvider'
+import { ProductCard } from '../component/ProductComponent/ProductCard'
+import ProductPage from './ProductPage'
 
 const HomePage = () => {
   const text = useColorModeValue('light','dark')
   const textColor = text==='dark'?'gray.100':'blackAlpha.900'
+  const {status} = useContext(SearchContext);
 
   return (
+    status ? <ProductPage/> : 
     <Box pt="70px">
       {/* Top Main Image Section here  */}
       <Box w="100%">
@@ -28,7 +33,6 @@ const HomePage = () => {
        <Box w="100%" display={{ base: 'block', md: 'block', lg: 'none' }}  >
        <DemoCarousel />
        </Box>
-        {/* <Image src="https://demo4techies.com/mage/magetheme108/pub/media/wysiwyg/slider/next-home-banner-1.png" /> */}
       </Box>
 
       {/* New Arrival Product section  */}
