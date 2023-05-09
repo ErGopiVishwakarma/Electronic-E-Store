@@ -15,7 +15,6 @@ import {
 import { HiChevronDown } from 'react-icons/hi';
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { getProducts } from '../../redux/Product/action';
 
 export const FilterSort = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -83,29 +82,12 @@ export const FilterSort = () => {
         }}
         gap={['10px', '20px']}
         w={'100%'}
-        // pos={'relative'}
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
-        // minH={'70px'}
-
         direction={{ base: 'row', md: 'row' }}
         justifyContent={{ base: 'space-between' }}
-        // display={{ base: 'none', md: 'none', lg: 'block' }}
         align={'center'}
       >
-        {/* <Flex
-          gap={'40px'}
-          justifyContent={'space-evenly'}
-          display={'flex'}
-          flexDirection={{
-            base: 'column',
-            sm: 'column',
-            md: 'column',
-            lg: 'row',
-            xl: 'row',
-            '2xl': 'row',
-          }}
-        > */}
         <Menu closeOnSelect={false}>
           <MenuButton
             as={Button}
@@ -257,7 +239,7 @@ export const FilterSort = () => {
             </Flex>
           </MenuList>
         </Menu>
-        {/* </Flex> */}
+
         <Stack>
           <Flex
             defaultValue="asc"
@@ -282,47 +264,6 @@ export const FilterSort = () => {
               </option>
             </Select>
           </Flex>
-
-          {/* <Menu closeOnSelect={false}>
-            <MenuButton
-              as={Button}
-              colorScheme="gray"
-              rightIcon={<HiChevronDown />}
-            >
-              Sort by
-            </MenuButton>
-            <MenuList minWidth="240px">
-              <MenuOptionGroup
-                defaultValue="asc"
-                title="Price"
-                type="radio"
-                onChange={handleSort}
-              >
-                <MenuItemOption value="asc">Ascending</MenuItemOption>
-                <MenuItemOption value="desc">Descending</MenuItemOption>
-              </MenuOptionGroup>
-              <MenuDivider />
-              <MenuOptionGroup
-                defaultValue="asc"
-                title="Discount"
-                type="radio"
-                onChange={handleSort}
-              >
-                <MenuItemOption value="asc">Low to High</MenuItemOption>
-                <MenuItemOption value="desc">High to Low</MenuItemOption>
-              </MenuOptionGroup>
-              <MenuDivider />
-              <MenuOptionGroup
-                defaultValue="asc"
-                title="Rating"
-                type="radio"
-                onChange={handleSort}
-              >
-                <MenuItemOption value="asc">Low to High</MenuItemOption>
-                <MenuItemOption value="desc">High to Low</MenuItemOption>
-              </MenuOptionGroup>
-            </MenuList>
-          </Menu> */}
         </Stack>
       </Box>
     </Box>

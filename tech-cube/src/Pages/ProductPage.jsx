@@ -1,13 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-  SimpleGrid,
-  useBreakpointValue,
-  Center,
-  Box,
-  Flex,
-  Grid,
-  Spinner,
-} from '@chakra-ui/react';
+import { Center, Box, Flex, Grid } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../redux/Product/action';
 import { ProductCard } from '../component/ProductComponent/ProductCard';
@@ -23,7 +15,6 @@ const ProductPage = () => {
     store => store.productReducer
   );
   const [page, setPage] = useState(1);
-  const [total, setTotal] = useState(0);
 
   let obj = {
     params: {
@@ -37,7 +28,7 @@ const ProductPage = () => {
   // console.log(searchParams.getAll('brand'), 'brand');
   useEffect(() => {
     dispatch(getProducts(obj, page));
-  }, [page, setTotal, searchParams]);
+  }, [page, searchParams]);
 
   console.log(totalProducts, 'totalproducts Count');
   console.log(page, 'pages');
