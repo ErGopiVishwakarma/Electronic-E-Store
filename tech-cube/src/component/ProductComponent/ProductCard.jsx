@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Stack,
   Text,
@@ -7,10 +7,12 @@ import {
   Button,
   useColorModeValue,
   Box,
+  useToast,
 } from '@chakra-ui/react';
 import { VscHeart } from 'react-icons/vsc';
-import { Navigate, useNavigate } from 'react-router-dom';
-
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { postSingleProductItem } from '../../redux/CartReducer/action';
 export const ProductCard = ({
   id,
   title,
@@ -22,6 +24,26 @@ export const ProductCard = ({
   discount,
 }) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const toast = useToast();
+  const products = useSelector(store => store.productReducer.products);
+  const [state, setState] = useState(false);
+
+  const handleAdd = () => {
+    let d = products.find(el => el.id === id);
+    // console.log(d);
+    dispatch(postSingleProductItem(d)).then(res => {
+      toast({
+        title: 'Yay!!',
+        description: 'Item added successfully',
+        status: 'success',
+        duration: 4000,
+        position: 'top',
+        isClosable: true,
+      });
+      setState(true);
+    });
+  };
   return (
     <Flex direction={'column'} pos={'relative'} borderRadius={'12px'}>
       <Box p="20px" bg="#F5F5F5" boxSizing="borderBox" borderRadius={'9PX'}>
@@ -86,20 +108,35 @@ export const ProductCard = ({
           </Text>
           <Text opacity={'90%'}>({review})</Text>
         </Flex>
-        <Button
-          variant={'unstyled'}
-          border={'1px solid black'}
-          w="120px"
-          borderRadius={'40px'}
-          bg={useColorModeValue('light', 'gray.700')}
-          _hover={{
-            backgroundColor: 'gray.700',
-            color: 'white',
-            background: useColorModeValue('light', 'gray'),
-          }}
-        >
-          Add To Cart
-        </Button>
+        {!state ? (
+          <Button
+            variant={'unstyled'}
+            border={'1px solid black'}
+            w="120px"
+            borderRadius={'40px'}
+            _hover={{
+              backgroundColor: 'gray.700',
+              color: 'white',
+            }}
+            onClick={handleAdd}
+          >
+            Add To Cart
+          </Button>
+        ) : (
+          <Button
+            variant={'unstyled'}
+            border={'1px solid black'}
+            w="120px"
+            borderRadius={'40px'}
+            _hover={{
+              backgroundColor: 'gray.700',
+              color: 'white',
+            }}
+            onClick={() => navigate('/cart')}
+          >
+            Go To Cart
+          </Button>
+        )}
       </Stack>
       <Button
         p="10px"

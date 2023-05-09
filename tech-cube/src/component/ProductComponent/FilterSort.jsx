@@ -17,6 +17,10 @@ import {
   Select,
   Stack,
   useColorModeValue,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
 } from '@chakra-ui/react';
 
 import { HiChevronDown } from 'react-icons/hi';
@@ -246,39 +250,30 @@ export const FilterSort = () => {
           </Menu>
         </Flex>
         <Stack>
-          <Menu closeOnSelect={false}>
-            <MenuButton
-              as={Button}
-              colorScheme="gray"
-              rightIcon={<HiChevronDown />}
-            >
-              Sort by
-            </MenuButton>
-            <MenuList minWidth="240px">
-              <Flex
-                defaultValue="asc"
-                title="Price"
-                type="radio"
-                flexDirection={'column'}
-                onChange={handleSort}
-              >
-                <Radio
-                  value="asc"
-                  name="sort"
-                  type="radio"
-                  placeholder="ascending"
-                />
-                <label>ascending</label>
-                <Radio
-                  value="desc"
-                  name="sort"
-                  type="radio"
-                  placeholder="descending"
-                />
-                <label>descending</label>
-              </Flex>
-            </MenuList>
-          </Menu>
+          <Flex
+            defaultValue="asc"
+            title="Price"
+            type="radio"
+            flexDirection={'column'}
+          >
+            <Select onChange={handleSort} bg={'#edf2f7'}>
+              <option value={''}>Sort By Price</option>
+
+              <option value={'asc'}>Ascending</option>
+
+              <option value={'desc'}>Descending</option>
+            </Select>
+            <Select onChange={handleSort}>
+              <option value={''} onf>
+                Sort By Discount
+              </option>
+
+              <option value={'asc'}>Ascending</option>
+
+              <option value={'desc'}>Descending</option>
+            </Select>
+          </Flex>
+
           {/* <Menu closeOnSelect={false}>
             <MenuButton
               as={Button}
