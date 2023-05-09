@@ -31,6 +31,7 @@ export const getCartServerdata = () => dispatch => {
     .get('http://localhost:8080/cart')
     .then(res => {
       dispatch({ type: GET_CART_SERVER_SUCCESS, payload: res.data });
+      localStorage.setItem('cart', JSON.stringify(res.data));
     })
         .catch((err) => dispatch({ type: GET_CART_SERVER_FAILD }))
 }

@@ -14,6 +14,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateCartFn } from '../../redux/CartReducer/action';
 
 import { ChevronDownIcon, DeleteIcon } from '@chakra-ui/icons';
+import axios from 'axios';
 
 
 
@@ -60,7 +61,7 @@ export default function CartItem({
     const upDatedData = cart.filter((el) => {
       return el.id !== id
     })
-
+    axios.delete(`http://localhost:8080/cart/${id}`);
     dispatch(updateCartFn(upDatedData));
   };
 
@@ -77,7 +78,7 @@ export default function CartItem({
 
         <Image width={{ base: "full", sm: 'full', md: '100px', lg: '150px', xl: '200px' }} src={image} alt={title} />
         <Box className='TitleColorBrand' display={'flex'} flexDirection={'column'} justifyContent={'center'}>
-          <Text fontWeight={'bold'} fontSize={'20px'}>{title}</Text>
+          <Text fontWeight={'bold'} fontSize={'20px'}>{title.substring(0, 15)}...</Text>
           <Text fontWeight={'bold'} color={'orange.400'}>Brand: {brand}</Text>
         </Box>
 
