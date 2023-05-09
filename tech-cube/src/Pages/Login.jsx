@@ -33,63 +33,63 @@ const Login = () => {
   // const data = useSelector(store => store.authReducer.users);
   const navigate = useNavigate();
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-        let data = await axios('http://localhost:8080/user').then(res=>res.data);
-        
-        if(!email || !password){
-            toast({
-                title: 'failed',
-                description: "all filled are required",
-                status: 'error',
-                duration: 3000,
-                isClosable: true,
-                position:'top'
-              })
-              return;
-        }
-       const newData = data.find(el=>el.email === email)
-       console.log(newData, data)
-       if(newData){
-        if(newData.password === password){
-            toast({
-            title: 'successfully login',
-            description: "Redirecting to admin page",
-            status: 'success',
-            duration: 3000,
-            isClosable: true,
-            position:'top'
-          })
-          localStorage.setItem('userId',JSON.stringify(newData.id))
-          localStorage.setItem('auth',JSON.stringify(true));
-          localStorage.setItem('user', JSON.stringify(newData));
-          setTimeout(()=>{
-            navigate('/');
-          },3000)
-          return;
-        }else{
-            toast({
-                title: 'failed',
-                description: "password didn't match",
-                status: 'warning',
-                duration: 3000,
-                isClosable: true,
-                position:'top'
-              })
-              return;
-        }
-       }else{
+    let data = await axios('http://localhost:8080/user').then(res => res.data);
+
+    if (!email || !password) {
+      toast({
+        title: 'failed',
+        description: "all filled are required",
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+        position: 'top'
+      })
+      return;
+    }
+    const newData = data.find(el => el.email === email)
+    console.log(newData, data)
+    if (newData) {
+      if (newData.password === password) {
         toast({
-            title: 'wrong credential',
-            description: "please check your email or password",
-            status: 'error',
-            duration: 3000,
-            isClosable: true,
-            position:'top'
-          })
-          return;
-       }
+          title: 'Log in Successful.',
+          description: "Redirecting to Home Page.",
+          status: 'success',
+          duration: 3000,
+          isClosable: true,
+          position: 'top'
+        })
+        localStorage.setItem('userId', JSON.stringify(newData.id))
+        localStorage.setItem('auth', JSON.stringify(true));
+        localStorage.setItem('user', JSON.stringify(newData));
+        setTimeout(() => {
+          navigate('/');
+        }, 3000)
+        return;
+      } else {
+        toast({
+          title: 'Login Failed!!',
+          description: "Password didn't match",
+          status: 'warning',
+          duration: 3000,
+          isClosable: true,
+          position: 'top'
+        })
+        return;
+      }
+    } else {
+      toast({
+        title: 'Wrong credentials',
+        description: "Make Sure you are registered.",
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+        position: 'top'
+      })
+      return;
+    }
 
     // if (!email || !password) {
     //   toast({

@@ -1,0 +1,3872 @@
+{
+  "user": [
+    {
+      "firstName": "Ritesh",
+      "lastName": "Goswami",
+      "mobile": "8210483459",
+      "email": "riteshgoswami22201@gmail.com",
+      "password": "ritesh123",
+      "pic": "https://avatars.githubusercontent.com/u/112602790?v=4",
+      "id": 1,
+      "address": "Khadi Bhandar Mairwa Road Srinagar, Siwan",
+      "city": "Saran",
+      "pincode": "841226",
+      "state": "Bihar"
+    },
+    {
+      "firstName": "Tanmoy",
+      "lastName": "Roy",
+      "email": "tanmoy123@gmail.com",
+      "password": "tanmoy123",
+      "mobile": "5843754385",
+      "id": 2,
+      "address": "Kolkata",
+      "city": "Kolkata",
+      "pincode": "123456",
+      "state": "West Bengal"
+    }
+  ],
+  "cart": [
+    {
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image-3_e05a4bee-499f-42da-8db5-e3921a185f5c_600x.png?v=1655526604",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/04_700x.jpg?v=1656100430",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/05_18ab4860-29e3-497b-b06d-ec73ede9a8cf_700x.jpg?v=1656100471",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image_e269db64-c847-4f30-b904-ccb4d973ae52_600x.png?v=1655526604",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image-2_93b99319-19ca-4375-9f44-60a89e370422_600x.png?v=1655526604"
+      ],
+      "tag_badge": "50 Hours Playback",
+      "title": "Airdopes 100",
+      "price": 1499,
+      "discount": 57,
+      "mrp": 3490,
+      "rating": 4.7,
+      "category": "wireless_earbuds",
+      "id": 10,
+      "description": "Up to 50HRS Playback Clear Calling ASAP™ Charge ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 48904
+    },
+    {
+      "color": [
+        "black",
+        "blue",
+        "gray"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_9230f72d-9f86-4aec-9ae2-a7d87d332877_600x.png?v=1647426798",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_41abf7ad-3d7f-4189-a93a-08fefd02ba45_600x.png?v=1647426798",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_c5f9fe7c-c012-4d93-ba0c-b25267c0560d_600x.png?v=1647426797",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD411ANC-FI-Blue06-a_e9789f39-65bb-4cd7-acb1-e22f28c63387_700x.png?v=1655187799",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD411ANC-FI-Blue07_7ddf7156-a375-4a9e-9593-5f13cfb04ced_700x.png?v=1655187802"
+      ],
+      "tag_badge": "24 Hours Playback",
+      "title": "Airdopes 113",
+      "price": 1599,
+      "discount": 47,
+      "mrp": 2990,
+      "rating": 5,
+      "category": "wireless_earbuds",
+      "id": 11,
+      "description": "Up to 24 HRS Playback 13 mm Drivers BEAST™ Mode ",
+      "brand": "ORAIMO",
+      "quantity": 1,
+      "review": 12404
+    },
+    {
+      "color": [
+        "green",
+        "black",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveCall.1_1_60x.png?v=1680772802",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/wave-call-3_600x.png?v=1680772802",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveCall.1_1_1800x.png?v=1680772802",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/wave-call-Copy_600x.png?v=1680772802",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/wave-call--4_600x.png?v=1680772802"
+      ],
+      "tag_badge": "Bt Calling",
+      "title": "Wave Call",
+      "price": 1799,
+      "discount": 77,
+      "mrp": 7990,
+      "rating": 4.9,
+      "category": "smart_watches",
+      "id": 12,
+      "description": "BT Calling HD Curved Display Save upto 10 contacts ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 4379
+    },
+    {
+      "color": [
+        "gray",
+        "red",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/MI-2_600x.png?v=1658736611",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD191G-FI_White05_700x.png?v=1658738968",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD191G-FI_Red04_700x.png?v=1658738969",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD191G-FI_Red05_700x.png?v=1658738971",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/MI-3_600x.png?v=1658736611"
+      ],
+      "tag_badge": "20 Hours Playback",
+      "title": "Airdopes 183",
+      "price": 1599,
+      "discount": 47,
+      "mrp": 2990,
+      "rating": 5,
+      "category": "wireless_earbuds",
+      "id": 9,
+      "description": "Up to 20 HRS Playback 10 mm Drivers BEAST™ Mode ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 1364
+    },
+    {
+      "color": [
+        "black",
+        "white",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/3_743027d7-94ca-43e1-9c04-72ad6483c226_700x.png?v=1669055392",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2_614c0321-f235-4765-b157-a8727f7e4aae_700x.png?v=1669055570",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1_0b38e5a7-0427-413d-b804-342451f18cca_700x.png?v=1669055570"
+      ],
+      "tag_badge": "50 Hours Playback",
+      "title": "Airdopes Atom 81",
+      "price": 999,
+      "discount": 71,
+      "mrp": 3490,
+      "rating": 5,
+      "category": "wireless_earbuds",
+      "id": 3,
+      "description": "Up to 50HRS Playback ENx™ Technology ASAP Fast Charge ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 48903
+    },
+    {
+      "color": [
+        "green",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Leapcall.5284_3aca31a0-1964-4e03-bbef-b4391393af2d_300x.png?v=1679352767",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268576",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268548",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268548",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268549"
+      ],
+      "tag_badge": "",
+      "title": "Wave Stride Voice",
+      "price": 2399,
+      "discount": 66,
+      "mrp": 6990,
+      "rating": 3.5,
+      "category": "smart_watches",
+      "id": 18,
+      "description": " Wave Stride Voice Brand syska ",
+      "brand": "Syska",
+      "quantity": 1,
+      "review": 12405
+    },
+    {
+      "color": [
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/removal.ai__tmp-63679b9ab29ed_300x.png?v=1667734467",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268574",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268546",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268546",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268547"
+      ],
+      "tag_badge": "Activity Tracker",
+      "title": "Wave Play",
+      "price": 1999,
+      "discount": 67,
+      "mrp": 5990,
+      "rating": 4,
+      "category": "smart_watches",
+      "id": 16,
+      "description": "15 Days Battery Life 25+ Sports Mode 100+ Watch Faces ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 1365
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/MAINPRIMIA_300x.png?v=1673000401",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268575",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268547",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268547",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268548"
+      ],
+      "tag_badge": "Bt Calling",
+      "title": "Watch‌ Primia",
+      "price": 4999,
+      "discount": 44,
+      "mrp": 8990,
+      "rating": 4.9,
+      "category": "smart_watches",
+      "id": 17,
+      "description": "BT Calling Always On AMOLED Display Stress Monitoring ",
+      "brand": "realme",
+      "quantity": 1,
+      "review": 48905
+    },
+    {
+      "color": [
+        "black",
+        "white",
+        "green",
+        "yellow"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/back_600x.png?v=1668599490",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI_1f060ff5-cbbf-43f3-b673-41e4aacc7d79_700x.jpg?v=1657869596",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI-1_2_d9489be8-8f88-4832-991d-28b012711719_700x.jpg?v=1655369215",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI-2_5f7d05ca-6358-4ff8-899f-c6720e201a72_700x.jpg?v=1655369215",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI-3_25e4be39-aa68-4c07-94de-75afabaeef11_700x.jpg?v=1655369215"
+      ],
+      "tag_badge": "42 Hours Playback",
+      "title": "Airdopes 141",
+      "price": 1299,
+      "discount": 71,
+      "mrp": 4490,
+      "rating": 4.8,
+      "category": "wireless_earbuds",
+      "id": 1,
+      "description": "Up to 42HRS Playback Clear Calling ASAP™ Charge",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 2159
+    }
+  ],
+  "products": [
+    {
+      "color": [
+        "black",
+        "white",
+        "green",
+        "yellow"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/back_600x.png?v=1668599490",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI_1f060ff5-cbbf-43f3-b673-41e4aacc7d79_700x.jpg?v=1657869596",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI-1_2_d9489be8-8f88-4832-991d-28b012711719_700x.jpg?v=1655369215",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI-2_5f7d05ca-6358-4ff8-899f-c6720e201a72_700x.jpg?v=1655369215",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-141-FI-3_25e4be39-aa68-4c07-94de-75afabaeef11_700x.jpg?v=1655369215"
+      ],
+      "tag_badge": "42 Hours Playback",
+      "title": "Airdopes 141",
+      "price": 1299,
+      "discount": 71,
+      "mrp": 4490,
+      "rating": 4.8,
+      "category": "wireless_earbuds",
+      "id": 1,
+      "description": "Up to 42HRS Playback Clear Calling ASAP™ Charge",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 2159
+    },
+    {
+      "color": [
+        "black",
+        "silver",
+        "green",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.png?v=1668756103",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_600x.png?v=1668756103",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/616b4ead-bbd9-4a16-aeab-8d331a16f697_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ivory-white_600x.png?v=1639466536",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/viper-green_600x.png?v=1642405569"
+      ],
+      "tag_badge": "60 Hours Playback",
+      "title": "Airdopes 131",
+      "price": 999,
+      "discount": 67,
+      "mrp": 2990,
+      "rating": 4.8,
+      "category": "wireless_earbuds",
+      "id": 2,
+      "description": "Up to 60HRS Playback 13mm drivers IWP Technology",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 1363
+    },
+    {
+      "color": [
+        "black",
+        "white",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/3_743027d7-94ca-43e1-9c04-72ad6483c226_700x.png?v=1669055392",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2_614c0321-f235-4765-b157-a8727f7e4aae_700x.png?v=1669055570",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1_0b38e5a7-0427-413d-b804-342451f18cca_700x.png?v=1669055570"
+      ],
+      "tag_badge": "50 Hours Playback",
+      "title": "Airdopes Atom 81",
+      "price": 999,
+      "discount": 71,
+      "mrp": 3490,
+      "rating": 5,
+      "category": "wireless_earbuds",
+      "id": 3,
+      "description": "Up to 50HRS Playback ENx™ Technology ASAP Fast Charge ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 48903
+    },
+    {
+      "color": [
+        "black",
+        "white",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_white_600x.png?v=1641206209",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD161-FI_Black02_bc21c8ef-bd1e-4850-b20f-1d3a89dba389_700x.jpg?v=1674117809",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD161-FI_Black06_f628e9ce-13c2-4994-bf07-efb9f87e190e_700x.jpg?v=1674117809",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_black_fa1c6ec3-93b7-443e-ae82-d5eeb34258f8_600x.png?v=1641206192",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_blue_a80b6882-1247-439d-a17b-1c87ed4fa7c8_600x.png?v=1641206192"
+      ],
+      "tag_badge": "17 Hours Playback",
+      "title": "Airdopes 161",
+      "price": 1099,
+      "discount": 56,
+      "mrp": 2490,
+      "rating": 4.9,
+      "category": "wireless_earbuds",
+      "id": 4,
+      "description": "Up to 17HRS Playback ASAP™ Charge IWP Technology ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 12403
+    },
+    {
+      "color": [
+        "black",
+        "white",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_white_9263689b-ad66-47cd-8183-f59685e1dff6_600x.png?v=1671193643",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD161-FI_Black05_3200c952-62a7-4b5a-969b-c5e6f29ba71c_700x.jpg?v=1674118097",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD161-FI_Black05_4f2d0cc7-9848-4382-82de-9bb5366c0a51_700x.jpg?v=1674118126"
+      ],
+      "tag_badge": "45 Hours Playback",
+      "title": "Airdopes 131 PRO",
+      "price": 1299,
+      "discount": 57,
+      "mrp": 2990,
+      "rating": 4.9,
+      "category": "wireless_earbuds",
+      "id": 5,
+      "description": "Up to 45HRS Playback Clear Calling BEAST™ Mode ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 4378
+    },
+    {
+      "color": [
+        "black",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/airdopes-121-v2-pink_600x.png?v=1678773275",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/airdopes-121-v2-blue_600x.png?v=1678773275",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/airdopes-121-v2-black_600x.png?v=1678773275"
+      ],
+      "tag_badge": "17 Hours Playback",
+      "title": "Airdopes 163",
+      "price": 1399,
+      "discount": 44,
+      "mrp": 2490,
+      "rating": 2.9,
+      "category": "wireless_earbuds",
+      "id": 6,
+      "description": "Up to 17HRS Playback boAt Immersive Sound IWP Technology ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 0
+    },
+    {
+      "color": [
+        "black",
+        "gray"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_black_71281c3f-ea28-4316-8a1f-544820908c6c_600x.png?v=1664103051",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD181-FI_Black01_e7aa0e47-1514-45d7-87e1-d39f9a869d89_700x.png?v=1664103052",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD181-FI_Black03_5e4a8ab0-1d57-4897-a3b7-aef202bff25a_700x.png?v=1664103054",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_white_8b96f43b-cc3e-4d21-913d-50389d8a7d29_600x.png?v=1664103051",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_grey_8202f335-95e8-4bc4-9889-ea9beb8292e4_600x.png?v=1664103052"
+      ],
+      "tag_badge": "Clear Calling",
+      "title": "Airdopes 115",
+      "price": 1599,
+      "discount": 47,
+      "mrp": 2990,
+      "rating": 4.9,
+      "category": "wireless_earbuds",
+      "id": 7,
+      "description": "Clear Calling 13mm Drivers BEAST™ Mode ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 53671
+    },
+    {
+      "color": [
+        "black",
+        "pink",
+        "green",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/grey_916612cd-a8da-408e-8ec6-b177df5fa727_1_700x.png?v=1658150489",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/121-pro-BG_600x.gif?v=1665492449",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/fvtfgvt_700x.png?v=1658150489",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/iiolo_700x.png?v=1658150489",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD121Pro-FI_Blue02_700x.png?v=1665492449"
+      ],
+      "tag_badge": "Bestseller",
+      "title": "Airdopes 121 v2",
+      "price": 1099,
+      "discount": 63,
+      "mrp": 2999,
+      "rating": 4.8,
+      "category": "wireless_earbuds",
+      "id": 8,
+      "description": "Up to 14HRS Playback IWP Technology LED Battery Case ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 2160
+    },
+    {
+      "color": [
+        "gray",
+        "red",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/MI-2_600x.png?v=1658736611",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD191G-FI_White05_700x.png?v=1658738968",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD191G-FI_Red04_700x.png?v=1658738969",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD191G-FI_Red05_700x.png?v=1658738971",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/MI-3_600x.png?v=1658736611"
+      ],
+      "tag_badge": "20 Hours Playback",
+      "title": "Airdopes 183",
+      "price": 1599,
+      "discount": 47,
+      "mrp": 2990,
+      "rating": 5,
+      "category": "wireless_earbuds",
+      "id": 9,
+      "description": "Up to 20 HRS Playback 10 mm Drivers BEAST™ Mode ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 1364
+    },
+    {
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image-3_e05a4bee-499f-42da-8db5-e3921a185f5c_600x.png?v=1655526604",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/04_700x.jpg?v=1656100430",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/05_18ab4860-29e3-497b-b06d-ec73ede9a8cf_700x.jpg?v=1656100471",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image_e269db64-c847-4f30-b904-ccb4d973ae52_600x.png?v=1655526604",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image-2_93b99319-19ca-4375-9f44-60a89e370422_600x.png?v=1655526604"
+      ],
+      "tag_badge": "50 Hours Playback",
+      "title": "Airdopes 100",
+      "price": 1499,
+      "discount": 57,
+      "mrp": 3490,
+      "rating": 4.7,
+      "category": "wireless_earbuds",
+      "id": 10,
+      "description": "Up to 50HRS Playback Clear Calling ASAP™ Charge ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 48904
+    },
+    {
+      "color": [
+        "black",
+        "blue",
+        "gray"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_9230f72d-9f86-4aec-9ae2-a7d87d332877_600x.png?v=1647426798",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_41abf7ad-3d7f-4189-a93a-08fefd02ba45_600x.png?v=1647426798",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_c5f9fe7c-c012-4d93-ba0c-b25267c0560d_600x.png?v=1647426797",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD411ANC-FI-Blue06-a_e9789f39-65bb-4cd7-acb1-e22f28c63387_700x.png?v=1655187799",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD411ANC-FI-Blue07_7ddf7156-a375-4a9e-9593-5f13cfb04ced_700x.png?v=1655187802"
+      ],
+      "tag_badge": "24 Hours Playback",
+      "title": "Airdopes 113",
+      "price": 1599,
+      "discount": 47,
+      "mrp": 2990,
+      "rating": 5,
+      "category": "wireless_earbuds",
+      "id": 11,
+      "description": "Up to 24 HRS Playback 13 mm Drivers BEAST™ Mode ",
+      "brand": "ORAIMO",
+      "quantity": 1,
+      "review": 12404
+    },
+    {
+      "color": [
+        "green",
+        "black",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveCall.1_1_60x.png?v=1680772802",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/wave-call-3_600x.png?v=1680772802",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveCall.1_1_1800x.png?v=1680772802",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/wave-call-Copy_600x.png?v=1680772802",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/wave-call--4_600x.png?v=1680772802"
+      ],
+      "tag_badge": "Bt Calling",
+      "title": "Wave Call",
+      "price": 1799,
+      "discount": 77,
+      "mrp": 7990,
+      "rating": 4.9,
+      "category": "smart_watches",
+      "id": 12,
+      "description": "BT Calling HD Curved Display Save upto 10 contacts ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 4379
+    },
+    {
+      "color": [
+        "black",
+        "red",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/black_bdca4987-8550-461d-bb37-b1bae02009b4_600x.png?v=1678969539",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveLite_GIFCarousal_001_800x.jpg?v=1678969539",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/CB_05601a56-8da0-439a-86c8-072dafdf0a5b_600x.png?v=1678969539",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveLite_GIFCarousal_003_800x.jpg?v=1678969539",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Red_07475267-c306-40f2-8bd2-9b8311620c42_600x.png?v=1678969539"
+      ],
+      "tag_badge": "Health Monitoring",
+      "title": "Wave Lite",
+      "price": 1799,
+      "discount": 74,
+      "mrp": 6990,
+      "rating": 4.9,
+      "category": "smart_watches",
+      "id": 13,
+      "description": "HD Display 70% RGB colour Ultra Slim ",
+      "brand": "Syska",
+      "quantity": 1,
+      "review": 2383
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-4_d6819031-819f-461b-a0e1-32c829d0c13c.png?v=1661268545",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268572",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268544",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268544",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268545"
+      ],
+      "tag_badge": "Bt Calling",
+      "title": "Storm Call",
+      "price": 1799,
+      "discount": 77,
+      "mrp": 7990,
+      "rating": 4.7,
+      "category": "smart_watches",
+      "id": 14,
+      "description": "BT Calling 2.5D Curved Display Save Upto 10 Contacts ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 53672
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveFlexConnectPackaging1.2_300x.png?v=1677645513",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268573",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268545",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268545",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268546"
+      ],
+      "tag_badge": "Bt Calling",
+      "title": "Wave Flex Connect",
+      "price": 1999,
+      "discount": 75,
+      "mrp": 7990,
+      "rating": 3.6,
+      "category": "smart_watches",
+      "id": 15,
+      "description": "HD Curved Display 10 Days Battery Life Multi Sports Mode ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 2161
+    },
+    {
+      "color": [
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/removal.ai__tmp-63679b9ab29ed_300x.png?v=1667734467",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268574",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268546",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268546",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268547"
+      ],
+      "tag_badge": "Activity Tracker",
+      "title": "Wave Play",
+      "price": 1999,
+      "discount": 67,
+      "mrp": 5990,
+      "rating": 4,
+      "category": "smart_watches",
+      "id": 16,
+      "description": "15 Days Battery Life 25+ Sports Mode 100+ Watch Faces ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 1365
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/MAINPRIMIA_300x.png?v=1673000401",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268575",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268547",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268547",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268548"
+      ],
+      "tag_badge": "Bt Calling",
+      "title": "Watch‌ Primia",
+      "price": 4999,
+      "discount": 44,
+      "mrp": 8990,
+      "rating": 4.9,
+      "category": "smart_watches",
+      "id": 17,
+      "description": "BT Calling Always On AMOLED Display Stress Monitoring ",
+      "brand": "realme",
+      "quantity": 1,
+      "review": 48905
+    },
+    {
+      "color": [
+        "green",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Leapcall.5284_3aca31a0-1964-4e03-bbef-b4391393af2d_300x.png?v=1679352767",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268576",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268548",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268548",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268549"
+      ],
+      "tag_badge": "",
+      "title": "Wave Stride Voice",
+      "price": 2399,
+      "discount": 66,
+      "mrp": 6990,
+      "rating": 3.5,
+      "category": "smart_watches",
+      "id": 18,
+      "description": " Wave Stride Voice Brand syska ",
+      "brand": "Syska",
+      "quantity": 1,
+      "review": 12405
+    },
+    {
+      "color": [
+        "black",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Lyncvoice2_300x.png?v=1674034373",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268577",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268549",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268549",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268550"
+      ],
+      "tag_badge": "Bt Calling",
+      "title": "Wave Lynk Voice",
+      "price": 2299,
+      "discount": 71,
+      "mrp": 7990,
+      "rating": 4.1,
+      "category": "smart_watches",
+      "id": 19,
+      "description": "HD Curved Display 10+ Sports Mode 600+ Watch Faces ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 4380
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Leapcall.5284_300x.png?v=1678948531",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268578",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268550",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268550",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268551"
+      ],
+      "tag_badge": "",
+      "title": "Wave Leap Call",
+      "price": 2199,
+      "discount": 69,
+      "mrp": 6990,
+      "rating": 2.9,
+      "category": "smart_watches",
+      "id": 20,
+      "description": "BOAT Wave Leap Call",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 0
+    },
+    {
+      "color": [
+        "green"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/blsck_300x.png?v=1671601227",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268579",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268551",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268551",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268552"
+      ],
+      "tag_badge": "Bt Calling",
+      "title": "Wave Electra",
+      "price": 1999,
+      "discount": 75,
+      "mrp": 7990,
+      "rating": 238456,
+      "category": "smart_watches",
+      "id": 21,
+      "description": "HD Display Built-in Games 100+ Watch Faces ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 53673
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/bla_300x.png?v=1679660395",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268580",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268552",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268552",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268553"
+      ],
+      "tag_badge": "",
+      "title": "Lunar Call Pro",
+      "price": 4299,
+      "discount": 38,
+      "mrp": 6990,
+      "rating": 2.9,
+      "category": "smart_watches",
+      "id": 22,
+      "description": "1.78\" AMOLED Display Faster Performance 700+ Active Modes ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 0
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/black_21bd8228-f672-4ccd-84a2-aff8ec1c293d_300x.png?v=1670787230",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268581",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268553",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268553",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268554"
+      ],
+      "tag_badge": "1.8\" HD Display",
+      "title": "Wave Arcade",
+      "price": 1999,
+      "discount": 75,
+      "mrp": 7990,
+      "rating": 4.7,
+      "category": "smart_watches",
+      "id": 23,
+      "description": "Built-in Games 100+ Watch Faces BT Calling ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 1366
+    },
+    {
+      "color": [
+        "green",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/B1_1_-PhotoRoom_300x.png?v=1668117625",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268582",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268554",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268554",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268555"
+      ],
+      "tag_badge": "Bt Calling",
+      "title": "Wave Voice",
+      "price": 2699,
+      "discount": 55,
+      "mrp": 5990,
+      "rating": 3.4,
+      "category": "smart_watches",
+      "id": 24,
+      "description": "HD Display 25+ Sports Mode 100+ Watch Faces ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 48906
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveArmourPackaging.98_300x.png?v=1679727242",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268583",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268555",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268555",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268556"
+      ],
+      "tag_badge": "",
+      "title": "Armour",
+      "price": 2299,
+      "discount": 77,
+      "mrp": 9999,
+      "rating": 2.9,
+      "category": "smart_watches",
+      "id": 25,
+      "description": " Armour Boat smart watch product ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 0
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveSmartCall-FI_Black01_300x.png?v=1680071619",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268584",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268556",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268556",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268557"
+      ],
+      "tag_badge": "",
+      "title": "Wave Smart Call",
+      "price": 1699,
+      "discount": 74,
+      "mrp": 6499,
+      "rating": 2.1,
+      "category": "smart_watches",
+      "id": 26,
+      "description": "1.78\" AMOLED Display Faster Performance 700+ Active Modes ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 4381
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/xtend-pro-3_300x.png?v=1658298359",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268585",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268557",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268557",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268558"
+      ],
+      "tag_badge": "Bt Calling",
+      "title": "Xtend Pro",
+      "price": 3999,
+      "discount": 59,
+      "mrp": 9799,
+      "rating": 4.9,
+      "category": "smart_watches",
+      "id": 27,
+      "description": "BT Calling 1.78\" AMOLED Display 700+ Active Modes ",
+      "brand": "ORAIMO",
+      "quantity": 1,
+      "review": 2385
+    },
+    {
+      "color": [
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Wavebeatcall1.2_300x.png?v=1674561165",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268586",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268558",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268558",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268559"
+      ],
+      "tag_badge": "Bluetooth Calling",
+      "title": "Wave Beat Call",
+      "price": 1999,
+      "discount": 75,
+      "mrp": 7990,
+      "rating": 2.9,
+      "category": "smart_watches",
+      "id": 28,
+      "description": "HD Display 600+ Cloud Faces 10+ Sports Mode ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 53674
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1.1129_300x.png?v=1678102525",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268587",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268559",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268559",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268560"
+      ],
+      "tag_badge": "",
+      "title": "Lunar Connect",
+      "price": 2499,
+      "discount": 69,
+      "mrp": 7999,
+      "rating": 2.9,
+      "category": "smart_watches",
+      "id": 29,
+      "description": "Lunar Connect boat ",
+      "brand": "Syska",
+      "quantity": 1,
+      "review": 2163
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveEdge.24_300x.png?v=1672899936",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268588",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268560",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268560",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268561"
+      ],
+      "tag_badge": "Bt Calling",
+      "title": "Wave Edge",
+      "price": 2499,
+      "discount": 69,
+      "mrp": 7990,
+      "rating": 2.9,
+      "category": "smart_watches",
+      "id": 30,
+      "description": "HD Curved Display 100+ Sports Mode 100+ Watch Faces ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 1367
+    },
+    {
+      "color": [
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveFit_FI-01-PhotoRoom.png-PhotoRoom_300x.png?v=1679351026",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268589",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268561",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268561",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268562"
+      ],
+      "tag_badge": "",
+      "title": "Wave Fit",
+      "price": 2099,
+      "discount": 74,
+      "mrp": 7990,
+      "rating": 2.9,
+      "category": "smart_watches",
+      "id": 31,
+      "description": "Wave Fit",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 48907
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/wave-call-Copy_dcaa5c5f-2574-4a71-ba0e-a77e7a82abfa_300x.png?v=1678190676",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268590",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268562",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268562",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268563"
+      ],
+      "tag_badge": "",
+      "title": "TRebel Wave Call",
+      "price": 1999,
+      "discount": 75,
+      "mrp": 7990,
+      "rating": 2.9,
+      "category": "smart_watches",
+      "id": 32,
+      "description": "TRebel Wave Call super battery",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 12407
+    },
+    {
+      "color": [
+        "green",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/3_886cfe4b-3473-4348-8242-001f3a156a61_300x.png?v=1672986395",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268591",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268563",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268563",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268564"
+      ],
+      "tag_badge": "Bt Calling",
+      "title": "Storm Pro Call",
+      "price": 4499,
+      "discount": 54,
+      "mrp": 9799,
+      "rating": 5,
+      "category": "smart_watches",
+      "id": 33,
+      "description": "BT Calling 1.78\" AMOLED Display 700+ Active Modes ",
+      "brand": "realme",
+      "quantity": 1,
+      "review": 4382
+    },
+    {
+      "color": [
+        "black"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untitled-5_300x.png?v=1658294451",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268592",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268564",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268564",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268565"
+      ],
+      "tag_badge": "Activity Tracker",
+      "title": "Wave Select Smartwatch",
+      "price": 2999,
+      "discount": 57,
+      "mrp": 6990,
+      "rating": 5,
+      "category": "smart_watches",
+      "id": 34,
+      "description": "2.5D Curved Body 20+ Sports Modes 5ATM Water Resistant ",
+      "brand": "Syska",
+      "quantity": 1,
+      "review": 2386
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untitled-2_78dd12b0-7258-46b8-97cf-01671a965d4a_300x.png?v=1669707141",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268593",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268565",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268565",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268566"
+      ],
+      "tag_badge": "Alexa + BT Calling",
+      "title": "Xtend Talk",
+      "price": 3999,
+      "discount": 43,
+      "mrp": 6990,
+      "rating": 4.9,
+      "category": "smart_watches",
+      "id": 35,
+      "description": "BT Calling Built-in Alexa 60+ Sports Moddes ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 53675
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1_f28099c2-bf34-48f9-88dd-dee880b36ec9_300x.png?v=1663246010",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268594",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268566",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268566",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268567"
+      ],
+      "tag_badge": "Activity Tracker",
+      "title": "Wave Beat",
+      "price": 2499,
+      "discount": 58,
+      "mrp": 5990,
+      "rating": 4.6,
+      "category": "smart_watches",
+      "id": 36,
+      "description": "HD Display Custom Fitness Plans Up to 7 Days Battery ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 2164
+    },
+    {
+      "color": [
+        "black",
+        "red"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_f30681d9-fddb-4997-bfcb-503fcc258a5c_300x.png?v=1646392933",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268595",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268567",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268567",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268568"
+      ],
+      "tag_badge": "AMOLED Display",
+      "title": "Matrix",
+      "price": 4999,
+      "discount": 58,
+      "mrp": 11990,
+      "rating": 5,
+      "category": "smart_watches",
+      "id": 37,
+      "description": "AMOLED Display Always On Display Activity Tracker ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 13
+    },
+    {
+      "color": [
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/a09a67f0-75bd-42b8-8f0d-58ffad51e03b_300x.png?v=1625045372",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268596",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268568",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268568",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268569"
+      ],
+      "tag_badge": "Activity Tracker",
+      "title": "Storm",
+      "price": 3499,
+      "discount": 42,
+      "mrp": 5990,
+      "rating": 4.1,
+      "category": "smart_watches",
+      "id": 38,
+      "description": "2.5D Curved Display SpO2 Monitor Water Resistant ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 48908
+    },
+    {
+      "color": [
+        "black",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/103_600x.png?v=1574927262",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/103blk_600x.png?v=1574927262",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/103b_600x.png?v=1574927262",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/103_mintgreen_600x.png?v=1632906887",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/103_mintorange_600x.png?v=1632906888"
+      ],
+      "tag_badge": "Noise Isolation",
+      "title": "BassHeads 103",
+      "price": 499,
+      "discount": 61,
+      "mrp": 1290,
+      "rating": 4.8,
+      "category": "earphones",
+      "id": 39,
+      "description": "10mm Drivers Lightweight Design In-Line Microphone ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 12408
+    },
+    {
+      "color": [
+        "black",
+        "gray"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8fd33d93-0ea1-46a3-89d6-6cad41e95741_600x.png?v=1625046503",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/5ea15cf3-7454-4851-9342-cd77f8af418f_600x.png?v=1625046503",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/5ea15cf3-7454-4851-9342-cd77f8af418f_600x.png?v=1625046503",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8fd33d93-0ea1-46a3-89d6-6cad41e95741_600x.png?v=1625046503"
+      ],
+      "tag_badge": "Premium Hd Sound",
+      "title": "BassHeads 122",
+      "price": 499,
+      "discount": 61,
+      "mrp": 1290,
+      "rating": 4.9,
+      "category": "earphones",
+      "id": 40,
+      "description": "10mm Drivers Voice Assistant 3.5mm Straight Jack ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 4383
+    },
+    {
+      "color": [
+        "black",
+        "white",
+        "black"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8ec58553-3255-48ec-929e-4838215b640c_1400x.png?v=1625046271",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8ec58553-3255-48ec-929e-4838215b640c_1400x.png?v=1625046271",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/08119dcb-d777-44af-b556-3492e5b4b7f0_600x.png?v=1625046271"
+      ],
+      "tag_badge": "In-Line Microphone",
+      "title": "Bassheads 900",
+      "price": 849,
+      "discount": 66,
+      "mrp": 2490,
+      "rating": 4.8,
+      "category": "earphones",
+      "id": 41,
+      "description": "40mm Drivers Super Extra Bass Comfortable & Foldable ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 2387
+    },
+    {
+      "color": [
+        "gray",
+        "red",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/bassheads-110-black_600x.png?v=1613742985",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/bassheads-110-white_600x.png?v=1613457275",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/bassheads-110-red_600x.png?v=1613457275",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/bassheads-110-pink_600x.png?v=1613457275"
+      ],
+      "tag_badge": "In-Line Microphone",
+      "title": "BassHeads 110",
+      "price": 449,
+      "discount": 55,
+      "mrp": 999,
+      "rating": 2.7,
+      "category": "earphones",
+      "id": 42,
+      "description": "10mm Drivers Hawk Inspired Design Super Extra Bass ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 53676
+    },
+    {
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/boat-bassheads-102-red_600x.png?v=1633152280",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2_4996964f-aee4-451a-9e4d-33ee171b439d_676x.png?v=1659689852",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/4_5649e20a-0b38-41a1-b505-a7d433367208_655x.png?v=1659689852",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/f87f98c3-9b52-4f7f-9ebe-dd10ee9517d9_600x.png?v=1659689852",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/boat-bassheads-102-black_600x.png?v=1659689852"
+      ],
+      "tag_badge": "Noise Isolation",
+      "title": "BassHeads 102",
+      "price": 499,
+      "discount": 61,
+      "mrp": 1290,
+      "rating": 4.8,
+      "category": "earphones",
+      "id": 43,
+      "description": "10mm Drivers Lightweight Design In-Line Microphone ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 2165
+    },
+    {
+      "color": [
+        "black",
+        "red",
+        "white",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c3d0fbbd-9479-4351-bf04-91136da2ae91_600x.png?v=1656750183",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/04981d98-f010-4553-9ba2-97c9a36fef4e_600x.png?v=1656750183",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/553af994-244a-4b81-9d9e-9967a1b966b3_600x.png?v=1656750183",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/48f99cab-b0ac-4e12-a5b4-fca6af5adf47_600x.png?v=1656750183"
+      ],
+      "tag_badge": "In-Line Microphone",
+      "title": "BassHeads 100",
+      "price": 399,
+      "discount": 60,
+      "mrp": 999,
+      "rating": 4.8,
+      "category": "earphones",
+      "id": 44,
+      "description": "10mm Drivers Voice Assistant 3.5mm Straight Jack ",
+      "brand": "ORAIMO",
+      "quantity": 1,
+      "review": 1369
+    },
+    {
+      "color": [
+        "green",
+        "black",
+        "white",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main15_600x.png?v=1623832759",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_743eb2f9-663e-4359-ae9d-192e5f0ed056_600x.png?v=1623832759",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_cd88f9ea-11e6-43de-931b-965621c393c7_600x.png?v=1623832759",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main15_600x.png?v=1623832759"
+      ],
+      "tag_badge": "Noise Isolation",
+      "title": "BassHeads 105",
+      "price": 449,
+      "discount": 55,
+      "mrp": 999,
+      "rating": 4.9,
+      "category": "earphones",
+      "id": 45,
+      "description": "13mm Drivers Super Extra Bass Voice Assistant ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 48909
+    },
+    {
+      "color": [
+        "green",
+        "blue",
+        "yellow",
+        "red"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Red_d8ee4785-21ae-4fee-943e-d5c571131ae8_700x.png?v=1660654082",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Orange_05fdf488-bd1f-437e-8d13-dc428e957628_700x.png?v=1660654083",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/blue_cf3aff8e-a359-4c0a-ac43-ffbf4ab81651_700x.png?v=1660654082",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/lime_700x.png?v=1660654081",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/black_700x.png?v=1660654081"
+      ],
+      "tag_badge": "Noise Isolation",
+      "title": "BassHeads 220 MKI",
+      "price": 699,
+      "discount": 30,
+      "mrp": 999,
+      "rating": 4.7,
+      "category": "earphones",
+      "id": 46,
+      "description": "Super Extra Bass Polished Metal Design Hands-free communication ",
+      "brand": "Syska",
+      "quantity": 1,
+      "review": 12409
+    },
+    {
+      "color": [
+        "green",
+        "blue",
+        "orange"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/mint--orange_600x.png?v=1673001242",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/mint-purple_600x.png?v=1673001241",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/mint-green_600x.png?v=1673001301"
+      ],
+      "tag_badge": "In-Line Microphone",
+      "title": "TRebel BassHeads 100",
+      "price": 399,
+      "discount": 60,
+      "mrp": 999,
+      "rating": 4.9,
+      "category": "earphones",
+      "id": 47,
+      "description": "Hawk-inspired Design Super Extra Bass 10mm Drivers ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 4384
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untblueitled-1_600x.png?v=1661509030",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/06-2_700x.png?v=1675769103",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/07-2_700x.png?v=1675769103",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/4_3d410a1f-523c-41bc-980d-14b8d2c1c58a_700x.png?v=1675769103",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/blue_83bb1e1b-8519-4bd9-83b8-92299b0b375d_600x.png?v=1661509030"
+      ],
+      "tag_badge": "20 Hours Playback",
+      "title": "Rockerz 103 Pro",
+      "price": 1199,
+      "discount": 52,
+      "mrp": 2490,
+      "rating": 4.9,
+      "category": "wireless_earphones",
+      "id": 48,
+      "description": "10mm Drivers Voice Assistant ENx™ Technology ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 2388
+    },
+    {
+      "color": [
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/35ca6350-d6f3-4bc2-a742-01b2c88d80c4_700x.png?v=1673005509",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/93b827fc-0108-4e8b-9ea9-e66fb1e7a362_600x.png?v=1625157890",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R255-pro-plus-FI-1.3_05e7346c-0444-4b11-9a34-9984125395a7_700x.jpg?v=1673005562",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R255-pro-plus-FI-2.2_dd561bf6-71b4-47a4-84e5-c3fb8da4fe82_700x.jpg?v=1655378031",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R255-pro-plus-FI-3.2_f6658dc9-794a-4d38-bff0-8b672be85345_700x.jpg?v=1655378030"
+      ],
+      "tag_badge": "40 Hours Playback",
+      "title": "Rockerz 255 Pro+",
+      "price": 1399,
+      "discount": 65,
+      "mrp": 3990,
+      "rating": 4.8,
+      "category": "wireless_earphones",
+      "id": 49,
+      "description": "10mm Drivers boAt Signature Sound ASAP Charge ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 53677
+    },
+    {
+      "color": [
+        "black",
+        "red"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/rockerz-255r-red_600x.png?v=1613731612",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R255-FI_Red02_600x.png?v=1667509412",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R255-FI_Red03_600x.png?v=1667509418",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R255-FI_Red04_600x.png?v=1667509413",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R255-FI_Neon02_600x.png?v=1667509856"
+      ],
+      "tag_badge": "6 Hours Playback",
+      "title": "Rockerz 255R",
+      "price": 1299,
+      "discount": 57,
+      "mrp": 2990,
+      "rating": 4.9,
+      "category": "wireless_earphones",
+      "id": 50,
+      "description": "10mm Drivers boAt Signature Audio Voice Assistant ",
+      "brand": "realme",
+      "quantity": 1,
+      "review": 2166
+    },
+    {
+      "color": [
+        "green",
+        "blue",
+        "gray",
+        "black"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ed46e58c-9643-43e0-b350-9539d293aa51_600x.png?v=1625045114",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/235v2-striking-orange_600x.png?v=1679327481",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/48d16e65-e295-45ef-a59d-ee85f787001d_600x.png?v=1625044995",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/5324091f-9f39-463f-bf20-e603c796349c_600x.png?v=1625045742"
+      ],
+      "tag_badge": "8 Hours Playback",
+      "title": "Rockerz 235 V2",
+      "price": 999,
+      "discount": 67,
+      "mrp": 2990,
+      "rating": 4.8,
+      "category": "wireless_earphones",
+      "id": 51,
+      "description": "10mm Drivers 8 Hours Playback Fast Charging ",
+      "brand": "Syska",
+      "quantity": 1,
+      "review": 1370
+    },
+    {
+      "color": [
+        "black",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1_1_c28e268f-71e2-44e0-9b7a-f52aebadc3e2_600x.png?v=1677232434",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Rockerz255MAXFI08_2_600x.png?v=1677232434",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Rockerz255MAXFI07_2_600x.png?v=1677232434",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Rockerz255MAXFI04_2_600x.png?v=1677232434",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/3_1_2c1cc902-7b5b-46ae-944c-2124106db6ed_600x.png?v=1677232434"
+      ],
+      "tag_badge": "60 Hours Playback",
+      "title": "Rockerz 255 Max",
+      "price": 1299,
+      "discount": 68,
+      "mrp": 3999,
+      "rating": 2.9,
+      "category": "wireless_earphones",
+      "id": 52,
+      "description": "EQ Modes IPX5 Water Resistance Self Repair ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 48910
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Nirvana551ANCPackaging1.3_600x.png?v=1681413243",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Rockers551ANCFI04_600x.png?v=1682310099",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Rockers551ANCFI03_600x.png?v=1682310099",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Rockers551ANCFI07_1_600x.png?v=1682310099",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Rockers551ANCFI01_600x.png?v=1682310099"
+      ],
+      "tag_badge": "100 Hours Playback",
+      "title": "Rockerz 551ANC",
+      "price": 3499,
+      "discount": 56,
+      "mrp": 7990,
+      "rating": 2.9,
+      "category": "wireless_earphones",
+      "id": 53,
+      "description": "BEAST™ Mode ENx™ Technology ASAP Charge ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 12410
+    },
+    {
+      "color": [
+        "green"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/m1_dac5a6b1-7937-4cdf-be70-76bb5a1fcf49_600x.png?v=1639153081",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/m3_08324ce2-cdd9-44d6-8f5b-849fda265ba8_600x.png?v=1639153082",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/m2_852f9f1f-5498-4e5a-b6a2-0645a7abbc41_600x.png?v=1639153081",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/GREEN_0bbd189a-8ab1-4806-80f2-95f679d0712d_600x.png?v=1652792832"
+      ],
+      "tag_badge": "60 Hours Playback",
+      "title": "Rockerz 333 Pro",
+      "price": 1699,
+      "discount": 43,
+      "mrp": 2990,
+      "rating": 4.9,
+      "category": "wireless_earphones",
+      "id": 54,
+      "description": "ASAP Charge IPX5 Water Resistance Magnetic Earbuds ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 4385
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/yellow-PhotoRoom.png-PhotoRoom_600x.png?v=1679314398",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/boldblue_600x.png?v=1679314398",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ocean-PhotoRoom.png-PhotoRoom_600x.png?v=1679314398",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/338_600x.png?v=1679317164"
+      ],
+      "tag_badge": "30 Hours Playback",
+      "title": "Rockerz 335",
+      "price": 1199,
+      "discount": 70,
+      "mrp": 3990,
+      "rating": 4.8,
+      "category": "wireless_earphones",
+      "id": 55,
+      "description": "IPX5 Water Resistance Voice Assistant ASAP Charge ",
+      "brand": "ORAIMO",
+      "quantity": 1,
+      "review": 2389
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/245pr01_600x.png?v=1663584345",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R245Pro-FI_Teal03_600x.png?v=1667508010",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R245Pro-FI_Teal04_600x.png?v=1667508010",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R245Pro-FI_Teal06_600x.png?v=1667508010"
+      ],
+      "tag_badge": "35 Hours Playback",
+      "title": "Rockerz 245 Pro",
+      "price": 1299,
+      "discount": 48,
+      "mrp": 2499,
+      "rating": 4.8,
+      "category": "wireless_earphones",
+      "id": 56,
+      "description": "ENx™ Technology ASAP Charge IPX4 Water Resistance ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 53678
+    },
+    {
+      "color": [
+        "green",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_8549ad38-acec-45d6-bba4-8b202a9bfdc1_600x.png?v=1673001484",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S500-FI_Black01_600x.png?v=1659431798",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S500-FI_Black03_600x.png?v=1659431798",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S500-FI_Black04_600x.png?v=1659431798",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S500-FI_Black05_600x.png?v=1659431798"
+      ],
+      "tag_badge": "05 Hours Playback",
+      "title": "Stone 500",
+      "price": 1999,
+      "discount": 33,
+      "mrp": 2990,
+      "rating": 4.9,
+      "category": "wireless_speakers",
+      "id": 57,
+      "description": "RGB Lights TWS Technology 10W Powerful Sound ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 2167
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img_Blue_cd42b3e2-9e7f-4f5d-9026-51770ac39389_600x.png?v=1678882698",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img_R_60710fef-bdab-4177-be07-6273b7536d26_600x.png?v=1678882698",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img_Black_7ec98ce1-2323-43ba-9d49-bb73b3a42c7f_600x.png?v=1678882698"
+      ],
+      "tag_badge": "06 Hours Playback",
+      "title": "Rugby Plus FM",
+      "price": 4990,
+      "discount": 0,
+      "mrp": null,
+      "rating": 2.9,
+      "category": "wireless_speakers",
+      "id": 58,
+      "description": " 06 Hours Playback Rugby Plus FM ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 1371
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8f17d4a5-844a-472d-9c60-d9741fd0290e_600x.png?v=1625045367",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2b57048f-0a88-4234-a72c-e57c6ed99cb6_600x.png?v=1625045116",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/448e5d44-7829-4597-9238-aebe7554b9a4_600x.png?v=1625045368"
+      ],
+      "tag_badge": "04 Hours Playback",
+      "title": "Stone 190",
+      "price": 1299,
+      "discount": 57,
+      "mrp": 2999,
+      "rating": 4.8,
+      "category": "wireless_speakers",
+      "id": 59,
+      "description": "IPX7 Water Resistance 52mm Dynamic Driver Lightweight Design ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 48911
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/3_1b999434-bebd-4991-97e0-8ab8974b99c2_600x.png?v=1655187482",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/resize_600x.png?v=1655187482",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/4_600x.png?v=1655187482",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/resize-2_600x.png?v=1655187482"
+      ],
+      "tag_badge": "11 Hours Playback",
+      "title": "Stone 135",
+      "price": 999,
+      "discount": 50,
+      "mrp": 1990,
+      "rating": 4.9,
+      "category": "wireless_speakers",
+      "id": 60,
+      "description": "Voice Assistant Lightweight TWS Technology ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 12411
+    },
+    {
+      "color": [
+        "red",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-2_0a0b0dd1-2a5d-4887-afad-7593ecf06ca1_600x.png?v=1640073281",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S620-FI_Blue04_cfba1596-5bf7-477d-8775-780b84a000c3_600x.png?v=1659433719",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S620-FI_Red05_ddefc526-829a-43fa-912f-1f19da649e1b_600x.png?v=1659433719",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S620-FI_Grey02_600x.png?v=1659433719",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S620-FI_Grey03_600x.png?v=1659433719"
+      ],
+      "tag_badge": "12W Stereo Sound",
+      "title": "Stone 620",
+      "price": 1999,
+      "discount": 50,
+      "mrp": 3990,
+      "rating": 4.9,
+      "category": "wireless_speakers",
+      "id": 61,
+      "description": "Up to 10HRS Playback IPX4 Water Resistance Portable & Lightweight ",
+      "brand": "ORAIMO",
+      "quantity": 1,
+      "review": 4386
+    },
+    {
+      "color": [
+        "black",
+        "yellow",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1200f_main2_600x.png?v=1673002142",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1200f_main3_600x.png?v=1673002201",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1200f_main1_600x.png?v=1673002141"
+      ],
+      "tag_badge": "14W Rms Sound",
+      "title": "Stone 1200F",
+      "price": 3999,
+      "discount": 43,
+      "mrp": 6990,
+      "rating": 5,
+      "category": "wireless_speakers",
+      "id": 62,
+      "description": "Up to 09HRS Playback RGB LED Lights IPX7 Water Resistance ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 2390
+    },
+    {
+      "color": [
+        "black"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main---1_14fdb862-156c-4161-a402-b4e56a464ec1_600x.png?v=1678952224",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/PP50-FI02_c9c4db94-902a-457d-b6a6-7e747da9b91b_600x.png?v=1678952224",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/PP50-FI04_878b15f1-70ad-4ffb-bc76-00bd6c6cfbca_600x.png?v=1678952224",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/PP50-FI05_8438772f-e9b7-4371-9f24-5f35ad2d68db_600x.png?v=1678952225"
+      ],
+      "tag_badge": "Party Pal",
+      "title": "Party Pal 53",
+      "price": 3799,
+      "discount": 52,
+      "mrp": 7990,
+      "rating": 2.9,
+      "category": "wireless_speakers",
+      "id": 63,
+      "description": " Party Pal 53 ",
+      "brand": "Syska",
+      "quantity": 1,
+      "review": 53679
+    },
+    {
+      "color": [
+        "red",
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/3e35681e-bcb1-449c-a58a-2d43e8b00bf4_cca7c375-b937-4349-a70b-2a5ae95f3e6f_600x.png?v=1679336862",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/last-blue_9fc4005e-f8fe-4227-8de9-6bb06e88c3ac_600x.jpg?v=1679336863",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/playback-blue.2_475c3632-c306-45c5-a754-3d35655e9d24_600x.jpg?v=1679336863",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/2_781acd00-42bd-4296-9a74-1bc4ff4cd784.png?v=1622437801"
+      ],
+      "tag_badge": "",
+      "title": "Stone 1208",
+      "price": 4099,
+      "discount": 41,
+      "mrp": 6990,
+      "rating": 2.9,
+      "category": "wireless_speakers",
+      "id": 64,
+      "description": " Stone 1208 Boat ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 2168
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_5f41606a-604c-4433-b1a0-404b31892ab8_600x.png?v=1662546797",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_c609fdda-89f7-44e4-ba04-ca485538711f_600x.png?v=1662546797",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/img1_6844879d-5850-4368-becc-fc57213d4e64.png?v=1645016883"
+      ],
+      "tag_badge": "",
+      "title": "Stone 1208 Sunburn Edition",
+      "price": 4099,
+      "discount": 41,
+      "mrp": 6990,
+      "rating": 2.9,
+      "category": "wireless_speakers",
+      "id": 65,
+      "description": " Stone 1208 Sunburn Edition ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 1372
+    },
+    {
+      "color": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/stone-1010-black_600x.png?v=1673002262",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/blue_3c76e716-948f-44ff-a53d-1406e787259e_600x.png?v=1673002262",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/158755263031141655609442stone-1000-active-black-3.png?v=1615322868"
+      ],
+      "tag_badge": "10 Hours Playback",
+      "title": "Stone 1010",
+      "price": 3099,
+      "discount": 56,
+      "mrp": 6990,
+      "rating": 5,
+      "category": "wireless_speakers",
+      "id": 66,
+      "description": "14W Powerful Sound Huge 3000 mAh Battery Party Booster ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 33
+    },
+    {
+      "color": [
+        "black"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/992fa71b-0203-43f3-a1ca-43c9f535e87a_600x.png?v=1631788202",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/64a076e9-ef0c-443d-b86e-16715212dd92_600x.png?v=1631788202",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/07206764-2d19-47ab-84b8-f2b77485fe18_600x.png?v=1631788202",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/3_0bce3255-98ef-443c-897d-cb3256a232e2.png?v=1615205905"
+      ],
+      "tag_badge": "LFW Edition",
+      "title": "Stone 170 LFW Edition",
+      "price": 1299,
+      "discount": 48,
+      "mrp": 2490,
+      "rating": 4.9,
+      "category": "wireless_speakers",
+      "id": 67,
+      "description": " Stone 170 LFW Edition ",
+      "brand": "realme",
+      "quantity": 1,
+      "review": 12412
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ab154db8-8ffc-4464-a37a-31f309893bfe_600x.png?v=1625046393",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/d3e46a5d-cda9-49f8-a24f-b975fdd50689_600x.png?v=1625046393",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ab154db8-8ffc-4464-a37a-31f309893bfe_600x.png?v=1625046393",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/6a69eaeb-36b9-438c-a8c3-7ff5de3e6ead_600x.png?v=1625046393"
+      ],
+      "tag_badge": "08 Hours Playback",
+      "title": "Stone 180",
+      "price": 1299,
+      "discount": 48,
+      "mrp": 2490,
+      "rating": 4.8,
+      "category": "wireless_speakers",
+      "id": 68,
+      "description": "Lightweight Design IPX7 Water Resistance Immersive HD Sound ",
+      "brand": "Syska",
+      "quantity": 1,
+      "review": 4387
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image_600x.png?v=1655534170",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_Batman02_600x.png?v=1656101102",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_Batman03_600x.png?v=1656101278",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_Batman04_600x.png?v=1656101278",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image-2_600x.png?v=1655534170"
+      ],
+      "tag_badge": "DC Edition",
+      "title": "Stone 190 DC Edition",
+      "price": 1299,
+      "discount": 57,
+      "mrp": 2999,
+      "rating": 5,
+      "category": "wireless_speakers",
+      "id": 69,
+      "description": " Stone 190 DC Edition ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 2391
+    },
+    {
+      "color": [
+        "red",
+        "green"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img_7fdc52dd-e28d-45a9-b965-09366b5ebb0d_600x.png?v=1616582227",
+        "https://rukminim1.flixcart.com/image/416/416/kkec4280/speaker/mobile-tablet-speaker/a/z/9/blitz-1500-boat-original-imafzr3zhtrxyqfx.jpeg?q=70"
+      ],
+      "tag_badge": "50W Rms Sound",
+      "title": "Blitz 1500",
+      "price": 3499,
+      "discount": 50,
+      "mrp": 6990,
+      "rating": 4.7,
+      "category": "wireless_speakers",
+      "id": 70,
+      "description": "2.1 Channel RGB LED Lights 5 EQ Modes ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 53680
+    },
+    {
+      "color": [
+        "red",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_250_red_600x.png?v=1673001723",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S250-FI_Red01_600x.png?v=1659432693",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S250-FI_Red02_600x.png?v=1659432693",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S250-FI_Black04_600x.png?v=1659432693",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S250-FI_Black05_600x.png?v=1659432693"
+      ],
+      "tag_badge": "5W Powerful Sound",
+      "title": "Stone 250",
+      "price": 1499,
+      "discount": 62,
+      "mrp": 3990,
+      "rating": 4.8,
+      "category": "wireless_speakers",
+      "id": 71,
+      "description": "Up to 9HRS Playback RGB LED Lights IPX7 Water Resistance ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 2169
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untitled-1_e66c4515-7594-4726-89d6-e2b311a39c94_600x.png?v=1658436784",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/3_6f20b409-43b2-43d5-96ac-e9f8a26d79a8_600x.png?v=1658436783",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2_f79ac2e3-f310-4473-87b4-ab70955b21d8_600x.png?v=1658436784"
+      ],
+      "tag_badge": "10 Hours Playback",
+      "title": "Stone 1000v2",
+      "price": 3499,
+      "discount": 50,
+      "mrp": 6990,
+      "rating": 5,
+      "category": "wireless_speakers",
+      "id": 72,
+      "description": "IPX5 Water Resistance Huge 3000 mAh Battery Party Booster ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 1373
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_WW02_a7ba0e48-779c-4625-acb9-2f79310b4c8b_600x.png?v=1656101346",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_WW03_faea534e-ac48-45ee-a949-3747bfcf3138_600x.png?v=1656101347",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_WW04_8663ef95-c841-4c08-a3c6-aeb20ed86def_600x.png?v=1656101346"
+      ],
+      "tag_badge": "",
+      "title": "Stone 190 Wonder Woman DC Edition",
+      "price": 1299,
+      "discount": 57,
+      "mrp": 2999,
+      "rating": 2.9,
+      "category": "wireless_speakers",
+      "id": 73,
+      "description": "Stone 190 Wonder Woman DC Edition 5 watt 950 mah battery",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 48913
+    },
+    {
+      "color": [
+        "red",
+        "green",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/190ca_600x.png?v=1639989015",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/desk3.jpg?v=1639984472",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/deks4.jpg?v=1639984472"
+      ],
+      "tag_badge": "",
+      "title": "Stone 190 - Captain America Marvel Edition",
+      "price": 1299,
+      "discount": 57,
+      "mrp": 2999,
+      "rating": 5,
+      "category": "wireless_speakers",
+      "id": 74,
+      "description": "Stone 190 - Captain America Marvel Edition",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 12413
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/power-bank/j/t/b/power-bank-dx10s-10000-mah-dx-10s-10000-callmate-original-imagzg2rmrrwtgzq.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/power-bank/n/y/y/power-bank-dx10s-10000-mah-dx-10s-10000-callmate-original-imagzg2rfzwz7h8p.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/power-bank/p/s/w/power-bank-dx10s-10000-mah-dx-10s-10000-callmate-original-imagzg2rxbghfhdp.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Energyshroom PB10",
+      "price": 949,
+      "discount": 53,
+      "mrp": 1999,
+      "rating": 4.2,
+      "category": "power_bank",
+      "id": 75,
+      "description": " Energyshroom PB10 ",
+      "brand": "Redmi",
+      "quantity": 1,
+      "review": 4388
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/power-bank/v/r/6/p1070d-elegant-black-10000-p1070d-elegant-black-syska-original-imaggd4twbytk967.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/power-bank/p/q/q/p1070d-elegant-black-10000-p1070d-elegant-black-syska-original-imaggmg6pryy7shs.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/power-bank/t/x/i/p1070d-elegant-black-10000-p1070d-elegant-black-syska-original-imaggmg6zj4d8yhb.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/power-bank/w/t/i/p1070d-elegant-black-10000-p1070d-elegant-black-syska-original-imaggmg6tztqbdrv.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Energyshroom PB9",
+      "price": 949,
+      "discount": 53,
+      "mrp": 1999,
+      "rating": 3.2,
+      "category": "power_bank",
+      "id": 76,
+      "description": " Energyshroom PB9 2000mah ower bank Brand : Boat ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 2392
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "pink"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/km9ht3k0/power-bank/r/o/w/pocket-pro-pb1022zm-mi-original-imagf78kujzgcwht.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/km9ht3k0/power-bank/1/c/n/pocket-pro-pb1022zm-mi-original-imagf78kh955adyd.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/kthjy4w0/power-bank/n/1/l/pocket-pro-pb1022zm-mi-original-imag6tcrh2vcmgxj.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Energyshroom PB06",
+      "price": 599,
+      "discount": 40,
+      "mrp": 999,
+      "rating": 2.9,
+      "category": "power_bank",
+      "id": 77,
+      "description": " Energyshroom PB06 power bank 2000mah ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 53681
+    },
+    {
+      "color": [
+        "red",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/o/l/w/pp-111-10000-ambrane-original-imagg7nprsfvwttp.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/l5jxt3k0/power-bank/3/i/v/-original-imagg7np5ap4eyfr.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/128/128/l5jxt3k0/power-bank/3/0/2/-original-imagg7nptmzxdfak.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/l5jxt3k0/power-bank/6/1/x/-original-imagg7npu4sfgz4r.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Energyshroom PB08",
+      "price": 799,
+      "discount": 60,
+      "mrp": 1999,
+      "rating": 3,
+      "category": "power_bank",
+      "id": 78,
+      "description": " 10000mah lithium ion battery ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 2170
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/l5fnhjk0/power-bank/m/f/z/-original-imagg3utnefgyxkh.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/l5fnhjk0/power-bank/6/z/h/-original-imagg3utytg5qwd4.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/l5fnhjk0/power-bank/w/w/3/-original-imagg3utzed2zzgt.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Energyshroom PB18",
+      "price": 1399,
+      "discount": 44,
+      "mrp": 2499,
+      "rating": 2.9,
+      "category": "power_bank",
+      "id": 79,
+      "description": " Energyshroom PB06 power bank 2000mah ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 1374
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "pink"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/kd7pevk0/power-bank/s/n/g/power-bank-10000-pb100lzm-redmi-original-imafu5entn9mvccq.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/kdeum4w0/power-bank/h/h/e/power-bank-20000-pb200lzm-redmi-original-imafubxpckzrz5uj.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/kdeum4w0/power-bank/h/h/e/power-bank-20000-pb200lzm-redmi-original-imafubxp4wy2sgfj.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Energyshroom PB20",
+      "price": 1099,
+      "discount": 45,
+      "mrp": 1999,
+      "rating": 2,
+      "category": "power_bank",
+      "id": 80,
+      "description": " Energyshroom PB06 power bank 1000mah color ",
+      "brand": "ORAIMO",
+      "quantity": 1,
+      "review": 48914
+    },
+    {
+      "color": [
+        "red",
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/u/1/k/stylo-10k-10000-ambrane-original-imaggvt4dpp43pfk.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/b/z/e/stylo-10k-10000-ambrane-original-imag6gca25nnywfv.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "EnergyShroom PB100",
+      "price": 799,
+      "discount": 46,
+      "mrp": 1490,
+      "rating": 2.9,
+      "category": "power_bank",
+      "id": 81,
+      "description": " Stone 190 DC Edition ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 12414
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/y/c/h/stylo-pro-27000-ambrane-original-imag58udy8vk2jhc.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/kn97te80/power-bank/r/a/l/quick-charging-18w-10000-p1029j-ebl-syska-original-imagfz7zpeab5wmg.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/kmuxevk0/power-bank/x/2/o/quick-charging-18w-p1029j-ebl-syska-original-imagfnzbr5dzptyn.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/kmuxevk0/power-bank/d/4/r/quick-charging-18w-p1029j-ebl-syska-original-imagfnzbh3rng6yy.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "EnergyShroom PB150",
+      "price": 999,
+      "discount": 50,
+      "mrp": 1990,
+      "rating": 1,
+      "category": "power_bank",
+      "id": 82,
+      "description": " Boat 1000 mah power bank with type C technology ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 4389
+    },
+    {
+      "color": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/z/s/1/stylo-pro-27000-ambrane-original-imag58udpcyzjyhf.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/n/d/u/stylo-pro-27000-ambrane-original-imag58udt6guvzyz.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "EnergyShroom PB200",
+      "price": 1199,
+      "discount": 52,
+      "mrp": 2490,
+      "rating": 2.9,
+      "category": "power_bank",
+      "id": 83,
+      "description": " Boat 1000 mah power bank with type C technology ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 0
+    },
+    {
+      "color": [
+        "black"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/612/612/xif0q/power-bank/o/8/w/-original-imaggbhjcsvzhurt.jpeg?q=70",
+        "https://image01.realme.net/general/20220613/1655093360510.png.webp"
+      ],
+      "tag_badge": "",
+      "title": "EnergyShroom PB250",
+      "price": 1399,
+      "discount": 53,
+      "mrp": 2990,
+      "rating": 2.9,
+      "category": "power_bank",
+      "id": 84,
+      "description": " this is 3000mah power bank from syska ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 0
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/612/612/xif0q/shopsy-power-bank/7/l/m/stylo-max-50000-ambrane-original-imagfgr5swwr6qkw.jpeg?q=70",
+        "https://cdn.shopify.com/s/files/1/0003/7565/2399/products/stylomaxblacklisting-02_720x.png?v=1669883612"
+      ],
+      "tag_badge": "",
+      "title": "EnergyShroom PB105",
+      "price": 799,
+      "discount": 46,
+      "mrp": 1490,
+      "rating": 4.2,
+      "category": "power_bank",
+      "id": 85,
+      "description": " Boat 2000 mah power bank with type C technology ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 2171
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/612/612/koenl3k0/power-bank/k/u/y/k2-3-in-1-black-40000-k2-bla-mi-mobinori-original-imag2vefp52zwnnz.jpeg?q=70",
+        "https://cdn.shopify.com/s/files/1/0003/7565/2399/products/powerlitultralisting-03_720x.jpg?v=1682055388"
+      ],
+      "tag_badge": "",
+      "title": "EnergyShroom PB255",
+      "price": 1399,
+      "discount": 53,
+      "mrp": 2990,
+      "rating": 2.9,
+      "category": "power_bank",
+      "id": 86,
+      "description": "BEAST™ Mode ENx™ Technology ASAP Charge ",
+      "brand": "realme",
+      "quantity": 1,
+      "review": 1375
+    },
+    {
+      "color": [
+        "red",
+        "green"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0003/7565/2399/products/powerlitultralisting-03_720x.jpg?v=1682055388",
+        "https://rukminim1.flixcart.com/image/612/612/kw2fki80/power-bank/i/k/2/smart-power-pack-l3-iqoniqe-original-imag8tv4n4arwphp.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "EnergyShroom PB 155",
+      "price": 999,
+      "discount": 50,
+      "mrp": 1990,
+      "rating": 3.1,
+      "category": "power_bank",
+      "id": 87,
+      "description": " Energyshroom PB9 2000mah ower bank Brand : Boat ",
+      "brand": "Syska",
+      "quantity": 1,
+      "review": 48915
+    },
+    {
+      "color": [
+        "red",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/612/612/xif0q/power-bank/j/b/l/dx138-c-thru-20000mah-20000-c-thru-20000mah-transparent-power-original-imagh64dyaz2x8c2.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/612/612/xif0q/power-bank/j/b/l/dx138-c-thru-20000mah-20000-c-thru-20000mah-transparent-power-original-imagh64dyaz2x8c2.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "EnergyShroom PB500",
+      "price": 1999,
+      "discount": 33,
+      "mrp": 2990,
+      "rating": 2.9,
+      "category": "power_bank",
+      "id": 88,
+      "description": " 1000 mah 20000 mah lithium polimer ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 12415
+    },
+    {
+      "color": [
+        "silver",
+        "blue",
+        "gray",
+        "green"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/REALMEBOOKSLIMi54_540x.jpg?v=1660559968",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/REALMEBOOKSLIMi53_320x.jpg?v=1660559970",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/REALMEBOOKSLIMi51_320x.jpg?v=1660559970",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/REALMEBOOKSLIMi52_320x.jpg?v=1660559968",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/REALMEBOOKSLIMi5_320x.jpg?v=1660559971"
+      ],
+      "tag_badge": "i5 12th gen",
+      "title": "realme Book(Slim) Intel Evo Core i5 11th Gen - (8 GB/512 GB SSD/Windows 10 Home) RMNB1002 Thin and Light Laptop (14 inch Real Gray 1.38 kg With MS Office)",
+      "price": 52999,
+      "discount": 46,
+      "mrp": 69999,
+      "rating": 3.3,
+      "category": "Laptop",
+      "id": 89,
+      "description": "Processor Brand Intel Processor Name Core i5 Processor Generation 11th Gen SSD Yes 8 GB RAM 512 GB RAM",
+      "brand": "REALME",
+      "quantity": 1,
+      "review": 4390
+    },
+    {
+      "color": [
+        "silver",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU4_9f7f65cc-fd3e-44f8-b4a6-d798e943725b_540x.jpg?v=1663670501",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU3_50e61315-9197-4768-b332-17c69235fa24_320x.jpg?v=1663670501",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU_320x.jpg?v=1661772120",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU1_a4ee8b46-78b0-4927-b679-5e4386208517_320x.jpg?v=1661772119",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU2_bc6e0fd4-4942-42b7-b767-82f0794343bc_320x.jpg?v=1661772120"
+      ],
+      "tag_badge": "i5 12th gen",
+      "title": "HP 15S-FQ5111TU 12th Generation Intel® Core™ i5 ProcessorWindows 11 Home8 GB DDR4-512 GB PCIe® NVMe™ M.2 SSDIntel®",
+      "price": 60899,
+      "discount": 50,
+      "mrp": 70750,
+      "rating": 3.7,
+      "category": "Laptop",
+      "id": 90,
+      "description": "HP Brand 15s- fq5111TU Model Name Screen Size 39.6 Centimeters",
+      "brand": "HP",
+      "quantity": 1,
+      "review": 2394
+    },
+    {
+      "color": [
+        "silver",
+        "blue",
+        "red"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/DELLINSPi55410_4_320x.jpg?v=1669094519",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/DELLINSPi55410_3_320x.jpg?v=1669094520",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/DELLINSPi55410_5_320x.jpg?v=1669094520",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/DELLINSPi55410_1_320x.jpg?v=1669094520",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/DELLINSPi55410_4_320x.jpg?v=1669094519"
+      ],
+      "tag_badge": "",
+      "title": "Dell 14 Inspiron 5410 Intel Core i5-11th Gen 1155G7 14\"(35cm) FHD 2 in 1 Laptop (8GB 512GB SSD -2GB GDDR5 Graphics",
+      "price": 81490,
+      "discount": 52,
+      "mrp": 104884,
+      "rating": 4.1,
+      "category": "Laptop",
+      "id": 91,
+      "description": "Dell Brand INSPIRON 5410 Series Screen Size 14 Inches",
+      "brand": "DELL",
+      "quantity": 1,
+      "review": 53683
+    },
+    {
+      "color": [
+        "silver",
+        "blue",
+        "red"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/02_cb3c93e3-02ea-478d-9c90-f750895d0ffd_320x.jpg?v=1667290210",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/03_41792eda-5506-4626-8ecd-c512f2aef324_320x.jpg?v=1667290209",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/04_bd0f5fb7-72cb-4356-a824-3b013baa1aca_320x.jpg?v=1667290210",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/10_89e78ad9-9034-4e9a-9505-faad274b78f3_320x.jpg?v=1667290213",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/13_8b96bbba-af9e-4bad-b4da-0f37d1ebd1a9_320x.jpg?v=1667290212"
+      ],
+      "tag_badge": "I5 14",
+      "title": "Lenovo Idea Pad Flex 5 11th Gen Intel Core i5 14\" (35.5cm)FHD IPS 2-in-1 Touch screen Laptop (8GB/512GB SSD",
+      "price": 75999,
+      "discount": 53,
+      "mrp": 85990,
+      "rating": 4.5,
+      "category": "Laptop",
+      "id": 92,
+      "description": "Brand Lenovo Series IdeaPad Flex 5i 15.6 Inches Screen Size",
+      "brand": "LENOVO",
+      "quantity": 1,
+      "review": 2172
+    },
+    {
+      "color": [
+        "silver",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585126_8344367e-4b86-4f69-8a3a-ed7c4a8d7d0c_320x.jpg?v=1663670400",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585122_276dca95-a6b4-4ad2-a60b-3fb4ff81900f_320x.jpg?v=1663670400",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585121_e6d16c2b-b850-4e6e-a481-8f1c1cb85674_320x.jpg?v=1663670400",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585125_8a431e59-0b0c-4f04-8e99-1aa16591e37b_320x.jpg?v=1663670400",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585124_374db567-5494-4a3a-9f88-66c507a342d6_320x.jpg?v=1663670400"
+      ],
+      "tag_badge": "Iris Xe",
+      "title": "Mi NoteBook Ultra i5/11th Gen/16GB RAM/512GB NVMe SSD/Iris Xe Graphics",
+      "price": 59999,
+      "discount": 46,
+      "mrp": 76999,
+      "rating": 4.9,
+      "category": "Laptop",
+      "id": 93,
+      "description": "MI Brand Mi Notebook Ultra Series Screen Size 39.62 Centimetres",
+      "brand": "REDMI",
+      "quantity": 1,
+      "review": 1376
+    },
+    {
+      "color": [
+        "green"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585126_8344367e-4b86-4f69-8a3a-ed7c4a8d7d0c_320x.jpg?v=1663670400",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585122_276dca95-a6b4-4ad2-a60b-3fb4ff81900f_320x.jpg?v=1663670400",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585121_e6d16c2b-b850-4e6e-a481-8f1c1cb85674_320x.jpg?v=1663670400",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585125_8a431e59-0b0c-4f04-8e99-1aa16591e37b_320x.jpg?v=1663670400",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585124_374db567-5494-4a3a-9f88-66c507a342d6_320x.jpg?v=1663670400"
+      ],
+      "tag_badge": "16GB RAM/512GB NVMe",
+      "title": "Mi NoteBook Ultra/i5/11th Gen/ 8GB RAM/512GB NVMe SSD/Iris Xe Graphics",
+      "price": 59999,
+      "discount": 53,
+      "mrp": 71999,
+      "rating": 3.3,
+      "category": "Laptop",
+      "id": 94,
+      "description": "MI Brand Mi Notebook Ultra Series Screen Size 39.62 Centimetres",
+      "brand": "REDMI",
+      "quantity": 1,
+      "review": 48916
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/ACERAV15-51-54S15_320x.jpg?v=1663673361",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585121_e6d16c2b-b850-4e6e-a481-8f1c1cb85674_320x.jpg?v=1663670400"
+      ],
+      "tag_badge": "",
+      "title": "ACER AV15-51-54S1 LAPTOP",
+      "price": 58990,
+      "discount": 50,
+      "mrp": 79999,
+      "rating": 3.7,
+      "category": "Laptop",
+      "id": 95,
+      "description": "Key Features 39.6cm (15.6\") FHD Intel Core i5 1155G7 Processor RAM: 8GB DDR4 ROM: 512GB SSD Windows 11 Home Intel Iris Xe Graphics",
+      "brand": "Acer",
+      "quantity": 1,
+      "review": 12416
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/AMDRyzen5-3500U4_320x.jpg?v=1663669249",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/62eb2580-32ba-46f7-8fe0-2da474ee1e6021131258_320x.jpg?v=1649237746"
+      ],
+      "tag_badge": "",
+      "title": "ACER A715-42G-R2NE laptop",
+      "price": 59490,
+      "discount": 52,
+      "mrp": 89999,
+      "rating": 4.5,
+      "category": "Laptop",
+      "id": 96,
+      "description": "Model Name : NH.QAYSI.004Windows 11 Home Operating System AMD Ryzen™ 5-5500U 15.6 ( 39.6 cm) Display Size 8 GB RAM 512 GB SSD Kensington Lock Slot NVIDIA® GeForce® GTX 1650",
+      "brand": "Acer",
+      "quantity": 1,
+      "review": 4391
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/62eb2580-32ba-46f7-8fe0-2da474ee1e6021131258_320x.jpg?v=1649237746",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585121_e6d16c2b-b850-4e6e-a481-8f1c1cb85674_320x.jpg?v=1663670400"
+      ],
+      "tag_badge": "",
+      "title": "realme Book (Slim) Intel Core i3 11th Gen 14 inches Thin and Light Laptop (8GB/256GB SSD/Windows 10 Home) RMNB1001 (Real Gray 1.38Kg with MS Office)",
+      "price": 39999,
+      "discount": 53,
+      "mrp": 54999,
+      "rating": 4.9,
+      "category": "Laptop",
+      "id": 97,
+      "description": "Brand    Realme Series    RMNB1001 Screen Size 14 Inches Hard Disk Size   256 GBCPU Model Core i3-350M RAM Memory Installed Size   8 GB Operating System Windows 10 Home Special Feature Light Weight Backlit Keyboard Thin CPU Speed 3 GHz Graphics Card  Integrated",
+      "brand": "REALME",
+      "quantity": 1,
+      "review": 2395
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/ACERAN515-45-R2GL_320x.jpg?v=1660545864",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/RedmiBook15Corei311thGeneration_8GBRAM_256GBSSD_Windo_1_320x.png?v=1643610479"
+      ],
+      "tag_badge": "",
+      "title": "ACER AN515-45-R2GL LAPTOP",
+      "price": 99890,
+      "discount": 46,
+      "mrp": 126999,
+      "rating": 3.3,
+      "category": "Laptop",
+      "id": 98,
+      "description": "15.6 inch Full HD With IPS (In-Plane Switching) technology ( Acer Comfy View LED-backlit TFT LCD 16:9 aspect ratio supporting 144 Hz refresh rate) Light Laptop without Optical Disk Drive Pre-installed Genuine Windows 10 OS",
+      "brand": "Acer",
+      "quantity": 1,
+      "review": 53684
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585121_e6d16c2b-b850-4e6e-a481-8f1c1cb85674_320x.jpg?v=1663670400",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MiNoteBookUltrai585121_e6d16c2b-b850-4e6e-a481-8f1c1cb85674_320x.jpg?v=1663670400",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/AcerAspire5Corei511thGeneration_8GBRAM_1TBHDD_Windows10Opeystem_A514-54_1_320x.png?v=1643606309"
+      ],
+      "tag_badge": "",
+      "title": "RedmiBook 15 Core i3 11th Generation (8GB RAM 256GB SSD Windows 10 Home Operating System) 15.6 inches full HD Display Micro Soft Office (Charcoal Gray)",
+      "price": 41999,
+      "discount": 53,
+      "mrp": 51999,
+      "rating": 3.7,
+      "category": "Laptop",
+      "id": 99,
+      "description": "RedmiBook 15 Core i3 11th Generation 8GB RAM 256GB SSD Windows 10 Home Operating System 39.62 Centimeters (15.6 inches) Full HD Display Amazing offers Micro Soft Office",
+      "brand": "REDMI",
+      "quantity": 1,
+      "review": 2173
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/ONEPLUSTVUSER-503_a7ad4009-759e-4f5a-9c4a-2abc9a246e9f_320x.jpg?v=1664779483",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HP15s-du3564TUCorei311thGeneration-_8GBRAM_512GBSSD_Windows11Home_MSOffice_1_320x.png?v=1640850183"
+      ],
+      "tag_badge": "",
+      "title": "OnePlus U1S 126 cm (50 inch) Ultra HD (4K) LED Smart Android TV with Far field and Dolby Audio (50UC1A00)",
+      "price": 59999,
+      "discount": 0,
+      "mrp": 61999,
+      "rating": 2.9,
+      "category": "smart_tv",
+      "id": 100,
+      "description": "Netflix Prime Video Disney Hotstar Youtube Android (Google Assistant & Chromecast in-built) 20 W Operating System: HD Ready 1366 768 Pixels Resolution:",
+      "brand": "ONEPLUS",
+      "quantity": 1,
+      "review": 1377
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/REALMETV43UHD_4_320x.jpg?v=1663672477",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/RedmiBook15Corei311thGeneration_8GBRAM_256GBSSD_Windo_1_320x.png?v=1643610479"
+      ],
+      "tag_badge": "",
+      "title": "Realme 108 cm (43 inch) Ultra HD (4K) LED Smart Android TV with Handsfree Voice Search and Dolby Vision & Atoms (RMV2004)",
+      "price": 27999,
+      "discount": 0,
+      "mrp": 32999,
+      "rating": 2.9,
+      "category": "smart_tv",
+      "id": 101,
+      "description": "Netflix Prime Video Disney Hotstar Youtube Ultra HD (4K) 3840 x 2160 Pixels 24 W z 60 H",
+      "brand": "Realme Tvs",
+      "quantity": 1,
+      "review": 48917
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/REALMETV435_320x.jpg?v=1663672556",
+        "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Realme 108 cm (43 inch) Full HD LED Smart Android TV",
+      "price": 24999,
+      "discount": 0,
+      "mrp": 29999,
+      "rating": 2.9,
+      "category": "smart_tv",
+      "id": 102,
+      "description": "Netflix Prime Video Disney Hotstar Youtube Android (Google Assistant & Chromecast in-built) 24 W Operating System: Full HD 1920  1080 Pixels Resolution:",
+      "brand": "Realme Tvs",
+      "quantity": 1,
+      "review": 12417
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/REALMETV325_320x.jpg?v=1660717635",
+        "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "realme 80 cm (32 inch) HD Ready LED Smart Android TV (TV 32)",
+      "price": 15999,
+      "discount": 0,
+      "mrp": 21999,
+      "rating": 2.9,
+      "category": "smart_tv",
+      "id": 103,
+      "description": "Netflix Prime Video Disney Hotstar Youtube Android (Google Assistant & Chromecast in-built) : 24 W Operating System: HD Ready 1366  768 Pixels Resolution:",
+      "brand": "Realme Tvs",
+      "quantity": 1,
+      "review": 4392
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/REDMISMARTTVX434_320x.jpg?v=1660645431",
+        "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Redmi 108 cm (43 inches) 4K Ultra HD Android Smart LED TV X43 | L43R7-7AIN (Black)",
+      "price": 26999,
+      "discount": 0,
+      "mrp": 28999,
+      "rating": 2.9,
+      "category": "smart_tv",
+      "id": 104,
+      "description": "Redmi 108 cm (43 inches) 4K Ultra HD Android Smart LED TV X43 | L43R7-7AIN (Black)",
+      "brand": "MI REDMI",
+      "quantity": 1,
+      "review": 2396
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/1_3d22c310-0cda-49ae-ab63-a17a7c4134a7_320x.png?v=1631779205",
+        "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Mi 4A 80 Centimeters (32 inches) HD Ready LED Smart TV Horizon Edition",
+      "price": 16499,
+      "discount": 0,
+      "mrp": 16499,
+      "rating": 2.9,
+      "category": "smart_tv",
+      "id": 105,
+      "description": "(32 inches) HD Ready Display PatchWall Experience 2 Hours Delivery Available For Selected Locations Bezel-less Design Amazing Offers Available Multiple EMI Options Available",
+      "brand": "Redmi",
+      "quantity": 1,
+      "review": 53685
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/ONEPLUSLEDTV43Y1_320x.jpg?v=1664779231",
+        "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "OnePlus 108 cm (43 inches) Y Series 4K Ultra HD Smart Android LED TV 43Y1S Pro (Black)",
+      "price": 29999,
+      "discount": 0,
+      "mrp": 35999,
+      "rating": 2.9,
+      "category": "smart_tv",
+      "id": 106,
+      "description": "Netflix Prime Video Disney Hotstar Youtube Android (Google Assistant & Chromecast in-built) 20 W Operating System: HD Ready 1366 768 Pixels Resolution:",
+      "brand": "ONEPLUS",
+      "quantity": 1,
+      "review": 2174
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/ONEPLUSLEDTV32Y16_320x.jpg?v=1666760464",
+        "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "ONE PLUS LED TV 32 Y1S EDGE",
+      "price": 16499,
+      "discount": 0,
+      "mrp": 23999,
+      "rating": 2.9,
+      "category": "smart_tv",
+      "id": 107,
+      "description": "Netflix Prime Video Disney Hotstar Youtube Android (Google Assistant & Chromecast in-built) 20 W Operating System: HD Ready 1366 768 Pixels Resolution:",
+      "brand": "ONEPLUS",
+      "quantity": 1,
+      "review": 1378
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MITV4A40_100CM_2_320x.jpg?v=1660643335",
+        "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "realme 126 cm (50 inch) Ultra HD (4K) LED Smart Android TV with Handsfree Voice Search and Dolby Vision & Atmos",
+      "price": 33199,
+      "discount": 0,
+      "mrp": 41999,
+      "rating": 3.9,
+      "category": "smart_tv",
+      "id": 108,
+      "description": "Netflix Prime Video Disney Hotstar Youtube Ultra HD (4K) 3840 2160 Pixels 24 W 60 Hz",
+      "brand": "Realme Tvs",
+      "quantity": 1,
+      "review": 48918
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MISMARTTV5A404_320x.jpg?v=1660637830",
+        "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "realme 80 cm (32 inch) Full HD LED Smart Android TV",
+      "price": 15999,
+      "discount": 0,
+      "mrp": 24999,
+      "rating": 2.9,
+      "category": "smart_tv",
+      "id": 109,
+      "description": "80 Centimetres LED Wi-Fi 1080p 1 LED TV Manual Stand 2 Batteries Remote Control Power Cable 60 Hz",
+      "brand": "REALME",
+      "quantity": 1,
+      "review": 12418
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/MISMARTTV5A323_320x.jpg?v=1660636374",
+        "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Mi 4A 100 cm (40 inch) Full HD LED Smart Android TV",
+      "price": null,
+      "discount": 20,
+      "mrp": 20999,
+      "rating": 2.9,
+      "category": "smart_tv",
+      "id": 110,
+      "description": "Netflix Prime Video Disney Hot star YouTube Full HD 1920 1080 Pixels 20 W 60 Hz",
+      "brand": "Redmi",
+      "quantity": 1,
+      "review": 4393
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/ONEPLUSLEDTV43Y1S4_320x.jpg?v=1667452057",
+        "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Mi 5A 100 cm (40 inch) Full HD LED Smart Android TV with Dolby Audio",
+      "price": null,
+      "discount": 21,
+      "mrp": 21999,
+      "rating": 2.9,
+      "category": "smart_tv",
+      "id": 111,
+      "description": "Netflix Prime VideoDisney HotstarYoutube Full HD 1920 1080 Pixels 24 W 60 Hz",
+      "brand": "REDMI",
+      "quantity": 1,
+      "review": 2397
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/Redmi108centimeters_43inches_FullHDSmartLEDTV_1_320x.png?v=1637994409",
+        "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Mi 80 cm (32 inches) 5A Series HD Ready Smart Android LED TV (Black)",
+      "price": null,
+      "discount": 22,
+      "mrp": 13999,
+      "rating": 2.9,
+      "category": "smart_tv",
+      "id": 112,
+      "description": "32 Inches LED Chrome cast supporting Apps : Netflix Prime Video Disney Hot star  5000 apps from Play Store Quad core Cortex A35 Chrome cast built-in  Ok Google  Auto Low Latency Mode 1GB RAM  8GB Storage Android TV 11  Patch Wall  IMDb Integration  Universal Search 300 Free Live Channels  Kids Mode with Parental lock  Smart Recommendations Language Universe 15 Languages  Mounting Hardware 1 LED TV 2 Table Stand Base 1 User Manual 1 Remote Control 4 screws 2 AAA Batteries 720p Special Feature Android TV 11  Patch Wall  IMDb Integration  Universal Search  300 Free Live Channels Kids Mode with Parental lock  Smart Recommendations  Language Universe – 15 Languages  User Centre  Okay Google 60 Hz",
+      "brand": "REDMI",
+      "quantity": 1,
+      "review": 53686
+    },
+    {
+      "color": [
+        "black",
+        "red"
+      ],
+      "image": [
+        "https://www.reliancedigital.in/medias/OnePlus-65U1S-Television-492338515-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wzMzgxMDZ8aW1hZ2UvanBlZ3xpbWFnZXMvaGEzL2g3MC85NTY4NDA3NzE1ODcwLmpwZ3xkOGE1ZGIzMmM1OTNkOTgyZGU3YjU3N2Q5ODU1ODI2ZDhmZTI1YzAxYzg2ZTlmNzhlYWZiZDNmOTJjNmE0NWE2",
+        "https://www.reliancedigital.in/medias/OnePlus-65U1S-Television-492338515-i-2-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w0MjA4Njl8aW1hZ2UvanBlZ3xpbWFnZXMvaDQ2L2hkNC85NTY4NDA4MDQzNTUwLmpwZ3w0OGIyOTRlMzcwY2JhYjlmZTIxZThiYmFiZGQ0OTgwZmI1YTY4NDRhNWJjNGZiYmZkMDc2ZTg5NWYzZjMyYWMw",
+        "https://www.reliancedigital.in/medias/OnePlus-65U1S-Television-492338515-i-4-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w1MTk4MzV8aW1hZ2UvanBlZ3xpbWFnZXMvaDQ1L2g0NS85NTY4NDA4Njk4OTEwLmpwZ3xiOTc3NzBkZjcxZDY2ZTEyYmFlNGUzOWMxMGFiM2NhMDBiMjMxYjhkZmNhNmM2MjA4YWZkMGQ4ZmFhN2ZhNjgz",
+        "https://www.reliancedigital.in/medias/OnePlus-65U1S-Television-492338515-i-5-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w0MzQ5NTZ8aW1hZ2UvanBlZ3xpbWFnZXMvaGViL2gyOS85NTY4NDA5MDI2NTkwLmpwZ3wxZTgzZjI5M2EyZGU5ZjJlMTgxMjgwNDliZmQwM2I1MGYzMzFhOGNlYWJiYjcyNmFkZTg0ZDBmMzQ0ZTcxZWFh"
+      ],
+      "tag_badge": "",
+      "title": "OnePlus 163.8 cm (65 inches) U Series 4K LED Smart Android TV 65U1S (Black)",
+      "price": 61999,
+      "discount": 45,
+      "mrp": 63999,
+      "rating": 2.9,
+      "category": "smart_tv",
+      "id": 113,
+      "description": "65 Inches LED Mounting Hardware       1 TV unit  1 Remote 1 AC Power Cord  1AV In Adaptor  1 Set Stand  1 Wall Mount  1 User manual and warranty card1 TV unit  1 Remote 1 AC Power Cord  1AV In Adaptor  1 Set Stand 1 Wall Mount  1 User manual and warranty card See more 4K Special Feature Gamma Engine  Google Assistant OnePlus Connect 2.0  Oxygen Play 2.0  Data Saver Plus  Supported Apps : Netflix You tube Prime Video Hot star Sony Liv Hungama Jio Cinema Zee5 Eros Now Oxygen Play Gamma Engine Google Assistant  OnePlus Connect 2.0  Oxygen Play 2.0  Data Saver Plus Supported Apps : Netflix Youtube Prime Video Hotstar Sony Liv Hungama JioCinema Zee5 Eros Now Oxygen Play See more 60 Hz",
+      "brand": "ONEPLUS",
+      "quantity": 1,
+      "review": 2175
+    },
+    {
+      "color": [
+        "blue",
+        "red"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/g/4/k/43fd2a00-43-y1s-oneplus-original-imagbgc44gerfphz.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/y/l/5/43fd2a00-43-y1s-oneplus-original-imagbgc43n4pcj4a.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "OnePlus Y1S 108 cm (43 inch) Full HD LED Smart Android TV with Android 11 and Bezel-Less Frame",
+      "price": 54999,
+      "discount": 51,
+      "mrp": 63999,
+      "rating": 2.9,
+      "category": "smart_tv",
+      "id": 114,
+      "description": " OnePlus Y1S 108 cm (43 inch) Full HD LED Smart Android TV with Android 11 and Bezel-Less Frame ",
+      "brand": "ONEPLUS",
+      "quantity": 1,
+      "review": 1379
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/n/t/p/43fd2a00-43-y1s-oneplus-original-imagbgc4twtftzkz.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/kzfvzww0/television/4/n/0/43fd2a00-43-y1s-oneplus-original-imagbgc4rcfpenmd.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Redmi 108 centimeters (43 inches) Full HD Smart LED TV",
+      "price": 23999,
+      "discount": 47,
+      "mrp": 34999,
+      "rating": 2.9,
+      "category": "smart_tv",
+      "id": 115,
+      "description": " Screen Size: 108 Centimeters (43 Inches) ",
+      "brand": "Redmi",
+      "quantity": 1,
+      "review": 48919
+    },
+    {
+      "color": [
+        "black"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/o/l/w/pp-111-10000-ambrane-original-imagg7nprsfvwttp.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/o/l/w/pp-111-10000-ambrane-original-imagg7nprsfvwttp.jpeg?q=70"
+      ],
+      "tag_badge": "Best seller",
+      "title": "10000 ambrane original power",
+      "price": 899,
+      "discount": 42,
+      "mrp": 1708.1,
+      "rating": 2.9,
+      "category": "power_bank",
+      "id": 116,
+      "description": " 10000mah lithium ion battery ambrane original power ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 12419
+    },
+    {
+      "color": [
+        "black"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/l5fnhjk0/power-bank/m/f/z/-original-imagg3utnefgyxkh.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/l5fnhjk0/power-bank/m/f/z/-original-imagg3utnefgyxkh.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "2000 mah powerbank",
+      "price": 1599,
+      "discount": 35,
+      "mrp": 3038.1,
+      "rating": 2.9,
+      "category": "power_bank",
+      "id": 117,
+      "description": " 20000mah lithium ion battery ambrane original power ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 4394
+    },
+    {
+      "color": [
+        "black"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/kd7pevk0/power-bank/s/n/g/power-bank-10000-pb100lzm-redmi-original-imafu5entn9mvccq.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/kd7pevk0/power-bank/s/n/g/power-bank-10000-pb100lzm-redmi-original-imafu5entn9mvccq.jpeg?q=70"
+      ],
+      "tag_badge": "55",
+      "title": "2000 mah powerbank",
+      "price": 1399,
+      "discount": 31,
+      "mrp": 2658.1,
+      "rating": 2.1,
+      "category": "power_bank",
+      "id": 118,
+      "description": " 2000 mah powerbank ",
+      "brand": "ORAIMO",
+      "quantity": 1,
+      "review": 2398
+    },
+    {
+      "color": [
+        "black",
+        "red"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/u/1/k/stylo-10k-10000-ambrane-original-imaggvt4dpp43pfk.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/u/1/k/stylo-10k-10000-ambrane-original-imaggvt4dpp43pfk.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Boat 1000 mah powerbank",
+      "price": 899,
+      "discount": 21,
+      "mrp": 1708.1,
+      "rating": 3.7,
+      "category": "power_bank",
+      "id": 119,
+      "description": " Boat 1000 mah power bank with type C technology ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 53687
+    },
+    {
+      "color": [
+        "black"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/y/c/h/stylo-pro-27000-ambrane-original-imag58udy8vk2jhc.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/y/c/h/stylo-pro-27000-ambrane-original-imag58udy8vk2jhc.jpeg?q=70"
+      ],
+      "tag_badge": "Best seller",
+      "title": "Syska 27000 mah power bank",
+      "price": 799,
+      "discount": 40,
+      "mrp": 1518.1,
+      "rating": 3.9,
+      "category": "power_bank",
+      "id": 120,
+      "description": " Syska 27000 mah power bank ",
+      "brand": "Syska",
+      "quantity": 1,
+      "review": 2176
+    },
+    {
+      "color": [
+        "black",
+        "yellow"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/z/s/1/stylo-pro-27000-ambrane-original-imag58udpcyzjyhf.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/shopsy-power-bank/z/s/1/stylo-pro-27000-ambrane-original-imag58udpcyzjyhf.jpeg?q=70"
+      ],
+      "tag_badge": "new",
+      "title": "Mk47 Mega Power",
+      "price": 1299,
+      "discount": 22,
+      "mrp": 2468.1,
+      "rating": 2.9,
+      "category": "power_bank",
+      "id": 121,
+      "description": " 20 w boat power bank ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 0
+    },
+    {
+      "color": [
+        "black"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/612/612/xif0q/power-bank/o/8/w/-original-imaggbhjcsvzhurt.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/612/612/xif0q/power-bank/o/8/w/-original-imaggbhjcsvzhurt.jpeg?q=70"
+      ],
+      "tag_badge": "50",
+      "title": "Realme Thunderer",
+      "price": 1600,
+      "discount": 37,
+      "mrp": 3040,
+      "rating": 4.7,
+      "category": "power_bank",
+      "id": 122,
+      "description": " type c 40 fast charging support 1000 mah lithium polimer ",
+      "brand": "realme",
+      "quantity": 1,
+      "review": 48920
+    },
+    {
+      "color": [
+        "black"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/612/612/xif0q/shopsy-power-bank/7/l/m/stylo-max-50000-ambrane-original-imagfgr5swwr6qkw.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/612/612/xif0q/shopsy-power-bank/7/l/m/stylo-max-50000-ambrane-original-imagfgr5swwr6qkw.jpeg?q=70"
+      ],
+      "tag_badge": "5000 mah",
+      "title": "Mega might 5000 mah lithium powerbank",
+      "price": 1400,
+      "discount": 20,
+      "mrp": 2660,
+      "rating": 2.9,
+      "category": "power_bank",
+      "id": 123,
+      "description": " Mega might 5000 mah lithium powerbank 4 port ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 12420
+    },
+    {
+      "color": [
+        "black",
+        "white"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/612/612/koenl3k0/power-bank/k/u/y/k2-3-in-1-black-40000-k2-bla-mi-mobinori-original-imag2vefp52zwnnz.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/612/612/koenl3k0/power-bank/k/u/y/k2-3-in-1-black-40000-k2-bla-mi-mobinori-original-imag2vefp52zwnnz.jpeg?q=70"
+      ],
+      "tag_badge": "Best seller",
+      "title": "Realme 3000 mah type-c ",
+      "price": 900,
+      "discount": 30,
+      "mrp": 1710,
+      "rating": 4.1,
+      "category": "power_bank",
+      "id": 124,
+      "description": " Realme 3000 mah type-c support 3 in one ",
+      "brand": "realme",
+      "quantity": 1,
+      "review": 439965
+    },
+    {
+      "color": [
+        "black"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/612/612/kw2fki80/power-bank/i/k/2/smart-power-pack-l3-iqoniqe-original-imag8tv4n4arwphp.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/612/612/kw2fki80/power-bank/i/k/2/smart-power-pack-l3-iqoniqe-original-imag8tv4n4arwphp.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Syska 2000 mah power bank 2 in 3 out ",
+      "price": 800,
+      "discount": 10,
+      "mrp": 1520,
+      "rating": 3.1,
+      "category": "",
+      "id": 125,
+      "description": " Syska 2000 mah power bank 2 in 3 out value for money ",
+      "brand": "Syska",
+      "quantity": 1,
+      "review": 2399
+    },
+    {
+      "color": [
+        "black"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/612/612/xif0q/power-bank/j/b/l/dx138-c-thru-20000mah-20000-c-thru-20000mah-transparent-power-original-imagh64dyaz2x8c2.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/612/612/xif0q/power-bank/j/b/l/dx138-c-thru-20000mah-20000-c-thru-20000mah-transparent-power-original-imagh64dyaz2x8c2.jpeg?q=70"
+      ],
+      "tag_badge": "Top view",
+      "title": "Boat 50000 mah powerbank",
+      "price": 1300,
+      "discount": 20,
+      "mrp": 2470,
+      "rating": 1.9,
+      "category": "power_bank",
+      "id": 126,
+      "description": " tag_badge: Top view Boat 50000 mah powerbank price: 1300",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 53688
+    },
+    {
+      "color": [
+        "black"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/t/a/x/-original-imaghmtch6qfmfxg.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/mobile/k/z/n/-original-imaghggz7emhbdfx.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/mobile/n/6/t/-original-imaghggzzmwgb6f7.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/mobile/z/g/g/-original-imaghggz5qrjmurb.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "POCO C50 (Royal Blue  32 GB)",
+      "price": 5749,
+      "discount": 36,
+      "mrp": 8999,
+      "rating": 4.3,
+      "category": "smart_phone",
+      "id": 127,
+      "description": "2 GB RAM | 32 GB ROM | Expandable Upto 512 GB 16.56 cm (6.52 inch) HD+ Display 8MP Dual Camera | 5MP Front Camera Mediatek Helio A22 Processor, Upto 2.0 GHz Processor",
+      "brand": "POCO",
+      "quantity": 1,
+      "review": 20562
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/w/d/o/-original-imaghgbyhy6banxv.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/mobile/n/6/t/-original-imaghggzzmwgb6f7.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/i/v/-original-imagfhu6bdzhnmkz.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "SAMSUNG Galaxy F04 (Opal Green  64 GB)",
+      "price": 6999,
+      "discount": 39,
+      "mrp": 11499,
+      "rating": 4.3,
+      "category": "smart_phone",
+      "id": 128,
+      "description": "4 GB RAM | 64 GB ROM | Expandable Upto 1 TB 16.51 cm (6.5 inch) HD Display 13MP + 2MP | 5MP Front Camera Mediatek Helio P35 Processor",
+      "brand": "SAMSUNG",
+      "quantity": 1,
+      "review": 11337
+    },
+    {
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/6/v/0/c51-mzb0dxkin-poco-original-imagzdpycgrcdc8z.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/mobile/n/6/t/-original-imaghggzzmwgb6f7.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "POCO C51 (Royal Blue  64 GB)",
+      "price": 6999,
+      "discount": 30,
+      "mrp": 9999,
+      "rating": 4.3,
+      "category": "smart_phone",
+      "id": 129,
+      "description": "4 GB RAM | 64 GB ROM | Expandable Upto 1 TB 16.56 cm (6.52 inch) HD+ Display 8MP Rear Camera | 5MP Front Camera Helio G36 Processor",
+      "brand": "POCO",
+      "quantity": 1,
+      "review": 1156
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/l4rd0280/mobile/q/x/g/e10-e10-cellecor-original-imagfh9ccyjh2sgv.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/l4rd0280/mobile/q/x/g/e10-e10-cellecor-original-imagfh9ccyjh2sgv.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Cellecor E10",
+      "price": 1353,
+      "discount": 30,
+      "mrp": 1949,
+      "rating": 3.8,
+      "category": "smart_phone",
+      "id": 130,
+      "description": "32 MB RAM | 32 MB ROM | Expandable Upto 32 GB 6.1 cm (2.4 inch) Display 0.8MP Rear Camera 1 Year Manufacturer Warranty",
+      "brand": "Infinix",
+      "quantity": 1,
+      "review": 57
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/7/p/9/-original-imaghgbyypzkzvud.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/i/v/-original-imagfhu6bdzhnmkz.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "SAMSUNG Galaxy F04 (Jade Purple  64 GB)",
+      "price": 6999,
+      "discount": 39,
+      "mrp": 11499,
+      "rating": 4.3,
+      "category": "smart_phone",
+      "id": 131,
+      "description": "4 GB RAM | 64 GB ROM | Expandable Upto 1 TB 16.51 cm (6.5 inch) HD Display 13MP + 2MP | 5MP Front Camera Mediatek Helio P35 Processor",
+      "brand": "SAMSUNG",
+      "quantity": 1,
+      "review": 11337
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/2/n/m/-original-imagna3rjqn8vqxb.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/u/c/u/-original-imagnanh2yvpc4zx.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/e/r/a/-original-imagna3qqyay2gaf.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Infinix SMART 7 (Emerald Green  64 GB)",
+      "price": 7299,
+      "discount": 27,
+      "mrp": 9999,
+      "rating": 4.2,
+      "category": "smart_phone",
+      "id": 132,
+      "description": "4 GB RAM | 64 GB ROM | Expandable Upto 2 TB 16.76 cm (6.6 inch) HD+ Display 13MP + AI Lens | 5MP Front Camera Unisoc Spreadtrum SC9863A1 Processor",
+      "brand": "Infinix",
+      "quantity": 1,
+      "review": 14388
+    },
+    {
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/u/c/u/-original-imagnanh2yvpc4zx.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/e/r/a/-original-imagna3qqyay2gaf.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Infinix SMART 7 (Azure Blue  64 GB)",
+      "price": 7299,
+      "discount": 27,
+      "mrp": 9999,
+      "rating": 4.2,
+      "category": "smart_phone",
+      "id": 133,
+      "description": "4 GB RAM | 64 GB ROM | Expandable Upto 2 TB 16.76 cm (6.6 inch) HD+ Display 13MP + AI Lens | 5MP Front Camera Unisoc Spreadtrum SC9863A1 Processor",
+      "brand": "Infinix",
+      "quantity": 1,
+      "review": 14388
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/o/t/a/c51-mzb0e6din-poco-original-imagzdzzraqzsrzc.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/b/y/g/-original-imagnfzybft7wzmp.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/6/f/-original-imagnb6nvnqz7hqq.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "POCO C51 (Power Black  64 GB)",
+      "price": 6999,
+      "discount": 30,
+      "mrp": 9999,
+      "rating": 4.3,
+      "category": "smart_phone",
+      "id": 134,
+      "description": "4 GB RAM | 64 GB ROM | Expandable Upto 1 TB 16.56 cm (6.52 inch) HD+ Display 8MP Rear Camera | 5MP Front Camera Helio G36 Processor",
+      "brand": "POCO",
+      "quantity": 1,
+      "review": 1156
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/w/o/s/-original-imaghuf9mryjhf3m.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/9/z/o/-original-imaghuf9guqmb65z.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "realme C33 2023 (Sandy Gold  64 GB)",
+      "price": 9999,
+      "discount": 23,
+      "mrp": 12999,
+      "rating": 4.5,
+      "category": "smart_phone",
+      "id": 135,
+      "description": "4 GB RAM | 64 GB ROM | Expandable Upto 1 TB 16.51 cm (6.5 inch) HD+ Display 50MP + 0.3MP | 5MP Front Camera Unisoc T612 Processor",
+      "brand": "realme",
+      "quantity": 1,
+      "review": 3453
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/e/n/j/-original-imaghuf9vphhbnkc.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/w/o/s/-original-imaghuf9mryjhf3m.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/9/z/o/-original-imaghuf9guqmb65z.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "realme C33 2023 (Night Sea  64 GB)",
+      "price": 9999,
+      "discount": 23,
+      "mrp": 12999,
+      "rating": 4.5,
+      "category": "smart_phone",
+      "id": 136,
+      "description": "4 GB RAM | 64 GB ROM | Expandable Upto 1 TB 16.51 cm (6.5 inch) HD+ Display 50MP + 0.3MP | 5MP Front Camera Unisoc T612 Processor",
+      "brand": "realme",
+      "quantity": 1,
+      "review": 3453
+    },
+    {
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/3/l/x/-original-imaghmtcmxwgypsk.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/b/y/g/-original-imagnfzybft7wzmp.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/6/f/-original-imagnb6nvnqz7hqq.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "POCO C50 (Country Green  32 GB)",
+      "price": 5749,
+      "discount": 36,
+      "mrp": 8999,
+      "rating": 4.3,
+      "category": "smart_phone",
+      "id": 137,
+      "description": "2 GB RAM | 32 GB ROM | Expandable Upto 512 GB 16.56 cm (6.52 inch) HD+ Display 8MP Dual Camera | 5MP Front Camera Mediatek Helio A22 Processor, Upto 2.0 GHz Processor",
+      "brand": "POCO",
+      "quantity": 1,
+      "review": 20562
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/e/r/a/-original-imagna3qqyay2gaf.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/u/c/u/-original-imagnanh2yvpc4zx.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/e/r/a/-original-imagna3qqyay2gaf.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "Infinix SMART 7 (Night Black  64 GB)",
+      "price": 7299,
+      "discount": 27,
+      "mrp": 9999,
+      "rating": 4.2,
+      "category": "smart_phone",
+      "id": 138,
+      "description": "4 GB RAM | 64 GB ROM | Expandable Upto 2 TB 16.76 cm (6.6 inch) HD+ Display 13MP + AI Lens | 5MP Front Camera Unisoc Spreadtrum SC9863A1 Processor",
+      "brand": "Infinix",
+      "quantity": 1,
+      "review": 14388
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/9/z/o/-original-imaghuf9guqmb65z.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/w/o/s/-original-imaghuf9mryjhf3m.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/9/z/o/-original-imaghuf9guqmb65z.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "realme C33 2023 (Aqua Blue  64 GB)",
+      "price": 9999,
+      "discount": 23,
+      "mrp": 12999,
+      "rating": 4.5,
+      "category": "smart_phone",
+      "id": 139,
+      "description": "4 GB RAM | 64 GB ROM | Expandable Upto 1 TB 16.51 cm (6.5 inch) HD+ Display 50MP + 0.3MP | 5MP Front Camera Unisoc T612 Processor",
+      "brand": "realme",
+      "quantity": 1,
+      "review": 3453
+    },
+    {
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/9/j/r/-original-imagjyhyaf7tdxnc.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/mobile/n/6/t/-original-imaghggzzmwgb6f7.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "REDMI A1+ (Light Blue  32 GB)",
+      "price": 6499,
+      "discount": 35,
+      "mrp": 9999,
+      "rating": 4.2,
+      "category": "smart_phone",
+      "id": 140,
+      "description": "2 GB RAM | 32 GB ROM | Expandable Upto 512 GB 16.56 cm (6.52 inch) HD+ Display 8MP Rear Camera | 5MP Front Camera Mediatek Helio A22 Processor",
+      "brand": "Redmi",
+      "quantity": 1,
+      "review": 1725
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/y/9/g/-original-imagnfzyhh8gz8sd.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/b/y/g/-original-imagnfzybft7wzmp.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/6/f/-original-imagnb6nvnqz7hqq.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "POCO C55 (Cool Blue  64 GB)",
+      "price": 7999,
+      "discount": 33,
+      "mrp": 11999,
+      "rating": 4.2,
+      "category": "smart_phone",
+      "id": 141,
+      "description": "4 GB RAM | 64 GB ROM | Expandable Upto 1 TB 17.04 cm (6.71 inch) HD+ Display 50MP Rear Camera | 5MP Front Camera Mediatek Helio G85 Processor",
+      "brand": "POCO",
+      "quantity": 1,
+      "review": 10287
+    },
+    {
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/b/y/g/-original-imagnfzybft7wzmp.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/6/f/-original-imagnb6nvnqz7hqq.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "POCO C55 (Power Black  128 GB)",
+      "price": 9499,
+      "discount": 32,
+      "mrp": 13999,
+      "rating": 4.2,
+      "category": "smart_phone",
+      "id": 142,
+      "description": "6 GB RAM | 128 GB ROM | Expandable Upto 1 TB 17.04 cm (6.71 inch) HD+ Display 50MP Rear Camera | 5MP Front Camera Mediatek Helio G85 Processor",
+      "brand": "POCO",
+      "quantity": 1,
+      "review": 6499
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/6/f/-original-imagnb6nvnqz7hqq.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/b/y/g/-original-imagnfzybft7wzmp.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/6/f/-original-imagnb6nvnqz7hqq.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "POCO C55 (Forest Green  64 GB)",
+      "price": 7999,
+      "discount": 33,
+      "mrp": 11999,
+      "rating": 4.2,
+      "category": "smart_phone",
+      "id": 143,
+      "description": "4 GB RAM | 64 GB ROM | Expandable Upto 1 TB 17.04 cm (6.71 inch) HD+ Display 50MP Rear Camera | 5MP Front Camera Mediatek Helio G85 Processor",
+      "brand": "POCO",
+      "quantity": 1,
+      "review": 10287
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/9/b/-original-imagjyhyrgdtnjjy.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/p/a/4/-original-imagjyhymqnhz7fm.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "REDMI A1+ (Light Green  32 GB)",
+      "price": 6499,
+      "discount": 35,
+      "mrp": 9999,
+      "rating": 4.2,
+      "category": "smart_phone",
+      "id": 144,
+      "description": "2 GB RAM | 32 GB ROM | Expandable Upto 512 GB 16.56 cm (6.52 inch) HD+ Display 8MP Rear Camera | 5MP Front Camera Mediatek Helio A22 Processor",
+      "brand": "Redmi",
+      "quantity": 1,
+      "review": 1725
+    },
+    {
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/i/v/-original-imagfhu6bdzhnmkz.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/w/d/o/-original-imaghgbyhy6banxv.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/416/416/xif0q/mobile/n/6/t/-original-imaghggzzmwgb6f7.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/i/v/-original-imagfhu6bdzhnmkz.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "SAMSUNG Galaxy F13 (Nightsky Green  64 GB)",
+      "price": 9699,
+      "discount": 35,
+      "mrp": 14999,
+      "rating": 4.4,
+      "category": "smart_phone",
+      "id": 145,
+      "description": "4 GB RAM | 64 GB ROM | Expandable Upto 1 TB 16.76 cm (6.6 inch) Full HD+ Display 50MP + 5MP + 2MP | 8MP Front Camera Exynos 850 Processor",
+      "brand": "SAMSUNG",
+      "quantity": 1,
+      "review": 140457
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/2/y/o/iphone-13-mlpk3hn-a-apple-original-imag6vpyur6hjngg.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/s/l/c/iphone-13-mlpf3hn-a-apple-original-imag6vzz5qvejz8z.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/8/z/w/iphone-13-mlph3hn-a-apple-original-imag6vzzhrxgazsg.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "APPLE iPhone 13 (Blue  128 GB)",
+      "price": 57999,
+      "discount": 17,
+      "mrp": 69900,
+      "rating": 4.7,
+      "category": "smart_phone",
+      "id": 146,
+      "description": "128 GB ROM 15.49 cm (6.1 inch) Super Retina XDR Display 12MP + 12MP | 12MP Front Camera Brand Warranty for 1 Year",
+      "brand": "APPLE",
+      "quantity": 1,
+      "review": 206545
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/p/a/4/-original-imagjyhymqnhz7fm.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/xif0q/mobile/a/9/b/-original-imagjyhyrgdtnjjy.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "REDMI A1+ (Black  32 GB)",
+      "price": 6499,
+      "discount": 35,
+      "mrp": 9999,
+      "rating": 4.2,
+      "category": "smart_phone",
+      "id": 147,
+      "description": "2 GB RAM | 32 GB ROM | Expandable Upto 512 GB 16.56 cm (6.52 inch) HD+ Display 8MP Rear Camera | 5MP Front Camera Mediatek Helio A22 Processor",
+      "brand": "Redmi",
+      "quantity": 1,
+      "review": 1725
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/8/z/w/iphone-13-mlph3hn-a-apple-original-imag6vzzhrxgazsg.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/s/l/c/iphone-13-mlpf3hn-a-apple-original-imag6vzz5qvejz8z.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "APPLE iPhone 13 (Pink  128 GB)",
+      "price": 57999,
+      "discount": 17,
+      "mrp": 69900,
+      "rating": 4.7,
+      "category": "smart_phone",
+      "id": 148,
+      "description": "128 GB ROM 15.49 cm (6.1 inch) Super Retina XDR Display 12MP + 12MP | 12MP Front Camera Brand Warranty for 1 Year",
+      "brand": "APPLE",
+      "quantity": 1,
+      "review": 206545
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/l0igvww0/mobile/r/q/m/-original-imagca5ajerqpfjy.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/8/z/w/iphone-13-mlph3hn-a-apple-original-imag6vzzhrxgazsg.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/s/l/c/iphone-13-mlpf3hn-a-apple-original-imag6vzz5qvejz8z.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "APPLE iPhone 13 (Green  128 GB)",
+      "price": 57999,
+      "discount": 17,
+      "mrp": 69900,
+      "rating": 4.7,
+      "category": "smart_phone",
+      "id": 149,
+      "description": "128 GB ROM 15.49 cm (6.1 inch) Super Retina XDR Display 12MP + 12MP | 12MP Front Camera Brand Warranty for 1 Year",
+      "brand": "APPLE",
+      "quantity": 1,
+      "review": 206545
+    },
+    {
+      "color": [
+        "black",
+        "blue"
+      ],
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/s/l/c/iphone-13-mlpf3hn-a-apple-original-imag6vzz5qvejz8z.jpeg?q=70",
+        "https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/8/z/w/iphone-13-mlph3hn-a-apple-original-imag6vzzhrxgazsg.jpeg?q=70"
+      ],
+      "tag_badge": "",
+      "title": "APPLE iPhone 13 (Midnight  128 GB)",
+      "price": 57999,
+      "discount": 17,
+      "mrp": 69900,
+      "rating": 4.7,
+      "category": "smart_phone",
+      "id": 150,
+      "description": "128 GB ROM 15.49 cm (6.1 inch) Super Retina XDR Display 12MP + 12MP | 12MP Front Camera Brand Warranty for 1 Year",
+      "brand": "APPLE",
+      "quantity": 1,
+      "review": 206545
+    }
+  ]
+}
