@@ -12,7 +12,10 @@ import {
 import { VscHeart } from 'react-icons/vsc';
 import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { postSingleProductItem } from '../../redux/CartReducer/action';
+import {
+  getCartServerdata,
+  postSingleProductItem,
+} from '../../redux/CartReducer/action';
 export const ProductCard = ({
   id,
   title,
@@ -33,6 +36,7 @@ export const ProductCard = ({
     let d = products.find(el => el.id === id);
     // console.log(d);
     dispatch(postSingleProductItem(d)).then(res => {
+      dispatch(getCartServerdata());
       toast({
         title: 'Yay!!',
         description: 'Item added successfully',

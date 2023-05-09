@@ -384,6 +384,32 @@
       "brand": "BOAT",
       "quantity": 1,
       "review": 53672
+    },
+    {
+      "color": [
+        "silver",
+        "blue",
+        "red"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/02_cb3c93e3-02ea-478d-9c90-f750895d0ffd_320x.jpg?v=1667290210",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/03_41792eda-5506-4626-8ecd-c512f2aef324_320x.jpg?v=1667290209",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/04_bd0f5fb7-72cb-4356-a824-3b013baa1aca_320x.jpg?v=1667290210",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/10_89e78ad9-9034-4e9a-9505-faad274b78f3_320x.jpg?v=1667290213",
+        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/13_8b96bbba-af9e-4bad-b4da-0f37d1ebd1a9_320x.jpg?v=1667290212"
+      ],
+      "tag_badge": "I5 14",
+      "title": "Lenovo Idea Pad Flex 5 11th Gen Intel Core i5 14\" (35.5cm)FHD IPS 2-in-1 Touch screen Laptop (8GB/512GB SSD",
+      "price": 75999,
+      "discount": 53,
+      "mrp": 85990,
+      "rating": 4.5,
+      "category": "Laptop",
+      "id": 92,
+      "description": "Brand Lenovo Series IdeaPad Flex 5i 15.6 Inches Screen Size",
+      "brand": "LENOVO",
+      "quantity": 1,
+      "review": 2172
     }
   ],
   "products": [
