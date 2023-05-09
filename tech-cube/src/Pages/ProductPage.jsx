@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   SimpleGrid,
   useBreakpointValue,
@@ -13,12 +13,15 @@ import { getProducts } from '../redux/Product/action';
 import { ProductCard } from '../component/ProductComponent/ProductCard';
 import { FilterSort } from '../component/ProductComponent/FilterSort';
 import { useSearchParams } from 'react-router-dom';
+import Loader from '../component/Loader&Error/Loader';
 
 const ProductPage = () => {
   const [searchParams] = useSearchParams();
   const dispatch = useDispatch();
   const products = useSelector(store => store.productReducer.products);
-
+  const [page, setPage] = useState(1);
+  const [total, setTotal] = useState(0);
+  
   let obj = {
     params: {
       brand: searchParams.getAll('brand'),
@@ -27,8 +30,10 @@ const ProductPage = () => {
   };
 
   useEffect(() => {
-    dispatch(getProducts(obj));
-  }, [searchParams]);
+    dispatch(getProducts(setTotal, page, obj));
+  }, [page, setTotal, searchParams]);
+
+  console.log(total)
 
   return (
     <Box pos={'relative'} minH={'1000px'}>
@@ -36,6 +41,7 @@ const ProductPage = () => {
         <Center>
           <FilterSort products={products} />
         </Center>
+        {products.length === 0 ? <Loader/> :
         <Grid
           templateColumns={{
             base: 'repeat(2,1fr)',
@@ -45,18 +51,9 @@ const ProductPage = () => {
           }}
           gap="20px"
         >
-          {products.length === 0 ? (
-            <Spinner
-              thickness="4px"
-              speed="0.65s"
-              emptyColor="gray.200"
-              color="blue.500"
-              size="xl"
-            />
-          ) : (
-            products?.map(el => <ProductCard key={el.id} {...el} />)
-          )}
+            {products?.map(el => <ProductCard key={el.id} {...el} />)}
         </Grid>
+}
       </Flex>
     </Box>
   );

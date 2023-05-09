@@ -78,14 +78,13 @@ export default function CartItem({
         <Image width={{ base: "full", sm: 'full', md: '100px', lg: '150px', xl: '200px' }} src={image} alt={title} />
         <Box className='TitleColorBrand' display={'flex'} flexDirection={'column'} justifyContent={'center'}>
           <Text fontWeight={'bold'} fontSize={'20px'}>{title}</Text>
-          <Flex gap={'10px'}><Text>Color : </Text><Box height={'20px'} w={'20px'} borderRadius={'50%'} bgColor={color[0]}></Box></Flex>
           <Text fontWeight={'bold'} color={'orange.400'}>Brand: {brand}</Text>
         </Box>
 
         <Box display={'flex'} flexDirection={'row'} justifyContent={'center'} gap={'20px'} alignItems={'center'}>
     
       
-      <Text fontWeight={'bold'} fontSize={'15px'}>$ {price}</Text>
+      <Text fontWeight={'bold'} fontSize={'15px'}>₹ {price}</Text>
 
 
       <Select placeholder={quantity} onChange={handleQuantity} w={{ base: '100px', }}>

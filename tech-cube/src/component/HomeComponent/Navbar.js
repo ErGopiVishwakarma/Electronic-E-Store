@@ -24,6 +24,7 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  Avatar,
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -41,9 +42,12 @@ import logo1 from '../../Assets/techCubeLogo.png';
 import { NAV_ITEMS } from './navComponent/NavItem';
 import logo from '../../Assets/techcube.png';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import UserProfile from './UserProfile';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { GET_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST } from '../../redux/Product/actionType';
+import axios from 'axios';
+import { SearchContext } from '../../context/SearchContextProvider';
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -53,6 +57,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const auth = JSON.parse(localStorage.getItem('auth')) || '';
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const {status, setStatus} = useContext(SearchContext);
+  const user = JSON.parse(localStorage.getItem('user')) || {};
+  const cartData = useSelector(store => store.cartReducer.cart);
 
   const openFun = () => {
     setOpen(true)
@@ -60,6 +68,30 @@ export default function Navbar() {
   const closeFun = () => {
     setOpen(false)
   }
+
+  const handleSearch = val => {
+    if (val) {
+      setStatus(true);
+    }
+    dispatch({type : PRODUCT_REQUEST})
+    axios
+      .get(`http://localhost:8080/products?q=${val}`)
+      .then(res => {
+        console.log(res);
+        dispatch({type : GET_PRODUCT_SUCCESS, payload : res.data});
+      })
+      .catch(err => {
+        dispatch({type : PRODUCT_FAILURE});
+      });
+  };
+
+  const handleDebounce = val => {
+    if (id) clearTimeout(id);
+    var id = setTimeout(() => {
+      handleSearch(val);
+      // console.log(val)
+    }, 1500);
+  };
 
   const handleLogout = () => {
     localStorage.setItem('auth', JSON.stringify(false));
@@ -137,7 +169,7 @@ export default function Navbar() {
           borderRadius={'30px'}
           display={{ base: 'none', md: 'none', lg: 'block' }}
         >
-          <Input pr="4.5rem" placeholder="search" />
+          <Input pr="4.5rem" placeholder="search" onChange={(e) => handleDebounce(e.target.value)} />
           <InputRightElement width="4.5rem">
             <SearchIcon />
           </InputRightElement>
@@ -153,16 +185,18 @@ export default function Navbar() {
   
           <Menu>
             <MenuButton>
-            <FaUser size={'20px'} />
+            {/* {auth ? user.firstName : <FaUser size={'20px'} />} */}
+            {auth?<Flex direction={'column'}><Avatar w={'35px'} h={'35px'} src={user.image} name={`${user.firstName} ${user.lastName}`} /></Flex> : <FaUser size={'20px'} />}
             </MenuButton>
             <MenuList>
-              <NavLink to='/signup'><MenuItem>login / signup</MenuItem></NavLink>
+              {auth ? <MenuItem>Hello {user.firstName} {user.lastName }</MenuItem> :
+              <NavLink to='/signup'><MenuItem>{'login / signup'}</MenuItem></NavLink>
+              }
               <MenuItem>
-                <UserProfile>User Profile</UserProfile>
+                <UserProfile data={user}>User Profile</UserProfile>
               </MenuItem>
-              <MenuItem onClick={handleLogout}>LogOut</MenuItem>
-              <NavLink to='/adminlogin'> <MenuItem>Admin</MenuItem></NavLink>
-
+              <MenuItem isDisabled={!auth} onClick={handleLogout}>LogOut</MenuItem>
+              <NavLink to='/admin'> <MenuItem>Admin</MenuItem></NavLink>
             </MenuList>
           </Menu>
           <NavLink to="/cart">
@@ -275,7 +309,7 @@ const DesktopSubNav = ({ image, href, subLabel }) => {
   const textColor = text === 'dark' ? 'gray.100' : 'blackAlpha.900'
   return (
     <NavLink
-      to="/product"
+      to="/products"
       role={'group'}
       display={'block'}
       rounded={'md'}
