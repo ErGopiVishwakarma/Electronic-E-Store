@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image, Text, Button, Divider, Alert, AlertIcon, Input, InputGroup } from '@chakra-ui/react'
+import { Box, Flex, Heading, Image, Text, Button, Divider, Alert, AlertIcon, Input, InputGroup, useToast } from '@chakra-ui/react'
 import React, { useEffect, useRef, useState } from 'react';
 import { css } from '@emotion/react';
 import orderSummaryImg from '../Assets/orderSummaryImg.avif';
@@ -7,29 +7,28 @@ import axios from 'axios';
 import { getAddress, postAddress, showData } from '../redux/CheckoutReducer/action';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate, useNavigate } from 'react-router-dom';
+import { getCartServerdata } from '../redux/CartReducer/action';
 
 const CheckOut = () => {
   const text = useColorModeValue('dark', 'light');
   const dispatch = useDispatch();
-  const data = useSelector(store => store.checkoutReducer.data);
+  // const data = useSelector(store => store.checkoutReducer.data);
   const user = useSelector(store => store.checkoutReducer.userData);
-  let { cart } = useSelector(store => store.cartReducer);
-
+  let data = useSelector(store => store.cartReducer.cart);
+  
   const [toggle, setToggle] = useState(false);
   let id = JSON.parse(localStorage.getItem('userId')) || '';
-  const navigate = useNavigate();
-  const ref = useRef(0);
+ 
+  const toast = useToast();
 
   const [formData, setFormData] = useState({
     firstName: '', lastName: '', address: '', city: '', pincode: '', state: '', mobile: ''
   })
 
   useEffect(() => {
-    dispatch(showData);
     if (id !== '') {
       dispatch(getAddress(id));
     }
-    totalPrice()
   }, [])
 
   const handleEdit = () => {
@@ -41,16 +40,22 @@ const CheckOut = () => {
   }
 
   const handleSubmit = () => {
+    if (!formData.firstName || !formData.lastName || !formData.address || !formData.city || !formData.pincode || !formData.state || !formData.mobile) {
+      toast({
+        title: 'Failed',
+        description: "All fields are Required",
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+        position: 'top'
+      })
+      return;
+    }
+
     dispatch(postAddress(id, formData));
     setToggle(!toggle);
   }
 
-  const totalPrice = () => {
-    cart.forEach(el => {
-      ref.current = el.quantity * el.price + ref.current;
-    })
-  }
-  
 
   return (
     <Flex id='app' justifyContent={'center'} direction={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }} w={'90%'} m={'20px auto'} gap={'20px'}>
@@ -70,7 +75,7 @@ const CheckOut = () => {
                 </Box>
                 <Box>
                   <Heading as='h3' size={'md'}>₹ {el.price}</Heading>
-                  <Text>Discount : {el.discount}</Text>
+                  <Text>Discount : {el.discount}%</Text>
                 </Box>
               </Flex>
             })}
@@ -167,54 +172,68 @@ const CheckOut = () => {
           }
         </Box>
       </Box>
-      <Box mt={{ base: '10px', sm: '10px', md: '10px', lg: '100px', xl: '100px', '2xl': '100px' }} w={{ base: '100%', sm: '100%', md: '100%', lg: '35%', xl: '35%', '2xl': '35%' }} boxShadow='rgba(0, 0, 0, 0.24) 0px 3px 8px' p={'20px'} h={'550px'} borderRadius={'10px'}>
-        <Flex justifyContent={'center'}>
-          <Image w={'250px'} src={orderSummaryImg} alt='orderSummaryImg' />
-        </Flex>
-        <Heading textAlign={'center'} as={'h2'} fontSize={'23px'}>Order Summary</Heading>
-        <Box mt={'20px'} lineHeight={'35px'}>
-          <Flex justifyContent={'space-between'}>
-            <Text>4 Months Subscription</Text>
-            <Text>₹ 499</Text>
-          </Flex>
-          <Flex justifyContent={'space-between'}>
-            <Text>Coupon: {data.length === 0 ? '' : 'GETFIRSTBUY10'}</Text>
-            <Text>-₹ {data.length === 0 ? 0 : 40}</Text>
-          </Flex>
-        </Box>
-        <Box m={'10px 0'} h={'3px'} color={'black'}>
-          <Divider orientation='horizontal'></Divider>
-        </Box>
-        <Box lineHeight={'35px'}>
-          <Flex justifyContent={'space-between'}>
-            <Text>Subtotal</Text>
-            <Text>₹ {ref.current}</Text>
-          </Flex>
-          <Flex justifyContent={'space-between'}>
-            <Text>Shipping</Text>
-            <Text>{ref.current > 500 ? 'FREE' : '₹ 40'}</Text>
-          </Flex>
-          <Flex justifyContent={'space-between'}>
-            <Text>Estimated Tax</Text>
-            <Text>₹ {ref.current > 1000 ? 'FREE' : 30}</Text>
-          </Flex>
-        </Box>
-        <Box m={'10px 0'} h={'3px'} color={'gray.600'}>
-          <Divider orientation='horizontal'></Divider>
-        </Box>
-        <Box>
-          <Flex justifyContent={'space-between'}>
-            <Heading size={'md'}>Total</Heading>
-            <Heading size={'md'}>₹ {ref.current > 500 && ref.current < 1000 ? ref.current + 30 : ref.current > 1000 ? ref.current : ref.current + 30 + 40}</Heading>
-          </Flex>
-        </Box>
-        <Box m={'10px 0'} h={'3px'} color={'gray.600'}>
-          <Divider orientation='horizontal'></Divider>
-        </Box>
-        <Button onClick={() => navigate('/payment')} _hover={{ bg: 'gray.700' }} w={'100%'} bg={text === 'dark' ? 'black' : 'white'} color={text === 'dark' ? 'white' : 'black'}>Proceed to Payment</Button>
-      </Box>
+      <CheckoutPrice text = {text}/>
     </Flex>
   )
 }
 
-export default CheckOut
+export default CheckOut;
+
+
+export const CheckoutPrice = ({text}) => {
+  const navigate = useNavigate();
+
+  const data = JSON.parse(localStorage.getItem('cart')) || [];
+  let cartPrice = 0;
+
+   data.forEach(el => {
+     cartPrice += el.price * el.quantity;
+   })
+
+   return <Box mt={{ base: '10px', sm: '10px', md: '10px', lg: '100px', xl: '100px', '2xl': '100px' }} w={{ base: '100%', sm: '100%', md: '100%', lg: '35%', xl: '35%', '2xl': '35%' }} boxShadow='rgba(0, 0, 0, 0.24) 0px 3px 8px' p={'20px'} h={'550px'} borderRadius={'10px'}>
+   <Flex justifyContent={'center'}>
+     <Image w={'250px'} src={orderSummaryImg} alt='orderSummaryImg' />
+   </Flex>
+   <Heading textAlign={'center'} as={'h2'} fontSize={'23px'}>Order Summary</Heading>
+   <Box mt={'20px'} lineHeight={'35px'}>
+     <Flex justifyContent={'space-between'}>
+       <Text>4 Months Subscription</Text>
+       <Text>₹ 499</Text>
+     </Flex>
+     <Flex justifyContent={'space-between'}>
+       <Text>Coupon: {data.length === 0 ? '' : 'GETFIRSTBUY10'}</Text>
+       <Text>-₹ {data.length === 0 ? 0 : 40}</Text>
+     </Flex>
+   </Box>
+   <Box m={'10px 0'} h={'3px'} color={'black'}>
+     <Divider orientation='horizontal'></Divider>
+   </Box>
+   <Box lineHeight={'35px'}>
+     <Flex justifyContent={'space-between'}>
+       <Text>Subtotal</Text>
+       <Text>₹ {cartPrice}</Text>
+     </Flex>
+     <Flex justifyContent={'space-between'}>
+       <Text>Shipping</Text>
+       <Text>{cartPrice > 500 ? 'FREE' : cartPrice === 0 ? `₹ ${0}` : `₹ ${40}`}</Text>
+     </Flex>
+     <Flex justifyContent={'space-between'}>
+       <Text>Estimated Tax</Text>
+       <Text>{cartPrice > 1000 ? 'FREE' : cartPrice === 0 ? `₹ ${0}` : `₹ ${40}`}</Text>
+     </Flex>
+   </Box>
+   <Box m={'10px 0'} h={'3px'} color={'gray.600'}>
+     <Divider orientation='horizontal'></Divider>
+   </Box>
+   <Box>
+     <Flex justifyContent={'space-between'}>
+       <Heading size={'md'}>Total</Heading>
+       <Heading size={'md'}>₹ {cartPrice > 500 && cartPrice < 1000 ? cartPrice + 30 : cartPrice > 1000 ? cartPrice : cartPrice === 0 ? 0 : cartPrice + 30 + 40}</Heading>
+     </Flex>
+   </Box>
+   <Box m={'10px 0'} h={'3px'} color={'gray.600'}>
+     <Divider orientation='horizontal'></Divider>
+   </Box>
+   <Button onClick={() => navigate('/payment')} _hover={{ bg: 'gray.700' }} w={'100%'} bg={text === 'dark' ? 'black' : 'white'} color={text === 'dark' ? 'white' : 'black'}>Proceed to Payment</Button>
+ </Box>
+}
