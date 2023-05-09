@@ -13,6 +13,7 @@ import { getProducts } from '../redux/Product/action';
 import { ProductCard } from '../component/ProductComponent/ProductCard';
 import { FilterSort } from '../component/ProductComponent/FilterSort';
 import { useSearchParams } from 'react-router-dom';
+import Loader from '../component/Loader&Error/Loader';
 
 const ProductPage = () => {
   const [searchParams] = useSearchParams();
@@ -46,13 +47,14 @@ const ProductPage = () => {
           gap="20px"
         >
           {products.length === 0 ? (
-            <Spinner
-              thickness="4px"
-              speed="0.65s"
-              emptyColor="gray.200"
-              color="blue.500"
-              size="xl"
-            />
+            // <Spinner
+            //   thickness="4px"
+            //   speed="0.65s"
+            //   emptyColor="gray.200"
+            //   color="blue.500"
+            //   size="xl"
+            // />
+            <Loader />
           ) : (
             products?.map(el => <ProductCard key={el.id} {...el} />)
           )}
