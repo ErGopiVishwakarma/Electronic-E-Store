@@ -50,7 +50,7 @@ export default function Footer() {
               <Link><IconButton borderRadius={'50%'} border={text === 'dark' ? "2px solid white" : "2px solid black"} variant={'outline'} color="brown.500"  icon={<FaPinterest />} /></Link>
 
             </HStack>
-            </Stack>
+            </Stack> 
             <Divider border={'1px solid lightgray'} w="100%"/>
             <Stack direction={'column'} pl={5}>
               {/* forth orbit ========================= */}

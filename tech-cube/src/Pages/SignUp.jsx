@@ -25,6 +25,7 @@ import { useToast } from '@chakra-ui/react';
 import signupImg from '../Assets/signupImg.jpg';
 import Loader from '../component/Loader&Error/Loader';
 import { NavLink } from 'react-router-dom';
+import Footer from '../component/HomeComponent/Footer';
 
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
@@ -125,6 +126,7 @@ export default function SignUp() {
   
 
   return (
+
     loader ? <Loader/> :
     <Flex
       minH={'100vh'}
@@ -225,6 +227,8 @@ export default function SignUp() {
         <Image w={'100%'} mr={'20px'} borderRadius={'10px'} src={signupImg} alt='signupImg' />
       </Box>
     </Flex>
+  
+  
   );
 
 }

@@ -9,6 +9,8 @@ import Footer from './component/HomeComponent/Footer';
 import ProductPage from './Pages/ProductPage';
 import { FilterSort } from './component/ProductComponent/FilterSort';
 import './App.css';
+import PaymentGateway from './component/Payment/PaymentGateway';
+
 
 
 function App() {
@@ -17,9 +19,7 @@ function App() {
 
     <Box className='App'>
       <Navbar />
-
       <MainRoutes />
-
       <Footer />
     </Box>
   );
