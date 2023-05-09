@@ -2,7 +2,7 @@
   "user": [
     {
       "firstName": "Ritesh",
-      "lastName" : "Goswami",
+      "lastName": "Goswami",
       "mobile": "8210483459",
       "email": "riteshgoswami22201@gmail.com",
       "password": "ritesh123",
@@ -14,16 +14,28 @@
       "state": "Bihar"
     },
     {
-      "firstName": "",
-      "lastName": "",
+      "firstName": "Tanmoy",
+      "lastName": "Roy",
       "email": "tanmoy123@gmail.com",
       "password": "tanmoy123",
-      "mobile": "",
+      "mobile": "5843754385",
       "id": 2,
-      "address": "",
-      "city": "",
-      "pincode": "",
-      "state": ""
+      "address": "Kolkata",
+      "city": "Kolkata",
+      "pincode": "123456",
+      "state": "West Bengal"
+    },
+    {
+      "firstName": "Ankit",
+      "lastName": "Kumar",
+      "email": "eve.holt@reqres.in",
+      "password": "1234",
+      "mobile": 9945047116,
+      "id": 3,
+      "address": "Kolkata",
+      "city": "Kolkata",
+      "pincode": "123456",
+      "state": "West Bengal"
     }
   ],
   "cart": [
@@ -104,6 +116,106 @@
       "brand": "BOAT",
       "quantity": 1,
       "review": 48903
+    },
+    {
+      "color": [
+        "black",
+        "yellow",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1200f_main2_600x.png?v=1673002142",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1200f_main3_600x.png?v=1673002201",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1200f_main1_600x.png?v=1673002141"
+      ],
+      "tag_badge": "14W Rms Sound",
+      "title": "Stone 1200F",
+      "price": 3999,
+      "discount": 43,
+      "mrp": 6990,
+      "rating": 5,
+      "category": "wireless_speakers",
+      "id": 62,
+      "description": "Up to 09HRS Playback RGB LED Lights IPX7 Water Resistance ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 2390
+    },
+    {
+      "color": [
+        "black"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main---1_14fdb862-156c-4161-a402-b4e56a464ec1_600x.png?v=1678952224",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/PP50-FI02_c9c4db94-902a-457d-b6a6-7e747da9b91b_600x.png?v=1678952224",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/PP50-FI04_878b15f1-70ad-4ffb-bc76-00bd6c6cfbca_600x.png?v=1678952224",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/PP50-FI05_8438772f-e9b7-4371-9f24-5f35ad2d68db_600x.png?v=1678952225"
+      ],
+      "tag_badge": "Party Pal",
+      "title": "Party Pal 53",
+      "price": 3799,
+      "discount": 52,
+      "mrp": 7990,
+      "rating": 2.9,
+      "category": "wireless_speakers",
+      "id": 63,
+      "description": " Party Pal 53 ",
+      "brand": "Syska",
+      "quantity": 1,
+      "review": 53679
+    },
+    {
+      "color": [
+        "black",
+        "pink",
+        "green",
+        "blue"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/grey_916612cd-a8da-408e-8ec6-b177df5fa727_1_700x.png?v=1658150489",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/121-pro-BG_600x.gif?v=1665492449",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/fvtfgvt_700x.png?v=1658150489",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/iiolo_700x.png?v=1658150489",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD121Pro-FI_Blue02_700x.png?v=1665492449"
+      ],
+      "tag_badge": "Bestseller",
+      "title": "Airdopes 121 v2",
+      "price": 1099,
+      "discount": 63,
+      "mrp": 2999,
+      "rating": 4.8,
+      "category": "wireless_earbuds",
+      "id": 8,
+      "description": "Up to 14HRS Playback IWP Technology LED Battery Case ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 2160
+    },
+    {
+      "color": [
+        "black",
+        "blue",
+        "red"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image-3_e05a4bee-499f-42da-8db5-e3921a185f5c_600x.png?v=1655526604",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/04_700x.jpg?v=1656100430",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/05_18ab4860-29e3-497b-b06d-ec73ede9a8cf_700x.jpg?v=1656100471",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image_e269db64-c847-4f30-b904-ccb4d973ae52_600x.png?v=1655526604",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image-2_93b99319-19ca-4375-9f44-60a89e370422_600x.png?v=1655526604"
+      ],
+      "tag_badge": "50 Hours Playback",
+      "title": "Airdopes 100",
+      "price": 1499,
+      "discount": 57,
+      "mrp": 3490,
+      "rating": 4.7,
+      "category": "wireless_earbuds",
+      "id": 10,
+      "description": "Up to 50HRS Playback Clear Calling ASAP™ Charge ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 48904
     }
   ],
   "products": [

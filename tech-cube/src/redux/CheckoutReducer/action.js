@@ -3,7 +3,9 @@ import { GET_ADDRESS, GET_ADDRESS_FAILURE, GET_ADDRESS_SUCCESSFUL, GET_DATA, GET
 
 export const showData = (dispatch) => {
     dispatch({ type: GET_DATA });
+
     axios.get('http://localhost:8080/cart')
+
         .then(res => {
             dispatch({ type: GET_DATA_SUCCESSFUL, payload: res.data });
         })

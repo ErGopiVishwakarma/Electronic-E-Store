@@ -12,14 +12,62 @@ import {
   MenuItemOption,
   MenuList,
   MenuOptionGroup,
+  Radio,
+  RadioGroup,
+  Select,
   Stack,
   useColorModeValue,
 } from '@chakra-ui/react';
 
 import { HiChevronDown } from 'react-icons/hi';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
- export const FilterSort = () => {
+export const FilterSort = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialBrand = searchParams.getAll('brand');
+  const [brand, setBrand] = useState(initialBrand || []);
+  // console.log(useSearchParams.getAll(""));
+  const initialCategory = searchParams.getAll('brand');
+  const [category, setcategory] = useState(initialCategory || []);
+
+  // const initialOrder=searchParams.get("order");
+  // const [order,setOrder]=useState(initialOrder||"");
+
+  useEffect(() => {
+    let params = {
+      brand,
+      category,
+    };
+
+    setSearchParams(params);
+  }, [brand, category]);
+
+  const handleBrand = e => {
+    console.log('brand', e.target.value);
+    const { value } = e.target;
+    let newBrand = [...brand];
+    if (newBrand.includes(value)) {
+      newBrand = newBrand.filter(el => el !== value);
+    } else {
+      newBrand.push(value);
+    }
+    setBrand(newBrand);
+  };
+  const handleCategory = e => {
+    console.log('category', e.target.value);
+    const { value } = e.target;
+    let newCategory = [...category];
+    if (newCategory.includes(value)) {
+      newCategory = newCategory.filter(el => el !== value);
+    } else {
+      newCategory.push(value);
+    }
+    setcategory(newCategory);
+  };
+  const handleSort = e => {
+    console.log(e.target.value);
+  };
   return (
     <Box
       w={'100%'}
@@ -39,7 +87,12 @@ import React from 'react';
         // display={{ base: 'none', md: 'none', lg: 'block' }}
         align={'center'}
       >
-        <Flex gap={'40px'} justifyContent={'space-evenly'}>
+        <Flex
+          gap={'40px'}
+          justifyContent={'space-evenly'}
+          display={'flex'}
+          flexDirection={'row'}
+        >
           <Menu closeOnSelect={false}>
             <MenuButton
               as={Button}
@@ -49,14 +102,28 @@ import React from 'react';
               Mobile Phones
             </MenuButton>
             <MenuList minWidth="240px">
-              <MenuOptionGroup title="Choose Brand" type="checkbox">
-                <MenuItemOption value="APPLE">IPhone</MenuItemOption>
-                <MenuItemOption value="SAMSUNG">Samsung</MenuItemOption>
-                <MenuItemOption value="POCO">Poco</MenuItemOption>
-                <MenuItemOption value="Infinix">Infinix</MenuItemOption>
-              </MenuOptionGroup>
+              <Flex
+                title="Choose Brand"
+                type="checkbox"
+                onChange={handleBrand}
+                flexDirection={'column'}
+              >
+                <MenuItemOption value={'APPLE'}>
+                  <Checkbox value={'APPLE'}>Apple</Checkbox>
+                </MenuItemOption>
+                <MenuItemOption value={'SAMSUNG'}>
+                  <Checkbox value={'SAMSUNG'}>Samsung</Checkbox>
+                </MenuItemOption>
+                <MenuItemOption value={'POCO'}>
+                  <Checkbox value={'POCO'}>Poco</Checkbox>
+                </MenuItemOption>
+                <MenuItemOption value={'Infinix'}>
+                  <Checkbox value={'Infinix'}>Infinix</Checkbox>
+                </MenuItemOption>
+              </Flex>
             </MenuList>
           </Menu>
+
           <Menu closeOnSelect={false}>
             <MenuButton
               as={Button}
@@ -66,13 +133,28 @@ import React from 'react';
               Laptop
             </MenuButton>
             <MenuList minWidth="240px">
-              <MenuOptionGroup title="Choose Brand" type="checkbox">
-                <MenuItemOption value="DELL">Dell</MenuItemOption>
-                <MenuItemOption value="LENOVO">Lenovo</MenuItemOption>
-                <MenuItemOption value="Acer">Acer</MenuItemOption>
-                <MenuItemOption value="HP">HP</MenuItemOption>
-                <MenuItemOption value="REDMI">Redmi</MenuItemOption>
-              </MenuOptionGroup>
+              <Flex
+                title="Choose Brand"
+                type="checkbox"
+                flexDirection={'column'}
+                onChange={handleBrand}
+              >
+                <MenuItemOption value="DELL">
+                  <Checkbox value="DELL">Dell</Checkbox>
+                </MenuItemOption>
+                <MenuItemOption value="LENOVO">
+                  <Checkbox value="LENOVO">Lenovo</Checkbox>
+                </MenuItemOption>
+                <MenuItemOption value="Acer">
+                  <Checkbox value="Acer">Acer</Checkbox>
+                </MenuItemOption>
+                <MenuItemOption value="HP">
+                  <Checkbox value="HP">HP</Checkbox>
+                </MenuItemOption>
+                <MenuItemOption value="REDMI">
+                  <Checkbox value="REDMI">Redmi</Checkbox>
+                </MenuItemOption>
+              </Flex>
             </MenuList>
           </Menu>
           <Menu closeOnSelect={false}>
@@ -84,11 +166,22 @@ import React from 'react';
               Televisions
             </MenuButton>
             <MenuList minWidth="240px">
-              <MenuOptionGroup title="Choose Brand" type="checkbox">
-                <MenuItemOption value="ONEPLUS">One plus</MenuItemOption>
-                <MenuItemOption value="Realme Tvs">Realme Tvs</MenuItemOption>
-                <MenuItemOption value="MI REDMI">MI Redmi</MenuItemOption>
-              </MenuOptionGroup>
+              <Flex
+                title="Choose Brand"
+                type="checkbox"
+                flexDirection={'column'}
+                onChange={handleBrand}
+              >
+                <MenuItemOption value="ONEPLUS">
+                  <Checkbox value="ONEPLUS">One plus</Checkbox>
+                </MenuItemOption>
+                <MenuItemOption value="Realme Tvs">
+                  <Checkbox value="Realme Tvs">Realme Tvs</Checkbox>
+                </MenuItemOption>
+                <MenuItemOption value="MI REDMI">
+                  <Checkbox value="MI REDMI">MI Redmi</Checkbox>
+                </MenuItemOption>
+              </Flex>
             </MenuList>
           </Menu>
           <Menu closeOnSelect={false}>
@@ -100,18 +193,31 @@ import React from 'react';
               Earphones & Speakers
             </MenuButton>
             <MenuList minWidth="240px">
-              <MenuOptionGroup title="Choose Type" type="checkbox">
+              <Flex
+                title="Choose Type"
+                type="checkbox"
+                flexDirection={'column'}
+                onChange={handleCategory}
+              >
                 <MenuItemOption value="wireless_earbuds">
-                  Wireless Earbuds
+                  <Checkbox value="wireless_earbuds">Wireless Earbuds</Checkbox>
                 </MenuItemOption>
                 <MenuItemOption value="wireless_earphones">
-                  Wireless Earphones
+                  <Checkbox value="wireless_earphones">
+                    {' '}
+                    Wireless Earphones
+                  </Checkbox>
                 </MenuItemOption>
-                <MenuItemOption value="earphones">Earphones</MenuItemOption>
+                <MenuItemOption value="earphones">
+                  <Checkbox value="earphones">Earphones</Checkbox>
+                </MenuItemOption>
                 <MenuItemOption value="wireless_speakers">
-                  Wireless Speakers
+                  <Checkbox value="wireless_speakers">
+                    {' '}
+                    Wireless Speakers
+                  </Checkbox>
                 </MenuItemOption>
-              </MenuOptionGroup>
+              </Flex>
             </MenuList>
           </Menu>
           <Menu closeOnSelect={false}>
@@ -123,12 +229,19 @@ import React from 'react';
               Other Accessories
             </MenuButton>
             <MenuList minWidth="240px">
-              <MenuOptionGroup title="Choose Type" type="checkbox">
+              <Flex
+                title="Choose Type"
+                type="checkbox"
+                flexDirection={'column'}
+                onChange={handleCategory}
+              >
                 <MenuItemOption value="smart_watches">
-                  Smart Watch
+                  <Checkbox value="smart_watches"> Smart Watch</Checkbox>
                 </MenuItemOption>
-                <MenuItemOption value="power_bank">Power Bank</MenuItemOption>
-              </MenuOptionGroup>
+                <MenuItemOption value="power_bank">
+                  <Checkbox value="power_bank">Power Bank</Checkbox>
+                </MenuItemOption>
+              </Flex>
             </MenuList>
           </Menu>
         </Flex>
@@ -142,25 +255,72 @@ import React from 'react';
               Sort by
             </MenuButton>
             <MenuList minWidth="240px">
-              <MenuOptionGroup defaultValue="asc" title="Price" type="radio">
+              <Flex
+                defaultValue="asc"
+                title="Price"
+                type="radio"
+                flexDirection={'column'}
+                onChange={handleSort}
+              >
+                <Radio
+                  value="asc"
+                  name="sort"
+                  type="radio"
+                  placeholder="ascending"
+                />
+                <label>ascending</label>
+                <Radio
+                  value="desc"
+                  name="sort"
+                  type="radio"
+                  placeholder="descending"
+                />
+                <label>descending</label>
+              </Flex>
+            </MenuList>
+          </Menu>
+          {/* <Menu closeOnSelect={false}>
+            <MenuButton
+              as={Button}
+              colorScheme="gray"
+              rightIcon={<HiChevronDown />}
+            >
+              Sort by
+            </MenuButton>
+            <MenuList minWidth="240px">
+              <MenuOptionGroup
+                defaultValue="asc"
+                title="Price"
+                type="radio"
+                onChange={handleSort}
+              >
                 <MenuItemOption value="asc">Ascending</MenuItemOption>
                 <MenuItemOption value="desc">Descending</MenuItemOption>
               </MenuOptionGroup>
               <MenuDivider />
-              <MenuOptionGroup defaultValue="asc" title="Discount" type="radio">
+              <MenuOptionGroup
+                defaultValue="asc"
+                title="Discount"
+                type="radio"
+                onChange={handleSort}
+              >
                 <MenuItemOption value="asc">Low to High</MenuItemOption>
                 <MenuItemOption value="desc">High to Low</MenuItemOption>
               </MenuOptionGroup>
               <MenuDivider />
-              <MenuOptionGroup defaultValue="asc" title="Rating" type="radio">
+              <MenuOptionGroup
+                defaultValue="asc"
+                title="Rating"
+                type="radio"
+                onChange={handleSort}
+              >
                 <MenuItemOption value="asc">Low to High</MenuItemOption>
                 <MenuItemOption value="desc">High to Low</MenuItemOption>
               </MenuOptionGroup>
             </MenuList>
-          </Menu>
+          </Menu> */}
         </Stack>
       </Flex>
     </Box>
   );
 };
-

@@ -41,17 +41,23 @@ import logo1 from '../../Assets/techCubeLogo.png';
 import { NAV_ITEMS } from './navComponent/NavItem';
 import logo from '../../Assets/techcube.png';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import UserProfile from './UserProfile';
 import { useDispatch } from 'react-redux';
+import { GET_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST } from '../../redux/Product/actionType';
+import axios from 'axios';
+import { SearchContext } from '../../context/SearchContextProvider';
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
   const text = useColorModeValue('dark', 'light')
   const textColor = text === 'dark' ? 'gray.100' : 'blackAlpha.900'
+
   const [open, setOpen] = useState(false);
   const auth = JSON.parse(localStorage.getItem('auth')) || '';
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const {status, setStatus} = useContext(SearchContext);
 
   const openFun = () => {
     setOpen(true)
@@ -59,15 +65,30 @@ export default function Navbar() {
   const closeFun = () => {
     setOpen(false)
   }
-  // const [isTrue,setIsTrue] = useState(false)
-  // window.addEventListener('wheel',(e)=>{
-  //     if(e.deltaY<0){
-  //       setIsTrue(false)
-  //     } else {
-  //       setIsTrue(true)
-  //     }
 
-  //   })
+  const handleSearch = val => {
+    if (val) {
+      setStatus(true);
+    }
+    dispatch({type : PRODUCT_REQUEST})
+    axios
+      .get(`http://localhost:8080/products?q=${val}`)
+      .then(res => {
+        console.log(res);
+        dispatch({type : GET_PRODUCT_SUCCESS, payload : res.data});
+      })
+      .catch(err => {
+        dispatch({type : PRODUCT_FAILURE});
+      });
+  };
+
+  const handleDebounce = val => {
+    if (id) clearTimeout(id);
+    var id = setTimeout(() => {
+      handleSearch(val);
+      // console.log(val)
+    }, 1500);
+  };
 
   const handleLogout = () => {
     localStorage.setItem('auth', JSON.stringify(false));
@@ -145,7 +166,7 @@ export default function Navbar() {
           borderRadius={'30px'}
           display={{ base: 'none', md: 'none', lg: 'block' }}
         >
-          <Input pr="4.5rem" placeholder="search" />
+          <Input pr="4.5rem" placeholder="search" onChange={(e) => handleDebounce(e.target.value)} />
           <InputRightElement width="4.5rem">
             <SearchIcon />
           </InputRightElement>
@@ -168,8 +189,10 @@ export default function Navbar() {
               <MenuItem>
                 <UserProfile>User Profile</UserProfile>
               </MenuItem>
+
               <MenuItem onClick={handleLogout}>LogOut</MenuItem>
               <NavLink to='/admin'> <MenuItem>Admin</MenuItem></NavLink>
+
             </MenuList>
           </Menu>
           <NavLink to="/cart">
