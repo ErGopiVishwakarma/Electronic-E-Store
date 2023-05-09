@@ -3,24 +3,13 @@ import {
   Button,
   Checkbox,
   Flex,
-  HStack,
-  Input,
   Menu,
   MenuButton,
-  MenuDivider,
-  MenuItem,
   MenuItemOption,
   MenuList,
-  MenuOptionGroup,
-  Radio,
-  RadioGroup,
   Select,
   Stack,
   useColorModeValue,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
 } from '@chakra-ui/react';
 
 import { HiChevronDown } from 'react-icons/hi';
@@ -35,17 +24,17 @@ export const FilterSort = () => {
   const initialCategory = searchParams.getAll('brand');
   const [category, setcategory] = useState(initialCategory || []);
 
-  // const initialOrder=searchParams.get("order");
-  // const [order,setOrder]=useState(initialOrder||"");
+  const initialOrder = searchParams.get('order');
+  const [order, setOrder] = useState(initialOrder || '');
 
   useEffect(() => {
     let params = {
       brand,
       category,
     };
-
+    order && (params.order = order);
     setSearchParams(params);
-  }, [brand, category]);
+  }, [brand, category, order]);
 
   const handleBrand = e => {
     console.log('brand', e.target.value);
@@ -71,6 +60,7 @@ export const FilterSort = () => {
   };
   const handleSort = e => {
     console.log(e.target.value);
+    setOrder(e.target.value);
   };
   return (
     <Box
@@ -259,9 +249,13 @@ export const FilterSort = () => {
             <Select onChange={handleSort} bg={'#edf2f7'}>
               <option value={''}>Sort By Price</option>
 
-              <option value={'asc'}>Ascending</option>
+              <option value={'asc'} name="order">
+                Ascending
+              </option>
 
-              <option value={'desc'}>Descending</option>
+              <option value={'desc'} name="order">
+                Descending
+              </option>
             </Select>
             <Select onChange={handleSort}>
               <option value={''} onf>

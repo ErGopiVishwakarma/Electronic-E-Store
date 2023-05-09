@@ -3951,6 +3951,33 @@
       "brand": "Infinix",
       "quantity": 1,
       "review": 57
+    },
+    {
+      "color": [
+        "black",
+        "green",
+        "blue",
+        "pink"
+      ],
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image_600x.png?v=1655534170",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_Batman02_600x.png?v=1656101102",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_Batman03_600x.png?v=1656101278",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_Batman04_600x.png?v=1656101278",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image-2_600x.png?v=1655534170"
+      ],
+      "tag_badge": "DC Edition",
+      "title": "Stone 190 DC Edition",
+      "price": 1299,
+      "discount": 57,
+      "mrp": 2999,
+      "rating": 5,
+      "category": "wireless_speakers",
+      "id": 69,
+      "description": " Stone 190 DC Edition ",
+      "brand": "BOAT",
+      "quantity": 1,
+      "review": 2391
     }
   ],
   "user": [
