@@ -160,11 +160,7 @@ export default function Navbar() {
               <MenuItem>
                 <UserProfile>User Profile</UserProfile>
               </MenuItem>
-
               <MenuItem onClick={handleLogout}>LogOut</MenuItem>
-              <NavLink to='/admin'> <MenuItem>Admin</MenuItem></NavLink>
-
-              <MenuItem>LogOut</MenuItem>
               <NavLink to='/adminlogin'> <MenuItem>Admin</MenuItem></NavLink>
 
             </MenuList>
@@ -172,7 +168,7 @@ export default function Navbar() {
           <NavLink to="/cart">
             <FaShoppingBag size={'20px'} />
           </NavLink>
-          <ColorModeSwitcher />
+          <ColorModeSwitcher /> 
         </Flex>
       </Flex>
 
@@ -198,9 +194,9 @@ export default function Navbar() {
             <Box onClick={openFun}>
               <FaSearch />
             </Box>
-            <NavLink to="/account">
-              <FaUser />
-            </NavLink>
+            <NavLink to='/adminlogin'> <MenuItem><FaUser /></MenuItem></NavLink>
+              
+      
             <NavLink to="/cart">
               <FaShoppingBag />
             </NavLink>

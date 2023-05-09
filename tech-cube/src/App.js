@@ -4,6 +4,8 @@ import MainRoutes from './route/MainRoutes';
 import Navbar from './component/HomeComponent/Navbar';
 import Footer from './component/HomeComponent/Footer';
 import './App.css';
+import PaymentGateway from './component/Payment/PaymentGateway';
+
 
 
 function App() {
@@ -12,8 +14,9 @@ function App() {
 
     <Box>
       <Navbar />
+      {/* <PaymentGateway /> */}
       <MainRoutes />
-      {/* <Footer /> */}
+      <Footer />
     </Box>
   );
 }

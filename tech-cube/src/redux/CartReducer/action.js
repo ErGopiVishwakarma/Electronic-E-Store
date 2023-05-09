@@ -31,7 +31,7 @@ export const getCartServerdata = () => (dispatch) => {
         .catch((err) => dispatch({ type: GET_CART_SERVER_FAILD }))
 }
 
-}
+
 
 
 export const postSingleProductItem=(obj)=>(dispatch)=>{
