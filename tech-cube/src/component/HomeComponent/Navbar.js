@@ -24,6 +24,7 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  Avatar,
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -43,7 +44,7 @@ import logo from '../../Assets/techcube.png';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 import { useContext, useState } from 'react';
 import UserProfile from './UserProfile';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { GET_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST } from '../../redux/Product/actionType';
 import axios from 'axios';
 import { SearchContext } from '../../context/SearchContextProvider';
@@ -58,6 +59,8 @@ export default function Navbar() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const {status, setStatus} = useContext(SearchContext);
+  const user = JSON.parse(localStorage.getItem('user')) || {};
+  const cartData = useSelector(store => store.cartReducer.cart);
 
   const openFun = () => {
     setOpen(true)
@@ -182,15 +185,17 @@ export default function Navbar() {
   
           <Menu>
             <MenuButton>
-            <FaUser size={'20px'} />
+            {/* {auth ? user.firstName : <FaUser size={'20px'} />} */}
+            {auth?<Flex direction={'column'}><Avatar w={'35px'} h={'35px'} src={user.image} name={`${user.firstName} ${user.lastName}`} /></Flex> : <FaUser size={'20px'} />}
             </MenuButton>
             <MenuList>
-              <NavLink to='/signup'><MenuItem>login / signup</MenuItem></NavLink>
+              {auth ? <MenuItem>Hello {user.firstName} {user.lastName }</MenuItem> :
+              <NavLink to='/signup'><MenuItem>{'login / signup'}</MenuItem></NavLink>
+              }
               <MenuItem>
-                <UserProfile>User Profile</UserProfile>
+                <UserProfile data={user}>User Profile</UserProfile>
               </MenuItem>
-
-              <MenuItem onClick={handleLogout}>LogOut</MenuItem>
+              <MenuItem isDisabled={!auth} onClick={handleLogout}>LogOut</MenuItem>
               <NavLink to='/admin'> <MenuItem>Admin</MenuItem></NavLink>
 
             </MenuList>
@@ -305,7 +310,7 @@ const DesktopSubNav = ({ image, href, subLabel }) => {
   const textColor = text === 'dark' ? 'gray.100' : 'blackAlpha.900'
   return (
     <NavLink
-      to="/product"
+      to="/products"
       role={'group'}
       display={'block'}
       rounded={'md'}

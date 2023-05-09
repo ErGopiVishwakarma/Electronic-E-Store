@@ -63,6 +63,7 @@ const Login = () => {
           })
           localStorage.setItem('userId',JSON.stringify(newData.id))
           localStorage.setItem('auth',JSON.stringify(true));
+          localStorage.setItem('user', JSON.stringify(newData));
           setTimeout(()=>{
             navigate('/');
           },3000)
