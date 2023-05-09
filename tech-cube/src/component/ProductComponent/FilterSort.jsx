@@ -15,6 +15,7 @@ import {
 import { HiChevronDown } from 'react-icons/hi';
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { getProducts } from '../../redux/Product/action';
 
 export const FilterSort = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -26,7 +27,7 @@ export const FilterSort = () => {
 
   const initialOrder = searchParams.get('order');
   const [order, setOrder] = useState(initialOrder || '');
-
+  const text = useColorModeValue('dark', 'light');
   useEffect(() => {
     let params = {
       brand,
@@ -34,6 +35,7 @@ export const FilterSort = () => {
     };
     order && (params.order = order);
     setSearchParams(params);
+    console.log(order, 'order');
   }, [brand, category, order]);
 
   const handleBrand = e => {
@@ -69,9 +71,19 @@ export const FilterSort = () => {
       bg={'white'}
       // w={'70%'}
     >
-      <Flex
+      <Box
+        display={'grid'}
+        gridTemplateColumns={{
+          base: 'repeat(1,1fr)',
+          sm: 'repeat(1,1fr)',
+          md: 'repeat(2,1fr)',
+          lg: 'repeat(2,1fr)',
+          xl: 'repeat(6,1fr)',
+          '2xl': 'repeat(6,1fr)',
+        }}
+        gap={['10px', '20px']}
         w={'100%'}
-        pos={'relative'}
+        // pos={'relative'}
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
         // minH={'70px'}
@@ -81,164 +93,171 @@ export const FilterSort = () => {
         // display={{ base: 'none', md: 'none', lg: 'block' }}
         align={'center'}
       >
-        <Flex
+        {/* <Flex
           gap={'40px'}
           justifyContent={'space-evenly'}
           display={'flex'}
-          flexDirection={'row'}
-        >
-          <Menu closeOnSelect={false}>
-            <MenuButton
-              as={Button}
-              colorScheme="gray"
-              rightIcon={<HiChevronDown />}
+          flexDirection={{
+            base: 'column',
+            sm: 'column',
+            md: 'column',
+            lg: 'row',
+            xl: 'row',
+            '2xl': 'row',
+          }}
+        > */}
+        <Menu closeOnSelect={false}>
+          <MenuButton
+            as={Button}
+            colorScheme="gray"
+            rightIcon={<HiChevronDown />}
+          >
+            Mobile Phones
+          </MenuButton>
+          <MenuList w="100px">
+            <Flex
+              title="Choose Brand"
+              type="checkbox"
+              onChange={handleBrand}
+              flexDirection={'column'}
             >
-              Mobile Phones
-            </MenuButton>
-            <MenuList minWidth="240px">
-              <Flex
-                title="Choose Brand"
-                type="checkbox"
-                onChange={handleBrand}
-                flexDirection={'column'}
-              >
-                <MenuItemOption value={'APPLE'}>
-                  <Checkbox value={'APPLE'}>Apple</Checkbox>
-                </MenuItemOption>
-                <MenuItemOption value={'SAMSUNG'}>
-                  <Checkbox value={'SAMSUNG'}>Samsung</Checkbox>
-                </MenuItemOption>
-                <MenuItemOption value={'POCO'}>
-                  <Checkbox value={'POCO'}>Poco</Checkbox>
-                </MenuItemOption>
-                <MenuItemOption value={'Infinix'}>
-                  <Checkbox value={'Infinix'}>Infinix</Checkbox>
-                </MenuItemOption>
-              </Flex>
-            </MenuList>
-          </Menu>
+              <MenuItemOption value={'APPLE'}>
+                <Checkbox value={'APPLE'}>Apple</Checkbox>
+              </MenuItemOption>
+              <MenuItemOption value={'SAMSUNG'}>
+                <Checkbox value={'SAMSUNG'}>Samsung</Checkbox>
+              </MenuItemOption>
+              <MenuItemOption value={'POCO'}>
+                <Checkbox value={'POCO'}>Poco</Checkbox>
+              </MenuItemOption>
+              <MenuItemOption value={'Infinix'}>
+                <Checkbox value={'Infinix'}>Infinix</Checkbox>
+              </MenuItemOption>
+            </Flex>
+          </MenuList>
+        </Menu>
 
-          <Menu closeOnSelect={false}>
-            <MenuButton
-              as={Button}
-              colorScheme="gray"
-              rightIcon={<HiChevronDown />}
+        <Menu closeOnSelect={false}>
+          <MenuButton
+            as={Button}
+            colorScheme="gray"
+            rightIcon={<HiChevronDown />}
+          >
+            Laptop
+          </MenuButton>
+          <MenuList minWidth="240px">
+            <Flex
+              title="Choose Brand"
+              type="checkbox"
+              flexDirection={'column'}
+              onChange={handleBrand}
             >
-              Laptop
-            </MenuButton>
-            <MenuList minWidth="240px">
-              <Flex
-                title="Choose Brand"
-                type="checkbox"
-                flexDirection={'column'}
-                onChange={handleBrand}
-              >
-                <MenuItemOption value="DELL">
-                  <Checkbox value="DELL">Dell</Checkbox>
-                </MenuItemOption>
-                <MenuItemOption value="LENOVO">
-                  <Checkbox value="LENOVO">Lenovo</Checkbox>
-                </MenuItemOption>
-                <MenuItemOption value="Acer">
-                  <Checkbox value="Acer">Acer</Checkbox>
-                </MenuItemOption>
-                <MenuItemOption value="HP">
-                  <Checkbox value="HP">HP</Checkbox>
-                </MenuItemOption>
-                <MenuItemOption value="REDMI">
-                  <Checkbox value="REDMI">Redmi</Checkbox>
-                </MenuItemOption>
-              </Flex>
-            </MenuList>
-          </Menu>
-          <Menu closeOnSelect={false}>
-            <MenuButton
-              as={Button}
-              colorScheme="gray"
-              rightIcon={<HiChevronDown />}
+              <MenuItemOption value="DELL">
+                <Checkbox value="DELL">Dell</Checkbox>
+              </MenuItemOption>
+              <MenuItemOption value="LENOVO">
+                <Checkbox value="LENOVO">Lenovo</Checkbox>
+              </MenuItemOption>
+              <MenuItemOption value="Acer">
+                <Checkbox value="Acer">Acer</Checkbox>
+              </MenuItemOption>
+              <MenuItemOption value="HP">
+                <Checkbox value="HP">HP</Checkbox>
+              </MenuItemOption>
+              <MenuItemOption value="REDMI">
+                <Checkbox value="REDMI">Redmi</Checkbox>
+              </MenuItemOption>
+            </Flex>
+          </MenuList>
+        </Menu>
+        <Menu closeOnSelect={false}>
+          <MenuButton
+            as={Button}
+            colorScheme="gray"
+            rightIcon={<HiChevronDown />}
+          >
+            Televisions
+          </MenuButton>
+          <MenuList minWidth="240px">
+            <Flex
+              title="Choose Brand"
+              type="checkbox"
+              flexDirection={'column'}
+              onChange={handleBrand}
             >
-              Televisions
-            </MenuButton>
-            <MenuList minWidth="240px">
-              <Flex
-                title="Choose Brand"
-                type="checkbox"
-                flexDirection={'column'}
-                onChange={handleBrand}
-              >
-                <MenuItemOption value="ONEPLUS">
-                  <Checkbox value="ONEPLUS">One plus</Checkbox>
-                </MenuItemOption>
-                <MenuItemOption value="Realme Tvs">
-                  <Checkbox value="Realme Tvs">Realme Tvs</Checkbox>
-                </MenuItemOption>
-                <MenuItemOption value="MI REDMI">
-                  <Checkbox value="MI REDMI">MI Redmi</Checkbox>
-                </MenuItemOption>
-              </Flex>
-            </MenuList>
-          </Menu>
-          <Menu closeOnSelect={false}>
-            <MenuButton
-              as={Button}
-              colorScheme="gray"
-              rightIcon={<HiChevronDown />}
+              <MenuItemOption value="ONEPLUS">
+                <Checkbox value="ONEPLUS">One plus</Checkbox>
+              </MenuItemOption>
+              <MenuItemOption value="Realme Tvs">
+                <Checkbox value="Realme Tvs">Realme Tvs</Checkbox>
+              </MenuItemOption>
+              <MenuItemOption value="MI REDMI">
+                <Checkbox value="MI REDMI">MI Redmi</Checkbox>
+              </MenuItemOption>
+            </Flex>
+          </MenuList>
+        </Menu>
+        <Menu closeOnSelect={false}>
+          <MenuButton
+            as={Button}
+            colorScheme="gray"
+            rightIcon={<HiChevronDown />}
+          >
+            Earphones & Speakers
+          </MenuButton>
+          <MenuList minWidth="240px">
+            <Flex
+              title="Choose Type"
+              type="checkbox"
+              flexDirection={'column'}
+              onChange={handleCategory}
             >
-              Earphones & Speakers
-            </MenuButton>
-            <MenuList minWidth="240px">
-              <Flex
-                title="Choose Type"
-                type="checkbox"
-                flexDirection={'column'}
-                onChange={handleCategory}
-              >
-                <MenuItemOption value="wireless_earbuds">
-                  <Checkbox value="wireless_earbuds">Wireless Earbuds</Checkbox>
-                </MenuItemOption>
-                <MenuItemOption value="wireless_earphones">
-                  <Checkbox value="wireless_earphones">
-                    {' '}
-                    Wireless Earphones
-                  </Checkbox>
-                </MenuItemOption>
-                <MenuItemOption value="earphones">
-                  <Checkbox value="earphones">Earphones</Checkbox>
-                </MenuItemOption>
-                <MenuItemOption value="wireless_speakers">
-                  <Checkbox value="wireless_speakers">
-                    {' '}
-                    Wireless Speakers
-                  </Checkbox>
-                </MenuItemOption>
-              </Flex>
-            </MenuList>
-          </Menu>
-          <Menu closeOnSelect={false}>
-            <MenuButton
-              as={Button}
-              colorScheme="gray"
-              rightIcon={<HiChevronDown />}
+              <MenuItemOption value="wireless_earbuds">
+                <Checkbox value="wireless_earbuds">Wireless Earbuds</Checkbox>
+              </MenuItemOption>
+              <MenuItemOption value="wireless_earphones">
+                <Checkbox value="wireless_earphones">
+                  {' '}
+                  Wireless Earphones
+                </Checkbox>
+              </MenuItemOption>
+              <MenuItemOption value="earphones">
+                <Checkbox value="earphones">Earphones</Checkbox>
+              </MenuItemOption>
+              <MenuItemOption value="wireless_speakers">
+                <Checkbox value="wireless_speakers">
+                  {' '}
+                  Wireless Speakers
+                </Checkbox>
+              </MenuItemOption>
+            </Flex>
+          </MenuList>
+        </Menu>
+        <Menu closeOnSelect={false}>
+          <MenuButton
+            as={Button}
+            colorScheme="gray"
+            rightIcon={<HiChevronDown />}
+          >
+            Other Accessories
+          </MenuButton>
+          <MenuList minWidth="240px">
+            <Flex
+              title="Choose Type"
+              type="checkbox"
+              flexDirection={'column'}
+              onChange={handleCategory}
             >
-              Other Accessories
-            </MenuButton>
-            <MenuList minWidth="240px">
-              <Flex
-                title="Choose Type"
-                type="checkbox"
-                flexDirection={'column'}
-                onChange={handleCategory}
-              >
-                <MenuItemOption value="smart_watches">
-                  <Checkbox value="smart_watches"> Smart Watch</Checkbox>
-                </MenuItemOption>
-                <MenuItemOption value="power_bank">
-                  <Checkbox value="power_bank">Power Bank</Checkbox>
-                </MenuItemOption>
-              </Flex>
-            </MenuList>
-          </Menu>
-        </Flex>
+              <MenuItemOption value="smart_watches">
+                <Checkbox value="smart_watches"> Smart Watch</Checkbox>
+              </MenuItemOption>
+              <MenuItemOption value="power_bank">
+                <Checkbox value="power_bank">Power Bank</Checkbox>
+              </MenuItemOption>
+            </Flex>
+          </MenuList>
+        </Menu>
+        {/* </Flex> */}
         <Stack>
           <Flex
             defaultValue="asc"
@@ -246,7 +265,12 @@ export const FilterSort = () => {
             type="radio"
             flexDirection={'column'}
           >
-            <Select onChange={handleSort} bg={'#edf2f7'}>
+            <Select
+              textAlign={'center'}
+              fontWeight={'800'}
+              onChange={handleSort}
+              bg={text === 'light' ? '#2c313d' : '#edf2f7'}
+            >
               <option value={''}>Sort By Price</option>
 
               <option value={'asc'} name="order">
@@ -256,15 +280,6 @@ export const FilterSort = () => {
               <option value={'desc'} name="order">
                 Descending
               </option>
-            </Select>
-            <Select onChange={handleSort}>
-              <option value={''} onf>
-                Sort By Discount
-              </option>
-
-              <option value={'asc'}>Ascending</option>
-
-              <option value={'desc'}>Descending</option>
             </Select>
           </Flex>
 
@@ -309,7 +324,7 @@ export const FilterSort = () => {
             </MenuList>
           </Menu> */}
         </Stack>
-      </Flex>
+      </Box>
     </Box>
   );
 };
