@@ -3,7 +3,7 @@ import React from 'react';
 
 const Loader = () => {
     return (
-        <Grid placeItems={'center'} h={'100vh'} pt={'80px'}>
+        <Flex justifyContent={'center'} alignItems={'center'} h={'30vh'} pt={'80px'}>
             <Spinner
                 thickness='4px'
                 speed='0.65s'
@@ -11,7 +11,7 @@ const Loader = () => {
                 color='blue.500'
                 size='xl'
             />
-        </Grid>
+        </Flex>
     )
 }
 
