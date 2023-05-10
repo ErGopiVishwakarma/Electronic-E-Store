@@ -24,6 +24,7 @@ const CartPage = () => {
   const { status } = useContext(SearchContext);
   const [promo, setPromo] = useState('');
   const [appliedPromo, setAppliedPromo] = useState(false);
+  const [promoStatus, setPromoStatus] = useState(false);
   // let [totalPrice, setTotalPrice] = useState(0);
   const promoCodeData = JSON.parse(localStorage.getItem('promo')) || '';
 
@@ -48,6 +49,7 @@ const CartPage = () => {
       setAppliedPromo(true);
       localStorage.setItem('promo', JSON.stringify(promoCode));
       totalPrice -= totalPrice*0.1;
+      setPromoStatus(true);
     }
   }
   const cartData = useSelector(store => store.cartReducer.cart);
@@ -55,6 +57,7 @@ const CartPage = () => {
   const handlePromoToggle = () => {
     localStorage.setItem('promo', JSON.stringify(''));
     setAppliedPromo(false);
+    setPromoStatus(false);
   }
 
 
@@ -106,12 +109,12 @@ const CartPage = () => {
 
           <Box display={"flex"} justifyContent={"space-between"} margin={"20px"}>
             <Text color={"gray.600"}>Discount</Text>
-            <Text color={"gray.600"}>-₹ {totalPrice > 0 && promoCodeData ? totalPrice*0.1 : 0}</Text>
+            <Text color={"gray.600"}>-₹ {totalPrice > 0 && promoCodeData ? (totalPrice*0.1).toFixed(2) : 0}</Text>
           </Box>
 
           <Box display={"flex"} justifyContent={"space-between"} margin={"20px"}>
             <Text color={"gray.600"}>Estimate Total</Text>
-            <Text color={"gray.600"}>₹ {promo ? (totalPrice + totalPrice*0.18).toFixed(2) : (totalPrice + totalPrice*0.18 - totalPrice*0.1).toFixed(2)}</Text>
+            <Text color={"gray.600"}>₹ {!promoStatus ? (totalPrice + totalPrice*0.18).toFixed(2) : (totalPrice + totalPrice*0.18 - totalPrice*0.1).toFixed(2)}</Text>
           </Box>
 
           <Link to="/checkout"><Button _hover={'gray.500'} display={'block'} margin={"auto"} width={"100%"} bgColor={"blackAlpha.900"} color={"white"}>Checkout</Button>
@@ -137,7 +140,7 @@ export const CartList = () => {
 
   return (
 
-    <Box maxH={'400px'} overflowY={'scroll'} className="cart-list-container"  >
+    <Box mr={'50px'} maxH={'400px'} overflowY={'scroll'} className="cart-list-container"  >
 
       {cart.length > 0 && cart.map((el) => {
         return <CartItem key={el.id} {...el} />
