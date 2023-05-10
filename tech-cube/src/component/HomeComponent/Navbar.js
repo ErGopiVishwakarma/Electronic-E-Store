@@ -201,15 +201,13 @@ export default function Navbar() {
 
 
           <Menu>
-            <MenuButton>
-              {/* {auth ? user.firstName : <FaUser size={'20px'} />} */}
-              {auth ? <Flex direction={'column'}><Avatar w={'35px'} h={'35px'} src={user.image} name={`${user.firstName} ${user.lastName}`} /></Flex> : <FaUser size={'20px'} />}
-            </MenuButton>
+            
             <MenuList>
               {auth ? <MenuItem>Hello {user.firstName} {user.lastName}</MenuItem> :
                 <NavLink to='/signup'><MenuItem>{'login / signup'}</MenuItem></NavLink>
               }
-
+            </MenuList>
+          </Menu>
           <Menu>
             <MenuButton>
               {/* {auth ? user.firstName : <FaUser size={'20px'} />} */}
