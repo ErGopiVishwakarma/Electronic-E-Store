@@ -210,6 +210,8 @@ export default function Navbar() {
           </Menu>
           <Menu>
             <MenuButton>
+
+            {auth?<Avatar w={'35px'} h={'35px'} src={user.pic} name={`${user.firstName} ${user.lastName}`} /> : <FaUser size={'20px'} />}
               {/* {auth ? user.firstName : <FaUser size={'20px'} />} */}
               {auth ? (
                 <Flex direction={'column'}>
@@ -238,13 +240,9 @@ export default function Navbar() {
               <MenuItem>
                 <UserProfile data={user}>User Profile</UserProfile>
               </MenuItem>
-              <MenuItem isDisabled={!auth} onClick={handleLogout}>
-                LogOut
-              </MenuItem>
-              <NavLink to="/admin">
-                {' '}
-                <MenuItem>Admin</MenuItem>
-              </NavLink>
+              <MenuItem isDisabled={!auth} onClick={handleLogout}>LogOut</MenuItem>
+              <NavLink to='/adminlogin'> <MenuItem>Admin</MenuItem></NavLink>
+
             </MenuList>
           </Menu>
           <Box position={'relative'}>
@@ -292,11 +290,8 @@ export default function Navbar() {
             <Box onClick={openFun}>
               <FaSearch />
             </Box>
-            <NavLink to="/adminlogin">
-              {' '}
-              <FaUser />
-            </NavLink>
-
+            <NavLink to='/adminlogin'> <FaUser /></NavLink>
+              
             <NavLink to="/cart">
               <FaShoppingBag />
             </NavLink>
@@ -479,17 +474,17 @@ const MobileNavItem = ({ label, children, href }) => {
         <VStack textAlign={'center'} spacing={'10px'} mt={2} pl={4}>
           {children &&
             children.map(child => (
-              <NavLink to="/product" style={{ textAlign: 'center' }}>
-                <Flex justifyContent={'center'}>
+              <NavLink to="/products" style={{ textAlign: 'center' }}>
+                <Flex justifyContent={'space-between'} alignItems={'center'}>
                   <Flex
                     gap="10px"
                     alignItems={'center'}
                     w={{ base: '250px', md: '320px' }}
-                    bg="pink"
                   >
                     <Image src={child.image} w="60px" />
                     <Text fontSize={'sm'}>{child.subLabel}</Text>
                   </Flex>
+                  <ChevronRightIcon />
                 </Flex>
               </NavLink>
             ))}

@@ -91,64 +91,6 @@ const Login = () => {
       return;
     }
 
-    // if (!email || !password) {
-    //   toast({
-    //     title: 'Login Failed.',
-    //     description: "All fields are required.",
-    //     status: 'warning',
-    //     duration: 4000,
-    //     position: 'top',
-    //     isClosable: true,
-    //   })
-    //   return;
-    // }
-
-    // dispatch(loginData);
-
-    // const userData = data.find(el => el.email === email);
-    // if (userData) {
-    //   if (userData.password !== password) {
-    //     toast({
-    //       title: 'Login Failed.',
-    //       description: "Please enter correct password.",
-    //       status: 'error',
-    //       duration: 4000,
-    //       position: 'top',
-    //       isClosable: true,
-    //     })
-    //     return;
-    //   }
-    //   else {
-    //     localStorage.setItem('userId', JSON.stringify(userData.id));
-    //     localStorage.setItem('auth', JSON.stringify(auth));
-    //     toast({
-    //       title: 'Login Successful.',
-    //       description: "Welcome Back.",
-    //       status: 'success',
-    //       duration: 4000,
-    //       position: 'top',
-    //       isClosable: true,
-    //     })
-
-    //     setTimeout(() => {
-    //       navigate('/');
-    //     }, 4000)
-    //     return;
-    //   }
-
-    // }
-    // else {
-    //   toast({
-    //     title: 'Wrong Credentials.',
-    //     description: "Please make sure you are registered.",
-    //     status: 'error',
-    //     duration: 4000,
-    //     position: 'top',
-    //     isClosable: true,
-    //   })
-    //   return;
-    // }
-
   }
 
 

@@ -47,7 +47,7 @@ import UserProfile from '../component/Admin/UserModal';
 ];
 export default function AdminPage() {
   const { isOpen, onOpen, onClose } = useDisclosure();
- 
+  
 
   return (
 
@@ -84,6 +84,9 @@ export default function AdminPage() {
 
 const MobileNav = ({ onOpen, ...rest }) => {
   let adminProfile = JSON.parse(localStorage.getItem('adminProfile')) || {}
+  const adminAuth = () => {
+    localStorage.setItem('adminAuth',JSON.stringify(false))
+  }
   return (
     <Flex 
     ml={{ base: 0, md: 0,lg:60 }}
@@ -148,11 +151,11 @@ const MobileNav = ({ onOpen, ...rest }) => {
             </MenuButton>
             <MenuList>
               <MenuItem>
-                <UserProfile>
+                <UserProfile data={adminProfile}>
                   Profile
                 </UserProfile>
               </MenuItem>
-              <MenuItem>Sign out</MenuItem>
+              <MenuItem onClick={adminAuth}>Sign out</MenuItem>
             </MenuList>
           </Menu>
         </Flex>
