@@ -185,8 +185,7 @@ export default function Navbar() {
   
           <Menu>
             <MenuButton>
-            {/* {auth ? user.firstName : <FaUser size={'20px'} />} */}
-            {auth?<Flex direction={'column'}><Avatar w={'35px'} h={'35px'} src={user.image} name={`${user.firstName} ${user.lastName}`} /></Flex> : <FaUser size={'20px'} />}
+            {auth?<Avatar w={'35px'} h={'35px'} src={user.pic} name={`${user.firstName} ${user.lastName}`} /> : <FaUser size={'20px'} />}
             </MenuButton>
             <MenuList>
               {auth ? <MenuItem>Hello {user.firstName} {user.lastName }</MenuItem> :
@@ -196,7 +195,7 @@ export default function Navbar() {
                 <UserProfile data={user}>User Profile</UserProfile>
               </MenuItem>
               <MenuItem isDisabled={!auth} onClick={handleLogout}>LogOut</MenuItem>
-              <NavLink to='/admin'> <MenuItem>Admin</MenuItem></NavLink>
+              <NavLink to='/adminlogin'> <MenuItem>Admin</MenuItem></NavLink>
             </MenuList>
           </Menu>
           <NavLink to="/cart">
@@ -228,7 +227,7 @@ export default function Navbar() {
             <Box onClick={openFun}>
               <FaSearch />
             </Box>
-            <NavLink to='/adminlogin'> <MenuItem><FaUser /></MenuItem></NavLink>
+            <NavLink to='/adminlogin'> <FaUser /></NavLink>
               
       
             <NavLink to="/cart">
@@ -397,17 +396,17 @@ const MobileNavItem = ({ label, children, href }) => {
         <VStack textAlign={'center'} spacing={'10px'} mt={2} pl={4}>
           {children &&
             children.map(child => (
-              <NavLink to="/product" style={{ textAlign: 'center' }}>
-                <Flex justifyContent={'center'}>
+              <NavLink to="/products" style={{ textAlign: 'center' }}>
+                <Flex justifyContent={'space-between'} alignItems={'center'}>
                   <Flex
                     gap="10px"
                     alignItems={'center'}
                     w={{ base: '250px', md: '320px' }}
-                    bg="pink"
                   >
                     <Image src={child.image} w="60px" />
                     <Text fontSize={'sm'}>{child.subLabel}</Text>
                   </Flex>
+                  <ChevronRightIcon />
                 </Flex>
               </NavLink>
             ))}

@@ -6,7 +6,7 @@ import { useColorModeValue } from '@chakra-ui/react';
 import axios from 'axios';
 import { getAddress, postAddress, showData } from '../redux/CheckoutReducer/action';
 import { useDispatch, useSelector } from 'react-redux';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { NavLink, Navigate, useNavigate } from 'react-router-dom';
 
 const CheckOut = () => {
   const text = useColorModeValue('dark', 'light');
@@ -211,7 +211,7 @@ const CheckOut = () => {
         <Box m={'10px 0'} h={'3px'} color={'gray.600'}>
           <Divider orientation='horizontal'></Divider>
         </Box>
-        <Button onClick={() => navigate('/payment')} _hover={{ bg: 'gray.700' }} w={'100%'} bg={text === 'dark' ? 'black' : 'white'} color={text === 'dark' ? 'white' : 'black'}>Proceed to Payment</Button>
+        <NavLink to="/payment"><Button onClick={() => navigate('/payment')} _hover={{ bg: 'gray.700' }} w={'100%'} bg={text === 'dark' ? 'black' : 'white'} color={text === 'dark' ? 'white' : 'black'}>Proceed to Payment</Button></NavLink>
       </Box>
     </Flex>
   )

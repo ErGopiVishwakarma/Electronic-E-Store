@@ -6,12 +6,12 @@ import Login from '../Pages/Login';
 import SignUp from '../Pages/SignUp';
 import CartPage from '../Pages/CartPage';
 import CheckOut from '../Pages/CheckOut';
-import PaymentPage from '../Pages/PaymentPage';
 import ErrorPage from '../Pages/ErrorPage';
 import AdminPage from '../Pages/AdminPage';
 import Private from './Private';
 import ProductPage from '../Pages/ProductPage';
 import AdminLogin from '../Pages/AdminLogin';
+import PaymentGateway from '../component/Payment/PaymentGateway';
 
 const MainRoutes = () => {
   return (
@@ -41,7 +41,7 @@ const MainRoutes = () => {
         path="/payment"
         element={
           <Private>
-            <PaymentPage />
+            <PaymentGateway  />
           </Private>
         }
       />

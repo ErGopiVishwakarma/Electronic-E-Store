@@ -29,16 +29,6 @@ const AdminNav = ({ onOpen, ...rest }) => {
         color={'white'}>
         Logo
       </Text>
-
-      {/* <HStack spacing={{ base: '0', md: '6' }}>
-        <IconButton
-          size="lg"
-          color={'white'}
-          variant="ghost"
-          aria-label="open menu"
-          icon={<FiBell />}
-        />
-      </HStack> */}
       </Flex>
     );
   };

@@ -29,10 +29,7 @@ const Admin = () => {
                                 <Text display={{ base: 'none', md: 'block' }}>{el.password}</Text>
                                 <Text display={{ base: 'none', md: 'block' }}>{el.mobile}</Text>
                             </Flex>
-                            {/* <Flex gap={{ base: '30px', md: '30px', lg: '50px' }} display={{ base: 'none', md: 'flex' }} >
-                                <Button>Edit</Button>
-                                <Button>Delete</Button>
-                            </Flex> */}
+                        
                         </Flex>
                     ))
                 }
