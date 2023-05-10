@@ -11,10 +11,11 @@ import {
     Text,
     Flex,
     Box,
+    Avatar,
 } from '@chakra-ui/react'
 
 
-function UserProfile({ name, children }) {
+function UserProfile({ name, children, data }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <>
@@ -23,12 +24,12 @@ function UserProfile({ name, children }) {
             <Modal isOpen={isOpen} onClose={onClose}>
                 {/* <ModalOverlay /> */}
                 <ModalContent>
-                    <ModalHeader textAlign={'center'}>Gopi Vishwakarma</ModalHeader>
+                    <ModalHeader textAlign={'center'}>{data.name}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody display={'flex'} justifyContent={'center'}>
                             <Flex direction={'column'} justifyContent={'center'}>
-                            <Image src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" h="150px" w="150px" />
-                            <Text fontSize="20px">gopi@gmail.com</Text>
+                            <Avatar src={data.pic} h="150px" w="150px" />
+                            <Text fontSize="20px">{data.email}</Text>
                             </Flex>
                     </ModalBody>
 

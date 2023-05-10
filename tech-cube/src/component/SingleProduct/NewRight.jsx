@@ -24,11 +24,11 @@ const NewRight = ({ spData }) => {
   const roundedRating = Math.round(spData.rating);
 
   const handleAddToCart = () => {
-    dispatch(postSingleProductItem(spData)).then(res => navigate('/cart'));
+    dispatch(postSingleProductItem({...spData,quantity:1})).then(res => navigate('/cart'));
   };
 
   const handleBuySingleProduct = () => {
-    dispatch(postSingleProductItem(spData)).then(res => navigate('/payment'));
+    dispatch(postSingleProductItem({...spData,quantity:1})).then(res => navigate('/payment'));
   };
 
   return (
@@ -63,7 +63,7 @@ const NewRight = ({ spData }) => {
         </Box>
       </Box>
 
-      <Box paddingY={'4%'}>
+      <Box paddingY={'1%'}>
         <Box display="flex" alignItems="center">
           <Box paddingRight={'3%'}>
             <Text fontSize={'xl'} display={'flex'}>
@@ -118,11 +118,12 @@ const NewRight = ({ spData }) => {
       <Box display={'flex'} flexDirection={'column'} gap={'5px'}>
         <Button
           onClick={handleAddToCart}
-          backgroundColor={'black'}
+          bg={'black'}
           textColor={'white'}
           fontSize={'17px'}
           width={'250px'}
           border={'2px solid black'}
+          colorScheme='white'
         >
           Add to Cart
         </Button>
@@ -133,6 +134,7 @@ const NewRight = ({ spData }) => {
           fontSize={'17px'}
           width={'250px'}
           border={'2px solid black'}
+          colorScheme='white'
         >
           Buy Now
         </Button>

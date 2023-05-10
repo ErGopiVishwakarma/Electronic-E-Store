@@ -10,6 +10,7 @@ import DemoCarousel from '../component/HomeComponent/DemoCarousel'
 import { SearchContext } from '../context/SearchContextProvider'
 import { ProductCard } from '../component/ProductComponent/ProductCard'
 import ProductPage from './ProductPage'
+import { NavLink } from 'react-router-dom'
 
 const HomePage = () => {
   const text = useColorModeValue('light','dark')
@@ -27,7 +28,7 @@ const HomePage = () => {
           <Heading>New Experience</Heading>
           <Heading fontSize={'40px'} letterSpacing={'5px'}>GREAT PRICE</Heading>
           <Text fontSize='20px'>save now 20% off on tech-cube</Text>
-          <Button variant={'outline'} borderRadius={'20px'} border={'1px solid black'} w='200px' color={'blackAlpha.900'}>shop now</Button>
+          <NavLink to="/products"><Button variant={'outline'} borderRadius={'20px'} border={'1px solid black'} w='200px' color={'blackAlpha.900'}>shop now</Button></NavLink>
          </Flex>
         </Box>
        <Box w="100%" display={{ base: 'block', md: 'block', lg: 'none' }}  >

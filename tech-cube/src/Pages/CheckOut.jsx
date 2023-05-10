@@ -6,13 +6,17 @@ import { useColorModeValue } from '@chakra-ui/react';
 import axios from 'axios';
 import { getAddress, postAddress, showData } from '../redux/CheckoutReducer/action';
 import { useDispatch, useSelector } from 'react-redux';
-import { Navigate, useNavigate } from 'react-router-dom';
+
+import { Navigate, useNavigate, NavLink } from 'react-router-dom';
 import { getCartServerdata } from '../redux/CartReducer/action';
+
 
 const CheckOut = () => {
   const text = useColorModeValue('dark', 'light');
   const dispatch = useDispatch();
+  const navigate= useNavigate()
   // const data = useSelector(store => store.checkoutReducer.data);
+  const ref = useRef()
   const user = useSelector(store => store.checkoutReducer.userData);
   let data = useSelector(store => store.cartReducer.cart);
   
@@ -173,6 +177,7 @@ const CheckOut = () => {
         </Box>
       </Box>
       <CheckoutPrice text = {text}/>
+ 
     </Flex>
   )
 }

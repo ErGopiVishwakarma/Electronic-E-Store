@@ -3,13 +3,19 @@ import { Box, Flex, Heading, Image } from '@chakra-ui/react'
 import { css } from '@emotion/react'
 import React, { useEffect, useState } from 'react'
 import dashLogo from '../../Assets/dashboard.png'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
+import { getAllData } from '../../redux/Admin/action'
 
 const Dashboard = () => {
   const [user, setUser] = useState('')
   const product = useSelector(store => store.adminReducer.allProductData)
   let count = product.length
+ const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(getAllData())
+},[])
+
   useEffect(() => {
     axios('http://localhost:8080/user').then(res => setUser(res.data.length))
   }, [])

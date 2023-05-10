@@ -21,7 +21,7 @@ export const FilterSort = () => {
   const initialBrand = searchParams.getAll('brand');
   const [brand, setBrand] = useState(initialBrand || []);
   // console.log(useSearchParams.getAll(""));
-  const initialCategory = searchParams.getAll('brand');
+  const initialCategory = searchParams.getAll('category');
   const [category, setcategory] = useState(initialCategory || []);
 
   const initialOrder = searchParams.get('order');
@@ -104,16 +104,30 @@ export const FilterSort = () => {
               flexDirection={'column'}
             >
               <MenuItemOption value={'APPLE'}>
-                <Checkbox value={'APPLE'}>Apple</Checkbox>
+                <Checkbox value={'APPLE'} isChecked={brand.includes('APPLE')}>
+                  Apple
+                </Checkbox>
               </MenuItemOption>
               <MenuItemOption value={'SAMSUNG'}>
-                <Checkbox value={'SAMSUNG'}>Samsung</Checkbox>
+                <Checkbox
+                  value={'SAMSUNG'}
+                  isChecked={brand.includes('SAMSUNG')}
+                >
+                  Samsung
+                </Checkbox>
               </MenuItemOption>
               <MenuItemOption value={'POCO'}>
-                <Checkbox value={'POCO'}>Poco</Checkbox>
+                <Checkbox value={'POCO'} isChecked={brand.includes('POCO')}>
+                  Poco
+                </Checkbox>
               </MenuItemOption>
               <MenuItemOption value={'Infinix'}>
-                <Checkbox value={'Infinix'}>Infinix</Checkbox>
+                <Checkbox
+                  value={'Infinix'}
+                  isChecked={brand.includes('Infinix')}
+                >
+                  Infinix
+                </Checkbox>
               </MenuItemOption>
             </Flex>
           </MenuList>
@@ -135,19 +149,29 @@ export const FilterSort = () => {
               onChange={handleBrand}
             >
               <MenuItemOption value="DELL">
-                <Checkbox value="DELL">Dell</Checkbox>
+                <Checkbox value="DELL" isChecked={brand.includes('DELL')}>
+                  Dell
+                </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="LENOVO">
-                <Checkbox value="LENOVO">Lenovo</Checkbox>
+                <Checkbox value="LENOVO" isChecked={brand.includes('LENOVO')}>
+                  Lenovo
+                </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="Acer">
-                <Checkbox value="Acer">Acer</Checkbox>
+                <Checkbox value="Acer" isChecked={brand.includes('Acer')}>
+                  Acer
+                </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="HP">
-                <Checkbox value="HP">HP</Checkbox>
+                <Checkbox value="HP" isChecked={brand.includes('HP')}>
+                  HP
+                </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="REDMI">
-                <Checkbox value="REDMI">Redmi</Checkbox>
+                <Checkbox value="REDMI" isChecked={brand.includes('REDMI')}>
+                  Redmi
+                </Checkbox>
               </MenuItemOption>
             </Flex>
           </MenuList>
@@ -168,13 +192,25 @@ export const FilterSort = () => {
               onChange={handleBrand}
             >
               <MenuItemOption value="ONEPLUS">
-                <Checkbox value="ONEPLUS">One plus</Checkbox>
+                <Checkbox value="ONEPLUS" isChecked={brand.includes('ONEPLUS')}>
+                  One plus
+                </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="Realme Tvs">
-                <Checkbox value="Realme Tvs">Realme Tvs</Checkbox>
+                <Checkbox
+                  value="Realme Tvs"
+                  isChecked={brand.includes('Realme Tvs')}
+                >
+                  Realme Tvs
+                </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="MI REDMI">
-                <Checkbox value="MI REDMI">MI Redmi</Checkbox>
+                <Checkbox
+                  value="MI REDMI"
+                  isChecked={brand.includes('MI REDMI')}
+                >
+                  MI Redmi
+                </Checkbox>
               </MenuItemOption>
             </Flex>
           </MenuList>
@@ -195,19 +231,35 @@ export const FilterSort = () => {
               onChange={handleCategory}
             >
               <MenuItemOption value="wireless_earbuds">
-                <Checkbox value="wireless_earbuds">Wireless Earbuds</Checkbox>
+                <Checkbox
+                  value="wireless_earbuds"
+                  isChecked={category.includes('wireless_earbuds')}
+                >
+                  Wireless Earbuds
+                </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="wireless_earphones">
-                <Checkbox value="wireless_earphones">
+                <Checkbox
+                  value="wireless_earphones"
+                  isChecked={category.includes('wireless_earphones')}
+                >
                   {' '}
                   Wireless Earphones
                 </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="earphones">
-                <Checkbox value="earphones">Earphones</Checkbox>
+                <Checkbox
+                  value="earphones"
+                  isChecked={category.includes('earphones')}
+                >
+                  Earphones
+                </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="wireless_speakers">
-                <Checkbox value="wireless_speakers">
+                <Checkbox
+                  value="wireless_speakers"
+                  isChecked={category.includes('wireless_speakers')}
+                >
                   {' '}
                   Wireless Speakers
                 </Checkbox>
@@ -231,10 +283,21 @@ export const FilterSort = () => {
               onChange={handleCategory}
             >
               <MenuItemOption value="smart_watches">
-                <Checkbox value="smart_watches"> Smart Watch</Checkbox>
+                <Checkbox
+                  value="smart_watches"
+                  isChecked={category.includes('smart_watches')}
+                >
+                  {' '}
+                  Smart Watch
+                </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="power_bank">
-                <Checkbox value="power_bank">Power Bank</Checkbox>
+                <Checkbox
+                  value="power_bank"
+                  isChecked={category.includes('power_bank')}
+                >
+                  Power Bank
+                </Checkbox>
               </MenuItemOption>
             </Flex>
           </MenuList>
@@ -255,11 +318,11 @@ export const FilterSort = () => {
             >
               <option value={''}>Sort By Price</option>
 
-              <option value={'asc'} name="order">
+              <option value={'asc'} name="order" selected={order === 'asc'}>
                 Ascending
               </option>
 
-              <option value={'desc'} name="order">
+              <option value={'desc'} name="order" selected={order === 'desc'}>
                 Descending
               </option>
             </Select>

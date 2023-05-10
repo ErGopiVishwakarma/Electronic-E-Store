@@ -23,8 +23,8 @@ useEffect(()=>{
                     user?.map((el,ind) => (
                         <Flex key={ind} direction={{ base: 'column', md: 'row' }} justify="space-between" alignItems={'center'} px={{ base: '7px', md: '20px', lg: '50px' }} py="10px" boxShadow="rgba(0, 0, 0, 0.16) 0px 1px 4px">
                             <Flex w="100%" justifyContent={'space-between'} pr={{ base: '0px', md: '30px', lg: '100px' }} alignItems={'center'}>
-                                <Avatar src={el.image} w='70px' h='70px' borderRadius={'50%'} name={el.name} />
-                                <Text>{el.name}</Text>
+                                <Avatar src={el.pic} w='70px' h='70px' borderRadius={'50%'} name={`${el.firstName} ${el.lastName}`} />
+                                <Text>{`${el.firstName} ${el.lastName}`}</Text>
                                 <Button display={{ base: 'block', md: 'none' }}>show detail</Button>
                                 <Text display={{ base: 'none', md: 'block' }}>{el.email.substring(0,20)}</Text>
                                 <Text display={{ base: 'none', md: 'block' }}>{el.password}</Text>

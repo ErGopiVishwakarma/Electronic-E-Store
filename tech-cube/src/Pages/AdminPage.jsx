@@ -21,6 +21,7 @@ import {
   MenuItem,
   MenuList,
   Input,
+  useToast,
 } from '@chakra-ui/react';
 import {
   FiHome,
@@ -36,6 +37,7 @@ import {
 import SidebarContent from '../component/Admin/SidebarContent';
 import AdminBody from '../component/Admin/AdminBody';
 import UserProfile from '../component/Admin/UserModal';
+import { useNavigate } from 'react-router-dom';
 
 
  const LinkItems= [
@@ -47,7 +49,7 @@ import UserProfile from '../component/Admin/UserModal';
 ];
 export default function AdminPage() {
   const { isOpen, onOpen, onClose } = useDisclosure();
- 
+  
 
   return (
 
@@ -83,7 +85,23 @@ export default function AdminPage() {
 
 
 const MobileNav = ({ onOpen, ...rest }) => {
+  let toast = useToast()
+  let navigate = useNavigate()
   let adminProfile = JSON.parse(localStorage.getItem('adminProfile')) || {}
+  const adminAuth = () => {
+    localStorage.setItem('adminAuth',JSON.stringify(false))
+    toast({
+      title: 'successfully logOut',
+      description: "Redirecting to login page",
+      status: 'success',
+      duration: 2000,
+      isClosable: true,
+      position:'top'
+    })
+    setTimeout(()=>{
+      navigate('/adminlogin')
+    },2000)
+  }
   return (
     <Flex 
     ml={{ base: 0, md: 0,lg:60 }}
@@ -148,11 +166,11 @@ const MobileNav = ({ onOpen, ...rest }) => {
             </MenuButton>
             <MenuList>
               <MenuItem>
-                <UserProfile>
+                <UserProfile data={adminProfile}>
                   Profile
                 </UserProfile>
               </MenuItem>
-              <MenuItem>Sign out</MenuItem>
+              <MenuItem onClick={adminAuth}>Sign out</MenuItem>
             </MenuList>
           </Menu>
         </Flex>
