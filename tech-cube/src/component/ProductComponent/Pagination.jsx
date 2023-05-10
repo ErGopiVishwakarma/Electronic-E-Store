@@ -15,6 +15,7 @@ export const Pagination = ({ totalPage=1, setPage, page=1 }) => {
       flexDirection={'row'}
       justifyContent={'center'}
       gap={'15px'}
+      minH={'1000px'}
     >
       <Button isDisabled={page <= 1} onClick={() => setPage(page - 1)}>
         Previous

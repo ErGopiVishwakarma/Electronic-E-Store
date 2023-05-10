@@ -70,8 +70,8 @@ const Login = () => {
       })
       return;
     }
-    const newData = data.find(el => el.email === email)
-    console.log(newData, data)
+    const newData = data.find(el => el.email === email);
+    // console.log(newData, data)
     if (newData) {
       if (newData.password === password) {
         toast({

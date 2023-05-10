@@ -11,7 +11,7 @@ function App() {
   return (
 
 
-    <Box >
+    <Box className='App'>
       <Navbar />
       <MainRoutes />
       <Footer />
