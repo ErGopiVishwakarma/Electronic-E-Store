@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { AdminProfile, AllProductData, UserProfile } from './actionType'
+import { AdminProfile, AllProductData, GetDataFromBlackList, UserProfile } from './actionType'
 
 export const getUser =()=>(dispatch)=>{
     axios('http://localhost:8080/user')
@@ -29,4 +29,21 @@ export const deleteProduct =(id)=>async()=>{
 export const addProduct =(data)=>async()=>{
     let res = await axios.post(`http://localhost:8080/products`,data)
     return res
+}
+
+//for blacklisted user
+
+export const postUserToBlacklist =(data)=>async()=>{
+    let res = await axios.post(`http://localhost:8080/blacklist`,data)
+    return res
+}
+
+export const deleteUserFromBlacklist =(id)=>async()=>{
+    let res = await axios.delete(`http://localhost:8080/blacklist/${id}`)
+    return res
+}
+
+export const getAllDataFromBlacklist =()=>(dispatch)=>{
+    axios('http://localhost:8080/blacklist')
+    .then(res=>dispatch({type:GetDataFromBlackList,payload:res.data}))
 }

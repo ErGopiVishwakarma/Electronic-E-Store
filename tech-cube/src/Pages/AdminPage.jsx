@@ -22,6 +22,7 @@ import {
   MenuList,
   Input,
   useToast,
+  Image,
 } from '@chakra-ui/react';
 import {
   FiHome,
@@ -38,6 +39,7 @@ import SidebarContent from '../component/Admin/SidebarContent';
 import AdminBody from '../component/Admin/AdminBody';
 import UserProfile from '../component/Admin/UserModal';
 import { useNavigate } from 'react-router-dom';
+import logo from '../Assets/techcube.png'
 
 
  const LinkItems= [
@@ -130,7 +132,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
         fontFamily="monospace"
         color="white"
         fontWeight="bold">
-        Logo
+        <Image src={logo} w="120px" />
       </Text>
 
       <HStack spacing={{ base: '0', md: '6' }}>

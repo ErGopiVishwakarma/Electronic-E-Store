@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, Image, Text, Button, Divider, Alert, AlertIcon, Input, InputGroup, useToast } from '@chakra-ui/react'
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { css } from '@emotion/react';
 import orderSummaryImg from '../Assets/orderSummaryImg.avif';
 import { useColorModeValue } from '@chakra-ui/react';
@@ -9,12 +9,14 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { Navigate, useNavigate, NavLink } from 'react-router-dom';
 import { getCartServerdata } from '../redux/CartReducer/action';
+import { SearchContext } from '../context/SearchContextProvider';
 
 
 const CheckOut = () => {
   const text = useColorModeValue('dark', 'light');
   const dispatch = useDispatch();
   const navigate= useNavigate()
+  const { status } = useContext(SearchContext);
   // const data = useSelector(store => store.checkoutReducer.data);
   const ref = useRef()
   const user = useSelector(store => store.checkoutReducer.userData);
@@ -62,6 +64,7 @@ const CheckOut = () => {
 
 
   return (
+    status? navigate('/products') :
     <Flex id='app' justifyContent={'center'} direction={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }} w={'90%'} m={'20px auto'} gap={'20px'}>
       <Box w={{ base: '100%', sm: '100%', md: '100%', lg: '65%', xl: '65%', '2xl': '65%' }} m={'100px 0 0px 0'}>
         <Box overflowY={'scroll'} maxHeight={'400px'} boxShadow='rgba(0, 0, 0, 0.24) 0px 3px 8px' p={'20px'} borderRadius={'10px'}>

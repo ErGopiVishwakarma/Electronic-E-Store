@@ -3694,6 +3694,19 @@
       "city": "Prayagraj",
       "pincode": "841226",
       "state": "UttarPradesh"
+    },
+    {
+      "firstName": "shivam",
+      "lastName": "Vishwakarma",
+      "mobile": "8303167234",
+      "email": "shivam123@gmail.com",
+      "password": "shivam123",
+      "pic": "",
+      "id": 6,
+      "address": "Varanasi UttarPradesh",
+      "city": "Varanasi",
+      "pincode": "841123",
+      "state": "UttarPradesh"
     }
   ],
   "blacklist": [],
@@ -3704,53 +3717,27 @@
     {
       "color": [
         "black",
-        "green",
-        "pink"
-      ],
-      "image": [
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveFlexConnectPackaging1.2_300x.png?v=1677645513",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268573",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268545",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268545",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268546"
-      ],
-      "tag_badge": "Bt Calling",
-      "title": "Wave Flex Connect",
-      "price": 1999,
-      "discount": 75,
-      "mrp": 7990,
-      "rating": 3.6,
-      "category": "smart_watches",
-      "id": 15,
-      "description": "HD Curved Display 10 Days Battery Life Multi Sports Mode ",
-      "brand": "Ambrane",
-      "quantity": 1,
-      "review": 2161
-    },
-    {
-      "color": [
-        "silver",
         "blue"
       ],
       "image": [
-        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU4_9f7f65cc-fd3e-44f8-b4a6-d798e943725b_540x.jpg?v=1663670501",
-        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU3_50e61315-9197-4768-b332-17c69235fa24_320x.jpg?v=1663670501",
-        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU_320x.jpg?v=1661772120",
-        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU1_a4ee8b46-78b0-4927-b679-5e4386208517_320x.jpg?v=1661772119",
-        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU2_bc6e0fd4-4942-42b7-b767-82f0794343bc_320x.jpg?v=1661772120"
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untblueitled-1_600x.png?v=1661509030",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/06-2_700x.png?v=1675769103",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/07-2_700x.png?v=1675769103",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/4_3d410a1f-523c-41bc-980d-14b8d2c1c58a_700x.png?v=1675769103",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/blue_83bb1e1b-8519-4bd9-83b8-92299b0b375d_600x.png?v=1661509030"
       ],
-      "tag_badge": "i5 12th gen",
-      "title": "HP 15S-FQ5111TU 12th Generation Intel® Core™ i5 ProcessorWindows 11 Home8 GB DDR4-512 GB PCIe® NVMe™ M.2 SSDIntel®",
-      "price": 60899,
-      "discount": 50,
-      "mrp": 70750,
-      "rating": 3.7,
-      "category": "Laptop",
-      "id": 90,
-      "description": "HP Brand 15s- fq5111TU Model Name Screen Size 39.6 Centimeters",
-      "brand": "HP",
-      "quantity": 20,
-      "review": 2394
+      "tag_badge": "20 Hours Playback",
+      "title": "Rockerz 103 Pro",
+      "price": 1199,
+      "discount": 52,
+      "mrp": 2490,
+      "rating": 4.9,
+      "category": "wireless_earphones",
+      "id": 48,
+      "description": "10mm Drivers Voice Assistant ENx™ Technology ",
+      "brand": "Ambrane",
+      "quantity": 1,
+      "review": 2388
     }
   ]
 }

@@ -4,6 +4,7 @@ import MainRoutes from './route/MainRoutes';
 import Navbar from './component/HomeComponent/Navbar';
 import Footer from './component/HomeComponent/Footer';
 import './App.css';
+import PaymentPopup from './component/Payment/PaymentPopup';
 
 
 function App() {

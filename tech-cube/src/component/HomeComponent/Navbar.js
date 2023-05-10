@@ -168,7 +168,7 @@ export default function Navbar() {
         >
           {/* logo section here  */}
           <NavLink to="/">
-            <Image src={logo} w="120px" />
+            <Box onClick={()=>setStatus(false)}><Image src={logo} w="120px" /></Box>
           </NavLink>
 
           <Flex
