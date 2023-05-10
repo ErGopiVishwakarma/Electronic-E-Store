@@ -1,5 +1,5 @@
 import React from 'react'
-import { Admin, AdminProfile, AllProductData, Dash, Product, User, UserProfile } from './actionType'
+import { Admin, AdminProfile, AllProductData, Dash, DeleteDataFromBlacklist, GetDataFromBlackList, PostDataToBlacklist, Product, User, UserProfile } from './actionType'
 
 const initial = {
     dash: true,
@@ -8,7 +8,8 @@ const initial = {
     product: false,
     allProductData: [],
     userProfile: [],
-    adminProfile: []
+    adminProfile: [],
+    blacklist: []
 }
 export const reducer = (state = initial, { type, payload }) => {
     switch (type) {
@@ -26,6 +27,13 @@ export const reducer = (state = initial, { type, payload }) => {
             return { ...state, userProfile: payload }
         case AdminProfile:
             return { ...state, adminProfile: payload }
+        case GetDataFromBlackList:
+            return { ...state, blacklist: payload }
+        case DeleteDataFromBlacklist:
+            return { ...state }
+        case PostDataToBlacklist:
+            return { ...state, blacklist: payload }
+
 
         default:
             return { ...state, dash: true, admin: false, user: false, product: false }

@@ -1,5 +1,6 @@
-import { Flex , useColorModeValue,IconButton,Text,HStack, Input} from "@chakra-ui/react";
+import { Flex , useColorModeValue,IconButton,Text,HStack, Input, Image} from "@chakra-ui/react";
 import { FiMenu, FiBell, } from 'react-icons/fi';
+import logo from '../..//Assets/techcube.png'
 
 const AdminNav = ({ onOpen, ...rest }) => {
     return (
@@ -27,7 +28,7 @@ const AdminNav = ({ onOpen, ...rest }) => {
         fontFamily="monospace"
         fontWeight="bold"
         color={'white'}>
-        Logo
+        <Image src={logo} w="120px" />
       </Text>
       </Flex>
     );

@@ -1,4 +1,4 @@
-import { Box, CloseButton, Flex, Icon, Link, Text } from '@chakra-ui/react';
+import { Box, CloseButton, Flex, Icon, Image, Link, Text } from '@chakra-ui/react';
 import React from 'react'
 import {
     FiHome,
@@ -9,6 +9,7 @@ import {
 import { useDispatch } from 'react-redux';
 import { Admin, Dash, Product, User } from '../../redux/Admin/actionType';
 import { NavLink } from 'react-router-dom';
+import logo from '../../Assets/techcube.png'
 
 
 const SidebarContent = ({ onClose, ...rest }) => {
@@ -44,7 +45,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
             {...rest}>
             <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
                 <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold" color={'white'}>
-                    Logo
+                    <Image src={logo} w="120px" />
                 </Text>
                 <CloseButton display={{ base: 'flex', md: 'flex', lg: 'none' }} color={'white'} onClick={onClose} />
             </Flex>

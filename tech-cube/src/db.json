@@ -3694,87 +3694,24 @@
       "city": "Prayagraj",
       "pincode": "841226",
       "state": "UttarPradesh"
+    },
+    {
+      "firstName": "shivam",
+      "lastName": "Vishwakarma",
+      "mobile": "8303167234",
+      "email": "shivam123@gmail.com",
+      "password": "shivam123",
+      "pic": "",
+      "id": 6,
+      "address": "Varanasi UttarPradesh",
+      "city": "Varanasi",
+      "pincode": "841123",
+      "state": "UttarPradesh"
     }
   ],
   "blacklist": [],
   "whishlist": [],
   "addcart": [],
   "orders": [],
-  "cart": [
-    {
-      "color": [
-        "black",
-        "white",
-        "blue"
-      ],
-      "image": [
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/3_743027d7-94ca-43e1-9c04-72ad6483c226_700x.png?v=1669055392",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2_614c0321-f235-4765-b157-a8727f7e4aae_700x.png?v=1669055570",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1_0b38e5a7-0427-413d-b804-342451f18cca_700x.png?v=1669055570"
-      ],
-      "tag_badge": "50 Hours Playback",
-      "title": "Airdopes Atom 81",
-      "price": 999,
-      "discount": 71,
-      "mrp": 3490,
-      "rating": 5,
-      "category": "wireless_earbuds",
-      "id": 3,
-      "description": "Up to 50HRS Playback ENx™ Technology ASAP Fast Charge ",
-      "brand": "BOAT",
-      "quantity": 1,
-      "review": 48903
-    },
-    {
-      "color": [
-        "silver",
-        "blue"
-      ],
-      "image": [
-        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU4_9f7f65cc-fd3e-44f8-b4a6-d798e943725b_540x.jpg?v=1663670501",
-        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU3_50e61315-9197-4768-b332-17c69235fa24_320x.jpg?v=1663670501",
-        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU_320x.jpg?v=1661772120",
-        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU1_a4ee8b46-78b0-4927-b679-5e4386208517_320x.jpg?v=1661772119",
-        "https://cdn.shopify.com/s/files/1/0564/3006/7870/products/HPLaptop15s-eq2144AU2_bc6e0fd4-4942-42b7-b767-82f0794343bc_320x.jpg?v=1661772120"
-      ],
-      "tag_badge": "i5 12th gen",
-      "title": "HP 15S-FQ5111TU 12th Generation Intel® Core™ i5 ProcessorWindows 11 Home8 GB DDR4-512 GB PCIe® NVMe™ M.2 SSDIntel®",
-      "price": 60899,
-      "discount": 50,
-      "mrp": 70750,
-      "rating": 3.7,
-      "category": "Laptop",
-      "id": 90,
-      "description": "HP Brand 15s- fq5111TU Model Name Screen Size 39.6 Centimeters",
-      "brand": "HP",
-      "quantity": 1,
-      "review": 2394
-    },
-    {
-      "color": [
-        "black",
-        "blue",
-        "pink"
-      ],
-      "image": [
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Lyncvoice2_300x.png?v=1674034373",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_call.gif?v=1661268577",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-2.png?v=1661268549",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-6_a68b6fc4-0226-4630-a5b1-313c2d45a73f.png?v=1661268549",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/pdp-5_b1d791f1-fc81-43ac-bfd4-c1991da569ad.png?v=1661268550"
-      ],
-      "tag_badge": "Bt Calling",
-      "title": "Wave Lynk Voice",
-      "price": "229",
-      "discount": 71,
-      "mrp": 7990,
-      "rating": 4.1,
-      "category": "smart_watches",
-      "id": 19,
-      "description": "HD Curved Display 10+ Sports Mode 600+ Watch Faces ",
-      "brand": "BOAT",
-      "quantity": 1,
-      "review": 4380
-    }
-  ]
+  "cart":[]
 }

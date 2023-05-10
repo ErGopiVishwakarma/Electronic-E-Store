@@ -38,6 +38,27 @@ const Login = () => {
 
     let data = await axios('http://localhost:8080/user').then(res => res.data);
 
+    let block = false;
+    const blockData = await axios.get('http://localhost:8080/blacklist').then(res => res.data)
+    if (blockData.length > 0) {
+      blockData.forEach(el => {
+        if (el.email === email) {
+          block = true;
+        }
+      })
+    }
+    if(block){
+      toast({
+        title: 'sorry',
+        description: "this email id has been blacklisted, you can not use this email",
+        status: 'warning',
+        duration: 5000,
+        position: 'top',
+        isClosable: true,
+      })
+      return;
+    }
+
     if (!email || !password) {
       toast({
         title: 'failed',

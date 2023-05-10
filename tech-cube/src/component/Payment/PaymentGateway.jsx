@@ -1,5 +1,6 @@
 import { Box, Button, Center, Checkbox, Flex, Heading, Image, Radio, RadioGroup, Text, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const PaymentGateway = () => {
 
@@ -36,7 +37,7 @@ const PaymentGateway = () => {
                         </RadioGroup>
 
                         <Center>
-                            <Button w="200px" bg={textColor} colorScheme={'white'}>Next</Button>
+                            <NavLink to='/paymentdetail'><Button w="200px" bg={textColor} colorScheme={'white'}>Next</Button></NavLink>
                         </Center>
                     </Flex>
 

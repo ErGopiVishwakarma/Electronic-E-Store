@@ -46,6 +46,35 @@ export default function SignUp() {
   const handleSubmit = async(e) => {
     e.preventDefault();
 
+    let userData = {
+      firstName,
+      lastName,
+      email,
+      password,
+      mobile
+    }
+
+    let block = false;
+    const blockData = await axios.get('http://localhost:8080/blacklist').then(res => res.data)
+    if (blockData.length > 0) {
+      blockData.forEach(el => {
+        if (el.email === userData.email) {
+          block = true;
+        }
+      })
+    }
+    if(block){
+      toast({
+        title: 'sorry',
+        description: "this email id has been blacklisted, you can not use this email",
+        status: 'warning',
+        duration: 5000,
+        position: 'top',
+        isClosable: true,
+      })
+      return;
+    }
+
     if (!firstName || !lastName || !email || !password || !mobile) {
       toast({
         title: 'Registration Failed.',
@@ -68,14 +97,6 @@ export default function SignUp() {
         isClosable: true,
       })
       return;
-    }
-
-    let userData = {
-      firstName,
-      lastName,
-      email,
-      password,
-      mobile
     }
 
     let check = false;

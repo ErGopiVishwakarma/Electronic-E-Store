@@ -6,32 +6,47 @@ import {
     ModalFooter,
     ModalBody,
     ModalCloseButton,
+    useDisclosure,
+    Button,
+    Image,
+    Heading,
   } from '@chakra-ui/react'
 
+  import success from '../../Assets/success.png'
+import { NavLink } from 'react-router-dom';
 
-function PaymentPopup() {
+
+function PaymentPopup({children,fun,val,seFun}) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
       <>
-        <Button onClick={onOpen}>Open Modal</Button>
+        <Button onClick={()=>{
+          onOpen()
+          seFun(true)
+        }} bg="blackAlpha.900" colorScheme='white' w="200px">{children}</Button>
   
-        <Modal isOpen={isOpen} onClose={onClose}>
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Modal Title</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody>
-              <Lorem count={2} />
-            </ModalBody>
-  
+        <Modal isOpen={isOpen}>
+         
+          <ModalContent display={'flex'} justifyContent={'center'} alignItems={'center'}>       
+            <ModalBody flexDirection={'column'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
+             <Image src={success} />
+             <Heading fontSize="20px">Your Order Placed Successfully</Heading>
+            </ModalBody>  
             <ModalFooter>
-              <Button colorScheme='blue' mr={3} onClick={onClose}>
-                Close
+              <NavLink to='/'>
+              <Button colorScheme='blue' mr={3} w="100px" onClick={()=>{
+                fun('')
+                onClose()
+                seFun(false)
+              }}>
+                Ok
               </Button>
-              <Button variant='ghost'>Secondary Action</Button>
+              </NavLink>
             </ModalFooter>
           </ModalContent>
         </Modal>
       </>
     )
   }
+
+  export default PaymentPopup;

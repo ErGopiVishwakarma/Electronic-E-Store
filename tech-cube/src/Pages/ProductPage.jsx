@@ -34,7 +34,7 @@ const ProductPage = () => {
   console.log(totalProducts, 'totalproducts Count');
   console.log(page, 'pages');
   return (
-    <Box pos={'relative'} minH={'1000px'}>
+    <Box pos={'relative'} minH={''}>
       <Flex direction={'column'} p="3%" gap="50px">
         <Center>
           <FilterSort products={products} />

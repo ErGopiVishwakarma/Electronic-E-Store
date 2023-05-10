@@ -5,6 +5,8 @@ import {
   Flex,
   Menu,
   MenuButton,
+  MenuIcon,
+  MenuItem,
   MenuItemOption,
   MenuList,
   Select,
@@ -15,6 +17,7 @@ import {
 import { HiChevronDown } from 'react-icons/hi';
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { ChevronDownIcon } from '@chakra-ui/icons';
 
 export const FilterSort = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -68,7 +71,7 @@ export const FilterSort = () => {
       w={'100%'}
       mt={'80px'}
       bg={'white'}
-      // w={'70%'}
+    // w={'70%'}
     >
       <Box
         display={'grid'}

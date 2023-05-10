@@ -10,15 +10,16 @@ import DemoCarousel from '../component/HomeComponent/DemoCarousel'
 import { SearchContext } from '../context/SearchContextProvider'
 import { ProductCard } from '../component/ProductComponent/ProductCard'
 import ProductPage from './ProductPage'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 const HomePage = () => {
   const text = useColorModeValue('light','dark')
   const textColor = text==='dark'?'gray.100':'blackAlpha.900'
   const {status} = useContext(SearchContext);
+  const navigate = useNavigate()
 
   return (
-    status ? <ProductPage/> : 
+    status ? navigate('/products') : 
     <Box pt="70px">
       {/* Top Main Image Section here  */}
       <Box w="100%">
