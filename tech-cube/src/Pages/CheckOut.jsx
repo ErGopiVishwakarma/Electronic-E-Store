@@ -187,17 +187,23 @@ export default CheckOut;
 
 export const CheckoutPrice = ({text}) => {
   const navigate = useNavigate();
-  // let promoCode = ;
-  const [promo, setPromo] = useState('');
+
+  const [promoCodeStatus, setPromoCodeStatus] = useState('');
   const data = JSON.parse(localStorage.getItem('cart')) || [];
   let cartPrice = 0;
+  const promo = JSON.parse(localStorage.getItem('promo')) || ''
 
    data.forEach(el => {
      cartPrice += el.price * el.quantity;
    })
 
    useEffect(() => {
-    setPromo(JSON.parse(localStorage.getItem('promo')) || '');
+     if(promo){
+      setPromoCodeStatus(true);
+     }
+     else{
+      setPromoCodeStatus(false);
+     }
    }, [])
 
    return <Box mt={{ base: '10px', sm: '10px', md: '10px', lg: '100px', xl: '100px', '2xl': '100px' }} w={{ base: '100%', sm: '100%', md: '100%', lg: '35%', xl: '35%', '2xl': '35%' }} boxShadow='rgba(0, 0, 0, 0.24) 0px 3px 8px' p={'20px'} h={'550px'} borderRadius={'10px'}>
@@ -211,8 +217,8 @@ export const CheckoutPrice = ({text}) => {
        <Text>₹ 499</Text>
      </Flex>
      <Flex justifyContent={'space-between'}>
-       <Text>Coupon: {promo ? 'GETFIRSTBUY10' : ''}</Text>
-       <Text>-₹ {promo ? cartPrice*0.1 : 0}</Text>
+       <Text>Coupon: {promoCodeStatus ? 'GETFIRSTBUY10' : ''}</Text>
+       <Text>-₹ {promoCodeStatus ? (cartPrice*0.1).toFixed(2) : 0}</Text>
      </Flex>
    </Box>
    <Box m={'10px 0'} h={'3px'} color={'black'}>
@@ -221,15 +227,15 @@ export const CheckoutPrice = ({text}) => {
    <Box lineHeight={'35px'}>
      <Flex justifyContent={'space-between'}>
        <Text>Subtotal</Text>
-       <Text>₹ {(cartPrice += cartPrice * 0.18 - cartPrice*0.1 )}</Text>
+       <Text>₹ {(cartPrice)}</Text>
      </Flex>
      <Flex justifyContent={'space-between'}>
        <Text>Shipping</Text>
        <Text>{cartPrice > 500 ? 'FREE' : cartPrice === 0 ? `₹ ${0}` : `₹ ${40}`}</Text>
      </Flex>
      <Flex justifyContent={'space-between'}>
-       <Text>Estimated Tax</Text>
-       <Text>{cartPrice > 1000 ? 'FREE' : cartPrice === 0 ? `₹ ${0}` : `₹ ${40}`}</Text>
+       <Text>Tax 18%</Text>
+       <Text>₹ {(cartPrice*0.18).toFixed(2)}</Text>
      </Flex>
    </Box>
    <Box m={'10px 0'} h={'3px'} color={'gray.600'}>
@@ -238,7 +244,7 @@ export const CheckoutPrice = ({text}) => {
    <Box>
      <Flex justifyContent={'space-between'}>
        <Heading size={'md'}>Total</Heading>
-       <Heading size={'md'}>₹ {cartPrice > 500 && cartPrice < 1000 ? cartPrice + 30 : cartPrice > 1000 ? cartPrice : cartPrice === 0 ? 0 : cartPrice + 30 + 40}</Heading>
+       <Heading size={'md'}>₹ {promoCodeStatus ? (cartPrice + cartPrice*0.18 - cartPrice*0.1).toFixed(2) : (cartPrice + cartPrice*0.18).toFixed(2)}</Heading>
      </Flex>
    </Box>
    <Box m={'10px 0'} h={'3px'} color={'gray.600'}>
