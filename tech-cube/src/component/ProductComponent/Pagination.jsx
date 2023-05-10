@@ -1,19 +1,23 @@
 import { Box, Button } from '@chakra-ui/react';
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-export const Pagination = ({ totalPage, setPage, page }) => {
+export const Pagination = ({ totalPage=1, setPage, page=1 }) => {
   console.log(totalPage);
+  const { products} = useSelector(
+    store => store.productReducer
+  );
   const btnArr = new Array(totalPage).fill(1);
   console.log(btnArr);
   return (
     <Box
-      display={'flex'}
+      display={products.length === 0 ? 'none' : 'flex'}
       flexDirection={'row'}
       justifyContent={'center'}
       gap={'15px'}
       minH={'1000px'}
     >
-      <Button isDisabled={page === 1} onClick={() => setPage(page - 1)}>
+      <Button isDisabled={page <= 1} onClick={() => setPage(page - 1)}>
         Previous
       </Button>
 
@@ -35,7 +39,7 @@ export const Pagination = ({ totalPage, setPage, page }) => {
         );
       })}
       <Button
-        isDisabled
+        
         display={{
           base: 'inline',
           sm: 'inline',
@@ -47,7 +51,7 @@ export const Pagination = ({ totalPage, setPage, page }) => {
       >
         {page}
       </Button>
-      <Button isDisabled={page === totalPage} onClick={() => setPage(page + 1)}>
+      <Button isDisabled={page === totalPage || products.length === 0} onClick={() => setPage(page + 1)}>
         Next
       </Button>
     </Box>

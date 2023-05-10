@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Center, Box, Flex, Grid } from '@chakra-ui/react';
+import { Center, Box, Flex, Grid, Heading, Image } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../redux/Product/action';
 import { ProductCard } from '../component/ProductComponent/ProductCard';
@@ -14,6 +14,7 @@ const ProductPage = () => {
   const { products, totalProducts } = useSelector(
     store => store.productReducer
   );
+  console.log(totalProducts)
   const [page, setPage] = useState(1);
 
   let obj = {
@@ -39,7 +40,9 @@ const ProductPage = () => {
           <FilterSort products={products} />
         </Center>
         {products.length === 0 ? (
-          <Loader />
+          <Flex justifyContent={'center'}>
+          <Image src="https://cdni.iconscout.com/illustration/premium/thumb/sorry-item-not-found-3328225-2809510.png"  />
+          </Flex>
         ) : (
           <Grid
             templateColumns={{
@@ -51,12 +54,14 @@ const ProductPage = () => {
             w={['100%', '100%']}
             gap="20px"
           >
-            {products?.map(el => (
+            {products.length > 0 &&  products.map(el => (
               <ProductCard key={el.id} {...el} />
             ))}
+         
           </Grid>
         )}
       </Flex>
+    
       <Pagination
         totalPage={Math.ceil(totalProducts / 20)}
         setPage={setPage}

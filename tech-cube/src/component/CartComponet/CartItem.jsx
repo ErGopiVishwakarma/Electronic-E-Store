@@ -74,37 +74,39 @@ export default function CartItem({
 
     <Box width={{ base: "full", sm: 'full', md: '2xl', lg: '2xl', xl: '2xl', '2xl': '4xl' }} >
 
-      <Box display={'flex'} flexDirection={{ base: "column", md: "row" }} justifyContent={"space-between"} gap={'20px'}>
+      <Box display={'flex'} flexDirection={{ base: "column", md: "row" }} alignItems={'center'} justifyContent={{ base: 'center', md: "space-between" }} gap={'20px'}>
 
-        <Image width={{ base: "full", sm: 'full', md: '100px', lg: '150px', xl: '200px' }} src={image} alt={title} />
+       <Flex justifyContent={{base:'space-between'}} gap={{base:'30px'}}>
+       <Image width={{ base: "160px", sm: '200px', md: '100px', lg: '150px', xl: '200px' }} src={image} alt={title} />
         <Box className='TitleColorBrand' display={'flex'} flexDirection={'column'} justifyContent={'center'}>
           <Text fontWeight={'bold'} fontSize={'20px'}>{title.substring(0, 15)}...</Text>
           <Text fontWeight={'bold'} color={'orange.400'}>Brand: {brand}</Text>
         </Box>
+       </Flex>
 
         <Box display={'flex'} flexDirection={'row'} justifyContent={'center'} gap={'20px'} alignItems={'center'}>
-    
-      
-      <Text fontWeight={'bold'} fontSize={'15px'}>₹ {price}</Text>
 
 
-      <Select placeholder={quantity} onChange={handleQuantity} w={{ base: '100px', }}>
-        <option value='1'> 1</option>
-        <option value='2'> 2</option>
-        <option value='3'> 3</option>
-        <option value='4'> 4</option>
-        <option value='5'> 5</option>
-      </Select>
+          <Text fontWeight={'bold'} fontSize={'15px'}>₹ {price}</Text>
+
+
+          <Select placeholder={quantity} onChange={handleQuantity} w={{ base: '100px', }}>
+            <option value='1'> 1</option>
+            <option value='2'> 2</option>
+            <option value='3'> 3</option>
+            <option value='4'> 4</option>
+            <option value='5'> 5</option>
+          </Select>
 
 
 
-      <Button onClick={handleDeleteQty}><DeleteIcon fontSize={"20px"} color={'red.500'} /></Button>
-  
+          <Button onClick={handleDeleteQty}><DeleteIcon fontSize={"20px"} color={'red.500'} /></Button>
+
         </Box>
-        
+
       </Box>
 
-      <Box className='actions' display={'flex'} flexDirection={{ base: "column", md: "row" }} justifyContent={"flex-end"} alignItems={"center"}>
+      <Box className='actions' display={'flex'} flexDirection='row' justifyContent={{base:'space-evenly',md:'flex-end'}} alignItems={"center"}>
 
 
         <Button variant="outline" color={'teal'} border={'none'}>move to wishlist</Button>
