@@ -74,7 +74,7 @@ const CheckOut = () => {
               return <Flex alignItems={'center'} mt={'30px'} justifyContent={'space-between'}>
                 <Image w={'150px'} src={el.image[0]} alt='product' />
                 <Box>
-                  <Heading as='h3' size={'md'}>{el.title}</Heading>
+                  <Heading as='h3' size={'md'}>{el.title.substring(0, 15)}...</Heading>
                   <Text>{el.category}</Text>
                 </Box>
                 <Box>
@@ -187,13 +187,18 @@ export default CheckOut;
 
 export const CheckoutPrice = ({text}) => {
   const navigate = useNavigate();
-
+  // let promoCode = ;
+  const [promo, setPromo] = useState('');
   const data = JSON.parse(localStorage.getItem('cart')) || [];
   let cartPrice = 0;
 
    data.forEach(el => {
      cartPrice += el.price * el.quantity;
    })
+
+   useEffect(() => {
+    setPromo(JSON.parse(localStorage.getItem('promo')) || '');
+   }, [])
 
    return <Box mt={{ base: '10px', sm: '10px', md: '10px', lg: '100px', xl: '100px', '2xl': '100px' }} w={{ base: '100%', sm: '100%', md: '100%', lg: '35%', xl: '35%', '2xl': '35%' }} boxShadow='rgba(0, 0, 0, 0.24) 0px 3px 8px' p={'20px'} h={'550px'} borderRadius={'10px'}>
    <Flex justifyContent={'center'}>
@@ -206,8 +211,8 @@ export const CheckoutPrice = ({text}) => {
        <Text>₹ 499</Text>
      </Flex>
      <Flex justifyContent={'space-between'}>
-       <Text>Coupon: {data.length === 0 ? '' : 'GETFIRSTBUY10'}</Text>
-       <Text>-₹ {data.length === 0 ? 0 : 40}</Text>
+       <Text>Coupon: {promo ? 'GETFIRSTBUY10' : ''}</Text>
+       <Text>-₹ {promo ? cartPrice*0.1 : 0}</Text>
      </Flex>
    </Box>
    <Box m={'10px 0'} h={'3px'} color={'black'}>
@@ -216,7 +221,7 @@ export const CheckoutPrice = ({text}) => {
    <Box lineHeight={'35px'}>
      <Flex justifyContent={'space-between'}>
        <Text>Subtotal</Text>
-       <Text>₹ {cartPrice}</Text>
+       <Text>₹ {(cartPrice += cartPrice * 0.18 - cartPrice*0.1 )}</Text>
      </Flex>
      <Flex justifyContent={'space-between'}>
        <Text>Shipping</Text>

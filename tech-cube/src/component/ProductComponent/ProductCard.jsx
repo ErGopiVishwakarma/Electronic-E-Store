@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import {
   Stack,
   Text,
@@ -16,6 +16,7 @@ import {
   getCartServerdata,
   postSingleProductItem,
 } from '../../redux/CartReducer/action';
+import { SearchContext } from '../../context/SearchContextProvider';
 export const ProductCard = ({
   id,
   title,
@@ -31,11 +32,12 @@ export const ProductCard = ({
   const toast = useToast();
   const products = useSelector(store => store.productReducer.products);
   const [state, setState] = useState(false);
+  const {setStatus} = useContext(SearchContext);
 
   const handleAdd = () => {
     let d = products.find(el => el.id === id);
     // console.log(d);
-    dispatch(postSingleProductItem(d)).then(res => {
+    dispatch(postSingleProductItem({...d, quantity : 1})).then(res => {
       dispatch(getCartServerdata());
       toast({
         title: 'Yay!!',
@@ -136,7 +138,10 @@ export const ProductCard = ({
               backgroundColor: 'gray.700',
               color: 'white',
             }}
-            onClick={() => navigate('/cart')}
+            onClick={() => {
+              setStatus(false);
+              navigate('/cart')
+            }}
           >
             Go To Cart
           </Button>
