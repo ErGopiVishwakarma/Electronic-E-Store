@@ -42,46 +42,57 @@ import logo1 from '../../Assets/techCubeLogo.png';
 import { NAV_ITEMS } from './navComponent/NavItem';
 import logo from '../../Assets/techcube.png';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import UserProfile from './UserProfile';
 import { useDispatch, useSelector } from 'react-redux';
-import { GET_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST } from '../../redux/Product/actionType';
+import {
+  GET_PRODUCT_SUCCESS,
+  PRODUCT_FAILURE,
+  PRODUCT_REQUEST,
+} from '../../redux/Product/actionType';
 import axios from 'axios';
 import { SearchContext } from '../../context/SearchContextProvider';
+import { getCartServerdata } from '../../redux/CartReducer/action';
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
-  const text = useColorModeValue('dark', 'light')
-  const textColor = text === 'dark' ? 'gray.100' : 'blackAlpha.900'
+  const text = useColorModeValue('dark', 'light');
+  const textColor = text === 'dark' ? 'gray.100' : 'blackAlpha.900';
 
   const [open, setOpen] = useState(false);
   const auth = JSON.parse(localStorage.getItem('auth')) || '';
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const {status, setStatus} = useContext(SearchContext);
+  const { status, setStatus } = useContext(SearchContext);
   const user = JSON.parse(localStorage.getItem('user')) || {};
   const cartData = useSelector(store => store.cartReducer.cart);
-
+  
   const openFun = () => {
-    setOpen(true)
-  }
+    setOpen(true);
+  };
   const closeFun = () => {
-    setOpen(false)
-  }
+    setOpen(false);
+  };
+
+  useEffect(() => {
+    dispatch(getCartServerdata());
+  }, [])
 
   const handleSearch = val => {
     if (val) {
       setStatus(true);
     }
-    dispatch({type : PRODUCT_REQUEST})
+
+    dispatch({ type: PRODUCT_REQUEST })
+    
     axios
       .get(`http://localhost:8080/products?q=${val}`)
       .then(res => {
         console.log(res);
-        dispatch({type : GET_PRODUCT_SUCCESS, payload : res.data});
+        dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data });
       })
       .catch(err => {
-        dispatch({type : PRODUCT_FAILURE});
+        dispatch({ type: PRODUCT_FAILURE });
       });
   };
 
@@ -96,7 +107,7 @@ export default function Navbar() {
   const handleLogout = () => {
     localStorage.setItem('auth', JSON.stringify(false));
     navigate('/login');
-  }
+  };
 
   return (
     <Box
@@ -108,6 +119,7 @@ export default function Navbar() {
       borderBottom={'1px solid white'}
       boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'}
     >
+
       <Flex
         pos={'relative'}
         bg={useColorModeValue('white', 'gray.800')}
@@ -169,7 +181,11 @@ export default function Navbar() {
           borderRadius={'30px'}
           display={{ base: 'none', md: 'none', lg: 'block' }}
         >
-          <Input pr="4.5rem" placeholder="search" onChange={(e) => handleDebounce(e.target.value)} />
+          <Input
+            pr="4.5rem"
+            placeholder="search"
+            onChange={e => handleDebounce(e.target.value)}
+          />
           <InputRightElement width="4.5rem">
             <SearchIcon />
           </InputRightElement>
@@ -182,26 +198,73 @@ export default function Navbar() {
           display={{ base: 'none', md: 'flex' }}
           justifyContent={'space-evenly'}
         >
-  
+
+
+          <Menu>
+            
+            <MenuList>
+              {auth ? <MenuItem>Hello {user.firstName} {user.lastName}</MenuItem> :
+                <NavLink to='/signup'><MenuItem>{'login / signup'}</MenuItem></NavLink>
+              }
+            </MenuList>
+          </Menu>
           <Menu>
             <MenuButton>
+
             {auth?<Avatar w={'35px'} h={'35px'} src={user.pic} name={`${user.firstName} ${user.lastName}`} /> : <FaUser size={'20px'} />}
+              {/* {auth ? user.firstName : <FaUser size={'20px'} />} */}
+              {auth ? (
+                <Flex direction={'column'}>
+                  <Avatar
+                    w={'35px'}
+                    h={'35px'}
+                    src={user.image}
+                    name={`${user.firstName} ${user.lastName}`}
+                  />
+                </Flex>
+              ) : (
+                <FaUser size={'20px'} />
+              )}
             </MenuButton>
             <MenuList>
-              {auth ? <MenuItem>Hello {user.firstName} {user.lastName }</MenuItem> :
-              <NavLink to='/signup'><MenuItem>{'login / signup'}</MenuItem></NavLink>
-              }
+              {auth ? (
+                <MenuItem>
+                  Hello {user.firstName} {user.lastName}
+                </MenuItem>
+              ) : (
+                <NavLink to="/signup">
+                  <MenuItem>{'login / signup'}</MenuItem>
+                </NavLink>
+              )}
+
               <MenuItem>
                 <UserProfile data={user}>User Profile</UserProfile>
               </MenuItem>
               <MenuItem isDisabled={!auth} onClick={handleLogout}>LogOut</MenuItem>
               <NavLink to='/adminlogin'> <MenuItem>Admin</MenuItem></NavLink>
+
             </MenuList>
           </Menu>
-          <NavLink to="/cart">
-            <FaShoppingBag size={'20px'} />
-          </NavLink>
-          <ColorModeSwitcher /> 
+          <Box position={'relative'}>
+            {cartData.length > 0 &&
+              <Flex
+                w={'22px'}
+                h={'22px'}
+                borderRadius={'50%'}
+                position={'absolute'} 
+                bottom={'6px'}
+                left={'13px'}
+                bg={text === 'dark' ? 'black' : 'white'}
+                color={text === 'dark' ? 'white' : 'black'}
+                justifyContent={'center'}
+                alignItems={'center'}
+              >{cartData.length}</Flex>
+              }
+            <NavLink to="/cart">
+              <FaShoppingBag size={'22px'} />
+            </NavLink>
+          </Box>
+          <ColorModeSwitcher />
         </Flex>
       </Flex>
 
@@ -229,24 +292,38 @@ export default function Navbar() {
             </Box>
             <NavLink to='/adminlogin'> <FaUser /></NavLink>
               
-      
             <NavLink to="/cart">
               <FaShoppingBag />
             </NavLink>
           </Flex>
         </IconContext.Provider>
       </Flex>
-      <Box pos={'absolute'} w="100%" zIndex={999} top={0} display={{ base: open ? 'block' : 'none', md: open ? 'block' : 'none', lg: 'none' }} >
-        <InputGroup size='md' >
+      <Box
+        pos={'absolute'}
+        w="100%"
+        zIndex={999}
+        top={0}
+        display={{
+          base: open ? 'block' : 'none',
+          md: open ? 'block' : 'none',
+          lg: 'none',
+        }}
+      >
+        <InputGroup size="md">
           <Input
             fontSize={'18px'}
             h="60px"
             bg="white"
             color="black"
-            placeholder='search....'
+            placeholder="search...."
           />
-          <InputRightElement width='4.5rem' >
-            <CloseIcon color="black" mt='20px' cursor={'pointer'} onClick={() => closeFun()} />
+          <InputRightElement width="4.5rem">
+            <CloseIcon
+              color="black"
+              mt="20px"
+              cursor={'pointer'}
+              onClick={() => closeFun()}
+            />
           </InputRightElement>
         </InputGroup>
       </Box>
@@ -264,7 +341,7 @@ const DesktopNav = () => {
       {NAV_ITEMS.map(navItem => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
-            <PopoverTrigger display='flex' align='center'>
+            <PopoverTrigger display="flex" align="center">
               <Link
                 p={2}
                 href={navItem.href ?? '#'}
@@ -276,7 +353,8 @@ const DesktopNav = () => {
                   color: linkHoverColor,
                 }}
               >
-                {navItem.label}{navItem.children ? <ChevronDownIcon w={5} h={5} /> : ''}
+                {navItem.label}
+                {navItem.children ? <ChevronDownIcon w={5} h={5} /> : ''}
               </Link>
             </PopoverTrigger>
 
@@ -304,8 +382,8 @@ const DesktopNav = () => {
 };
 
 const DesktopSubNav = ({ image, href, subLabel }) => {
-  const text = useColorModeValue('light', 'dark')
-  const textColor = text === 'dark' ? 'gray.100' : 'blackAlpha.900'
+  const text = useColorModeValue('light', 'dark');
+  const textColor = text === 'dark' ? 'gray.100' : 'blackAlpha.900';
   return (
     <NavLink
       to="/products"
