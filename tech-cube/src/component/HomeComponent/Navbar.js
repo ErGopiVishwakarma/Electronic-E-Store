@@ -66,6 +66,9 @@ export default function Navbar() {
   const { status, setStatus } = useContext(SearchContext);
   const user = JSON.parse(localStorage.getItem('user')) || {};
   const cartData = useSelector(store => store.cartReducer.cart);
+
+  // let {id} = useRef()
+  var id;
   
   const openFun = () => {
     setOpen(true);
@@ -79,6 +82,10 @@ export default function Navbar() {
   }, [])
 
   const handleSearch = val => {
+    // console.log(val)
+    // if(!val){
+    //   return;
+    // }
     if (val) {
       setStatus(true);
     }
@@ -86,22 +93,21 @@ export default function Navbar() {
     dispatch({ type: PRODUCT_REQUEST })
     
     axios
-      .get(`http://localhost:8080/products?q=${val}`)
+      .get(`http://localhost:8080/products?q=${val}&_limit=20`)
       .then(res => {
-        console.log(res);
-        dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data });
+        dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data , totalProducts: +(res.headers['x-total-count']) });
       })
       .catch(err => {
         dispatch({ type: PRODUCT_FAILURE });
       });
   };
 
-  const handleDebounce = val => {
+  const handleDebounce = (val) => {
     if (id) clearTimeout(id);
-    var id = setTimeout(() => {
+     id = setTimeout(() => {
       handleSearch(val);
       // console.log(val)
-    }, 1500);
+    }, 2000);
   };
 
   const handleLogout = () => {
@@ -213,18 +219,6 @@ export default function Navbar() {
 
             {auth?<Avatar w={'35px'} h={'35px'} src={user.pic} name={`${user.firstName} ${user.lastName}`} /> : <FaUser size={'20px'} />}
               {/* {auth ? user.firstName : <FaUser size={'20px'} />} */}
-              {auth ? (
-                <Flex direction={'column'}>
-                  <Avatar
-                    w={'35px'}
-                    h={'35px'}
-                    src={user.image}
-                    name={`${user.firstName} ${user.lastName}`}
-                  />
-                </Flex>
-              ) : (
-                <FaUser size={'20px'} />
-              )}
             </MenuButton>
             <MenuList>
               {auth ? (
@@ -316,7 +310,7 @@ export default function Navbar() {
             bg="white"
             color="black"
             placeholder="search...."
-          />
+            onChange={e => handleDebounce(e.target.value)}/>
           <InputRightElement width="4.5rem">
             <CloseIcon
               color="black"

@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Text, flexbox } from '@chakra-ui/react';
+import { Box, Flex, HStack, Image, Text, flexbox } from '@chakra-ui/react';
 import React, { useState } from 'react';
 
 const NewLeft = props => {
@@ -8,17 +8,18 @@ const NewLeft = props => {
 
   return (
     <Box
-      display={'flex'}
+      display={'flex'} flexDirection={'column-reverse'}
       margin={['5%', '5%', '10%', '10%']}
       alignItems={'center'}
+      gap="20px"
     >
       <Box
-        height={'100%'}
-        maxWidth={'16.7%'}
+        height={'100px'}
+        maxWidth={'100%'}
         className="multiple-small-div"
         backgroundColor={'gray.500'}
-        gap={'%'}
-        display="grid"
+        display="flex"
+        gap="10px"
         bg="gray.100"
         justifyContent="space-around"
       >
@@ -28,10 +29,11 @@ const NewLeft = props => {
               onMouseEnter={() => {
                 setIndex(i);
               }}
+              h="100%" w='100px'
               className="sub-img-1"
             >
               {' '}
-              <img src={el} alt="dthr" />
+              <Image src={el} alt="dthr" h="100%" w="100px" />
             </Box>
           );
         })}
@@ -45,7 +47,7 @@ const NewLeft = props => {
         borderBottom={'2px'}
       >
         <Box>
-          <img src={image && image[index]} alt="" width="100%" />
+          <Image src={image && image[index]} alt="" w="100%" h={{base:'400px',md:'450px'}} />
         </Box>
       </Box>
     </Box>
