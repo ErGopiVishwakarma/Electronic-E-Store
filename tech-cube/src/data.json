@@ -3739,31 +3739,5 @@
   "wishlist": [],
   "addcart": [],
   "orders": [],
-  "cart": [
-    {
-      "color": [
-        "black",
-        "blue"
-      ],
-      "image": [
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untblueitled-1_600x.png?v=1661509030",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/06-2_700x.png?v=1675769103",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/07-2_700x.png?v=1675769103",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/4_3d410a1f-523c-41bc-980d-14b8d2c1c58a_700x.png?v=1675769103",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/blue_83bb1e1b-8519-4bd9-83b8-92299b0b375d_600x.png?v=1661509030"
-      ],
-      "tag_badge": "20 Hours Playback",
-      "title": "Rockerz 103 Pro",
-      "price": 1199,
-      "discount": 52,
-      "mrp": 2490,
-      "rating": 4.9,
-      "category": "wireless_earphones",
-      "id": 48,
-      "description": "10mm Drivers Voice Assistant ENx™ Technology ",
-      "brand": "Ambrane",
-      "quantity": 1,
-      "review": 2388
-    }
-  ]
+  "cart":[]
 }

@@ -170,7 +170,13 @@ export default function Navbar() {
         >
           {/* logo section here  */}
           <NavLink to="/">
+<<<<<<< HEAD
             <Box onClick={() => setStatus(false)}><Image src={logo} w="120px" /></Box>
+=======
+
+            <Box onClick={()=>setStatus(false)}><Image src={logo} w="120px" /></Box>
+
+>>>>>>> 3f1b9796fb334d5a0a412fd875da7c09bcbc4476
           </NavLink>
 
           <Flex
@@ -242,7 +248,7 @@ export default function Navbar() {
             </MenuList>
           </Menu>
           <Box position={'relative'}>
-            {cartData.length > 0 &&
+            {cartData.length > 0 && auth &&
               <Flex
                 w={'22px'}
                 h={'22px'}

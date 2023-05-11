@@ -37,9 +37,12 @@ const CartPage = () => {
     totalPrice += cartItem.price * cartItem.quantity;
   })
 
+<<<<<<< HEAD
   useEffect(()=>{
     window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   },[])
+=======
+>>>>>>> 3f1b9796fb334d5a0a412fd875da7c09bcbc4476
 
   useEffect(() => {
     dispatch(getCartServerdata());
@@ -93,7 +96,11 @@ const CartPage = () => {
 
           </Box>
 
+<<<<<<< HEAD
           {promoCodeData && <Box  color={'gray.600'} my={'20px'} w={'100%'} display={'flex'} justifyContent={'space-between'}>
+=======
+          {promoCodeData && <Box  color={'gray.600'} m={'20px'} w={'100%'} display={'flex'} justifyContent={'space-between'}>
+>>>>>>> 3f1b9796fb334d5a0a412fd875da7c09bcbc4476
             <Text>Promocode <Button onClick={handlePromoToggle} size={'sm'} fontSize={'14px'} colorScheme='red'>X</Button></Text>
             <Badge colorScheme='green'>{promoCode} applied</Badge>
             </Box>}
