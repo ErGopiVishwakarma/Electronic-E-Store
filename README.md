@@ -45,11 +45,11 @@ Chakra-ui
 ##### react, redux, html, css, chakra
 
 ## Team Collaborators
-#### [@Gopi Vishwakarma](https://github.com/ErGopiVishwakarma)
-#### [@Tanmoy Roy](https://github.com/Tanmoy0151)
-#### [@Juri Kalita](https://github.com/jurikalita011)
-#### [@Ritesh Goswami](https://github.com/ritesh22201)
-#### [@Deepak Yadav](https://github.com/Deepak-25yadav)
+[@Gopi Vishwakarma](https://github.com/ErGopiVishwakarma)
+[@Tanmoy Roy](https://github.com/Tanmoy0151)
+[@Juri Kalita](https://github.com/jurikalita011)
+[@Ritesh Goswami](https://github.com/ritesh22201)
+[@Deepak Yadav](https://github.com/Deepak-25yadav)
 
 
 
