@@ -11,7 +11,7 @@ const Users = () => {
     console.log(blackData)
 
     useEffect(() => {
-        axios('http://localhost:8080/user').then(res => setUser(res.data))
+        axios('https://viridian-confusion-henley.glitch.me/user').then(res => setUser(res.data))
     }, [])
 
     const blockUser = (data) => {

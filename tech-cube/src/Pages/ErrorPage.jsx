@@ -1,11 +1,15 @@
 import { Box, Image, Button, useColorModeValue, Link } from '@chakra-ui/react'
-import React from 'react';
+import React, { useEffect } from 'react';
 import errorImg from '../Assets/errorImg.webp';
 import { useNavigate } from 'react-router-dom';
 
 const ErrorPage = () => {
   const text = useColorModeValue('dark', 'light');
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  },[])
 
   return (
     <Box w={'50%'} m={'80px auto 20px auto'}>

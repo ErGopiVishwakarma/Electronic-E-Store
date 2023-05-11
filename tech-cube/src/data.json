@@ -3683,6 +3683,19 @@
       "state": "UttarPradesh"
     },
     {
+      "firstName": "Anubhav",
+      "lastName": "Dixit",
+      "mobile": "8234523423",
+      "email": "anubhav123@gmail.com",
+      "password": "anubhav123",
+      "pic": "",
+      "id": 7,
+      "address": "Varanasi UttarPradesh",
+      "city": "Varanasi",
+      "pincode": "841123",
+      "state": "UttarPradesh"
+    },
+    {
       "firstName": "Deepak",
       "lastName": "Yadav",
       "mobile": "4152896354",
@@ -3707,10 +3720,23 @@
       "city": "Varanasi",
       "pincode": "841123",
       "state": "UttarPradesh"
+    },
+    {
+      "firstName": "Nishat",
+      "lastName": "Shukla",
+      "mobile": "1234567898",
+      "email": "nishant123@gmail.com",
+      "password": "nishant123",
+      "pic": "",
+      "id": 6,
+      "address": "Varanasi UttarPradesh",
+      "city": "Varanasi",
+      "pincode": "841123",
+      "state": "UttarPradesh"
     }
   ],
   "blacklist": [],
-  "whishlist": [],
+  "wishlist": [],
   "addcart": [],
   "orders": [],
   "cart": [

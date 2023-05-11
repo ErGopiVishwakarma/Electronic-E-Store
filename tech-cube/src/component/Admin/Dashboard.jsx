@@ -21,7 +21,7 @@ const Dashboard = () => {
   },[])
 
   useEffect(() => {
-    axios('http://localhost:8080/user').then(res => setUser(res.data.length))
+    axios('https://viridian-confusion-henley.glitch.me/user').then(res => setUser(res.data.length))
   }, [])
   return (
     <Flex direction={'column'} css={css`&:

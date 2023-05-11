@@ -28,7 +28,7 @@ export const updatePaymentMethod = paymentDetails => dispatch => {
 export const getCartServerdata = () => dispatch => {
   dispatch({ type: GET_CART_SERVER_REQUEST });
   axios
-    .get('http://localhost:8080/cart')
+    .get('https://viridian-confusion-henley.glitch.me/cart')
     .then(res => {
       dispatch({ type: GET_CART_SERVER_SUCCESS, payload: res.data });
       localStorage.setItem('cart', JSON.stringify(res.data));
@@ -41,7 +41,7 @@ export const getCartServerdata = () => dispatch => {
 export const postSingleProductItem = obj => dispatch => {
   dispatch({ type: GET_CART_SERVER_REQUEST });
   return axios
-    .post(`http://localhost:8080/cart`, obj)
+    .post(`https://viridian-confusion-henley.glitch.me/cart`, obj)
     .then(res => {
       console.log('res after post 👌👌');
     })

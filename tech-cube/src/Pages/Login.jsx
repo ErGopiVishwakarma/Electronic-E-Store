@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Flex,
   Box,
@@ -33,13 +33,17 @@ const Login = () => {
   // const data = useSelector(store => store.authReducer.users);
   const navigate = useNavigate();
 
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  },[])
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    let data = await axios('http://localhost:8080/user').then(res => res.data);
+    let data = await axios('https://viridian-confusion-henley.glitch.me/user').then(res => res.data);
 
     let block = false;
-    const blockData = await axios.get('http://localhost:8080/blacklist').then(res => res.data)
+    const blockData = await axios.get('https://viridian-confusion-henley.glitch.me/blacklist').then(res => res.data)
     if (blockData.length > 0) {
       blockData.forEach(el => {
         if (el.email === email) {

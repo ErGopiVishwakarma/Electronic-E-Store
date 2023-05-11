@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, Image, Text, Button, Divider, Alert, AlertIcon, Input, InputGroup, useToast } from '@chakra-ui/react'
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { css } from '@emotion/react';
 import orderSummaryImg from '../Assets/orderSummaryImg.avif';
 import { useColorModeValue } from '@chakra-ui/react';
@@ -9,14 +9,12 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { Navigate, useNavigate, NavLink } from 'react-router-dom';
 import { getCartServerdata } from '../redux/CartReducer/action';
-import { SearchContext } from '../context/SearchContextProvider';
 
 
 const CheckOut = () => {
   const text = useColorModeValue('dark', 'light');
   const dispatch = useDispatch();
   const navigate= useNavigate()
-  const { status } = useContext(SearchContext);
   // const data = useSelector(store => store.checkoutReducer.data);
   const ref = useRef()
   const user = useSelector(store => store.checkoutReducer.userData);
@@ -30,6 +28,10 @@ const CheckOut = () => {
   const [formData, setFormData] = useState({
     firstName: '', lastName: '', address: '', city: '', pincode: '', state: '', mobile: ''
   })
+
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  },[])
 
   useEffect(() => {
     if (id !== '') {
@@ -64,7 +66,6 @@ const CheckOut = () => {
 
 
   return (
-    status? navigate('/products') :
     <Flex id='app' justifyContent={'center'} direction={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }} w={'90%'} m={'20px auto'} gap={'20px'}>
       <Box w={{ base: '100%', sm: '100%', md: '100%', lg: '65%', xl: '65%', '2xl': '65%' }} m={'100px 0 0px 0'}>
         <Box overflowY={'scroll'} maxHeight={'400px'} boxShadow='rgba(0, 0, 0, 0.24) 0px 3px 8px' p={'20px'} borderRadius={'10px'}>
@@ -77,7 +78,7 @@ const CheckOut = () => {
               return <Flex alignItems={'center'} mt={'30px'} justifyContent={'space-between'}>
                 <Image w={'150px'} src={el.image[0]} alt='product' />
                 <Box>
-                  <Heading as='h3' size={'md'}>{el.title}</Heading>
+                  <Heading as='h3' size={'md'}>{el.title.substring(0, 15)}...</Heading>
                   <Text>{el.category}</Text>
                 </Box>
                 <Box>
@@ -191,12 +192,23 @@ export default CheckOut;
 export const CheckoutPrice = ({text}) => {
   const navigate = useNavigate();
 
+  const [promoCodeStatus, setPromoCodeStatus] = useState('');
   const data = JSON.parse(localStorage.getItem('cart')) || [];
   let cartPrice = 0;
+  const promo = JSON.parse(localStorage.getItem('promo')) || ''
 
    data.forEach(el => {
      cartPrice += el.price * el.quantity;
    })
+
+   useEffect(() => {
+     if(promo){
+      setPromoCodeStatus(true);
+     }
+     else{
+      setPromoCodeStatus(false);
+     }
+   }, [])
 
    return <Box mt={{ base: '10px', sm: '10px', md: '10px', lg: '100px', xl: '100px', '2xl': '100px' }} w={{ base: '100%', sm: '100%', md: '100%', lg: '35%', xl: '35%', '2xl': '35%' }} boxShadow='rgba(0, 0, 0, 0.24) 0px 3px 8px' p={'20px'} h={'550px'} borderRadius={'10px'}>
    <Flex justifyContent={'center'}>
@@ -209,8 +221,8 @@ export const CheckoutPrice = ({text}) => {
        <Text>₹ 499</Text>
      </Flex>
      <Flex justifyContent={'space-between'}>
-       <Text>Coupon: {data.length === 0 ? '' : 'GETFIRSTBUY10'}</Text>
-       <Text>-₹ {data.length === 0 ? 0 : 40}</Text>
+       <Text>Coupon: {promoCodeStatus ? 'GETFIRSTBUY10' : ''}</Text>
+       <Text>-₹ {promoCodeStatus ? (cartPrice*0.1).toFixed(2) : 0}</Text>
      </Flex>
    </Box>
    <Box m={'10px 0'} h={'3px'} color={'black'}>
@@ -219,15 +231,15 @@ export const CheckoutPrice = ({text}) => {
    <Box lineHeight={'35px'}>
      <Flex justifyContent={'space-between'}>
        <Text>Subtotal</Text>
-       <Text>₹ {cartPrice}</Text>
+       <Text>₹ {(cartPrice)}</Text>
      </Flex>
      <Flex justifyContent={'space-between'}>
        <Text>Shipping</Text>
        <Text>{cartPrice > 500 ? 'FREE' : cartPrice === 0 ? `₹ ${0}` : `₹ ${40}`}</Text>
      </Flex>
      <Flex justifyContent={'space-between'}>
-       <Text>Estimated Tax</Text>
-       <Text>{cartPrice > 1000 ? 'FREE' : cartPrice === 0 ? `₹ ${0}` : `₹ ${40}`}</Text>
+       <Text>Tax 18%</Text>
+       <Text>₹ {(cartPrice*0.18).toFixed(2)}</Text>
      </Flex>
    </Box>
    <Box m={'10px 0'} h={'3px'} color={'gray.600'}>
@@ -236,12 +248,12 @@ export const CheckoutPrice = ({text}) => {
    <Box>
      <Flex justifyContent={'space-between'}>
        <Heading size={'md'}>Total</Heading>
-       <Heading size={'md'}>₹ {cartPrice > 500 && cartPrice < 1000 ? cartPrice + 30 : cartPrice > 1000 ? cartPrice : cartPrice === 0 ? 0 : cartPrice + 30 + 40}</Heading>
+       <Heading size={'md'}>₹ {promoCodeStatus ? (cartPrice + cartPrice*0.18 - cartPrice*0.1).toFixed(2) : (cartPrice + cartPrice*0.18).toFixed(2)}</Heading>
      </Flex>
    </Box>
    <Box m={'10px 0'} h={'3px'} color={'gray.600'}>
      <Divider orientation='horizontal'></Divider>
    </Box>
    <Button onClick={() => navigate('/payment')} _hover={{ bg: 'gray.700' }} w={'100%'} bg={text === 'dark' ? 'black' : 'white'} color={text === 'dark' ? 'white' : 'black'}>Proceed to Payment</Button>
- </Box>
+ </Box>
 }
