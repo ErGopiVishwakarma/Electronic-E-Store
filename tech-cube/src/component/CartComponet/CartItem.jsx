@@ -61,7 +61,7 @@ export default function CartItem({
     const upDatedData = cart.filter((el) => {
       return el.id !== id
     })
-    axios.delete(`http://localhost:8080/cart/${id}`);
+    axios.delete(`https://viridian-confusion-henley.glitch.me/cart/${id}`);
     dispatch(updateCartFn(upDatedData));
   };
 

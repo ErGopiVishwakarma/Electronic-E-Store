@@ -7,7 +7,7 @@ import axios from 'axios'
 const Admin = () => {
    const [admin,setAdmin] = useState([])
     useEffect(()=>{
-        axios('http://localhost:8080/admin').then(res => setAdmin(res.data))
+        axios('https://viridian-confusion-henley.glitch.me/admin').then(res => setAdmin(res.data))
     },[])
 
 

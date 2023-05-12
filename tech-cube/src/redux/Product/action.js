@@ -10,7 +10,7 @@ export const getProducts = (paramObj, page) => dispatch => {
   dispatch({ type: PRODUCT_REQUEST });
   axios
 
-    .get(`http://localhost:8080/products?_page=${page}&_limit=20`, paramObj)
+    .get(`https://viridian-confusion-henley.glitch.me/products?_page=${page}&_limit=20`, paramObj)
 
     .then(res => {
       dispatch({
@@ -33,7 +33,7 @@ export const singleProductfunc = id => dispatch => {
   dispatch({ type: PRODUCT_REQUEST });
   console.log('sghdgassdj');
   return axios
-    .get(`http://localhost:8080/products/${id}`)
+    .get(`https://viridian-confusion-henley.glitch.me/products/${id}`)
     .then(res => {
       dispatch({ type: SINGLE_PRODUCT_SUCCESS, payload: res.data });
     })

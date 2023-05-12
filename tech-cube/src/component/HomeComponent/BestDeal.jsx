@@ -23,7 +23,7 @@ const BestDeal = () => {
           Today's Best Deal For You
         </Heading>
       </Center>
-        <Grid templateColumns={{ base: 'repeat(2,1fr)', md: 'repeat(3,1fr)', lg: 'repeat(4,1fr)' }} gap="20px" >
+        <Grid templateColumns={{ base: 'repeat(1,1fr)',sm:'repeat(2,1fr)', md: 'repeat(3,1fr)', lg: 'repeat(4,1fr)' }} gap="20px" >
 
           {
             imageArr.map((el,ind) => (

@@ -5,6 +5,7 @@ import { deleteProduct, getAllData } from '../../redux/Admin/action'
 import EditProduct from './EditProduct'
 import DeleteData from './DeleteProduct'
 import AddProduct from './AddProduct'
+import ProductDetail from './ProductDetail'
 
 
 const Products = () => {
@@ -32,7 +33,9 @@ useEffect(()=>{
                             <Flex w="100%" justifyContent={'space-between'} pr={{ base: '0px', md: '30px', lg: '100px' }} alignItems={'center'}>
                                 <Image src={el.image[0]} w='70px' h='70px' borderRadius={'50%'} />
                                 <Text>{el.title.substring(0,20)}</Text>
-                                <Button display={{ base: 'block', md: 'none' }}>show detail</Button>
+                                <Box display={{ base: 'block', md: 'none' }}>
+                                    <ProductDetail child={el}>show detail</ProductDetail>
+                                </Box>
                                 <Text display={{ base: 'none', md: 'block' }}>{el.brand}</Text>
                                 <Text display={{ base: 'none', md: 'block' }}>{el.price}</Text>
                             </Flex>

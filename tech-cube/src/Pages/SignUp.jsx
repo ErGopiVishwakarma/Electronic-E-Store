@@ -43,6 +43,10 @@ export default function SignUp() {
   const loader = useSelector(store => store.authReducer.isLoading);
   const error = useSelector(store => store.authReducer.isError);
 
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  },[])
+
   const handleSubmit = async(e) => {
     e.preventDefault();
 
@@ -55,7 +59,7 @@ export default function SignUp() {
     }
 
     let block = false;
-    const blockData = await axios.get('http://localhost:8080/blacklist').then(res => res.data)
+    const blockData = await axios.get('https://viridian-confusion-henley.glitch.me/blacklist').then(res => res.data)
     if (blockData.length > 0) {
       blockData.forEach(el => {
         if (el.email === userData.email) {

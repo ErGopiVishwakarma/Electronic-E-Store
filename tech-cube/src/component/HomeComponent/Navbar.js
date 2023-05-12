@@ -67,9 +67,11 @@ export default function Navbar() {
   const user = JSON.parse(localStorage.getItem('user')) || {};
   const cartData = useSelector(store => store.cartReducer.cart);
 
+
+
   // let {id} = useRef()
   var id;
-  
+
   const openFun = () => {
     setOpen(true);
   };
@@ -91,11 +93,11 @@ export default function Navbar() {
     }
 
     dispatch({ type: PRODUCT_REQUEST })
-    
+
     axios
-      .get(`http://localhost:8080/products?q=${val}&_limit=20`)
+      .get(`https://viridian-confusion-henley.glitch.me/products?q=${val}&_limit=20`)
       .then(res => {
-        dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data , totalProducts: +(res.headers['x-total-count']) });
+        dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data, totalProducts: +(res.headers['x-total-count']) });
       })
       .catch(err => {
         dispatch({ type: PRODUCT_FAILURE });
@@ -104,7 +106,7 @@ export default function Navbar() {
 
   const handleDebounce = (val) => {
     if (id) clearTimeout(id);
-     id = setTimeout(() => {
+    id = setTimeout(() => {
       handleSearch(val);
       // console.log(val)
     }, 2000);
@@ -168,9 +170,7 @@ export default function Navbar() {
         >
           {/* logo section here  */}
           <NavLink to="/">
-
-            <Box onClick={()=>setStatus(false)}><Image src={logo} w="120px" /></Box>
-
+            <Box onClick={() => setStatus(false)}><Image src={logo} w="120px" /></Box>
           </NavLink>
 
           <Flex
@@ -209,7 +209,7 @@ export default function Navbar() {
 
 
           <Menu>
-            
+
             <MenuList>
               {auth ? <MenuItem>Hello {user.firstName} {user.lastName}</MenuItem> :
                 <NavLink to='/signup'><MenuItem>{'login / signup'}</MenuItem></NavLink>
@@ -219,7 +219,7 @@ export default function Navbar() {
           <Menu>
             <MenuButton>
 
-            {auth?<Avatar w={'35px'} h={'35px'} src={user.pic} name={`${user.firstName} ${user.lastName}`} /> : <FaUser size={'20px'} />}
+              {auth ? <Avatar w={'35px'} h={'35px'} src={user.pic} name={`${user.firstName} ${user.lastName}`} /> : <FaUser size={'20px'} />}
               {/* {auth ? user.firstName : <FaUser size={'20px'} />} */}
             </MenuButton>
             <MenuList>
@@ -247,7 +247,7 @@ export default function Navbar() {
                 w={'22px'}
                 h={'22px'}
                 borderRadius={'50%'}
-                position={'absolute'} 
+                position={'absolute'}
                 bottom={'6px'}
                 left={'13px'}
                 bg={text === 'dark' ? 'black' : 'white'}
@@ -255,7 +255,7 @@ export default function Navbar() {
                 justifyContent={'center'}
                 alignItems={'center'}
               >{cartData.length}</Flex>
-              }
+            }
             <NavLink to="/cart">
               <FaShoppingBag size={'22px'} />
             </NavLink>
@@ -276,8 +276,11 @@ export default function Navbar() {
         bg={textColor}
         py="6px"
         borderRadius={'10px'}
-        boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'}
-      >
+        boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'}      >
+
+
+
+        {/* BOTTOM NAVBAR  */}
         <IconContext.Provider value={{ size: '25px' }}>
           <Flex justifyContent={'space-around'}>
             <NavLink to="/">
@@ -286,8 +289,41 @@ export default function Navbar() {
             <Box onClick={openFun}>
               <FaSearch />
             </Box>
-            <NavLink to='/adminlogin'> <FaUser /></NavLink>
-              
+            {/* <NavLink to='/adminlogin'> <FaUser /></NavLink> */}
+            <Menu>
+
+              <MenuList>
+                {auth ? <MenuItem>Hello {user.firstName} {user.lastName}</MenuItem> :
+                  <NavLink to='/signup'><MenuItem>{'login / signup'}</MenuItem></NavLink>
+                }
+              </MenuList>
+            </Menu>
+            <Menu>
+              <MenuButton>
+
+                {auth ? <Avatar w={'35px'} h={'35px'} src={user.pic} name={`${user.firstName} ${user.lastName}`} /> : <FaUser size={'20px'} />}
+                {/* {auth ? user.firstName : <FaUser size={'20px'} />} */}
+              </MenuButton>
+              <MenuList>
+                {auth ? (
+                  <MenuItem>
+                    Hello {user.firstName} {user.lastName}
+                  </MenuItem>
+                ) : (
+                  <NavLink to="/signup">
+                    <MenuItem>{'login / signup'}</MenuItem>
+                  </NavLink>
+                )}
+
+                <MenuItem>
+                  <UserProfile data={user}>User Profile</UserProfile>
+                </MenuItem>
+                <MenuItem isDisabled={!auth} onClick={handleLogout}>LogOut</MenuItem>
+                <NavLink to='/adminlogin'> <MenuItem>Admin</MenuItem></NavLink>
+
+              </MenuList>
+            </Menu>
+
             <NavLink to="/cart">
               <FaShoppingBag />
             </NavLink>
@@ -312,7 +348,7 @@ export default function Navbar() {
             bg="white"
             color="black"
             placeholder="search...."
-            onChange={e => handleDebounce(e.target.value)}/>
+            onChange={e => handleDebounce(e.target.value)} />
           <InputRightElement width="4.5rem">
             <CloseIcon
               color="black"

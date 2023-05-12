@@ -1,4 +1,3 @@
-
 import { AspectRatio, Badge, Box, Button, Center, Divider, Flex, Heading, Image, Input, InputGroup, Text, } from '@chakra-ui/react';
 
 import React, { useContext, useEffect, useState } from 'react';
@@ -10,13 +9,6 @@ import { Link } from 'react-router-dom';
 import emptyCartGif from '../Assets/emptyCartImg2.gif';
 import { SearchContext } from '../context/SearchContextProvider';
 import ProductPage from './ProductPage';
-
-
-
-
-
-
-
 
 //----------------------------------------------------------------------------------------------------------------------------
 const CartPage = () => {
@@ -38,6 +30,9 @@ const CartPage = () => {
     totalPrice += cartItem.price * cartItem.quantity;
   })
 
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  },[])
 
   useEffect(() => {
     dispatch(getCartServerdata());
@@ -63,10 +58,10 @@ const CartPage = () => {
 
   return (
     status ? <ProductPage /> :
-      <Box justifyContent={{base:'center',md:'center',lg:'flex'}} mb={'130px'} display={"flex"} flexDirection={{ base: 'column', sm: cart.length>0 && "row", md: "column", lg: cart.length>0 && 'row' }}  paddingTop={"20px"} p={'3%'}>
+      <Box justifyContent={{base:'center',md:'center',lg:'flex'}}  display={"flex"} flexDirection={{ base: 'column', sm: cart.length>0 && "row", md: "column", lg: cart.length>0 && 'row' }}  paddingTop={"20px"} p={'3%'}>
 
-        <Flex width={{base:'100%',sm:'90%',md: '100%'}} justifyContent={'center'} direction={'column'} mt={{base:'50px',md:''}} >
-          <Center fontWeight={'bold'} fontSize={'24px'}>Your Cart</Center>
+        <Flex width={{base:'100%',sm:'90%',md: '100%'}} justifyContent={'center'} direction={'column'}  mt={{base:'50px',md:'20px',lg:'10px'}} >
+          <Center fontWeight={'bold'} fontSize={'24px'} pt={{base:'40px',md:''}}>Your Cart</Center>
           <Divider />
           {cart.length > 0 ? (
 
@@ -74,9 +69,8 @@ const CartPage = () => {
 
           ) : (
             <Flex direction='column' justifyContent='center' >
-            
             <Image src={emptyCartGif} />
-           <Center> <Heading fontSize={'25px'} pt="40px">Your Cart Is Empty</Heading></Center>
+           
             </Flex>
             
             /* <AspectRatio h={'80vh'} ratio={[1 / 1,4/3,16/9,20/10]}><Image h={'100%'} minW={'full'}  src={emptyCartGif} alt='empty cart' /></AspectRatio> */
@@ -92,7 +86,8 @@ const CartPage = () => {
 
           </Box>
 
-          {promoCodeData && <Box  color={'gray.600'} m={'20px'} w={'100%'} display={'flex'} justifyContent={'space-between'}>
+
+          {promoCodeData && <Box  color={'gray.600'} my={'20px'} w={'100%'} display={'flex'} justifyContent={'space-between'}>
             <Text>Promocode <Button onClick={handlePromoToggle} size={'sm'} fontSize={'14px'} colorScheme='red'>X</Button></Text>
             <Badge colorScheme='green'>{promoCode} applied</Badge>
             </Box>}
@@ -146,12 +141,6 @@ export const CartList = () => {
         return <CartItem key={el.id} {...el} />
       })}
 
-    </Box>
-  );
+</Box>
+);
 };
-
-
-
-
-
-

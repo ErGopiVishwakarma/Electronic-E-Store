@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     Flex,
     Box,
@@ -25,9 +25,13 @@ const AdminLogin = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+    useEffect(()=>{
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      },[])
+
     const handleSubmit = async(e) => {
         e.preventDefault()
-        let data = await axios('http://localhost:8080/admin').then(res=>res.data)
+        let data = await axios('https://viridian-confusion-henley.glitch.me/admin').then(res=>res.data)
     
         if(!email || !password){
             toast({
@@ -90,7 +94,7 @@ const AdminLogin = () => {
             justify={'center'}
             direction={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }}
             bg={useColorModeValue('gray.50', 'gray.800')}>
-            <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+            <Stack spacing={8} mx={'auto'} maxW={{base:'full',md:'lg'}} py={12} px={{base:2,md:6}}>
                 <Stack align={'center'}>
                     <Heading fontSize={'4xl'}>Admin Login</Heading>
                 </Stack>

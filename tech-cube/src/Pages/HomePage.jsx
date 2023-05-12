@@ -1,5 +1,5 @@
 import { Box, Button, Center, Flex, Grid, Heading, Image, Text, useColorModeValue } from '@chakra-ui/react'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import home from '../Assets/home.png'
 import '../Css/Home.css'
 import { shopCategory } from '../component/HomeComponent/navComponent/NavItem'
@@ -17,6 +17,10 @@ const HomePage = () => {
   const textColor = text==='dark'?'gray.100':'blackAlpha.900'
   const {status} = useContext(SearchContext);
   const navigate = useNavigate()
+
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  },[])
 
   return (
     status ? navigate('/products') : 
@@ -65,7 +69,6 @@ const HomePage = () => {
       
       {/* all services section here which is provided by the company  */}
       <HomeService />
-      <Heading p="3%">Tech-cube</Heading>
     </Box>
   )
 }
