@@ -13,12 +13,8 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateCartFn } from '../../redux/CartReducer/action';
 
-
 import { ChevronDownIcon, DeleteIcon } from '@chakra-ui/icons';
 import axios from 'axios';
-
-
-
 
 
 
@@ -65,7 +61,7 @@ export default function CartItem({
     const upDatedData = cart.filter((el) => {
       return el.id !== id
     })
-    axios.delete(`http://localhost:8080/cart/${id}`);
+    axios.delete(`https://viridian-confusion-henley.glitch.me/cart/${id}`);
     dispatch(updateCartFn(upDatedData));
   };
 

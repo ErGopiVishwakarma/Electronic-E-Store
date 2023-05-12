@@ -21,7 +21,7 @@ const Dashboard = () => {
   },[])
 
   useEffect(() => {
-    axios('http://localhost:8080/user').then(res => setUser(res.data.length))
+    axios('https://viridian-confusion-henley.glitch.me/user').then(res => setUser(res.data.length))
   }, [])
   return (
     <Flex direction={'column'} css={css`&:
@@ -30,7 +30,7 @@ const Dashboard = () => {
    width:'100%'
  }
 `} >
-      <Flex justifyContent={{ base: 'center', md: 'flex-start' }} gap='50px' direction={{ base: 'column', md: 'row' }} alignItems={'center'}>
+      <Flex justifyContent={{ base: 'center', md: 'flex-start' }} gap={{base:'10px',md:'50px'}} direction={{ base: 'column', md: 'row' }} alignItems={'center'}>
         <Flex gap ={{base:'60px',md:'5px'}} alignItems={'center'} justifyContent={'center'} h='120px' w={{ base: '90%', md: '200px' }} bg='orange.400' direction={{ base: 'row', md: 'column' }} color={'white'} borderRadius={'40px'} >
           <Heading fontSize={'25px'}>Total User</Heading>
           <Heading fontSize={'25px'}>{user}</Heading>

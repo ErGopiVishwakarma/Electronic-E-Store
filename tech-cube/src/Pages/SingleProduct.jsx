@@ -12,7 +12,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { singleProductfunc } from '../redux/Product/action';
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -20,6 +20,7 @@ import { useEffect } from 'react';
 import NewLeft from '../component/SingleProduct/NewLeft';
 import NewRight from '../component/SingleProduct/NewRight';
 import { extendTheme } from '@chakra-ui/react';
+
 
 // 2. Update the breakpoints as key-value pairs
 const breakpoints = {
@@ -37,6 +38,8 @@ const SingleProduct = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
 
+ 
+
   console.log('id at single page', id);
   // const data=useSelector((store)=> store.productReducer.data)
   // const singleData=data.find((singleData)=>singleData.id === parseInt(id));
@@ -48,6 +51,10 @@ const SingleProduct = () => {
   useEffect(() => {
     dispatch(singleProductfunc(id));
   }, []);
+
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  },[])
 
   return (
     <Box

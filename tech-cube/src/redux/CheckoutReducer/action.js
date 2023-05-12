@@ -4,7 +4,7 @@ import { GET_ADDRESS, GET_ADDRESS_FAILURE, GET_ADDRESS_SUCCESSFUL, GET_DATA, GET
 export const showData = (dispatch) => {
     dispatch({ type: GET_DATA });
 
-    axios.get('http://localhost:8080/cart')
+    axios.get('https://viridian-confusion-henley.glitch.me/cart')
 
         .then(res => {
             dispatch({ type: GET_DATA_SUCCESSFUL, payload: res.data });
@@ -16,7 +16,7 @@ export const showData = (dispatch) => {
 
 export const getAddress = (id) => (dispatch) => {
     dispatch({type : GET_ADDRESS});
-    axios.get(`http://localhost:8080/user/${+id}`)
+    axios.get(`https://viridian-confusion-henley.glitch.me/user/${+id}`)
     .then(res => {
         dispatch({type : GET_ADDRESS_SUCCESSFUL, payload : res.data})
     })
@@ -27,7 +27,7 @@ export const getAddress = (id) => (dispatch) => {
 
 export const postAddress = (id, dataObj) => (dispatch) => {
     dispatch({type : GET_ADDRESS});
-    axios.patch(`http://localhost:8080/user/${+id}`, dataObj)
+    axios.patch(`https://viridian-confusion-henley.glitch.me/user/${+id}`, dataObj)
     .then(res => {
         dispatch({type : POST_ADDRESS_SUCCESS, payload : res.data})
     })
