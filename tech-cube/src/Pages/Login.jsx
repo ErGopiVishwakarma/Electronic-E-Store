@@ -22,6 +22,7 @@ import { LOGIN_USER, LOGIN_USER_FAILURE, LOGIN_USER_SUCCESSFUL } from '../redux/
 import { NavLink, useNavigate } from 'react-router-dom';
 import { loginData } from '../redux/Authentication/action';
 import Loader from '../component/Loader&Error/Loader';
+import Footer from '../component/HomeComponent/Footer';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -121,6 +122,7 @@ const Login = () => {
 
   return (
     loader ? <Loader /> :
+    <>
       <Flex
         minH={'100vh'}
         align={'center'}
@@ -175,6 +177,8 @@ const Login = () => {
           <Image w={'95%'} borderRadius={'10px'} h={'500px'} src={loginImg} alt='loginImg' />
         </Box>
       </Flex>
+      <Footer />
+      </>
   )
 }
 

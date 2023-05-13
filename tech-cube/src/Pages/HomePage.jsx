@@ -11,6 +11,7 @@ import { SearchContext } from '../context/SearchContextProvider'
 import { ProductCard } from '../component/ProductComponent/ProductCard'
 import ProductPage from './ProductPage'
 import { NavLink, useNavigate } from 'react-router-dom'
+import Footer from '../component/HomeComponent/Footer'
 
 const HomePage = () => {
   const text = useColorModeValue('light','dark')
@@ -62,13 +63,14 @@ const HomePage = () => {
             <Heading fontSize='25px'>Headphone</Heading>
             <Heading fontSize='25px'>Premium sound</Heading>
             <Text>Starting from: $245.00</Text>
-            <Button w="120px" variant={'outline'} borderRadius={'20px'} border={'1px solid black'} color={'blackAlpha.900'}>shop now</Button>
+            <NavLink to='/products'><Button  w="120px" variant={'outline'} borderRadius={'20px'} border={'1px solid black'} color={'blackAlpha.900'}>shop now</Button></NavLink>
           </Flex>
         </Box>
       </Flex>
       
       {/* all services section here which is provided by the company  */}
       <HomeService />
+      <Footer />
     </Box>
   )
 }

@@ -151,8 +151,9 @@ export default function SignUp() {
   
 
   return (
-
+  
     loader ? <Loader/> :
+    <>
     <Flex
       minH={'100vh'}
       align={'center'}
@@ -252,7 +253,8 @@ export default function SignUp() {
         <Image w={'100%'} mr={'20px'} borderRadius={'10px'} src={signupImg} alt='signupImg' />
       </Box>
     </Flex>
-  
+    <Footer />
+  </>
   
   );
 

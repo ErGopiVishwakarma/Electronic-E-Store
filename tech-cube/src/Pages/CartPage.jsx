@@ -9,13 +9,7 @@ import { Link } from 'react-router-dom';
 import emptyCartGif from '../Assets/emptyCartImg2.gif';
 import { SearchContext } from '../context/SearchContextProvider';
 import ProductPage from './ProductPage';
-
-
-
-
-
-
-
+import Footer from '../component/HomeComponent/Footer';
 
 //----------------------------------------------------------------------------------------------------------------------------
 const CartPage = () => {
@@ -37,12 +31,9 @@ const CartPage = () => {
     totalPrice += cartItem.price * cartItem.quantity;
   })
 
-<<<<<<< HEAD
   useEffect(()=>{
     window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   },[])
-=======
->>>>>>> 3f1b9796fb334d5a0a412fd875da7c09bcbc4476
 
   useEffect(() => {
     dispatch(getCartServerdata());
@@ -68,9 +59,10 @@ const CartPage = () => {
 
   return (
     status ? <ProductPage /> :
+    <>
       <Box justifyContent={{base:'center',md:'center',lg:'flex'}}  display={"flex"} flexDirection={{ base: 'column', sm: cart.length>0 && "row", md: "column", lg: cart.length>0 && 'row' }}  paddingTop={"20px"} p={'3%'}>
 
-        <Flex width={{base:'100%',sm:'90%',md: '100%'}} justifyContent={'center'} direction={'column'}  mt={{base:'50px',md:''}} >
+        <Flex width={{base:'100%',sm:'90%',md: '100%'}} justifyContent={'center'} direction={'column'}  mt={{base:'50px',md:'20px',lg:'10px'}} >
           <Center fontWeight={'bold'} fontSize={'24px'} pt={{base:'40px',md:''}}>Your Cart</Center>
           <Divider />
           {cart.length > 0 ? (
@@ -96,11 +88,8 @@ const CartPage = () => {
 
           </Box>
 
-<<<<<<< HEAD
+
           {promoCodeData && <Box  color={'gray.600'} my={'20px'} w={'100%'} display={'flex'} justifyContent={'space-between'}>
-=======
-          {promoCodeData && <Box  color={'gray.600'} m={'20px'} w={'100%'} display={'flex'} justifyContent={'space-between'}>
->>>>>>> 3f1b9796fb334d5a0a412fd875da7c09bcbc4476
             <Text>Promocode <Button onClick={handlePromoToggle} size={'sm'} fontSize={'14px'} colorScheme='red'>X</Button></Text>
             <Badge colorScheme='green'>{promoCode} applied</Badge>
             </Box>}
@@ -130,6 +119,8 @@ const CartPage = () => {
         </Box>
 
       </Box>
+      <Footer />
+      </>
   );
 };
 export default CartPage;// nothing here yet

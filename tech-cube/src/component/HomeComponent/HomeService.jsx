@@ -12,7 +12,7 @@ const HomeService = () => {
     return (
         <Flex direction={'column'} gap='50px' px="3%" mt="20px">
             <Center>
-            <Heading>
+            <Heading fontSize={{base:'25px',md:'32px'}}>
                 Services To Help Shop
             </Heading>
             </Center>

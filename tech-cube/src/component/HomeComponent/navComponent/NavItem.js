@@ -38,14 +38,15 @@ export const NAV_ITEMS = [
     },
     {
         label: 'Accessories',
+        href:'/products'
     },
     {
         label: 'Tv & Watches',
-        href: '#',
+        href:'/products'
     },
     {
-        label: 'electonics',
-        href: '#',
+        label: 'Electronics',
+        href:'/products'
     },
 ];
 

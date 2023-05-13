@@ -4,10 +4,10 @@ import React from 'react'
 import { FaGrinHearts, FaHeart, FaHeartBroken, FaHeartbeat, FaKissWinkHeart } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 const imageArr = [
-  { image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e61eb4ad4af6e75689_macbook%2013-min.png',text:'APPLE A715-42G-R2NE l', price:500, description:'Key Features 39.6cm (15.6\")',id:97},
-  { image: 'https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untblueitled-1_600x.png?v=1661509030',text:'wireless_headphone' , price:300, description:'Organic Cotton, fairtrade certified',id:48},
-  { image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e64bd907adafd35b46_ipad%20mini-min.png',text:'REDMI A1+ (Black  32 GB)', price:5900 , description:'4 GB RAM | 64 GB ROM',id:147},
-  { image: 'https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveFlexConnectPackaging1.2_300x.png?v=1677645513',text:'Wave Select Smartwatch' , price:800, description:'1.78\" AMOLED Display',id:15}
+  { image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e61eb4ad4af6e75689_macbook%2013-min.png',text:'APPLE A715-42G-R2NE l', price:500, description:'Key Features 39.6cm (15.6\")',id:97,disc:53},
+  { image: 'https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untblueitled-1_600x.png?v=1661509030',text:'Wireless_Headphone' , price:300, description:'Organic Cotton, fairtrade certified',id:48,disc:52},
+  { image: 'https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e64bd907adafd35b46_ipad%20mini-min.png',text:'REDMI A1+ (Black  32 GB)', price:5900 , description:'4 GB RAM | 64 GB ROM',id:147,disc:35},
+  { image: 'https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WaveFlexConnectPackaging1.2_300x.png?v=1677645513',text:'Wave Select Smartwatch' , price:800, description:'1.78\" AMOLED Display',id:15,disc:75}
 ]
 
 const BestDeal = () => {
@@ -19,7 +19,7 @@ const BestDeal = () => {
     <Box mt="20px">
       <Flex direction={'column'} px="3%" gap="50px">
       <Center>
-      <Heading>
+      <Heading fontSize={{base:'25px',md:'32px'}}>
           Today's Best Deal For You
         </Heading>
       </Center>
@@ -34,9 +34,10 @@ const BestDeal = () => {
                   </Box>
                 </Box>
                 <Stack px="5px">
-                  <Flex justifyContent={'space-between'} color={text==='dark'?'white':'blackAlpha.900'}>
-                    <Text fontWeight={'bold'} fontSize={'18px'} color={textColor}>{el.text}</Text>
+                <Text fontWeight={'bold'} fontSize={'18px'} color={textColor}>{el.text}</Text>
+                  <Flex gap="20px" color={text==='dark'?'white':'blackAlpha.900'}>                    
                     <Text fontWeight={'bold'} color={textColor} fontSize={'18px'}>₹{el.price}</Text>
+                    <Text fontWeight={'bold'} color={'green'} fontSize={'18px'}>{el.disc}% off</Text>
                   </Flex>
                   <Text fontSize={'14px'} color={textColor}>{el.description}</Text>
                   <Flex>

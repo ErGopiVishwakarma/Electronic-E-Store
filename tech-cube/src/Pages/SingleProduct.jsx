@@ -20,6 +20,7 @@ import { useEffect } from 'react';
 import NewLeft from '../component/SingleProduct/NewLeft';
 import NewRight from '../component/SingleProduct/NewRight';
 import { extendTheme } from '@chakra-ui/react';
+import Footer from '../component/HomeComponent/Footer';
 
 
 // 2. Update the breakpoints as key-value pairs
@@ -57,7 +58,8 @@ const SingleProduct = () => {
   },[])
 
   return (
-    <Box
+       <>
+            <Box
       display={['block', 'block', 'block', 'flex']}
       width={'100%'}
       paddingTop={'50px'}
@@ -82,6 +84,8 @@ const SingleProduct = () => {
       </Box>
   
     </Box>
+    <Footer />
+       </>
   );
 };
 

@@ -44,6 +44,7 @@ function EditProduct({ id , children }) {
         dispatch(editProducts(id, data))
             .then((res) => {
                 dispatch(getAllData())
+                alert('product updated successfully..')
             })
     }
 
@@ -111,7 +112,10 @@ function EditProduct({ id , children }) {
                             <Button varient='unstyled' mr={3} onClick={onClose}>
                                 cancel
                             </Button>
-                            <Button  onClick={handleEdit}  varient='outline'>update</Button>
+                            <Button  onClick={(e)=>{                            
+                            handleEdit(e)
+                            onClose()
+                            }}  varient='outline'>update</Button>
                         </Flex>
                     </ModalFooter>
                 </ModalContent>

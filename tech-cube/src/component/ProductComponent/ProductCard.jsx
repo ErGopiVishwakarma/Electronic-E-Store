@@ -76,7 +76,7 @@ export const ProductCard = ({
           fontFamily={'sans-serif'}
           pt={'10px'}
         >
-          {title.length < 30 ? title : title.substring(0, 32)}
+          {title.length < 20 ? title : title.substring(0, 20)}...
         </Text>
         <Flex justifyContent={'space-between'}>
           <Flex>
