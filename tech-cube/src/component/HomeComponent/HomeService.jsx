@@ -21,7 +21,7 @@ const HomeService = () => {
                 data.map((el,ind)=>(
                     <Flex key={ind} direction={'column'} boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"} borderBottomRadius={'20px'} bg="red.50" >
                     <Stack mt='6' spacing='4' p="30px" pr="150px" color='blackAlpha.900'>
-                        <Heading fontSize="25px">{el.text}</Heading>
+                        <Heading fontSize={{base:'18px',sm:'20px',md:'25px'}}>{el.text}</Heading>
                         <Text>
                         Updates on safe Shopping in our Stores
                         </Text>
