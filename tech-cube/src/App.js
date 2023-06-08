@@ -14,9 +14,7 @@ function App() {
 
     <Box className='App'>
       <Navbar />
-      {/* <Test /> */}
       <MainRoutes />
-      {/* <Footer /> */}
     </Box>
   );
 }

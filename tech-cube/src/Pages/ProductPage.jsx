@@ -7,6 +7,7 @@ import { FilterSort } from '../component/ProductComponent/FilterSort';
 import { useSearchParams } from 'react-router-dom';
 import Loader from '../component/Loader&Error/Loader';
 import { Pagination } from '../component/ProductComponent/Pagination';
+import Footer from '../component/HomeComponent/Footer';
 
 const ProductPage = () => {
   const [searchParams] = useSearchParams();
@@ -38,6 +39,7 @@ const ProductPage = () => {
   console.log(totalProducts, 'totalproducts Count');
   console.log(page, 'pages');
   return (
+    <>
     <Box pos={'relative'} minH={''}>
       <Flex direction={'column'} p="3%" gap="50px">
         <Center>
@@ -50,7 +52,7 @@ const ProductPage = () => {
         ) : (
           <Grid
             templateColumns={{
-              base: 'repeat(2,1fr)',
+              base: 'repeat(1,1fr)',
               sm: 'repeat(2,1fr)',
               md: 'repeat(3,1fr)',
               lg: 'repeat(4,1fr)',
@@ -72,6 +74,8 @@ const ProductPage = () => {
         page={page}
       />
     </Box>
+    <Footer />
+    </>
   );
 };
 

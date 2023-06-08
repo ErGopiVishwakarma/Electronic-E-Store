@@ -14,6 +14,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { deleteUserFromBlacklist, getAllDataFromBlacklist, postUserToBlacklist } from '../../redux/Admin/action'
 import ShowDetail from './ShowDetail'
 
+var flag=false
+
 const Users = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [user, setUser] = useState([])
@@ -28,11 +30,10 @@ const Users = () => {
 
     const blockUser = (data) => {
         setLength(1)
-        dispatch(postUserToBlacklist(data)).then(res => {
-           
+        dispatch(postUserToBlacklist(data)).then(res => {           
             dispatch(getAllDataFromBlacklist())
-        }
-        )
+        })
+        localStorage.setItem('auth',JSON.stringify(false))
     }
 
     const delUser = (id) => {
@@ -45,13 +46,19 @@ const Users = () => {
     }
 
 
-
+   const fun =(el) =>{
+     for(let a of blackData){
+        if(a.email === el.email ){
+            return true
+        }      
+     }
+    }
     return (
         <Flex direction={'column'} bg='white' borderRadius={'10px'}>
             <Flex justify={'flex-end'} px={{ base: '7px', md: '20px', lg: '50px' }} alignItems={'center'} py="15px">
                 <Text fontSize={'20px'} fontWeight={'bolder'}>Total users - {user.length}</Text>
             </Flex>
-            <Box w="98%" h={{ base: "100vh", md: '100vh', lg: '450px' }} direction={'column'} overflow={'scroll'} >
+            <Box w="98%" h={{ base: "100vh", md: '100vh', lg: '450px' }} direction={'column'} overflowY={'scroll'} >
 
                 {
                     user?.map((el, ind) => (
@@ -61,7 +68,7 @@ const Users = () => {
                                 <Text>{`${el.firstName} ${el.lastName}`}</Text>
                                 <Box display={{ base: 'block', md: 'none' }}>
 
-                                    <ShowDetail child={el}>show details</ShowDetail>
+                                    <ShowDetail child={el} fun={fun}>show details</ShowDetail>
             
 
                                 </Box>
@@ -69,29 +76,13 @@ const Users = () => {
                                 <Text display={{ base: 'none', md: 'block' }}>{el.password}</Text>
                             </Flex>
                             <Flex gap={{ base: '30px', md: '30px', lg: '50px' }} display={{ base: 'none', md: 'flex' }} >
-                                {
+                                 {
+                                    blackData.length > 0 ? 
+                                     
+                                     fun(el)?<Button bg="red.400" colorScheme='black' onClick={() => delUser(el.id)}>Unblock User</Button>:<Button bg="green.400" colorScheme='black' onClick={() =>blockUser(el)}>Block User</Button>
+                                     :<Button bg="green.400" colorScheme='black' onClick={() =>blockUser(el)}>Block User</Button>
+                                 }
 
-                                    blackData.length > 0 && length === 1 ?
-/* 
-                                        blackData.length === 1 ?
-                                            blackData?.map(elem => {
-                                                if (elem.email === el.email) {
-                                                    return <Button bg="red.400" colorScheme='black' onClick={() => delUser(elem.id)}>Unblock User</Button>
-                                                } else {
-                                                    return <Button bg="green.400" colorScheme='black' onClick={() => blockUser(el)}>Block User</Button>
-                                                }
-                                            }) */
-                                             blackData?.map(element => {
-                                                if (element.email === el.email) {
-                                                    setLength(0)
-                                                    return <Button bg="red.400" colorScheme='black' onClick={() => delUser(element.id)}>Unblock User</Button>
-                                                } else {
-                                                    setLength(0)
-                                                    return <Button bg="green.400" colorScheme='black' onClick={() => blockUser(el)}>Block User</Button>
-                                                }
-                                            })
-                                        : <Button bg="green.400" colorScheme='black' onClick={() =>blockUser(el)}>Block User</Button>
-                                }
                             </Flex>
 
                         </Flex>
@@ -104,6 +95,5 @@ const Users = () => {
 }
 
 export default Users
-
-
-{/* <Button bg="green.400" colorScheme='black' onClick={() => blockUser(el)}>Block User</Button> */ }
+/* <Button bg="green.400" colorScheme='black' onClick={() =>blockUser(el)}>Block User</Button>
+<Button bg="red.400" colorScheme='black' onClick={() => delUser(element.id)}>Unblock User</Button> */

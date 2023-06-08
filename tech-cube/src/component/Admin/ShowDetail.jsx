@@ -12,7 +12,7 @@ import {
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteUserFromBlacklist, getAllDataFromBlacklist, postUserToBlacklist } from '../../redux/Admin/action'
 
-const ShowDetail = ({ children, child }) => {
+const ShowDetail = ({ children, child,fun }) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const dispatch = useDispatch()
     const blackData = useSelector(store => store.adminReducer.blacklist)
@@ -51,23 +51,9 @@ const ShowDetail = ({ children, child }) => {
 
                     <ModalFooter>
                         {
+                            blackData.length > 0 ?
 
-                            blackData.length > 0  ?
-
-                                blackData.length === 1 ?
-                                    blackData?.map(elem => {
-                                        if (elem.email === child.email) {
-                                            return <Button bg="red.400" colorScheme='black' onClick={() => delUser(elem.id)}>Unblock User</Button>
-                                        } else {
-                                            return <Button bg="green.400" colorScheme='black' onClick={() => blockUser(child)}>Block User</Button>
-                                        }
-                                    })
-                                    : blackData?.map(element => {
-                                        if (element.email === child.email) {
-                                            {/* setLength(0) */}
-                                            return <Button bg="red.400" colorScheme='black' onClick={() => delUser(element.id)}>Unblock User</Button>
-                                        }
-                                    })
+                                fun(child) ? <Button bg="red.400" colorScheme='black' onClick={() => delUser(child.id)}>Unblock User</Button> : <Button bg="green.400" colorScheme='black' onClick={() => blockUser(child)}>Block User</Button>
                                 : <Button bg="green.400" colorScheme='black' onClick={() => blockUser(child)}>Block User</Button>
                         }
                     </ModalFooter>

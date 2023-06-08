@@ -17,6 +17,7 @@ import {
 } from '@chakra-ui/react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../component/HomeComponent/Footer';
 
 const AdminLogin = () => {
     const toast = useToast()
@@ -135,7 +136,6 @@ const AdminLogin = () => {
                     </form>
                 </Box>
             </Stack>
-
         </Flex>
     )
 }

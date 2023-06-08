@@ -30,6 +30,7 @@ import { useToast } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCartData, updatePaymentMethod } from '../redux/CartReducer/action';
 import { Link } from 'react-router-dom';
+import Footer from '../component/HomeComponent/Footer';
 
 
 let handleSubmitTriggure; // for adding details on local storage on Address Page
@@ -407,6 +408,7 @@ export const Multistep = () => {
           </Flex>
         </ButtonGroup>
       </Box>
+      <Footer />
     </>
   );
 }
