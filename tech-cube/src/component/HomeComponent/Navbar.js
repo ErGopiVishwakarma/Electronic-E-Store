@@ -373,12 +373,26 @@ const DesktopNav = () => {
       {NAV_ITEMS.map(navItem => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
-            <PopoverTrigger display="flex" align="center">
-              <Link
+            <PopoverTrigger display="flex" alignItems="center">
+              {
+                navItem.href ? <NavLink to={navItem.href}>
+                  <Link
+                    p={2}
+                    fontSize={'15px'}
+                    fontWeight={'bold'}
+                    color={linkColor}
+                    _hover={{
+                      textDecoration: 'none',
+                      color: linkHoverColor,
+                    }}
+                  >
+                    {navItem.label}
+                    {navItem.children ? <ChevronDownIcon w={5} h={5} /> : ''}
+                  </Link>
+                </NavLink>:<Link
                 p={2}
-                href={navItem.href ?? '#'}
                 fontSize={'15px'}
-                fontWeight={500}
+                fontWeight={'bold'}
                 color={linkColor}
                 _hover={{
                   textDecoration: 'none',
@@ -388,6 +402,8 @@ const DesktopNav = () => {
                 {navItem.label}
                 {navItem.children ? <ChevronDownIcon w={5} h={5} /> : ''}
               </Link>
+              }
+
             </PopoverTrigger>
 
             {navItem.children && (

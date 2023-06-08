@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import emptyCartGif from '../Assets/emptyCartImg2.gif';
 import { SearchContext } from '../context/SearchContextProvider';
 import ProductPage from './ProductPage';
+import Footer from '../component/HomeComponent/Footer';
 
 //----------------------------------------------------------------------------------------------------------------------------
 const CartPage = () => {
@@ -58,6 +59,7 @@ const CartPage = () => {
 
   return (
     status ? <ProductPage /> :
+    <>
       <Box justifyContent={{base:'center',md:'center',lg:'flex'}}  display={"flex"} flexDirection={{ base: 'column', sm: cart.length>0 && "row", md: "column", lg: cart.length>0 && 'row' }}  paddingTop={"20px"} p={'3%'}>
 
         <Flex width={{base:'100%',sm:'90%',md: '100%'}} justifyContent={'center'} direction={'column'}  mt={{base:'50px',md:'20px',lg:'10px'}} >
@@ -117,6 +119,8 @@ const CartPage = () => {
         </Box>
 
       </Box>
+      <Footer />
+      </>
   );
 };
 export default CartPage;// nothing here yet

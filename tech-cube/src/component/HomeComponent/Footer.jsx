@@ -6,7 +6,7 @@ export default function Footer() {
   const textColor = text==='dark'?'gray.100':'blackAlpha.900'
   return (
     <>
-    <Box w={'100%'} borderTop="1px solid lightgray">
+    <Box w={'100%'} borderTop="1px solid lightgray" mt='20px'>
     </Box>
     <Box
       bg={useColorModeValue('gray.50', 'gray.900')}
