@@ -1,4 +1,4 @@
-# difficult-wire-2490
+# Tech cube
 
 ### [Tech cube](https://tech-cube-ergopivishwakarma.vercel.app/) is an E-commerce website which sells elctronic gadgets and products such as mobile, laptop, watch, TV etc.
 ### A collaborative project built by team of five members within 5 days.
