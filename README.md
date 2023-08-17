@@ -2,6 +2,13 @@
 
 ### [Tech cube](https://tech-cube-ergopivishwakarma.vercel.app/) is an E-commerce website which sells elctronic gadgets and products such as mobile, laptop, watch, TV etc.
 ### A collaborative project built by team of five members within 5 days.
+## Team Collaborators
+- [@Gopi Vishwakarma](https://github.com/ErGopiVishwakarma)
+- [@Tanmoy Roy](https://github.com/Tanmoy0151)
+- [@Juri Kalita](https://github.com/jurikalita011)
+- [@Ritesh Goswami](https://github.com/ritesh22201)
+- [@Deepak Yadav](https://github.com/Deepak-25yadav)
+
 #### Tech Stacks used: JavaScript, ReactJS, Redux, React-Redux and Chakra UI.
 
 
@@ -44,12 +51,7 @@ Chakra-ui
 ### Technologies Used 
 ##### react, redux, html, css, chakra
 
-## Team Collaborators
-- [@Gopi Vishwakarma](https://github.com/ErGopiVishwakarma)
-- [@Tanmoy Roy](https://github.com/Tanmoy0151)
-- [@Juri Kalita](https://github.com/jurikalita011)
-- [@Ritesh Goswami](https://github.com/ritesh22201)
-- [@Deepak Yadav](https://github.com/Deepak-25yadav)
+
 
 
 
