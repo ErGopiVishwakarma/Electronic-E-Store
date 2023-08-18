@@ -1,3 +1,4 @@
+
 import { Flex, Center, Box, Heading, Image, Text, Button, Avatar, useDisclosure } from '@chakra-ui/react'
 import axios from 'axios'
 import {
@@ -95,5 +96,3 @@ const Users = () => {
 }
 
 export default Users
-/* <Button bg="green.400" colorScheme='black' onClick={() =>blockUser(el)}>Block User</Button>
-<Button bg="red.400" colorScheme='black' onClick={() => delUser(element.id)}>Unblock User</Button> */

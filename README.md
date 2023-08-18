@@ -1,3 +1,4 @@
+
 # Tech cube
 
 ### [Tech cube](https://tech-cube-ergopivishwakarma.vercel.app/) is an E-commerce website which sells elctronic gadgets and products such as mobile, laptop, watch, TV etc.
@@ -50,7 +51,4 @@ Chakra-ui
 - [@Juri Kalita](https://github.com/jurikalita011)
 - [@Ritesh Goswami](https://github.com/ritesh22201)
 - [@Deepak Yadav](https://github.com/Deepak-25yadav)
-
-
-
 
