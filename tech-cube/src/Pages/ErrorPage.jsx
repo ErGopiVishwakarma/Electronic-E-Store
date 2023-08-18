@@ -1,3 +1,4 @@
+
 import { Box, Image, Button, useColorModeValue, Link } from '@chakra-ui/react'
 import React, { useEffect } from 'react';
 import errorImg from '../Assets/errorImg.webp';
@@ -24,5 +25,4 @@ const ErrorPage = () => {
     </>
   )
 }
-
 export default ErrorPage

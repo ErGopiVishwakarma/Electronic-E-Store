@@ -1,3 +1,4 @@
+
 import { Flex, Center, Box, Heading, Image, Text, Button } from '@chakra-ui/react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'

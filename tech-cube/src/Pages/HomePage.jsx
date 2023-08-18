@@ -1,3 +1,4 @@
+
 import { Box, Button, Center, Flex, Grid, Heading, Image, Text, useColorModeValue } from '@chakra-ui/react'
 import React, { useContext, useEffect } from 'react'
 import home from '../Assets/home.png'

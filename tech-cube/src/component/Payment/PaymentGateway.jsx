@@ -1,3 +1,4 @@
+
 import { Box, Button, Center, Checkbox, Flex, Heading, Image, Radio, RadioGroup, Text, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
@@ -50,5 +51,6 @@ const PaymentGateway = () => {
         </Flex>
     )
 }
+
 
 export default PaymentGateway

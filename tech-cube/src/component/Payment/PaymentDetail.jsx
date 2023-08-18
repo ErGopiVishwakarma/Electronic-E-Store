@@ -1,3 +1,4 @@
+
 import { Box, Button, Center, Flex, FormControl, FormLabel, Image, Input, useToast } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
@@ -84,5 +85,4 @@ const PaymentDetail = () => {
        </Flex>
   )
 }
-
 export default PaymentDetail

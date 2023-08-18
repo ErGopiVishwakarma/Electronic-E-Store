@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import {
   Progress,
@@ -54,9 +55,9 @@ export const AddressForm = () => {
 
   }
 
-  useEffect(()=>{
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-  },[])
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [])
 
 
 
@@ -137,7 +138,7 @@ export const AddressForm = () => {
       </Box>
 
       <Box>
-        
+
       </Box>
 
     </Box>

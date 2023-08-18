@@ -1,4 +1,5 @@
 
+
 import { Box, Flex, Heading, Image } from '@chakra-ui/react'
 import { css } from '@emotion/react'
 import React, { useEffect, useState } from 'react'
@@ -50,5 +51,4 @@ const Dashboard = () => {
     </Flex>
   )
 }
-
 export default Dashboard

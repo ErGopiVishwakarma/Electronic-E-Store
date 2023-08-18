@@ -1,3 +1,4 @@
+
 import { Box, Container, Link, SimpleGrid, Stack, Text, IconButton, useColorModeValue, HStack, Divider, Image, Center, Grid,
 } from '@chakra-ui/react';
 import { FaInstagram, FaTwitter, FaYoutube,FaUser, FaFacebook, FaPinterest } from 'react-icons/fa';
@@ -84,4 +85,5 @@ export default function Footer() {
     </Box>
     </>
   );
+
 }
