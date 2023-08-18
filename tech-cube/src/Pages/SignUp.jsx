@@ -104,7 +104,7 @@ export default function SignUp() {
       return;
     }
     let check = false;
-    const data = await axios.get('https://viridian-confusion-henley.glitch.me/').then(res => res.data)
+    const data = await axios.get('https://viridian-confusion-henley.glitch.me/user').then(res => res.data)
     if (data.length > 0) {
       data.forEach(el => {
         if (el.email === userData.email) {
